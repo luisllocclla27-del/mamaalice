@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donar | ONG Mama Alice</title>
+    <meta name="description" content="Haz tu donación segura a Mama Alice. €15 cubren materiales escolares. €50 cubren un mes de formación técnica. €100 cubren una beca completa.">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body { background: var(--bg-soft); }
+
+        .donate-layout { display: grid; grid-template-columns: 1fr 420px; gap: 0; min-height: calc(100vh - 80px); }
+        .donate-hero { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); padding: 80px 60px; display: flex; flex-direction: column; justify-content: center; position: relative; overflow: hidden; }
+        .donate-hero::before { content: ''; position: absolute; width: 500px; height: 500px; border-radius: 50%; background: rgba(230,126,34,0.06); top: -200px; right: -200px; }
+        .donate-hero::after { content: ''; position: absolute; width: 300px; height: 300px; border-radius: 50%; background: rgba(230,126,34,0.04); bottom: -100px; left: -100px; }
+        .donate-hero h1 { color: white; font-size: 3rem; margin-bottom: 20px; line-height: 1.1; }
+        .donate-hero p { color: rgba(255,255,255,0.75); font-size: 1.1rem; line-height: 1.8; margin-bottom: 32px; }
+        .impact-list { display: flex; flex-direction: column; gap: 16px; }
+        .impact-list-item { display: flex; align-items: flex-start; gap: 16px; color: rgba(255,255,255,0.85); font-size: 0.95rem; }
+        .impact-list-item .impact-icon { width: 40px; height: 40px; min-width: 40px; border-radius: 50%; background: rgba(230,126,34,0.2); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; border: 1px solid rgba(230,126,34,0.3); }
+
+        .donate-form-panel { background: var(--bg-white); padding: 48px 40px; display: flex; flex-direction: column; justify-content: center; }
+        .donate-form-panel h2 { font-family: var(--font-body); font-size: 1.5rem; font-weight: 700; margin-bottom: 8px; }
+        .donate-form-panel .subtitle { font-size: 0.92rem; color: var(--text-muted); margin-bottom: 28px; }
+
+        /* Frequency Toggle */
+        .freq-toggle { display: flex; background: var(--bg-soft); border-radius: var(--radius-full); padding: 4px; margin-bottom: 24px; }
+        .freq-option { flex: 1; text-align: center; padding: 12px 16px; border-radius: var(--radius-full); font-weight: 600; font-size: 0.9rem; cursor: pointer; transition: all var(--duration-fast) var(--ease-out); color: var(--text-muted); }
+        .freq-option.active { background: var(--primary); color: white; box-shadow: var(--shadow-sm); }
+
+        /* Price Anchors */
+        .price-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 12px; }
+        .price-anchor { padding: 20px 12px; text-align: center; border: 2px solid var(--border); border-radius: var(--radius-md); cursor: pointer; transition: all var(--duration-fast) var(--ease-out); position: relative; }
+        .price-anchor:hover { border-color: var(--accent); }
+        .price-anchor.selected { border-color: var(--accent); background: linear-gradient(135deg, rgba(230,126,34,0.05), rgba(230,126,34,0.1)); }
+        .price-anchor .amount { font-family: var(--font-heading); font-size: 1.8rem; font-weight: 800; color: var(--primary); display: block; }
+        .price-anchor .impact-text { font-size: 0.72rem; color: var(--text-muted); margin-top: 4px; line-height: 1.3; display: block; }
+        .price-anchor.popular::before { content: 'Popular'; position: absolute; top: -10px; left: 50%; transform: translateX(-50%); background: var(--accent); color: white; font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; padding: 3px 10px; border-radius: var(--radius-full); }
+
+        .custom-amount { margin-bottom: 24px; }
+        .custom-amount input { width: 100%; padding: 16px 20px; border: 2px solid var(--border); border-radius: var(--radius-md); font-family: var(--font-body); font-size: 1rem; outline: none; transition: border-color var(--duration-fast) var(--ease-out); }
+        .custom-amount input:focus { border-color: var(--primary); }
+
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px; }
+        .form-group { margin-bottom: 16px; }
+        .form-group label { display: block; font-size: 0.82rem; font-weight: 600; color: var(--text-secondary); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .form-control { width: 100%; padding: 14px 16px; border: 2px solid var(--border); border-radius: var(--radius-md); font-family: var(--font-body); font-size: 0.95rem; outline: none; transition: border-color var(--duration-fast) var(--ease-out); }
+        .form-control:focus { border-color: var(--primary); box-shadow: 0 0 0 3px rgba(15,43,74,0.08); }
+
+        .donate-btn { width: 100%; padding: 18px; font-size: 1.05rem; margin-top: 8px; }
+
+        .secure-info { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 20px; font-size: 0.82rem; color: var(--text-muted); }
+        .secure-info .lock { font-size: 1rem; }
+
+        .trust-strip { display: flex; gap: 24px; justify-content: center; margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--border); }
+        .trust-item { font-size: 0.78rem; color: var(--text-muted); display: flex; align-items: center; gap: 6px; }
+
+        @media (max-width: 768px) {
+            .donate-layout { grid-template-columns: 1fr; }
+            .donate-hero { padding: 60px 24px; }
+            .donate-hero h1 { font-size: 2.2rem; }
+            .donate-form-panel { padding: 32px 24px; }
+            .price-grid { grid-template-columns: repeat(3, 1fr); }
+            .form-row { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Minimal Donation Nav -->
+    <header class="header header--scrolled" style="position: sticky;">
+        <div class="container nav-container">
+            <a href="index.html" class="logo" style="color: var(--primary);">Mama<span>Alice.</span></a>
+            <a href="index.html" class="btn btn--outline btn--sm">← Volver al sitio</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="donate-layout">
+            <!-- Left Panel: Why Donate -->
+            <div class="donate-hero">
+                <div style="position: relative; z-index: 1;">
+                    <span style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 3px; color: var(--accent-light);">Tu donación importa</span>
+                    <h1 style="margin-top: 12px;">Haz posible el cambio hoy</h1>
+                    <p>Tu aporte directo asegura la alimentación, educación y capacitación técnica de cientos de jóvenes en Ayacucho.</p>
+
+                    <div class="impact-list">
+                        <div class="impact-list-item">
+                            <div class="impact-icon">📚</div>
+                            <div><strong>€15</strong> cubren los materiales escolares de un niño durante un semestre.</div>
+                        </div>
+                        <div class="impact-list-item">
+                            <div class="impact-icon">🍳</div>
+                            <div><strong>€50</strong> cubren un mes completo de formación técnica en el HTC.</div>
+                        </div>
+                        <div class="impact-list-item">
+                            <div class="impact-icon">🎓</div>
+                            <div><strong>€100</strong> cubren una beca mensual completa: alimentación, materiales y transporte.</div>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 40px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1);">
+                        <p style="font-size: 0.85rem; color: rgba(255,255,255,0.5);">El 88% de tu donación se destina directamente a los programas. <a href="transparencia.html" style="color: var(--accent-light);">Ver transparencia →</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Panel: Donation Form -->
+            <div class="donate-form-panel">
+                <h2>Elige tu aporte</h2>
+                <p class="subtitle">Selecciona un monto o ingresa una cantidad personalizada.</p>
+
+                <form onsubmit="event.preventDefault(); alert('¡Gracias por tu generosidad! Esta es una versión demostrativa. En producción, se conectará con Stripe o PayPal.');">
+
+                    <!-- Frequency -->
+                    <div class="freq-toggle">
+                        <div class="freq-option active" onclick="this.parentElement.querySelectorAll('.freq-option').forEach(e=>e.classList.remove('active'));this.classList.add('active');">Donación única</div>
+                        <div class="freq-option" onclick="this.parentElement.querySelectorAll('.freq-option').forEach(e=>e.classList.remove('active'));this.classList.add('active');">Mensual ❤️</div>
+                    </div>
+
+                    <!-- Price Anchors -->
+                    <div class="price-grid">
+                        <div class="price-anchor" onclick="selectDonation(this)">
+                            <span class="amount">€15</span>
+                            <span class="impact-text">Materiales escolares</span>
+                        </div>
+                        <div class="price-anchor selected popular" onclick="selectDonation(this)">
+                            <span class="amount">€50</span>
+                            <span class="impact-text">1 mes de formación</span>
+                        </div>
+                        <div class="price-anchor" onclick="selectDonation(this)">
+                            <span class="amount">€100</span>
+                            <span class="impact-text">Beca completa</span>
+                        </div>
+                    </div>
+
+                    <!-- Custom Amount -->
+                    <div class="custom-amount">
+                        <input type="text" class="custom-amount-input" placeholder="Otra cantidad (€)" onfocus="document.querySelectorAll('.price-anchor').forEach(e=>e.classList.remove('selected'));">
+                    </div>
+
+                    <!-- Personal Info -->
+                    <div class="form-row">
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label for="donor-name">Nombre</label>
+                            <input type="text" id="donor-name" class="form-control" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <label for="donor-lastname">Apellido</label>
+                            <input type="text" id="donor-lastname" class="form-control" placeholder="Tu apellido" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="donor-email">Correo electrónico</label>
+                        <input type="email" id="donor-email" class="form-control" placeholder="tu@correo.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="donor-card">Método de pago</label>
+                        <input type="text" id="donor-card" class="form-control" placeholder="Número de tarjeta" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <input type="text" class="form-control" placeholder="MM / AA" required>
+                        </div>
+                        <div class="form-group" style="margin-bottom: 0;">
+                            <input type="text" class="form-control" placeholder="CVC" required>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn--primary donate-btn">Completar donación segura →</button>
+
+                    <div class="secure-info">
+                        <span class="lock">🔒</span>
+                        <span>Pagos encriptados con SSL de 256 bits</span>
+                    </div>
+
+                    <div class="trust-strip">
+                        <div class="trust-item">✓ Deducible de impuestos</div>
+                        <div class="trust-item">✓ Recibo inmediato</div>
+                        <div class="trust-item">✓ Cancelar en cualquier momento</div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        function selectDonation(element) {
+            document.querySelectorAll('.price-anchor').forEach(el => el.classList.remove('selected'));
+            element.classList.add('selected');
+            document.querySelector('.custom-amount-input').value = '';
+        }
+    </script>
+</body>
+</html>
