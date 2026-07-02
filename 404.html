@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página no encontrada | ONG Mama Alice</title>
+    <meta name="description" content="La página que buscas no existe. Vuelve al inicio de Mama Alice.">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700;800&display=swap">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            background: var(--primary-dark);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 24px;
+            overflow: hidden;
+        }
+
+        /* Animated background circles */
+        .bg-orb {
+            position: fixed;
+            border-radius: 50%;
+            pointer-events: none;
+            animation: float 8s ease-in-out infinite;
+        }
+        .bg-orb-1 {
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(230,126,34,0.08) 0%, transparent 70%);
+            top: -200px; right: -200px;
+            animation-delay: 0s;
+        }
+        .bg-orb-2 {
+            width: 400px; height: 400px;
+            background: radial-gradient(circle, rgba(15,43,74,0.6) 0%, transparent 70%);
+            bottom: -100px; left: -100px;
+            animation-delay: -4s;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) scale(1); }
+            50%       { transform: translateY(-20px) scale(1.05); }
+        }
+
+        .error-container {
+            position: relative;
+            z-index: 1;
+            max-width: 560px;
+        }
+
+        .error-code {
+            font-family: var(--font-heading);
+            font-size: clamp(7rem, 20vw, 12rem);
+            font-weight: 800;
+            line-height: 1;
+            background: linear-gradient(135deg, rgba(255,255,255,0.15), rgba(230,126,34,0.4));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+            letter-spacing: -4px;
+            user-select: none;
+        }
+
+        .error-divider {
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--accent-light));
+            border-radius: 2px;
+            margin: 0 auto 28px;
+        }
+
+        .error-title {
+            font-family: var(--font-heading);
+            font-size: clamp(1.6rem, 4vw, 2.2rem);
+            color: white;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .error-description {
+            font-size: 1.05rem;
+            color: rgba(255,255,255,0.6);
+            line-height: 1.8;
+            margin-bottom: 40px;
+        }
+
+        .error-actions {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 60px;
+        }
+
+        /* Quick links */
+        .quick-links {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding-top: 32px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+        }
+        .quick-link-item {
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.4);
+            text-decoration: none;
+            padding: 6px 16px;
+            border-radius: var(--radius-full);
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.2s ease;
+        }
+        .quick-link-item:hover {
+            color: white;
+            border-color: rgba(255,255,255,0.3);
+            background: rgba(255,255,255,0.05);
+        }
+
+        /* Override btn styles for dark bg */
+        .btn--outline-white {
+            border: 2px solid rgba(255,255,255,0.3);
+            color: white;
+            background: transparent;
+            border-radius: var(--radius-full);
+            padding: 14px 32px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.25s ease;
+            text-decoration: none;
+        }
+        .btn--outline-white:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: rgba(255,255,255,0.5);
+            transform: translateY(-2px);
+        }
+
+        /* Illustration */
+        .illustration {
+            font-size: 5rem;
+            margin-bottom: 24px;
+            display: block;
+            animation: wiggle 3s ease-in-out infinite;
+        }
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(-3deg); }
+            50%       { transform: rotate(3deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-orb bg-orb-1"></div>
+    <div class="bg-orb bg-orb-2"></div>
+
+    <div class="error-container">
+        <span class="illustration" role="img" aria-label="Mapa con pin">🗺️</span>
+
+        <div class="error-code" aria-label="Error 404">404</div>
+        <div class="error-divider"></div>
+
+        <h1 class="error-title">Página no encontrada</h1>
+        <p class="error-description">
+            Parece que esta ruta no lleva a ninguna comunidad.
+            La página que buscas puede haberse movido o ya no existe.
+        </p>
+
+        <div class="error-actions">
+            <a href="index.html" class="btn btn--primary btn--lg">
+                ← Volver al inicio
+            </a>
+            <a href="donar.html" class="btn--outline-white">
+                Hacer una donación
+            </a>
+        </div>
+
+        <nav class="quick-links" aria-label="Links rápidos">
+            <a href="nosotros.html"      class="quick-link-item">Nosotros</a>
+            <a href="comunidades.html"   class="quick-link-item">Proyectos</a>
+            <a href="hospitality.html"   class="quick-link-item">Hospitality</a>
+            <a href="transparencia.html" class="quick-link-item">Transparencia</a>
+            <a href="mailto:info@mamaalice.org" class="quick-link-item">Contacto</a>
+        </nav>
+    </div>
+
+    <script>
+        // Auto-redirect after 15 seconds
+        let countdown = 15;
+        const interval = setInterval(() => {
+            countdown--;
+            if (countdown <= 0) {
+                clearInterval(interval);
+                window.location.href = 'index.html';
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

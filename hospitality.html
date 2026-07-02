@@ -1,205 +1,639 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hospitality Training Center | ONG Mama Alice</title>
-    <meta name="description" content="Centro de formación técnica en gastronomía y hotelería con 85% de inserción laboral. Conoce el Hospitality Training Center de Mama Alice.">
-    <link rel="stylesheet" href="css/styles.css">
-    <style>
-        .stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; margin: 60px 0; }
-        .stat-card { background: var(--bg-white); border-radius: var(--radius-lg); padding: 32px 24px; text-align: center; box-shadow: var(--shadow-md); transition: all var(--duration-normal) var(--ease-out); }
-        .stat-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-xl); }
-        .stat-number { font-family: var(--font-heading); font-size: 2.5rem; font-weight: 800; color: var(--primary); margin-bottom: 8px; }
-        .stat-label { font-size: 0.85rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
-        .curriculum-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-        .curriculum-item { background: var(--bg-white); border-radius: var(--radius-lg); padding: 32px; box-shadow: var(--shadow-md); display: flex; gap: 20px; align-items: flex-start; transition: all var(--duration-normal) var(--ease-out); }
-        .curriculum-item:hover { transform: translateY(-4px); box-shadow: var(--shadow-xl); }
-        .curriculum-icon { width: 56px; height: 56px; min-width: 56px; border-radius: var(--radius-md); background: linear-gradient(135deg, var(--accent), var(--accent-dark)); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; }
-        .curriculum-item h3 { font-family: var(--font-body); font-size: 1.1rem; margin-bottom: 8px; }
-        .curriculum-item p { font-size: 0.9rem; color: var(--text-muted); }
-        .partners-strip { display: flex; gap: 48px; align-items: center; justify-content: center; flex-wrap: wrap; padding: 40px 0; }
-        .partner-logo { width: 140px; height: 50px; background: var(--bg-soft); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; font-size: 0.8rem; color: var(--text-muted); font-weight: 600; opacity: 0.6; transition: opacity var(--duration-fast) var(--ease-out); }
-        .partner-logo:hover { opacity: 1; }
-        @media (max-width: 768px) {
-            .stats-row { grid-template-columns: 1fr 1fr; }
-            .curriculum-grid { grid-template-columns: 1fr; }
-        }
-    </style>
-</head>
-<body>
-
-    <header class="header" id="header">
-        <div class="container nav-container">
-            <a href="index.html" class="logo">Mama<span>Alice.</span></a>
-            <button class="mobile-menu-btn" aria-label="Abrir menú">☰</button>
-            <nav class="nav-links">
-                <a href="index.html">Inicio</a>
-                <a href="nosotros.html">Nosotros</a>
-                <a href="comunidades.html">Proyectos</a>
-                <a href="hospitality.html" class="active">Hospitality</a>
-                <a href="transparencia.html">Transparencia</a>
-                <a href="donar.html" class="btn btn--primary btn--sm">Donar Ahora</a>
-            </nav>
-        </div>
-    </header>
-
-    <main>
-        <section class="page-hero">
-            <img src="assets/images/hospitality_image_1782863355574.png" alt="Hospitality Training Center" class="page-hero-bg">
-            <div class="container page-hero-content">
-                <h1>Hospitality Training Center</h1>
-                <p>Formación técnica de excelencia en gastronomía y hotelería con inserción laboral garantizada.</p>
-                <div class="breadcrumb"><a href="index.html">Inicio</a> / <span>Hospitality</span></div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Hospitality Training Center | ONG Mama Alice</title>
+        <meta
+            name="description"
+            content="Centro de formación técnica en gastronomía y hotelería con 85% de inserción laboral. Conoce el Hospitality Training Center de Mama Alice."
+        />
+        <meta
+            property="og:title"
+            content="Hospitality Training Center | ONG Mama Alice"
+        />
+        <meta
+            property="og:description"
+            content="Centro de formación técnica en gastronomía y hotelería con 85% de inserción laboral."
+        />
+        <meta property="og:type" content="website" />
+        <meta
+            property="og:url"
+            content="https://tu-dominio-aqui.org/hospitality.html"
+        />
+        <meta property="og:site_name" content="ONG Mama Alice" />
+        <meta property="og:locale" content="es_PE" />
+        <meta
+            property="og:image"
+            content="https://tu-dominio-aqui.org/assets/images/logo.png"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+            name="twitter:title"
+            content="Hospitality Training Center | ONG Mama Alice"
+        />
+        <meta
+            name="twitter:description"
+            content="Centro de formación técnica en gastronomía y hotelería con 85% de inserción laboral."
+        />
+        <meta
+            name="twitter:image"
+            content="https://tu-dominio-aqui.org/assets/images/logo.png"
+        />
+        <link
+            rel="canonical"
+            href="https://tu-dominio-aqui.org/hospitality.html"
+        />
+        <meta name="theme-color" content="#0F2B4A" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="assets/images/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="assets/images/favicon-16x16.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="512x512"
+            href="assets/images/favicon-512x512.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="assets/images/apple-touch-icon.png"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap"
+        />
+        <link rel="stylesheet" href="css/styles.css" />
+        <style>
+            .stats-row {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 24px;
+                margin: 60px 0;
+            }
+            .stat-card {
+                background: var(--bg-white);
+                border-radius: var(--radius-lg);
+                padding: 32px 24px;
+                text-align: center;
+                box-shadow: var(--shadow-md);
+                transition: all var(--duration-normal) var(--ease-out);
+            }
+            .stat-card:hover {
+                transform: translateY(-4px);
+                box-shadow: var(--shadow-xl);
+            }
+            .stat-number {
+                font-family: var(--font-heading);
+                font-size: 2.5rem;
+                font-weight: 800;
+                color: var(--primary);
+                margin-bottom: 8px;
+            }
+            .stat-label {
+                font-size: 0.85rem;
+                color: var(--text-muted);
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+            .curriculum-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 24px;
+            }
+            .curriculum-item {
+                background: var(--bg-white);
+                border-radius: var(--radius-lg);
+                padding: 32px;
+                box-shadow: var(--shadow-md);
+                display: flex;
+                gap: 20px;
+                align-items: flex-start;
+                transition: all var(--duration-normal) var(--ease-out);
+            }
+            .curriculum-item:hover {
+                transform: translateY(-4px);
+                box-shadow: var(--shadow-xl);
+            }
+            .curriculum-icon {
+                width: 56px;
+                height: 56px;
+                min-width: 56px;
+                border-radius: var(--radius-md);
+                background: linear-gradient(
+                    135deg,
+                    var(--accent),
+                    var(--accent-dark)
+                );
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 1.5rem;
+            }
+            .curriculum-item h3 {
+                font-family: var(--font-body);
+                font-size: 1.1rem;
+                margin-bottom: 8px;
+            }
+            .curriculum-item p {
+                font-size: 0.9rem;
+                color: var(--text-muted);
+            }
+            .partners-strip {
+                display: flex;
+                gap: 48px;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                padding: 40px 0;
+            }
+            .partner-logo {
+                width: 140px;
+                height: 50px;
+                background: var(--bg-soft);
+                border-radius: var(--radius-md);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 0.8rem;
+                color: var(--text-muted);
+                font-weight: 600;
+                opacity: 0.6;
+                transition: opacity var(--duration-fast) var(--ease-out);
+            }
+            .partner-logo:hover {
+                opacity: 1;
+            }
+            @media (max-width: 768px) {
+                .stats-row {
+                    grid-template-columns: 1fr 1fr;
+                }
+                .curriculum-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    
+        <header class="header" id="header">
+            <div class="container nav-container">
+                <a href="index.html" class="logo"
+                    ><picture
+                        ><source
+                            srcset="assets/images/logo-mark.webp"
+                            type="image/webp" />
+                        <img
+                            src="assets/images/logo-mark.png"
+                            alt=""
+                            class="logo-icon"
+                            width="782"
+                            height="555"
+                            loading="eager" /></picture
+                    >Mama<span>Alice</span></a
+                >
+                <button class="mobile-menu-btn" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
+                    ☰
+                </button>
+                <nav class="nav-links" id="nav-links">
+                    <a href="index.html">Inicio</a>
+                    <a href="nosotros.html">Nosotros</a>
+                    <a href="comunidades.html">Proyectos</a>
+                    <a href="hospitality.html" class="active">Hospitality</a>
+                    <a href="transparencia.html">Transparencia</a>
+                    <a href="donar.html" class="btn btn--primary btn--sm"
+                        >Donar Ahora</a
+                    >
+                </nav>
             </div>
-        </section>
+        </header>
 
-        <!-- Stats -->
-        <div class="container">
-            <div class="stats-row">
-                <div class="stat-card reveal stagger-1">
-                    <div class="stat-number" data-count="85" data-suffix="%">0</div>
-                    <div class="stat-label">Inserción laboral</div>
+        <main id="main-content">
+            <section class="page-hero">
+                <picture>
+                    <source
+                        srcset="
+                            assets/images/hospitality_image_1782863355574.webp
+                        "
+                        type="image/webp"
+                    />
+                    <img
+                        src="assets/images/hospitality_image_1782863355574.png"
+                        alt="Hospitality Training Center"
+                        class="page-hero-bg"
+                        width="1024"
+                        height="1024"
+                        loading="eager"
+                        fetchpriority="high"
+                        decoding="async"
+                    />
+                </picture>
+                <div class="container page-hero-content">
+                    <h1>Hospitality Training Center</h1>
+                    <p>
+                        Formación técnica de excelencia en gastronomía y
+                        hotelería con inserción laboral garantizada.
+                    </p>
+                    <div class="breadcrumb">
+                        <a href="index.html">Inicio</a> /
+                        <span>Hospitality</span>
+                    </div>
                 </div>
-                <div class="stat-card reveal stagger-2">
-                    <div class="stat-number" data-count="6" data-suffix=" meses">0</div>
-                    <div class="stat-label">Duración programa</div>
-                </div>
-                <div class="stat-card reveal stagger-3">
-                    <div class="stat-number" data-count="12" data-suffix="">0</div>
-                    <div class="stat-label">Aliados empleadores</div>
-                </div>
-                <div class="stat-card reveal stagger-4">
-                    <div class="stat-number" data-count="350" data-prefix="+">0</div>
-                    <div class="stat-label">Egresados activos</div>
-                </div>
-            </div>
-        </div>
+            </section>
 
-        <!-- About HTC -->
-        <section class="section">
+            <!-- Stats -->
             <div class="container">
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
-                    <div class="reveal-left">
-                        <span style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 3px; color: var(--accent);">Nuestra propuesta</span>
-                        <h2 style="font-size: 2.5rem; margin: 12px 0 24px;">Más que formación técnica, una transformación de vida</h2>
-                        <p style="font-size: 1.05rem; line-height: 1.9; margin-bottom: 16px;">El Hospitality Training Center (HTC) es nuestro programa insignia. Formamos a jóvenes de comunidades vulnerables en las competencias técnicas y humanas que la industria del turismo y gastronomía demanda.</p>
-                        <p style="font-size: 1.05rem; line-height: 1.9; margin-bottom: 32px;">Nuestros egresados no solo obtienen un título, sino prácticas garantizadas y acompañamiento hasta su primera contratación formal.</p>
-                        <a href="donar.html" class="btn btn--primary">Apadrinar un estudiante →</a>
+                <div class="stats-row">
+                    <div class="stat-card reveal stagger-1">
+                        <div
+                            class="stat-number"
+                            data-count="85"
+                            data-suffix="%"
+                        >
+                            0
+                        </div>
+                        <div class="stat-label">Inserción laboral</div>
                     </div>
-                    <div class="reveal-right">
-                        <img src="assets/images/hospitality_image_1782863355574.png" alt="Estudiantes en la cocina profesional" style="border-radius: var(--radius-lg); box-shadow: var(--shadow-2xl); width: 100%; height: 450px; object-fit: cover;">
+                    <div class="stat-card reveal stagger-2">
+                        <div
+                            class="stat-number"
+                            data-count="6"
+                            data-suffix=" meses"
+                        >
+                            0
+                        </div>
+                        <div class="stat-label">Duración programa</div>
+                    </div>
+                    <div class="stat-card reveal stagger-3">
+                        <div class="stat-number" data-count="12" data-suffix="">
+                            0
+                        </div>
+                        <div class="stat-label">Aliados empleadores</div>
+                    </div>
+                    <div class="stat-card reveal stagger-4">
+                        <div
+                            class="stat-number"
+                            data-count="350"
+                            data-prefix="+"
+                        >
+                            0
+                        </div>
+                        <div class="stat-label">Egresados activos</div>
                     </div>
                 </div>
             </div>
-        </section>
 
-        <!-- Curriculum -->
-        <section class="section section--gray">
-            <div class="container">
-                <div class="section-header reveal">
-                    <span class="eyebrow">Currícula</span>
-                    <h2>Programa formativo integral</h2>
-                    <p>Diseñado junto a profesionales de la industria para garantizar empleabilidad inmediata.</p>
+            <!-- About HTC -->
+            <section class="section">
+                <div class="container">
+                    <div
+                        style="
+                            display: grid;
+                            grid-template-columns: 1fr 1fr;
+                            gap: 80px;
+                            align-items: center;
+                        "
+                    >
+                        <div class="reveal-left">
+                            <span
+                                style="
+                                    font-size: 0.8rem;
+                                    font-weight: 700;
+                                    text-transform: uppercase;
+                                    letter-spacing: 3px;
+                                    color: var(--accent);
+                                "
+                                >Nuestra propuesta</span
+                            >
+                            <h2 style="font-size: 2.5rem; margin: 12px 0 24px">
+                                Más que formación técnica, una transformación de
+                                vida
+                            </h2>
+                            <p
+                                style="
+                                    font-size: 1.05rem;
+                                    line-height: 1.9;
+                                    margin-bottom: 16px;
+                                "
+                            >
+                                El Hospitality Training Center (HTC) es nuestro
+                                programa insignia. Formamos a jóvenes de
+                                comunidades vulnerables en las competencias
+                                técnicas y humanas que la industria del turismo
+                                y gastronomía demanda.
+                            </p>
+                            <p
+                                style="
+                                    font-size: 1.05rem;
+                                    line-height: 1.9;
+                                    margin-bottom: 32px;
+                                "
+                            >
+                                Nuestros egresados no solo obtienen un título,
+                                sino prácticas garantizadas y acompañamiento
+                                hasta su primera contratación formal.
+                            </p>
+                            <a href="donar.html" class="btn btn--primary"
+                                >Apadrinar un estudiante →</a
+                            >
+                        </div>
+                        <div class="reveal-right">
+                            <picture>
+                                <source
+                                    srcset="
+                                        assets/images/hospitality_image_1782863355574.webp
+                                    "
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="assets/images/hospitality_image_1782863355574.png"
+                                    alt="Estudiantes en la cocina profesional"
+                                    style="
+                                        border-radius: var(--radius-lg);
+                                        box-shadow: var(--shadow-2xl);
+                                        width: 100%;
+                                        height: 450px;
+                                        object-fit: cover;
+                                    "
+                                    width="1024"
+                                    height="1024"
+                                    loading="lazy"
+                                    decoding="async"
+                                />
+                            </picture>
+                        </div>
+                    </div>
                 </div>
-                <div class="curriculum-grid">
-                    <div class="curriculum-item reveal stagger-1">
-                        <div class="curriculum-icon">🍳</div>
-                        <div>
-                            <h3>Alta Gastronomía</h3>
-                            <p>Cocina regional e internacional, técnicas modernas, mise en place profesional y control de costos.</p>
-                        </div>
-                    </div>
-                    <div class="curriculum-item reveal stagger-2">
-                        <div class="curriculum-icon">🏨</div>
-                        <div>
-                            <h3>Gestión Hotelera</h3>
-                            <p>Front desk, housekeeping, atención al huésped y protocolos de excelencia en servicio.</p>
-                        </div>
-                    </div>
-                    <div class="curriculum-item reveal stagger-3">
-                        <div class="curriculum-icon">🤝</div>
-                        <div>
-                            <h3>Habilidades Blandas</h3>
-                            <p>Liderazgo, comunicación efectiva, trabajo en equipo, resolución de conflictos y preparación para entrevistas.</p>
-                        </div>
-                    </div>
-                    <div class="curriculum-item reveal stagger-4">
-                        <div class="curriculum-icon">💼</div>
-                        <div>
-                            <h3>Prácticas Profesionales</h3>
-                            <p>Rotación garantizada en hoteles y restaurantes aliados con seguimiento pedagógico continuo.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Testimonial -->
-        <section class="section">
-            <div class="container">
-                <div style="display: grid; grid-template-columns: 1fr 1.3fr; gap: 60px; align-items: center;">
-                    <div class="reveal-left">
-                        <img src="assets/images/testimonial_student_1782863781130.png" alt="Egresada del HTC" style="border-radius: var(--radius-lg); box-shadow: var(--shadow-xl); width: 100%; height: 480px; object-fit: cover;">
+            <!-- Curriculum -->
+            <section class="section section--gray">
+                <div class="container">
+                    <div class="section-header reveal">
+                        <span class="eyebrow">Currícula</span>
+                        <h2>Programa formativo integral</h2>
+                        <p>
+                            Diseñado junto a profesionales de la industria para
+                            garantizar empleabilidad inmediata.
+                        </p>
                     </div>
-                    <div class="reveal-right">
-                        <div class="testimonial-card">
-                            <blockquote>"Cuando entré al HTC, no sabía ni hervir agua correctamente. Seis meses después, ya cocinaba platos que servía a turistas internacionales. Hoy trabajo en uno de los mejores restaurantes de Ayacucho y puedo mantener a mi familia."</blockquote>
-                            <div class="testimonial-author">
-                                <img src="assets/images/testimonial_student_1782863781130.png" alt="María C.">
-                                <div class="testimonial-author-info">
-                                    <h4>María C.</h4>
-                                    <p>Egresada 2024 · Chef de Partida</p>
+                    <div class="curriculum-grid">
+                        <div class="curriculum-item reveal stagger-1">
+                            <div class="curriculum-icon">🍳</div>
+                            <div>
+                                <h3>Alta Gastronomía</h3>
+                                <p>
+                                    Cocina regional e internacional, técnicas
+                                    modernas, mise en place profesional y
+                                    control de costos.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="curriculum-item reveal stagger-2">
+                            <div class="curriculum-icon">🏨</div>
+                            <div>
+                                <h3>Gestión Hotelera</h3>
+                                <p>
+                                    Front desk, housekeeping, atención al
+                                    huésped y protocolos de excelencia en
+                                    servicio.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="curriculum-item reveal stagger-3">
+                            <div class="curriculum-icon">🤝</div>
+                            <div>
+                                <h3>Habilidades Blandas</h3>
+                                <p>
+                                    Liderazgo, comunicación efectiva, trabajo en
+                                    equipo, resolución de conflictos y
+                                    preparación para entrevistas.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="curriculum-item reveal stagger-4">
+                            <div class="curriculum-icon">💼</div>
+                            <div>
+                                <h3>Prácticas Profesionales</h3>
+                                <p>
+                                    Rotación garantizada en hoteles y
+                                    restaurantes aliados con seguimiento
+                                    pedagógico continuo.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonial -->
+            <section class="section">
+                <div class="container">
+                    <div
+                        style="
+                            display: grid;
+                            grid-template-columns: 1fr 1.3fr;
+                            gap: 60px;
+                            align-items: center;
+                        "
+                    >
+                        <div class="reveal-left">
+                            <picture>
+                                <source
+                                    srcset="
+                                        assets/images/testimonial_student_1782863781130.webp
+                                    "
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="assets/images/testimonial_student_1782863781130.png"
+                                    alt="Egresada del HTC"
+                                    style="
+                                        border-radius: var(--radius-lg);
+                                        box-shadow: var(--shadow-xl);
+                                        width: 100%;
+                                        height: 480px;
+                                        object-fit: cover;
+                                    "
+                                    width="1024"
+                                    height="1024"
+                                    loading="lazy"
+                                    decoding="async"
+                                />
+                            </picture>
+                        </div>
+                        <div class="reveal-right">
+                            <div class="testimonial-card">
+                                <blockquote>
+                                    "Cuando entré al HTC, no sabía ni hervir
+                                    agua correctamente. Seis meses después, ya
+                                    cocinaba platos que servía a turistas
+                                    internacionales. Hoy trabajo en uno de los
+                                    mejores restaurantes de Ayacucho y puedo
+                                    mantener a mi familia."
+                                </blockquote>
+                                <div class="testimonial-author">
+                                    <picture>
+                                        <source
+                                            srcset="
+                                                assets/images/testimonial_student_1782863781130.webp
+                                            "
+                                            type="image/webp"
+                                        />
+                                        <img
+                                            src="assets/images/testimonial_student_1782863781130.png"
+                                            alt="María C."
+                                            width="1024"
+                                            height="1024"
+                                            loading="lazy"
+                                            decoding="async"
+                                        />
+                                    </picture>
+                                    <div class="testimonial-author-info">
+                                        <h4>María C.</h4>
+                                        <p>Egresada 2024 · Chef de Partida</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Partners -->
-        <section class="section section--gray">
+            <!-- Partners -->
+            <section class="section section--gray">
+                <div class="container">
+                    <div class="section-header reveal">
+                        <span class="eyebrow">Aliados</span>
+                        <h2>Empresas que confían en nuestro talento</h2>
+                        <p>
+                            Hoteles, restaurantes y empresas de turismo que
+                            emplean y co-forman a nuestros estudiantes.
+                        </p>
+                    </div>
+                    <div class="partners-strip reveal">
+                        <div class="partner-logo">Hotel Ayacucho</div>
+                        <div class="partner-logo">La Casa del Sol</div>
+                        <div class="partner-logo">Restaurante Wari</div>
+                        <div class="partner-logo">Sumaq Hotels</div>
+                        <div class="partner-logo">Turismo Andino</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA -->
+            <section class="cta-band">
+                <div class="container reveal">
+                    <h2>Apadrina a un futuro chef</h2>
+                    <p>
+                        Con €50 al mes cubres la formación completa de un
+                        estudiante en nuestro centro de capacitación.
+                    </p>
+                    <div class="btn-group" style="justify-content: center">
+                        <a href="donar.html" class="btn btn--primary btn--lg"
+                            >Apadrinar ahora →</a
+                        >
+                        <a href="#" class="btn btn--white btn--lg"
+                            >Ser empresa aliada</a
+                        >
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
             <div class="container">
-                <div class="section-header reveal">
-                    <span class="eyebrow">Aliados</span>
-                    <h2>Empresas que confían en nuestro talento</h2>
-                    <p>Hoteles, restaurantes y empresas de turismo que emplean y co-forman a nuestros estudiantes.</p>
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <a href="index.html" class="logo"
+                            ><picture
+                                ><source
+                                    srcset="assets/images/logo-mark.webp"
+                                    type="image/webp" />
+                                <img
+                                    src="assets/images/logo-mark.png"
+                                    alt=""
+                                    class="logo-icon"
+                                    width="782"
+                                    height="555"
+                                    loading="eager" /></picture
+                            >Mama<span>Alice</span></a
+                        >
+                        <p>
+                            Transformando el futuro de la juventud ayacuchana
+                            mediante educación, soporte emocional y formación
+                            técnica de excelencia.
+                        </p>
+                        <div class="social-links">
+                            <a
+                                href="#"
+                                class="social-link"
+                                aria-label="Facebook"
+                                >f</a
+                            ><a
+                                href="#"
+                                class="social-link"
+                                aria-label="Instagram"
+                                >ig</a
+                            ><a
+                                href="#"
+                                class="social-link"
+                                aria-label="LinkedIn"
+                                >in</a
+                            ><a
+                                href="#"
+                                class="social-link"
+                                aria-label="YouTube"
+                                >yt</a
+                            >
+                        </div>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Navegación</h4>
+                        <a href="index.html">Inicio</a
+                        ><a href="nosotros.html">Sobre Nosotros</a
+                        ><a href="comunidades.html">Proyectos</a
+                        ><a href="hospitality.html">Hospitality Center</a
+                        ><a href="transparencia.html">Transparencia</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Involúcrate</h4>
+                        <a href="donar.html">Donar</a
+                        ><a href="#">Voluntariado</a
+                        ><a href="#">Empresas Aliadas</a
+                        ><a href="#">Trabaja con Nosotros</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Contacto</h4>
+                        <a href="#">Ayacucho, Perú</a
+                        ><a href="mailto:info@mamaalice.org"
+                            >info@mamaalice.org</a
+                        ><a href="tel:+5166123456">+51 66 123 456</a>
+                    </div>
                 </div>
-                <div class="partners-strip reveal">
-                    <div class="partner-logo">Hotel Ayacucho</div>
-                    <div class="partner-logo">La Casa del Sol</div>
-                    <div class="partner-logo">Restaurante Wari</div>
-                    <div class="partner-logo">Sumaq Hotels</div>
-                    <div class="partner-logo">Turismo Andino</div>
+                <div class="footer-bottom">
+                    <p>© 2026 ONG Mama Alice. Todos los derechos reservados.</p>
+                    <div>
+                        <a href="#">Política de Privacidad</a> ·
+                        <a href="#">Aviso Legal</a>
+                    </div>
                 </div>
             </div>
-        </section>
-
-        <!-- CTA -->
-        <section class="cta-band">
-            <div class="container reveal">
-                <h2>Apadrina a un futuro chef</h2>
-                <p>Con €50 al mes cubres la formación completa de un estudiante en nuestro centro de capacitación.</p>
-                <div class="btn-group" style="justify-content: center;">
-                    <a href="donar.html" class="btn btn--primary btn--lg">Apadrinar ahora →</a>
-                    <a href="#" class="btn btn--white btn--lg">Ser empresa aliada</a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand"><a href="index.html" class="logo">Mama<span>Alice.</span></a><p>Transformando el futuro de la juventud ayacuchana mediante educación, soporte emocional y formación técnica de excelencia.</p><div class="social-links"><a href="#" class="social-link">f</a><a href="#" class="social-link">ig</a><a href="#" class="social-link">in</a><a href="#" class="social-link">yt</a></div></div>
-                <div class="footer-col"><h4>Navegación</h4><a href="index.html">Inicio</a><a href="nosotros.html">Sobre Nosotros</a><a href="comunidades.html">Proyectos</a><a href="hospitality.html">Hospitality Center</a><a href="transparencia.html">Transparencia</a></div>
-                <div class="footer-col"><h4>Involúcrate</h4><a href="donar.html">Donar</a><a href="#">Voluntariado</a><a href="#">Empresas Aliadas</a><a href="#">Trabaja con Nosotros</a></div>
-                <div class="footer-col"><h4>Contacto</h4><a href="#">Ayacucho, Perú</a><a href="mailto:info@mamaalice.org">info@mamaalice.org</a><a href="tel:+5166123456">+51 66 123 456</a></div>
-            </div>
-            <div class="footer-bottom"><p>© 2026 ONG Mama Alice. Todos los derechos reservados.</p><div><a href="#">Política de Privacidad</a> · <a href="#">Aviso Legal</a></div></div>
-        </div>
-    </footer>
+        </footer>
+        <script src="js/components.js"></script>
     <script src="js/main.js"></script>
-</body>
+    </body>
 </html>

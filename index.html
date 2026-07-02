@@ -1,301 +1,795 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ONG Mama Alice | Transformando vidas en Ayacucho, Perú</title>
-    <meta name="description" content="Mama Alice empodera a la juventud ayacuchana mediante educación, soporte psicosocial y formación técnica de excelencia. Conoce nuestro impacto.">
-    <meta name="keywords" content="ONG, Mama Alice, Ayacucho, Perú, educación, juventud, desarrollo social, hospitalidad">
-    <meta property="og:title" content="ONG Mama Alice — Transformando vidas en Ayacucho">
-    <meta property="og:description" content="Educación, soporte psicosocial y formación técnica de excelencia para la juventud ayacuchana.">
-    <meta property="og:type" content="website">
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ONG Mama Alice | Transformando vidas en Ayacucho, Perú</title>
+        <meta
+            name="description"
+            content="Mama Alice empodera a la juventud ayacuchana mediante educación, soporte psicosocial y formación técnica de excelencia. Conoce nuestro impacto."
+        />
+        <meta
+            name="keywords"
+            content="ONG, Mama Alice, Ayacucho, Perú, educación, juventud, desarrollo social, hospitalidad"
+        />
+        <meta
+            property="og:title"
+            content="ONG Mama Alice — Transformando vidas en Ayacucho"
+        />
+        <meta
+            property="og:description"
+            content="Educación, soporte psicosocial y formación técnica de excelencia para la juventud ayacuchana."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://tu-dominio-aqui.org/" />
+        <meta property="og:site_name" content="ONG Mama Alice" />
+        <meta property="og:locale" content="es_PE" />
+        <meta
+            property="og:image"
+            content="https://tu-dominio-aqui.org/assets/images/logo.png"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+            name="twitter:title"
+            content="ONG Mama Alice — Transformando vidas en Ayacucho"
+        />
+        <meta
+            name="twitter:description"
+            content="Educación, soporte psicosocial y formación técnica de excelencia para la juventud ayacuchana."
+        />
+        <meta
+            name="twitter:image"
+            content="https://tu-dominio-aqui.org/assets/images/logo.png"
+        />
+        <link rel="canonical" href="https://tu-dominio-aqui.org/" />
+        <meta name="theme-color" content="#0F2B4A" />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="assets/images/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="assets/images/favicon-16x16.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="512x512"
+            href="assets/images/favicon-512x512.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="assets/images/apple-touch-icon.png"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap"
+        />
+        <link rel="stylesheet" href="css/styles.css" />
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "NGO",
+                "name": "ONG Mama Alice",
+                "url": "https://tu-dominio-aqui.org/",
+                "logo": "https://tu-dominio-aqui.org/assets/images/logo.png",
+                "description": "Mama Alice empodera a la juventud ayacuchana mediante educación, soporte psicosocial y formación técnica de excelencia.",
+                "address": {
+                    "@type": "PostalAddress",
+                    "addressLocality": "Ayacucho",
+                    "addressCountry": "PE"
+                },
+                "email": "info@mamaalice.org",
+                "telephone": "+51-66-123-456"
+            }
+        </script>
+    </head>
+    <body>
+        <a href="#main-content" class="skip-link"
+            >Saltar al contenido principal</a
+        >
 
-    <!-- ═══════ HEADER ═══════ -->
-    <header class="header" id="header">
-        <div class="container nav-container">
-            <a href="index.html" class="logo">Mama<span>Alice.</span></a>
-            <button class="mobile-menu-btn" aria-label="Abrir menú">☰</button>
-            <nav class="nav-links" id="nav-links">
-                <a href="index.html" class="active">Inicio</a>
-                <a href="nosotros.html">Nosotros</a>
-                <a href="comunidades.html">Proyectos</a>
-                <a href="hospitality.html">Hospitality</a>
-                <a href="transparencia.html">Transparencia</a>
-                <a href="donar.html" class="btn btn--primary btn--sm">Donar Ahora</a>
-            </nav>
-        </div>
-    </header>
+        <!-- ═══════ HEADER ═══════ -->
+        <header class="header" id="header">
+            <div class="container nav-container">
+                <a href="index.html" class="logo"
+                    ><picture
+                        ><source
+                            srcset="assets/images/logo-mark.webp"
+                            type="image/webp" />
+                        <img
+                            src="assets/images/logo-mark.png"
+                            alt=""
+                            class="logo-icon"
+                            width="782"
+                            height="555"
+                            loading="eager" /></picture
+                    >Mama<span>Alice</span></a
+                >
+                <button
+                    class="mobile-menu-btn"
+                    aria-label="Abrir menú"
+                    aria-expanded="false"
+                    aria-controls="nav-links"
+                >
+                    ☰
+                </button>
+                <nav class="nav-links" id="nav-links">
+                    <a href="index.html" class="active">Inicio</a>
+                    <a href="nosotros.html">Nosotros</a>
+                    <a href="comunidades.html">Proyectos</a>
+                    <a href="hospitality.html">Hospitality</a>
+                    <a href="transparencia.html">Transparencia</a>
+                    <a href="donar.html" class="btn btn--primary btn--sm"
+                        >Donar Ahora</a
+                    >
+                </nav>
+            </div>
+        </header>
 
-    <main>
+        <main id="main-content">
+            <!-- ═══════ HERO ═══════ -->
+            <section class="hero" id="hero">
+                <picture>
+                    <source
+                        srcset="assets/images/hero_image_1782863341822.webp"
+                        type="image/webp"
+                    />
+                    <img
+                        src="assets/images/hero_image_1782863341822.png"
+                        alt="Joven esperanzado en Ayacucho"
+                        class="hero-bg parallax"
+                        width="1024"
+                        height="1024"
+                        loading="eager"
+                        fetchpriority="high"
+                        decoding="async"
+                        data-speed="0.15"
+                    />
+                </picture>
+                <div class="hero-overlay"></div>
+                <div class="container">
+                    <div class="hero-content">
+                        <span class="eyebrow">ONG desde Ayacucho, Perú</span>
+                        <h1>
+                            Donde el <em>origen</em> no define el
+                            <em>destino</em>
+                        </h1>
+                        <p>
+                            Educación, soporte psicosocial y formación técnica
+                            de excelencia para que cada joven construya su
+                            propio futuro.
+                        </p>
+                        <div class="btn-group">
+                            <a
+                                href="donar.html"
+                                class="btn btn--primary btn--lg"
+                                >Haz tu impacto hoy →</a
+                            >
+                            <a
+                                href="nosotros.html"
+                                class="btn btn--white btn--lg"
+                                >Nuestra historia</a
+                            >
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-scroll-indicator">
+                    <span>Descubre más</span>
+                    <div class="arrow"></div>
+                </div>
+            </section>
 
-        <!-- ═══════ HERO ═══════ -->
-        <section class="hero" id="hero">
-            <img src="assets/images/hero_image_1782863341822.png" alt="Joven esperanzado en Ayacucho" class="hero-bg parallax" data-speed="0.15">
-            <div class="hero-overlay"></div>
+            <!-- ═══════ IMPACT BAR (KPIs) ═══════ -->
             <div class="container">
-                <div class="hero-content">
-                    <span class="eyebrow">ONG desde Ayacucho, Perú</span>
-                    <h1>Donde el <em>origen</em> no define el <em>destino</em></h1>
-                    <p>Educación, soporte psicosocial y formación técnica de excelencia para que cada joven construya su propio futuro.</p>
-                    <div class="btn-group">
-                        <a href="donar.html" class="btn btn--primary btn--lg">Haz tu impacto hoy →</a>
-                        <a href="nosotros.html" class="btn btn--white btn--lg">Nuestra historia</a>
-                    </div>
-                </div>
-            </div>
-            <div class="hero-scroll-indicator">
-                <span>Descubre más</span>
-                <div class="arrow"></div>
-            </div>
-        </section>
-
-
-        <!-- ═══════ IMPACT BAR (KPIs) ═══════ -->
-        <div class="container">
-            <div class="impact-bar reveal">
-                <div class="impact-grid">
-                    <div class="impact-item">
-                        <div class="number"><span data-count="2.5" data-suffix="K" data-decimals="1">0</span></div>
-                        <div class="label">Jóvenes Capacitados</div>
-                    </div>
-                    <div class="impact-item">
-                        <div class="number"><span data-count="85" data-suffix="%">0</span></div>
-                        <div class="label">Inserción Laboral</div>
-                    </div>
-                    <div class="impact-item">
-                        <div class="number"><span data-count="500" data-prefix="+">0</span></div>
-                        <div class="label">Familias Apoyadas</div>
-                    </div>
-                    <div class="impact-item">
-                        <div class="number"><span data-count="15" data-suffix=" años">0</span></div>
-                        <div class="label">De trayectoria</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <!-- ═══════ ABOUT PREVIEW ═══════ -->
-        <section class="section" id="about-preview">
-            <div class="bg-shapes"><div class="shape shape-1"></div><div class="shape shape-2"></div></div>
-            <div class="container">
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;">
-                    <div class="reveal-left">
-                        <span class="section-header" style="text-align: left; margin: 0 0 0 0;">
-                            <span class="eyebrow">Quiénes somos</span>
-                        </span>
-                        <h2 style="font-size: clamp(2rem, 4vw, 2.8rem); margin-bottom: 20px;">Una historia de <em style="color: var(--accent);">esperanza</em> nacida en los Andes</h2>
-                        <p style="font-size: 1.05rem; line-height: 1.9; margin-bottom: 16px;">Mama Alice nació de la convicción de que ningún joven debería ver limitado su futuro por su lugar de nacimiento o condición económica.</p>
-                        <p style="font-size: 1.05rem; line-height: 1.9; margin-bottom: 32px;">Desde Ayacucho, construimos puentes entre la vulnerabilidad y la profesionalización, mediante programas integrales que abarcan la salud emocional, la educación y la formación técnica.</p>
-                        <a href="nosotros.html" class="btn btn--outline">Conoce nuestra historia →</a>
-                    </div>
-                    <div class="reveal-right">
-                        <img src="assets/images/historical_founder_1782863423506.png" alt="Historia de Mama Alice" style="border-radius: var(--radius-lg); box-shadow: var(--shadow-2xl);">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- ═══════ PILLARS / PROGRAMS ═══════ -->
-        <section class="section section--gray" id="programs">
-            <div class="container">
-                <div class="section-header reveal">
-                    <span class="eyebrow">Nuestros Pilares</span>
-                    <h2>Intervención integral, impacto real</h2>
-                    <p>Cada programa está diseñado científicamente para romper el ciclo de pobreza y abrir caminos hacia la autonomía profesional.</p>
-                </div>
-
-                <div class="card-grid card-grid--3">
-                    <!-- Card 1 -->
-                    <div class="card reveal stagger-1">
-                        <div class="card-image-wrapper">
-                            <img src="assets/images/community_image_1782863348941.png" alt="Soporte Psicosocial" class="card-image">
-                            <span class="card-tag">Comunidad</span>
+                <div class="impact-bar reveal">
+                    <div class="impact-grid">
+                        <div class="impact-item">
+                            <div class="number">
+                                <span
+                                    data-count="2.5"
+                                    data-suffix="K"
+                                    data-decimals="1"
+                                    >0</span
+                                >
+                            </div>
+                            <div class="label">Jóvenes Capacitados</div>
                         </div>
-                        <div class="card-body">
-                            <h3>Soporte Psicosocial</h3>
-                            <p>Acompañamiento psicológico y emocional para superar traumas y fortalecer la resiliencia familiar.</p>
-                            <a href="comunidades.html" class="card-link">Ver programa <span class="arrow-icon">→</span></a>
+                        <div class="impact-item">
+                            <div class="number">
+                                <span data-count="85" data-suffix="%">0</span>
+                            </div>
+                            <div class="label">Inserción Laboral</div>
                         </div>
-                    </div>
-
-                    <!-- Card 2 -->
-                    <div class="card reveal stagger-2">
-                        <div class="card-image-wrapper">
-                            <img src="assets/images/volunteer_team_1782863788228.png" alt="Refuerzo Escolar" class="card-image">
-                            <span class="card-tag">Educación</span>
+                        <div class="impact-item">
+                            <div class="number">
+                                <span data-count="500" data-prefix="+">0</span>
+                            </div>
+                            <div class="label">Familias Apoyadas</div>
                         </div>
-                        <div class="card-body">
-                            <h3>Refuerzo Escolar</h3>
-                            <p>Tutorías especializadas y apoyo pedagógico para prevenir la deserción escolar en zonas rurales de alto riesgo.</p>
-                            <a href="comunidades.html" class="card-link">Ver programa <span class="arrow-icon">→</span></a>
-                        </div>
-                    </div>
-
-                    <!-- Card 3 -->
-                    <div class="card reveal stagger-3">
-                        <div class="card-image-wrapper">
-                            <img src="assets/images/hospitality_image_1782863355574.png" alt="Hospitality Training Center" class="card-image">
-                            <span class="card-tag">Formación</span>
-                        </div>
-                        <div class="card-body">
-                            <h3>Hospitality Training</h3>
-                            <p>Formación técnica en gastronomía y hotelería con inserción laboral inmediata garantizada.</p>
-                            <a href="hospitality.html" class="card-link">Ver programa <span class="arrow-icon">→</span></a>
+                        <div class="impact-item">
+                            <div class="number">
+                                <span data-count="15" data-suffix=" años"
+                                    >0</span
+                                >
+                            </div>
+                            <div class="label">De trayectoria</div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
 
-
-        <!-- ═══════ TESTIMONIAL ═══════ -->
-        <section class="section" id="testimonial">
-            <div class="container">
-                <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 60px; align-items: center;">
-                    <div class="reveal-left">
-                        <img src="assets/images/testimonial_student_1782863781130.png" alt="María, egresada del Hospitality Training Center" style="border-radius: var(--radius-lg); box-shadow: var(--shadow-xl); width: 100%; height: 480px; object-fit: cover;">
+            <!-- ═══════ ABOUT PREVIEW ═══════ -->
+            <section class="section" id="about-preview">
+                <div class="bg-shapes">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                </div>
+                <div class="container">
+                    <div
+                        style="
+                            display: grid;
+                            grid-template-columns: 1fr 1fr;
+                            gap: 80px;
+                            align-items: center;
+                        "
+                    >
+                        <div class="reveal-left">
+                            <span
+                                class="section-header"
+                                style="text-align: left; margin: 0 0 0 0"
+                            >
+                                <span class="eyebrow">Quiénes somos</span>
+                            </span>
+                            <h2
+                                style="
+                                    font-size: clamp(2rem, 4vw, 2.8rem);
+                                    margin-bottom: 20px;
+                                "
+                            >
+                                Una historia de
+                                <em style="color: var(--accent)">esperanza</em>
+                                nacida en los Andes
+                            </h2>
+                            <p
+                                style="
+                                    font-size: 1.05rem;
+                                    line-height: 1.9;
+                                    margin-bottom: 16px;
+                                "
+                            >
+                                Mama Alice nació de la convicción de que ningún
+                                joven debería ver limitado su futuro por su
+                                lugar de nacimiento o condición económica.
+                            </p>
+                            <p
+                                style="
+                                    font-size: 1.05rem;
+                                    line-height: 1.9;
+                                    margin-bottom: 32px;
+                                "
+                            >
+                                Desde Ayacucho, construimos puentes entre la
+                                vulnerabilidad y la profesionalización, mediante
+                                programas integrales que abarcan la salud
+                                emocional, la educación y la formación técnica.
+                            </p>
+                            <a href="nosotros.html" class="btn btn--outline"
+                                >Conoce nuestra historia →</a
+                            >
+                        </div>
+                        <div class="reveal-right">
+                            <picture>
+                                <source
+                                    srcset="
+                                        assets/images/historical_founder_1782863423506.webp
+                                    "
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="assets/images/historical_founder_1782863423506.png"
+                                    alt="Historia de Mama Alice"
+                                    style="
+                                        border-radius: var(--radius-lg);
+                                        box-shadow: var(--shadow-2xl);
+                                    "
+                                    width="1024"
+                                    height="1024"
+                                    loading="lazy"
+                                    decoding="async"
+                                />
+                            </picture>
+                        </div>
                     </div>
-                    <div class="reveal-right">
-                        <div class="testimonial-card">
-                            <blockquote>"Antes de Mama Alice, mi única opción era el trabajo informal. Hoy soy chef profesional en uno de los mejores hoteles de la región. Este programa no solo me dio una carrera, me devolvió la dignidad."</blockquote>
-                            <div class="testimonial-author">
-                                <img src="assets/images/testimonial_student_1782863781130.png" alt="María C.">
-                                <div class="testimonial-author-info">
-                                    <h4>María C.</h4>
-                                    <p>Egresada 2024 — Hospitality Training Center</p>
+                </div>
+            </section>
+
+            <!-- ═══════ PILLARS / PROGRAMS ═══════ -->
+            <section class="section section--gray" id="programs">
+                <div class="container">
+                    <div class="section-header reveal">
+                        <span class="eyebrow">Nuestros Pilares</span>
+                        <h2>Intervención integral, impacto real</h2>
+                        <p>
+                            Cada programa está diseñado científicamente para
+                            romper el ciclo de pobreza y abrir caminos hacia la
+                            autonomía profesional.
+                        </p>
+                    </div>
+
+                    <div class="card-grid card-grid--3">
+                        <!-- Card 1 -->
+                        <div class="card reveal stagger-1">
+                            <div class="card-image-wrapper">
+                                <picture>
+                                    <source
+                                        srcset="
+                                            assets/images/community_image_1782863348941.webp
+                                        "
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="assets/images/community_image_1782863348941.png"
+                                        alt="Soporte Psicosocial"
+                                        class="card-image"
+                                        width="1024"
+                                        height="1024"
+                                        loading="lazy"
+                                        decoding="async"
+                                    />
+                                </picture>
+                                <span class="card-tag">Comunidad</span>
+                            </div>
+                            <div class="card-body">
+                                <h3>Soporte Psicosocial</h3>
+                                <p>
+                                    Acompañamiento psicológico y emocional para
+                                    superar traumas y fortalecer la resiliencia
+                                    familiar.
+                                </p>
+                                <a href="comunidades.html" class="card-link"
+                                    >Ver programa
+                                    <span class="arrow-icon">→</span></a
+                                >
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="card reveal stagger-2">
+                            <div class="card-image-wrapper">
+                                <picture>
+                                    <source
+                                        srcset="
+                                            assets/images/volunteer_team_1782863788228.webp
+                                        "
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="assets/images/volunteer_team_1782863788228.png"
+                                        alt="Refuerzo Escolar"
+                                        class="card-image"
+                                        width="1024"
+                                        height="1024"
+                                        loading="lazy"
+                                        decoding="async"
+                                    />
+                                </picture>
+                                <span class="card-tag">Educación</span>
+                            </div>
+                            <div class="card-body">
+                                <h3>Refuerzo Escolar</h3>
+                                <p>
+                                    Tutorías especializadas y apoyo pedagógico
+                                    para prevenir la deserción escolar en zonas
+                                    rurales de alto riesgo.
+                                </p>
+                                <a href="comunidades.html" class="card-link"
+                                    >Ver programa
+                                    <span class="arrow-icon">→</span></a
+                                >
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="card reveal stagger-3">
+                            <div class="card-image-wrapper">
+                                <picture>
+                                    <source
+                                        srcset="
+                                            assets/images/hospitality_image_1782863355574.webp
+                                        "
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="assets/images/hospitality_image_1782863355574.png"
+                                        alt="Hospitality Training Center"
+                                        class="card-image"
+                                        width="1024"
+                                        height="1024"
+                                        loading="lazy"
+                                        decoding="async"
+                                    />
+                                </picture>
+                                <span class="card-tag">Formación</span>
+                            </div>
+                            <div class="card-body">
+                                <h3>Hospitality Training</h3>
+                                <p>
+                                    Formación técnica en gastronomía y hotelería
+                                    con inserción laboral inmediata garantizada.
+                                </p>
+                                <a href="hospitality.html" class="card-link"
+                                    >Ver programa
+                                    <span class="arrow-icon">→</span></a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ═══════ TESTIMONIAL ═══════ -->
+            <section class="section" id="testimonial">
+                <div class="container">
+                    <div
+                        style="
+                            display: grid;
+                            grid-template-columns: 1fr 1.2fr;
+                            gap: 60px;
+                            align-items: center;
+                        "
+                    >
+                        <div class="reveal-left">
+                            <picture>
+                                <source
+                                    srcset="
+                                        assets/images/testimonial_student_1782863781130.webp
+                                    "
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="assets/images/testimonial_student_1782863781130.png"
+                                    alt="María, egresada del Hospitality Training Center"
+                                    style="
+                                        border-radius: var(--radius-lg);
+                                        box-shadow: var(--shadow-xl);
+                                        width: 100%;
+                                        height: 480px;
+                                        object-fit: cover;
+                                    "
+                                    width="1024"
+                                    height="1024"
+                                    loading="lazy"
+                                    decoding="async"
+                                />
+                            </picture>
+                        </div>
+                        <div class="reveal-right">
+                            <div class="testimonial-card">
+                                <blockquote>
+                                    "Antes de Mama Alice, mi única opción era el
+                                    trabajo informal. Hoy soy chef profesional
+                                    en uno de los mejores hoteles de la región.
+                                    Este programa no solo me dio una carrera, me
+                                    devolvió la dignidad."
+                                </blockquote>
+                                <div class="testimonial-author">
+                                    <picture>
+                                        <source
+                                            srcset="
+                                                assets/images/testimonial_student_1782863781130.webp
+                                            "
+                                            type="image/webp"
+                                        />
+                                        <img
+                                            src="assets/images/testimonial_student_1782863781130.png"
+                                            alt="María C."
+                                            width="1024"
+                                            height="1024"
+                                            loading="lazy"
+                                            decoding="async"
+                                        />
+                                    </picture>
+                                    <div class="testimonial-author-info">
+                                        <h4>María C.</h4>
+                                        <p>
+                                            Egresada 2024 — Hospitality Training
+                                            Center
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
+            <!-- ═══════ TRANSPARENCY PREVIEW ═══════ -->
+            <section class="section section--gray" id="transparency-preview">
+                <div class="container">
+                    <div class="section-header reveal">
+                        <span class="eyebrow">Transparencia total</span>
+                        <h2>Cada euro, cada sol, rendido</h2>
+                        <p>
+                            Creemos que la confianza se gana con hechos. Cada
+                            donación se audita y se reporta públicamente.
+                        </p>
+                    </div>
+                    <div
+                        style="
+                            display: grid;
+                            grid-template-columns: 1fr 1fr;
+                            gap: 48px;
+                        "
+                    >
+                        <div class="progress-card reveal stagger-1">
+                            <h3
+                                style="
+                                    margin-bottom: 28px;
+                                    font-family: var(--font-body);
+                                    font-size: 1.2rem;
+                                "
+                            >
+                                Distribución de Fondos 2025
+                            </h3>
+                            <div class="progress-item">
+                                <div class="progress-label">
+                                    <span>Programas Educativos</span
+                                    ><span class="percentage">45%</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div
+                                        class="progress-fill"
+                                        data-width="45%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="progress-item">
+                                <div class="progress-label">
+                                    <span>Soporte Psicosocial</span
+                                    ><span class="percentage">20%</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div
+                                        class="progress-fill"
+                                        data-width="20%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="progress-item">
+                                <div class="progress-label">
+                                    <span>Hospitality Center</span
+                                    ><span class="percentage">18%</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div
+                                        class="progress-fill"
+                                        data-width="18%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="progress-item">
+                                <div class="progress-label">
+                                    <span>Administración</span
+                                    ><span class="percentage">12%</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div
+                                        class="progress-fill"
+                                        data-width="12%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="progress-item">
+                                <div class="progress-label">
+                                    <span>Comunicación</span
+                                    ><span class="percentage">5%</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div
+                                        class="progress-fill"
+                                        data-width="5%"
+                                    ></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="progress-card reveal stagger-2">
+                            <h3
+                                style="
+                                    margin-bottom: 28px;
+                                    font-family: var(--font-body);
+                                    font-size: 1.2rem;
+                                "
+                            >
+                                Origen de los Fondos
+                            </h3>
+                            <div class="progress-item">
+                                <div class="progress-label">
+                                    <span>Cooperación Internacional</span
+                                    ><span class="percentage">42%</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div
+                                        class="progress-fill"
+                                        data-width="42%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="progress-item">
+                                <div class="progress-label">
+                                    <span>Donantes Privados (Europa)</span
+                                    ><span class="percentage">28%</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div
+                                        class="progress-fill"
+                                        data-width="28%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="progress-item">
+                                <div class="progress-label">
+                                    <span>Subvenciones Públicas</span
+                                    ><span class="percentage">18%</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div
+                                        class="progress-fill"
+                                        data-width="18%"
+                                    ></div>
+                                </div>
+                            </div>
+                            <div class="progress-item">
+                                <div class="progress-label">
+                                    <span>Ingresos propios (HTC)</span
+                                    ><span class="percentage">12%</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div
+                                        class="progress-fill"
+                                        data-width="12%"
+                                    ></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        style="text-align: center; margin-top: 48px"
+                        class="reveal"
+                    >
+                        <a href="transparencia.html" class="btn btn--outline"
+                            >Explora todos los informes →</a
+                        >
+                    </div>
+                </div>
+            </section>
 
-        <!-- ═══════ TRANSPARENCY PREVIEW ═══════ -->
-        <section class="section section--gray" id="transparency-preview">
+            <!-- ═══════ NEWSLETTER CTA ═══════ -->
+            <section class="cta-band" id="newsletter">
+                <div class="container reveal">
+                    <h2>Únete a nuestra red de cambio</h2>
+                    <p>
+                        Recibe historias de impacto, novedades de proyectos y
+                        oportunidades de voluntariado directamente en tu correo.
+                    </p>
+                    <form
+                        class="newsletter-form"
+                        onsubmit="
+                            event.preventDefault();
+                            alert(
+                                '¡Gracias por suscribirte! Pronto recibirás noticias.',
+                            );
+                        "
+                    >
+                        <label for="newsletter-email" class="sr-only"
+                            >Tu correo electrónico</label
+                        >
+                        <input
+                            type="email"
+                            id="newsletter-email"
+                            placeholder="Tu correo electrónico"
+                            autocomplete="email"
+                            inputmode="email"
+                            required
+                        />
+                        <button type="submit" class="btn btn--primary">
+                            Suscribirme
+                        </button>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+        <!-- ═══════ FOOTER ═══════ -->
+        <footer class="footer" id="footer">
             <div class="container">
-                <div class="section-header reveal">
-                    <span class="eyebrow">Transparencia total</span>
-                    <h2>Cada euro, cada sol, rendido</h2>
-                    <p>Creemos que la confianza se gana con hechos. Cada donación se audita y se reporta públicamente.</p>
-                </div>
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px;">
-                    <div class="progress-card reveal stagger-1">
-                        <h3 style="margin-bottom: 28px; font-family: var(--font-body); font-size: 1.2rem;">Distribución de Fondos 2025</h3>
-                        <div class="progress-item">
-                            <div class="progress-label"><span>Programas Educativos</span><span class="percentage">45%</span></div>
-                            <div class="progress-track"><div class="progress-fill" data-width="45%"></div></div>
-                        </div>
-                        <div class="progress-item">
-                            <div class="progress-label"><span>Soporte Psicosocial</span><span class="percentage">20%</span></div>
-                            <div class="progress-track"><div class="progress-fill" data-width="20%"></div></div>
-                        </div>
-                        <div class="progress-item">
-                            <div class="progress-label"><span>Hospitality Center</span><span class="percentage">18%</span></div>
-                            <div class="progress-track"><div class="progress-fill" data-width="18%"></div></div>
-                        </div>
-                        <div class="progress-item">
-                            <div class="progress-label"><span>Administración</span><span class="percentage">12%</span></div>
-                            <div class="progress-track"><div class="progress-fill" data-width="12%"></div></div>
-                        </div>
-                        <div class="progress-item">
-                            <div class="progress-label"><span>Comunicación</span><span class="percentage">5%</span></div>
-                            <div class="progress-track"><div class="progress-fill" data-width="5%"></div></div>
-                        </div>
-                    </div>
-                    <div class="progress-card reveal stagger-2">
-                        <h3 style="margin-bottom: 28px; font-family: var(--font-body); font-size: 1.2rem;">Origen de los Fondos</h3>
-                        <div class="progress-item">
-                            <div class="progress-label"><span>Cooperación Internacional</span><span class="percentage">42%</span></div>
-                            <div class="progress-track"><div class="progress-fill" data-width="42%"></div></div>
-                        </div>
-                        <div class="progress-item">
-                            <div class="progress-label"><span>Donantes Privados (Europa)</span><span class="percentage">28%</span></div>
-                            <div class="progress-track"><div class="progress-fill" data-width="28%"></div></div>
-                        </div>
-                        <div class="progress-item">
-                            <div class="progress-label"><span>Subvenciones Públicas</span><span class="percentage">18%</span></div>
-                            <div class="progress-track"><div class="progress-fill" data-width="18%"></div></div>
-                        </div>
-                        <div class="progress-item">
-                            <div class="progress-label"><span>Ingresos propios (HTC)</span><span class="percentage">12%</span></div>
-                            <div class="progress-track"><div class="progress-fill" data-width="12%"></div></div>
+                <div class="footer-grid">
+                    <div class="footer-brand">
+                        <a href="index.html" class="logo"
+                            ><picture
+                                ><source
+                                    srcset="assets/images/logo-mark.webp"
+                                    type="image/webp" />
+                                <img
+                                    src="assets/images/logo-mark.png"
+                                    alt=""
+                                    class="logo-icon"
+                                    width="782"
+                                    height="555"
+                                    loading="eager" /></picture
+                            >Mama<span>Alice</span></a
+                        >
+                        <p>
+                            Transformando el futuro de la juventud ayacuchana
+                            mediante educación, soporte emocional y formación
+                            técnica de excelencia.
+                        </p>
+                        <div class="social-links">
+                            <a
+                                href="#"
+                                class="social-link"
+                                aria-label="Facebook"
+                                >f</a
+                            >
+                            <a
+                                href="#"
+                                class="social-link"
+                                aria-label="Instagram"
+                                >ig</a
+                            >
+                            <a
+                                href="#"
+                                class="social-link"
+                                aria-label="LinkedIn"
+                                >in</a
+                            >
+                            <a href="#" class="social-link" aria-label="YouTube"
+                                >yt</a
+                            >
                         </div>
                     </div>
-                </div>
-                <div style="text-align: center; margin-top: 48px;" class="reveal">
-                    <a href="transparencia.html" class="btn btn--outline">Explora todos los informes →</a>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- ═══════ NEWSLETTER CTA ═══════ -->
-        <section class="cta-band" id="newsletter">
-            <div class="container reveal">
-                <h2>Únete a nuestra red de cambio</h2>
-                <p>Recibe historias de impacto, novedades de proyectos y oportunidades de voluntariado directamente en tu correo.</p>
-                <form class="newsletter-form" onsubmit="event.preventDefault(); alert('¡Gracias por suscribirte! Pronto recibirás noticias.');">
-                    <input type="email" placeholder="Tu correo electrónico" required>
-                    <button type="submit" class="btn btn--primary">Suscribirme</button>
-                </form>
-            </div>
-        </section>
-
-    </main>
-
-
-    <!-- ═══════ FOOTER ═══════ -->
-    <footer class="footer" id="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="index.html" class="logo">Mama<span>Alice.</span></a>
-                    <p>Transformando el futuro de la juventud ayacuchana mediante educación, soporte emocional y formación técnica de excelencia.</p>
-                    <div class="social-links">
-                        <a href="#" class="social-link" aria-label="Facebook">f</a>
-                        <a href="#" class="social-link" aria-label="Instagram">ig</a>
-                        <a href="#" class="social-link" aria-label="LinkedIn">in</a>
-                        <a href="#" class="social-link" aria-label="YouTube">yt</a>
+                    <div class="footer-col">
+                        <h4>Navegación</h4>
+                        <a href="index.html">Inicio</a>
+                        <a href="nosotros.html">Sobre Nosotros</a>
+                        <a href="comunidades.html">Proyectos</a>
+                        <a href="hospitality.html">Hospitality Center</a>
+                        <a href="transparencia.html">Transparencia</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Involúcrate</h4>
+                        <a href="donar.html">Donar</a>
+                        <a href="#">Voluntariado</a>
+                        <a href="#">Empresas Aliadas</a>
+                        <a href="#">Trabaja con Nosotros</a>
+                    </div>
+                    <div class="footer-col">
+                        <h4>Contacto</h4>
+                        <a href="#">Ayacucho, Perú</a>
+                        <a href="mailto:info@mamaalice.org"
+                            >info@mamaalice.org</a
+                        >
+                        <a href="tel:+5166123456">+51 66 123 456</a>
                     </div>
                 </div>
-                <div class="footer-col">
-                    <h4>Navegación</h4>
-                    <a href="index.html">Inicio</a>
-                    <a href="nosotros.html">Sobre Nosotros</a>
-                    <a href="comunidades.html">Proyectos</a>
-                    <a href="hospitality.html">Hospitality Center</a>
-                    <a href="transparencia.html">Transparencia</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Involúcrate</h4>
-                    <a href="donar.html">Donar</a>
-                    <a href="#">Voluntariado</a>
-                    <a href="#">Empresas Aliadas</a>
-                    <a href="#">Trabaja con Nosotros</a>
-                </div>
-                <div class="footer-col">
-                    <h4>Contacto</h4>
-                    <a href="#">Ayacucho, Perú</a>
-                    <a href="mailto:info@mamaalice.org">info@mamaalice.org</a>
-                    <a href="tel:+5166123456">+51 66 123 456</a>
+                <div class="footer-bottom">
+                    <p>© 2026 ONG Mama Alice. Todos los derechos reservados.</p>
+                    <div>
+                        <a href="#">Política de Privacidad</a> ·
+                        <a href="#">Aviso Legal</a>
+                    </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>© 2026 ONG Mama Alice. Todos los derechos reservados.</p>
-                <div>
-                    <a href="#">Política de Privacidad</a> · <a href="#">Aviso Legal</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+        </footer>
 
+        <script src="js/components.js"></script>
     <script src="js/main.js"></script>
-</body>
+    </body>
 </html>
