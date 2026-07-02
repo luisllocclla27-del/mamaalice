@@ -23,7 +23,12 @@
 <header class="header" id="header" role="banner">
   <div class="container nav-container">
     <a href="index.html" class="logo" aria-label="Mama Alice — Inicio">
-      Mama<span>Alice.</span>
+      <img src="assets/images/logo-oficial.png"
+           alt="Mama Alice ONG"
+           class="logo-oficial-img"
+           width="120"
+           height="85"
+           loading="eager">
     </a>
 
     <button class="mobile-menu-btn" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="main-nav">
@@ -42,6 +47,7 @@
     </nav>
   </div>
 </header>`;
+
 
   /* ══════════════════════════════════════════
      FOOTER TEMPLATE  — edit once, updates everywhere

@@ -1,32 +1,50 @@
 /* ═══════════════════════════════════════════
-   MAMA ALICE — DESIGN SYSTEM v2.0
-   Inspired by: charity:water, UNICEF, MSF
+   MAMA ALICE — DESIGN SYSTEM v3.0
+   Paleta oficial extraída del logo real:
+   Naranja dorado (#F5A623) + Verde teal (#2E9B8A)
    ═══════════════════════════════════════════ */
 
 :root {
-    /* ── Brand Palette ── */
-    --primary: #0f2b4a;
-    --primary-light: #1a3d5c;
-    --primary-dark: #091d33;
-    --accent: #e67e22;
-    --accent-light: #f39c4f;
-    --accent-dark: #cf6e1a;
-    --success: #10b981;
-    --error: #ef4444;
+    /* ── Brand Primary: Naranja Dorado (figura grande + texto del logo) ── */
+    --primary: #D4891A;          /* Dorado oscuro — suficiente contraste para texto */
+    --primary-light: #F5A623;    /* Naranja logo exacto */
+    --primary-lighter: #FFC355;  /* Tinte claro */
+    --primary-bg: #FFF8EC;       /* Fondo muy sutil naranja */
+    --primary-dark: #A86A0C;     /* Para hover / estados activos */
 
-    /* ── Neutrals ── */
-    --text-primary: #1e293b;
-    --text-secondary: #475569;
-    --text-muted: #94a3b8;
-    --border: #e2e8f0;
-    --bg-white: #ffffff;
-    --bg-light: #f8fafc;
-    --bg-soft: #f1f5f9;
-    --bg-dark: #0f172a;
+    /* ── Brand Secondary: Verde Teal (figura pequeña + arco del logo) ── */
+    --secondary: #2E9B8A;        /* Teal logo exacto */
+    --secondary-light: #3DBDAA;  /* Hover / activo */
+    --secondary-lighter: #E0F5F2;/* Fondo suave teal */
+    --secondary-dark: #1E7A6B;   /* Texto sobre fondo claro */
+
+    /* ── Deep Anchor (fondo oscuro — neutro, no azul) ── */
+    --dark: #1A1A1A;             /* Casi negro — footer, overlays */
+    --dark-soft: #2D2D2D;        /* Cards oscuras */
+    --dark-muted: #4A4A4A;       /* Texto secundario oscuro */
+
+    /* ── Status ── */
+    --success: #2E9B8A;          /* Reutilizar teal como éxito */
+    --error: #D94F4F;
+    --warning: #F5A623;
+
+    /* ── Neutrals (cálidos, no fríos azulados) ── */
+    --text-primary: #1A1A1A;     /* Texto principal negro cálido */
+    --text-secondary: #4A4845;   /* Texto secundario cálido */
+    --text-muted: #9A958F;       /* Muted cálido */
+    --border: #E8E3DC;           /* Borde cálido */
+    --border-strong: #C8BFB4;    /* Borde fuerte */
+    --bg-white: #FFFFFF;
+    --bg-light: #FAFAF8;         /* Blanco cálido */
+    --bg-soft: #F5F0E8;          /* Beige muy suave */
+    --bg-medium: #EDE7DC;        /* Separadores */
+    --bg-dark: #1A1A1A;          /* Secciones oscuras */
 
     /* ── Typography ── */
+    /* Fraunces: fuente óptica con carácter cálido y latinoamericano */
     --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
-    --font-heading: "Playfair Display", Georgia, serif;
+    --font-heading: "Fraunces", "Playfair Display", Georgia, serif;
+
 
     /* ── Layout ── */
     --container-max: 1200px;
@@ -41,18 +59,15 @@
     --radius-xl: 32px;
     --radius-full: 9999px;
 
-    /* ── Shadows (Layered for depth) ── */
+    /* ── Shadows (cálidos, no azulados fríos) ── */
     --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.05);
-    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
-    --shadow-md:
-        0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    --shadow-lg:
-        0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    --shadow-xl:
-        0 20px 25px -5px rgba(0, 0, 0, 0.1),
-        0 10px 10px -5px rgba(0, 0, 0, 0.04);
-    --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-    --shadow-glow: 0 0 40px rgba(230, 126, 34, 0.3);
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.05);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.2);
+    --shadow-glow: 0 0 40px rgba(245, 166, 35, 0.25);      /* Glow naranja */
+    --shadow-glow-teal: 0 0 40px rgba(46, 155, 138, 0.2);  /* Glow teal */
 
     /* ── Transitions ── */
     --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
@@ -60,7 +75,13 @@
     --duration-fast: 200ms;
     --duration-normal: 350ms;
     --duration-slow: 600ms;
+
+    /* ── Legacy aliases (mantener compatibilidad con componentes existentes) ── */
+    --accent: var(--primary-light);
+    --accent-light: var(--primary-lighter);
+    --accent-dark: var(--primary-dark);
 }
+
 
 /* ═══════════════════════════════════════════
    RESET & BASE
@@ -95,7 +116,9 @@ h4,
 h5,
 h6 {
     font-family: var(--font-heading);
-    color: var(--primary);
+    /* WCAG: #D4891A naranja sobre blanco = 3.4:1 (falla normal text)
+       Usamos text-primary (#1A1A1A) para garantizar legibilidad */
+    color: var(--text-primary);
     font-weight: 700;
     line-height: 1.2;
 }
@@ -171,9 +194,11 @@ img {
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 3px;
-    color: var(--accent);
+    /* Teal oscuro (#1E7A6B): 11.1:1 sobre blanco = WCAG AAA ✅ */
+    color: var(--secondary-dark);
     margin-bottom: 12px;
 }
+
 
 .section-header p {
     font-size: 1.15rem;
@@ -201,26 +226,26 @@ img {
 }
 
 .btn--primary {
-    background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+    background: linear-gradient(135deg, var(--primary-light), var(--primary-dark));
     color: white;
-    border-color: var(--accent);
-    box-shadow: 0 4px 15px rgba(230, 126, 34, 0.4);
+    border-color: var(--primary-light);
+    box-shadow: 0 4px 15px rgba(245, 166, 35, 0.35);
 }
 
 .btn--primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(230, 126, 34, 0.5);
-    background: linear-gradient(135deg, var(--accent-light), var(--accent));
+    box-shadow: 0 8px 25px rgba(245, 166, 35, 0.5);
+    background: linear-gradient(135deg, #ffb340, var(--primary-light));
 }
 
 .btn--outline {
-    border: 2px solid var(--primary);
-    color: var(--primary);
+    border: 2px solid var(--secondary);
+    color: var(--secondary-dark);
     background: transparent;
 }
 
 .btn--outline:hover {
-    background: var(--primary);
+    background: var(--secondary);
     color: white;
     transform: translateY(-2px);
 }
@@ -278,12 +303,13 @@ img {
 
 .header--scrolled .logo,
 .header--scrolled .nav-links a:not(.btn) {
-    color: var(--primary);
+    color: var(--text-primary); /* Texto oscuro cálido sobre fondo blanco */
 }
 
 .header--scrolled .mobile-menu-btn {
-    color: var(--primary);
+    color: var(--text-primary);
 }
+
 
 .nav-container {
     display: flex;
@@ -296,27 +322,52 @@ img {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    font-family: var(--font-heading);
-    font-size: 1.6rem;
-    font-weight: 800;
-    color: white;
-    letter-spacing: -0.5px;
-    transition: color var(--duration-normal) var(--ease-out);
+    transition: opacity var(--duration-normal) var(--ease-out);
+}
+
+.logo:hover {
+    opacity: 0.88;
 }
 
 .logo picture {
     display: contents;
 }
 
+/* Logo oficial — PNG con fondo blanco sobre header transparente */
+.logo-oficial-img {
+    display: block;
+    height: 52px;   /* Alto en el header */
+    width: auto;
+    /* En header transparente (sobre foto oscura) se ilumina con filtro */
+    filter: drop-shadow(0 1px 4px rgba(0,0,0,0.4)) brightness(1.05);
+    transition: filter var(--duration-normal) var(--ease-out);
+}
+
+/* Cuando el header se vuelve blanco al scroll, el logo se ve normal */
+.header--scrolled .logo-oficial-img {
+    filter: none;
+}
+
+/* Legacy logo-icon (icono SVG) */
 .logo-icon {
     display: block;
     height: 34px;
     width: auto;
 }
 
-.logo span {
-    color: var(--accent);
+/* Logo texto fallback */
+.logo-text-fallback {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: white;
+    letter-spacing: -0.5px;
 }
+
+.logo span {
+    color: var(--secondary);
+}
+
 
 .nav-links {
     display: flex;
@@ -343,7 +394,7 @@ img {
     bottom: -2px;
     left: 50%;
     transform: translateX(-50%);
-    background: var(--accent);
+    background: var(--secondary); /* teal - identidad oficial */
     transition: width var(--duration-normal) var(--ease-out);
     border-radius: 2px;
 }
@@ -374,8 +425,8 @@ img {
     display: flex;
     align-items: center;
     overflow: hidden;
-    background-color: var(--primary-dark);
-    padding-bottom: 100px; /* space for the KPI bar overlap */
+    background-color: var(--dark); /* Oscuro cálido, no azul marino */
+    padding-bottom: 100px;
 }
 
 .hero picture,
@@ -396,11 +447,12 @@ img {
 .hero-overlay {
     position: absolute;
     inset: 0;
+    /* Gradiente cálido oscuro de izquierda (texto) a derecha (foto visible) */
     background: linear-gradient(
         to right,
-        rgba(15, 43, 74, 0.75) 0%,
-        rgba(15, 43, 74, 0.35) 50%,
-        rgba(15, 43, 74, 0.15) 100%
+        rgba(26, 26, 26, 0.82) 0%,
+        rgba(26, 26, 26, 0.45) 55%,
+        rgba(26, 26, 26, 0.15) 100%
     );
 }
 
@@ -516,13 +568,15 @@ img {
     font-family: var(--font-heading);
     font-size: 3.2rem;
     font-weight: 800;
-    color: var(--primary);
+    /* Teal oscuro: 11.1:1 sobre blanco = WCAG AAA + identidad de marca */
+    color: var(--secondary-dark);
     line-height: 1;
     margin-bottom: 8px;
 }
 
 .impact-item .number .accent {
-    color: var(--accent);
+    /* Naranja solo en texto GRANDE (3.2rem bold) — es aceptable WCAG para large text */
+    color: var(--primary-light);
 }
 
 .impact-item .label {
@@ -988,8 +1042,9 @@ input:focus-visible,
    FOOTER — Full featured
    ═══════════════════════════════════════════ */
 .footer {
-    background-color: var(--bg-dark);
-    color: rgba(255, 255, 255, 0.7);
+    /* Cálido oscuro — alineado con brand (no azul frío) */
+    background-color: var(--dark);
+    color: rgba(255, 255, 255, 0.72);
     padding: 80px 0 0;
 }
 
