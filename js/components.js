@@ -23,7 +23,7 @@
 <header class="header" id="header" role="banner">
   <div class="container nav-container">
     <a href="index.html" class="logo" aria-label="Mama Alice — Inicio">
-      <img src="assets/images/logo-oficial.png"
+      <img src="assets/images/logo-transparent.png"
            alt="Mama Alice ONG"
            class="logo-oficial-img"
            width="120"
