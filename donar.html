@@ -78,10 +78,11 @@
                 min-height: calc(100vh - 80px);
             }
             .donate-hero {
+                /* Changed from primary (orange) to secondary (teal) for a calmer, more trustworthy donation experience */
                 background: linear-gradient(
                     135deg,
-                    var(--primary) 0%,
-                    var(--primary-dark) 100%
+                    var(--secondary) 0%,
+                    var(--secondary-dark) 100%
                 );
                 padding: 80px 60px;
                 display: flex;
@@ -96,7 +97,7 @@
                 width: 500px;
                 height: 500px;
                 border-radius: 50%;
-                background: rgba(230, 126, 34, 0.06);
+                background: rgba(255, 255, 255, 0.04);
                 top: -200px;
                 right: -200px;
             }
@@ -139,12 +140,12 @@
                 height: 40px;
                 min-width: 40px;
                 border-radius: 50%;
-                background: rgba(230, 126, 34, 0.2);
+                background: rgba(255, 255, 255, 0.1);
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 font-size: 1.1rem;
-                border: 1px solid rgba(230, 126, 34, 0.3);
+                border: 1px solid rgba(255, 255, 255, 0.2);
             }
 
             .donate-form-panel {
@@ -364,20 +365,14 @@
         <!-- Minimal Donation Nav -->
         <header class="header header--scrolled" style="position: sticky">
             <div class="container nav-container">
-                <a href="index.html" class="logo" style="color: var(--primary)"
-                    ><picture
-                        ><source
-                            srcset="assets/images/logo-mark.webp"
-                            type="image/webp" />
-                        <img
-                            src="assets/images/logo-mark.png"
-                            alt=""
-                            class="logo-icon"
-                            width="782"
-                            height="555"
-                            loading="eager" /></picture
-                    >Mama<span>Alice</span></a
-                >
+                <a href="index.html" class="logo" aria-label="Mama Alice — Inicio">
+                    <img src="assets/images/logo-transparent.png"
+                         alt="Mama Alice ONG"
+                         class="logo-oficial-img"
+                         width="120"
+                         height="85"
+                         loading="eager">
+                </a>
                 <a href="index.html" class="btn btn--outline btn--sm"
                     >← Volver al sitio</a
                 >
@@ -395,7 +390,7 @@
                                 font-weight: 700;
                                 text-transform: uppercase;
                                 letter-spacing: 3px;
-                                color: var(--accent-light);
+                                color: var(--primary-light);
                             "
                             >Tu donación importa</span
                         >
