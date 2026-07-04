@@ -129,14 +129,49 @@
                         </div>
                     </div>
 
-                    <!-- Custom Amount -->
-                    <div class="custom-amount">
-                        <label for="custom-amount" class="sr-only">Otra cantidad en euros</label>
-                        <input type="text" id="custom-amount" class="custom-amount-input"
-                               placeholder="Otra cantidad (€)" inputmode="decimal"
-                               onfocus="document.querySelectorAll('.price-anchor').forEach(e=>{e.classList.remove('selected');e.setAttribute('aria-checked','false');})" />
+                    <!-- Custom Amount Slider -->
+                    <div class="custom-slider-container" style="margin-top:24px;padding:24px;background:var(--bg-soft);border-radius:var(--radius-md);border:1px solid var(--border);">
+                        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+                            <label for="donation-slider" style="font-weight:600;color:var(--text-primary);margin:0;">Desliza para elegir tu impacto</label>
+                            <div style="font-family:var(--font-heading);font-size:1.8rem;color:var(--primary);font-weight:800;">€<span id="slider-val">50</span></div>
+                        </div>
+                        <input type="range" id="donation-slider" min="5" max="250" step="5" value="50" style="width:100%;accent-color:var(--primary);cursor:pointer;" />
+                        <div style="margin-top:16px;font-size:0.95rem;color:var(--text-muted);background:rgba(255,255,255,0.5);padding:12px;border-radius:var(--radius-sm);border-left:3px solid var(--gold);">
+                            ✨ <span id="slider-impact">1 mes de formación técnica en el HTC.</span>
+                        </div>
                     </div>
-
+                    
+                    <script>
+                        document.addEventListener('DOMContentLoaded', () => {
+                            const slider = document.getElementById('donation-slider');
+                            const valDisplay = document.getElementById('slider-val');
+                            const impactDisplay = document.getElementById('slider-impact');
+                            
+                            slider.addEventListener('input', (e) => {
+                                const val = parseInt(e.target.value);
+                                valDisplay.textContent = val;
+                                
+                                // Update price anchors UI
+                                document.querySelectorAll('.price-anchor').forEach(el => {
+                                    el.classList.remove('selected');
+                                    el.setAttribute('aria-checked', 'false');
+                                });
+                                
+                                // Dynamic impact text
+                                if(val < 25) {
+                                    impactDisplay.textContent = "Materiales escolares y apoyo básico.";
+                                } else if(val < 50) {
+                                    impactDisplay.textContent = "Terapias psicológicas para un joven.";
+                                } else if(val < 100) {
+                                    impactDisplay.textContent = "1 mes de formación técnica en el HTC.";
+                                } else if(val < 150) {
+                                    impactDisplay.textContent = "Beca completa (educación, comida, pasajes).";
+                                } else {
+                                    impactDisplay.textContent = "Impacto profundo en múltiples jóvenes y familias.";
+                                }
+                            });
+                        });
+                    </script>
                     <!-- Personal Info -->
                     <div class="form-row">
                         <div class="form-group" style="margin-bottom:0;">

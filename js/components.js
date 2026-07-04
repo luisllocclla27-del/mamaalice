@@ -174,6 +174,57 @@
     // ── Active nav link ──
     const nav = document.getElementById('main-nav');
     if (nav) setActive(nav);
+
+    // ── Lenis Smooth Scroll ──
+    if (!document.getElementById('lenis-script')) {
+      const script = document.createElement('script');
+      script.id = 'lenis-script';
+      script.src = 'https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js';
+      script.onload = () => {
+        const lenis = new Lenis({ 
+          duration: 1.4, 
+          easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+          smoothWheel: true 
+        });
+        function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+        requestAnimationFrame(raf);
+      };
+      document.head.appendChild(script);
+    }
+
+    // ── Custom Branded Cursor ──
+    if (window.matchMedia('(pointer: fine)').matches && !document.getElementById('custom-cursor')) {
+      const cursor = document.createElement('div');
+      cursor.id = 'custom-cursor';
+      cursor.className = 'custom-cursor';
+      document.body.appendChild(cursor);
+      
+      let clientX = -100;
+      let clientY = -100;
+      
+      document.addEventListener('mousemove', e => {
+        clientX = e.clientX;
+        clientY = e.clientY;
+      });
+      
+      const renderCursor = () => {
+        cursor.style.transform = `translate3d(${clientX}px, ${clientY}px, 0)`;
+        requestAnimationFrame(renderCursor);
+      };
+      requestAnimationFrame(renderCursor);
+      
+      // Add hover states dynamically
+      document.body.addEventListener('mouseover', e => {
+        if(e.target.closest('a, button, input, .freq-option, .price-anchor, svg, .map-wrapper')) {
+          cursor.classList.add('cursor-hover');
+        }
+      });
+      document.body.addEventListener('mouseout', e => {
+        if(e.target.closest('a, button, input, .freq-option, .price-anchor, svg, .map-wrapper')) {
+          cursor.classList.remove('cursor-hover');
+        }
+      });
+    }
   }
 
   if (document.readyState === 'loading') {

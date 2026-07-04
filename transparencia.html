@@ -176,8 +176,9 @@
                 </div>
                 <div class="finance-grid">
                     <div class="finance-card finance-card-flex reveal stagger-1">
-                        <div class="finance-chart" style="width:200px;height:200px;min-width:200px;border-radius:50%;background:conic-gradient(var(--secondary) 0% 45%, var(--primary) 45% 65%, var(--gold) 65% 83%, var(--dark-soft) 83% 95%, #ddd 95% 100%);position:relative;box-shadow:var(--shadow-md);transform:rotate(-15deg);">
-                            <div style="position:absolute;inset:40px;background:var(--bg-white);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-heading);font-weight:800;font-size:1.6rem;color:var(--text-primary);box-shadow:inset 0 4px 10px rgba(0,0,0,0.05);transform:rotate(15deg);">2025</div>
+                        <div class="finance-chart" style="width:220px;height:220px;position:relative;">
+                            <canvas id="investmentChart"></canvas>
+                            <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;font-family:var(--font-heading);font-weight:800;font-size:1.6rem;color:var(--text-primary);">2025</div>
                         </div>
                         <div style="flex:1;">
                             <h3>📊 Distribución de Inversión 2025</h3>
@@ -204,8 +205,12 @@
                         </div>
                     </div>
                     <div class="finance-card finance-card-flex reveal stagger-2">
-                        <div class="finance-chart" style="width:200px;height:200px;min-width:200px;border-radius:50%;background:conic-gradient(var(--secondary) 0% 42%, var(--primary) 42% 70%, var(--gold) 70% 88%, var(--dark-soft) 88% 100%);position:relative;box-shadow:var(--shadow-md);transform:rotate(45deg);">
-                            <div style="position:absolute;inset:40px;background:var(--bg-white);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:var(--font-heading);font-weight:800;font-size:1.4rem;color:var(--text-primary);box-shadow:inset 0 4px 10px rgba(0,0,0,0.05);transform:rotate(-45deg);"><span>€1.2M</span><span style="font-size:0.6rem;font-family:var(--font-body);text-transform:uppercase;letter-spacing:1px;color:var(--text-muted);font-weight:600;">Recaudado</span></div>
+                        <div class="finance-chart" style="width:220px;height:220px;position:relative;">
+                            <canvas id="fundingChart"></canvas>
+                            <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;pointer-events:none;font-family:var(--font-heading);font-weight:800;font-size:1.4rem;color:var(--text-primary);line-height:1.2;">
+                                <span>€1.2M</span>
+                                <span style="font-size:0.65rem;font-family:var(--font-body);text-transform:uppercase;letter-spacing:1px;color:var(--text-muted);font-weight:600;">Recaudado</span>
+                            </div>
                         </div>
                         <div style="flex:1;">
                             <h3>💰 Origen de los Fondos</h3>
@@ -292,5 +297,55 @@
 
     <script src="js/components.js"></script>
     <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const ctx1 = document.getElementById('investmentChart');
+            if (ctx1) {
+                new Chart(ctx1, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Programas', 'Psicosocial', 'HTC', 'Admin', 'Comunicación'],
+                        datasets: [{
+                            data: [45, 20, 18, 12, 5],
+                            backgroundColor: ['#2E9B8A', '#F5A623', '#d4af37', '#2a3b38', '#cccccc'],
+                            borderWidth: 0,
+                            hoverOffset: 10
+                        }]
+                    },
+                    options: {
+                        cutout: '75%',
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: { legend: { display: false }, tooltip: { enabled: true } },
+                        animation: { animateScale: true, animateRotate: true, duration: 1500, easing: 'easeOutQuart' }
+                    }
+                });
+            }
+
+            const ctx2 = document.getElementById('fundingChart');
+            if (ctx2) {
+                new Chart(ctx2, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Cooperación', 'Donantes Privados', 'Subvenciones Públicas', 'Ingresos HTC'],
+                        datasets: [{
+                            data: [42, 28, 18, 12],
+                            backgroundColor: ['#2E9B8A', '#F5A623', '#d4af37', '#2a3b38'],
+                            borderWidth: 0,
+                            hoverOffset: 10
+                        }]
+                    },
+                    options: {
+                        cutout: '75%',
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: { legend: { display: false }, tooltip: { enabled: true } },
+                        animation: { animateScale: true, animateRotate: true, duration: 1500, easing: 'easeOutQuart', delay: 300 }
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 </html>
