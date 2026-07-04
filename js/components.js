@@ -23,7 +23,7 @@
   // --- Preloader Injection ---
   const preloaderHTML = `
   <div id="global-preloader" style="position:fixed; top:0; left:0; width:100%; height:100%; background-color:#ffffff; z-index:9999; display:flex; justify-content:center; align-items:center; transition:opacity 0.8s ease, visibility 0.8s ease;">
-    <img src="${assetPrefix}images/logo-transparent.png" alt="Mama Alice Loading..." style="max-width:150px; animation: pulse 2s infinite ease-in-out;">
+    <img src="${assetPrefix}images/logo-oficial.png" alt="Mama Alice Loading..." style="max-width:200px; animation: pulse 2s infinite ease-in-out;">
     <style>
       @keyframes pulse {
         0% { transform: scale(0.95); opacity: 0.7; }
@@ -34,8 +34,17 @@
     </style>
   </div>
   `;
-  document.write(preloaderHTML);
-  document.body.classList.add('loading');
+
+  if (document.body) {
+      document.body.insertAdjacentHTML('afterbegin', preloaderHTML);
+      document.body.classList.add('loading');
+  } else {
+      document.addEventListener('DOMContentLoaded', () => {
+          document.body.insertAdjacentHTML('afterbegin', preloaderHTML);
+          document.body.classList.add('loading');
+      });
+  }
+
 
   const labels = {
     inicio: isEn ? 'Home' : 'Inicio',
