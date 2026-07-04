@@ -22,7 +22,7 @@
   <div class="container nav-container">
 
     <a href="index.html" class="logo" aria-label="Mama Alice — Inicio">
-      <img src="assets/images/logo-oficial.png"
+      <img src="assets/images/logo-transparent.png"
            alt="Mama Alice ONG"
            class="logo-oficial-img"
            width="120" height="85"
@@ -62,7 +62,7 @@
       <!-- Brand -->
       <div class="footer-brand">
         <a href="index.html" class="logo" aria-label="Mama Alice — Inicio">
-          <img src="assets/images/logo-oficial.png"
+          <img src="assets/images/logo-transparent.png"
                alt="Mama Alice ONG"
                style="height:56px;width:auto;filter:brightness(0) invert(1);opacity:0.9;"
                loading="lazy" />
