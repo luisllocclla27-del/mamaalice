@@ -1,705 +1,199 @@
 <!doctype html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Proyectos en Comunidades | ONG Mama Alice</title>
-        <meta
-            name="description"
-            content="Soporte psicosocial, refuerzo escolar y talleres preventivos en las comunidades más vulnerables de Ayacucho, Perú."
-        />
-        <meta
-            property="og:title"
-            content="Proyectos en Comunidades | ONG Mama Alice"
-        />
-        <meta
-            property="og:description"
-            content="Soporte psicosocial, refuerzo escolar y talleres preventivos en las comunidades más vulnerables de Ayacucho, Perú."
-        />
-        <meta property="og:type" content="website" />
-        <meta
-            property="og:url"
-            content="https://tu-dominio-aqui.org/comunidades.html"
-        />
-        <meta property="og:site_name" content="ONG Mama Alice" />
-        <meta property="og:locale" content="es_PE" />
-        <meta
-            property="og:image"
-            content="https://tu-dominio-aqui.org/assets/images/logo.png"
-        />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-            name="twitter:title"
-            content="Proyectos en Comunidades | ONG Mama Alice"
-        />
-        <meta
-            name="twitter:description"
-            content="Soporte psicosocial, refuerzo escolar y talleres preventivos en las comunidades más vulnerables de Ayacucho, Perú."
-        />
-        <meta
-            name="twitter:image"
-            content="https://tu-dominio-aqui.org/assets/images/logo.png"
-        />
-        <link rel="canonical" href="https://tu-dominio-aqui.org/comunidades.html" />
-        <meta name="theme-color" content="#0F2B4A" />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="assets/images/favicon-32x32.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="assets/images/favicon-16x16.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="512x512"
-            href="assets/images/favicon-512x512.png"
-        />
-        <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="assets/images/apple-touch-icon.png"
-        />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,800;1,9..144,500&amp;family=Inter:wght@400;500;600&amp;display=swap"
-        />
-        <link rel="stylesheet" href="css/styles.css" />
-        <style>
-            .approach-grid {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 48px;
-                align-items: center;
-            }
-            .approach-grid.reverse {
-                direction: rtl;
-            }
-            .approach-grid.reverse > * {
-                direction: ltr;
-            }
-            .program-number {
-                font-family: var(--font-heading);
-                font-size: 5rem;
-                font-weight: 800;
-                color: var(--accent);
-                opacity: 0.15;
-                line-height: 1;
-                margin-bottom: -16px;
-            }
-            .impact-calculator {
-                background: linear-gradient(
-                    135deg,
-                    var(--primary),
-                    var(--primary-dark)
-                );
-                border-radius: var(--radius-xl);
-                padding: 60px;
-                color: white;
-                text-align: center;
-            }
-            .impact-calculator h2 {
-                color: white;
-                margin-bottom: 16px;
-            }
-            .calc-grid {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: 32px;
-                margin-top: 40px;
-            }
-            .calc-item {
-                background: rgba(255, 255, 255, 0.1);
-                border-radius: var(--radius-lg);
-                padding: 32px 24px;
-                backdrop-filter: blur(10px);
-                border: 1px solid rgba(255, 255, 255, 0.1);
-                transition: all var(--duration-normal) var(--ease-out);
-            }
-            .calc-item:hover {
-                background: rgba(255, 255, 255, 0.18);
-                transform: translateY(-4px);
-            }
-            .calc-amount {
-                font-family: var(--font-heading);
-                font-size: 2.5rem;
-                font-weight: 800;
-                color: var(--accent-light);
-                margin-bottom: 12px;
-            }
-            .calc-desc {
-                font-size: 0.95rem;
-                opacity: 0.85;
-            }
-            @media (max-width: 768px) {
-                .approach-grid,
-                .approach-grid.reverse {
-                    grid-template-columns: 1fr;
-                    direction: ltr;
-                }
-                .calc-grid {
-                    grid-template-columns: 1fr;
-                }
-            }
-        </style>
-    </head>
-    <body>
-        <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
-    
-        <header class="header" id="header">
-            <div class="container nav-container">
-                <a href="index.html" class="logo"
-                    ><picture
-                        ><source
-                            srcset="assets/images/logo-mark.webp"
-                            type="image/webp" />
-                        <img
-                            src="assets/images/logo-mark.png"
-                            alt=""
-                            class="logo-icon"
-                            width="782"
-                            height="555"
-                            loading="eager" /></picture
-                    >Mama<span>Alice</span></a
-                >
-                <button class="mobile-menu-btn" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
-                    ☰
-                </button>
-                <nav class="nav-links" id="nav-links">
-                    <a href="index.html">Inicio</a>
-                    <a href="nosotros.html">Nosotros</a>
-                    <a href="comunidades.html" class="active">Proyectos</a>
-                    <a href="hospitality.html">Hospitality</a>
-                    <a href="transparencia.html">Transparencia</a>
-                    <a href="donar.html" class="btn btn--primary btn--sm"
-                        >Donar Ahora</a
-                    >
-                </nav>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyectos en Comunidades | ONG Mama Alice</title>
+    <meta name="description" content="Soporte psicosocial, refuerzo escolar y talleres preventivos en las comunidades más vulnerables de Ayacucho, Perú." />
+    <meta property="og:title" content="Proyectos en Comunidades | ONG Mama Alice" />
+    <meta property="og:description" content="Soporte psicosocial, refuerzo escolar y talleres preventivos en las comunidades más vulnerables de Ayacucho, Perú." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tu-dominio-aqui.org/comunidades.html" />
+    <meta property="og:site_name" content="ONG Mama Alice" />
+    <meta property="og:locale" content="es_PE" />
+    <meta property="og:image" content="https://tu-dominio-aqui.org/assets/images/logo-oficial.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://tu-dominio-aqui.org/comunidades.html" />
+    <meta name="theme-color" content="#F5A420" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,800;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+    <main id="main-content">
+
+        <!-- PAGE HERO -->
+        <section class="page-hero">
+            <picture>
+                <source srcset="assets/images/community_image_1782863348941.webp" type="image/webp" />
+                <img src="assets/images/community_image_1782863348941.png"
+                     alt="Comunidad en Ayacucho" class="page-hero-bg"
+                     width="1024" height="1024" loading="eager" fetchpriority="high" decoding="async" />
+            </picture>
+            <div class="container page-hero-content">
+                <span class="eyebrow-hero">3 programas · 24 comunidades</span>
+                <h1>Proyectos en Comunidades</h1>
+                <p>Intervención integral desde la infancia hasta la juventud en las zonas más vulnerables de Ayacucho.</p>
+                <div class="breadcrumb">
+                    <a href="index.html">Inicio</a> / <span>Proyectos</span>
+                </div>
             </div>
-        </header>
+        </section>
+        <!-- IMPACT MAP -->
+        <section class="section section--gray" style="padding-bottom: 0;">
+            <div class="container" style="text-align: center; margin-bottom: 40px;">
+                <span class="eyebrow">Alcance Geográfico</span>
+                <h2>Mapa de Impacto en Ayacucho</h2>
+                <p style="max-width: 600px; margin: 0 auto;">Intervenimos en 24 comunidades vulnerables distribuidas en las zonas urbanas y periurbanas de la región.</p>
+            </div>
+            <div class="container reveal">
+                <div style="width:100%; height: 400px; background: var(--dark-soft); border-radius: var(--radius-xl); position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; box-shadow: inset 0 0 40px rgba(0,0,0,0.2);">
+                    <div style="position: absolute; inset: 0; background-image: radial-gradient(rgba(255,255,255,0.1) 1px, transparent 1px); background-size: 20px 20px; opacity: 0.5;"></div>
+                    
+                    <!-- Map Pins Placeholder -->
+                    <div style="position: absolute; top: 40%; left: 35%; width: 14px; height: 14px; background: var(--primary); border-radius: 50%; box-shadow: 0 0 0 4px rgba(245, 166, 35, 0.3);"></div>
+                    <div style="position: absolute; top: 25%; left: 55%; width: 14px; height: 14px; background: var(--secondary); border-radius: 50%; box-shadow: 0 0 0 4px rgba(46, 155, 138, 0.3);"></div>
+                    <div style="position: absolute; top: 60%; left: 45%; width: 18px; height: 18px; background: var(--gold); border-radius: 50%; box-shadow: 0 0 0 6px rgba(255, 215, 0, 0.2);"></div>
+                    <div style="position: absolute; top: 50%; left: 65%; width: 12px; height: 12px; background: var(--primary); border-radius: 50%;"></div>
+                    <div style="position: absolute; top: 70%; left: 30%; width: 12px; height: 12px; background: var(--secondary); border-radius: 50%;"></div>
 
-        <main id="main-content">
-            <section class="page-hero">
-                <picture>
-                    <source
-                        srcset="
-                            assets/images/community_image_1782863348941.webp
-                        "
-                        type="image/webp"
-                    />
-                    <img
-                        src="assets/images/community_image_1782863348941.png"
-                        alt="Comunidad en Ayacucho"
-                        class="page-hero-bg"
-                        width="1024"
-                        height="1024"
-                        loading="eager"
-                        fetchpriority="high"
-                        decoding="async"
-                    />
-                </picture>
-                <div class="container page-hero-content">
-                    <h1>Proyectos en Comunidades</h1>
-                    <p>
-                        Intervención integral desde la infancia hasta la
-                        juventud en las zonas más vulnerables de Ayacucho.
-                    </p>
-                    <div class="breadcrumb">
-                        <a href="index.html">Inicio</a> / <span>Proyectos</span>
+                    <div style="position: relative; z-index: 2; background: rgba(0,0,0,0.6); padding: 12px 24px; border-radius: 30px; color: white; font-weight: 700; font-size: 0.9rem; backdrop-filter: blur(4px); border: 1px solid rgba(255,255,255,0.1);">
+                        🗺️ Mapa Interactivo en Desarrollo
                     </div>
                 </div>
-            </section>
-
-            <!-- Program 1 -->
-            <section class="section">
-                <div class="container">
-                    <div class="approach-grid">
-                        <div class="reveal-left">
-                            <picture>
-                                <source
-                                    srcset="
-                                        assets/images/community_image_1782863348941.webp
-                                    "
-                                    type="image/webp"
-                                />
-                                <img
-                                    src="assets/images/community_image_1782863348941.png"
-                                    alt="Soporte Psicosocial"
-                                    style="
-                                        border-radius: var(--radius-lg);
-                                        box-shadow: var(--shadow-xl);
-                                        width: 100%;
-                                        height: 400px;
-                                        object-fit: cover;
-                                    "
-                                    width="1024"
-                                    height="1024"
-                                    loading="lazy"
-                                    decoding="async"
-                                />
-                            </picture>
-                        </div>
-                        <div class="reveal-right">
-                            <div class="program-number">01</div>
-                            <h2 style="font-size: 2.2rem; margin-bottom: 20px">
-                                Soporte Psicosocial
-                            </h2>
-                            <p
-                                style="
-                                    font-size: 1.05rem;
-                                    line-height: 1.9;
-                                    margin-bottom: 16px;
-                                "
-                            >
-                                Nuestro equipo de psicólogos especializados
-                                trabaja directamente en las comunidades
-                                afectadas por décadas de conflicto armado y
-                                pobreza extrema.
-                            </p>
-                            <p
-                                style="
-                                    font-size: 1.05rem;
-                                    line-height: 1.9;
-                                    margin-bottom: 24px;
-                                "
-                            >
-                                Mediante terapia individual, grupal y talleres
-                                familiares, reconstruimos la confianza, la
-                                autoestima y los vínculos afectivos que son la
-                                base de todo desarrollo.
-                            </p>
-                            <div
-                                style="
-                                    display: grid;
-                                    grid-template-columns: 1fr 1fr;
-                                    gap: 16px;
-                                "
-                            >
-                                <div
-                                    style="
-                                        padding: 16px;
-                                        background: var(--bg-soft);
-                                        border-radius: var(--radius-md);
-                                    "
-                                >
-                                    <strong
-                                        style="
-                                            color: var(--primary);
-                                            font-size: 1.5rem;
-                                        "
-                                        >320</strong
-                                    >
-                                    <p
-                                        style="
-                                            font-size: 0.85rem;
-                                            color: var(--text-muted);
-                                        "
-                                    >
-                                        Sesiones terapéuticas al año
-                                    </p>
-                                </div>
-                                <div
-                                    style="
-                                        padding: 16px;
-                                        background: var(--bg-soft);
-                                        border-radius: var(--radius-md);
-                                    "
-                                >
-                                    <strong
-                                        style="
-                                            color: var(--primary);
-                                            font-size: 1.5rem;
-                                        "
-                                        >92%</strong
-                                    >
-                                    <p
-                                        style="
-                                            font-size: 0.85rem;
-                                            color: var(--text-muted);
-                                        "
-                                    >
-                                        Reportan mejoría emocional
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Program 2 -->
-            <section class="section section--gray">
-                <div class="container">
-                    <div class="approach-grid reverse">
-                        <div class="reveal-right">
-                            <picture>
-                                <source
-                                    srcset="
-                                        assets/images/volunteer_team_1782863788228.webp
-                                    "
-                                    type="image/webp"
-                                />
-                                <img
-                                    src="assets/images/volunteer_team_1782863788228.png"
-                                    alt="Refuerzo Escolar"
-                                    style="
-                                        border-radius: var(--radius-lg);
-                                        box-shadow: var(--shadow-xl);
-                                        width: 100%;
-                                        height: 400px;
-                                        object-fit: cover;
-                                    "
-                                    width="1024"
-                                    height="1024"
-                                    loading="lazy"
-                                    decoding="async"
-                                />
-                            </picture>
-                        </div>
-                        <div class="reveal-left">
-                            <div class="program-number">02</div>
-                            <h2 style="font-size: 2.2rem; margin-bottom: 20px">
-                                Refuerzo Escolar
-                            </h2>
-                            <p
-                                style="
-                                    font-size: 1.05rem;
-                                    line-height: 1.9;
-                                    margin-bottom: 16px;
-                                "
-                            >
-                                Tutorías especializadas en matemáticas, lenguaje
-                                y ciencias para niños y adolescentes en riesgo
-                                de deserción escolar.
-                            </p>
-                            <p
-                                style="
-                                    font-size: 1.05rem;
-                                    line-height: 1.9;
-                                    margin-bottom: 24px;
-                                "
-                            >
-                                Nuestros voluntarios y educadores trabajan en
-                                turnos vespertinos dentro de los centros
-                                comunitarios, asegurando que cada estudiante
-                                reciba atención personalizada.
-                            </p>
-                            <div
-                                style="
-                                    display: grid;
-                                    grid-template-columns: 1fr 1fr;
-                                    gap: 16px;
-                                "
-                            >
-                                <div
-                                    style="
-                                        padding: 16px;
-                                        background: var(--bg-white);
-                                        border-radius: var(--radius-md);
-                                    "
-                                >
-                                    <strong
-                                        style="
-                                            color: var(--primary);
-                                            font-size: 1.5rem;
-                                        "
-                                        >450+</strong
-                                    >
-                                    <p
-                                        style="
-                                            font-size: 0.85rem;
-                                            color: var(--text-muted);
-                                        "
-                                    >
-                                        Estudiantes atendidos
-                                    </p>
-                                </div>
-                                <div
-                                    style="
-                                        padding: 16px;
-                                        background: var(--bg-white);
-                                        border-radius: var(--radius-md);
-                                    "
-                                >
-                                    <strong
-                                        style="
-                                            color: var(--primary);
-                                            font-size: 1.5rem;
-                                        "
-                                        >78%</strong
-                                    >
-                                    <p
-                                        style="
-                                            font-size: 0.85rem;
-                                            color: var(--text-muted);
-                                        "
-                                    >
-                                        Mejoran calificaciones
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Program 3 -->
-            <section class="section">
-                <div class="container">
-                    <div class="approach-grid">
-                        <div class="reveal-left">
-                            <picture>
-                                <source
-                                    srcset="
-                                        assets/images/ayacucho_landscape_1782863794905.webp
-                                    "
-                                    type="image/webp"
-                                />
-                                <img
-                                    src="assets/images/ayacucho_landscape_1782863794905.png"
-                                    alt="Talleres preventivos en Ayacucho"
-                                    style="
-                                        border-radius: var(--radius-lg);
-                                        box-shadow: var(--shadow-xl);
-                                        width: 100%;
-                                        height: 400px;
-                                        object-fit: cover;
-                                    "
-                                    width="1024"
-                                    height="1024"
-                                    loading="lazy"
-                                    decoding="async"
-                                />
-                            </picture>
-                        </div>
-                        <div class="reveal-right">
-                            <div class="program-number">03</div>
-                            <h2 style="font-size: 2.2rem; margin-bottom: 20px">
-                                Talleres Preventivos
-                            </h2>
-                            <p
-                                style="
-                                    font-size: 1.05rem;
-                                    line-height: 1.9;
-                                    margin-bottom: 16px;
-                                "
-                            >
-                                Educación en valores, prevención de violencia
-                                intrafamiliar, embarazo adolescente y consumo de
-                                sustancias.
-                            </p>
-                            <p
-                                style="
-                                    font-size: 1.05rem;
-                                    line-height: 1.9;
-                                    margin-bottom: 24px;
-                                "
-                            >
-                                Trabajamos con metodologías participativas,
-                                teatro, arte y dinámicas grupales que conectan
-                                con la realidad de cada comunidad.
-                            </p>
-                            <div
-                                style="
-                                    display: grid;
-                                    grid-template-columns: 1fr 1fr;
-                                    gap: 16px;
-                                "
-                            >
-                                <div
-                                    style="
-                                        padding: 16px;
-                                        background: var(--bg-soft);
-                                        border-radius: var(--radius-md);
-                                    "
-                                >
-                                    <strong
-                                        style="
-                                            color: var(--primary);
-                                            font-size: 1.5rem;
-                                        "
-                                        >24</strong
-                                    >
-                                    <p
-                                        style="
-                                            font-size: 0.85rem;
-                                            color: var(--text-muted);
-                                        "
-                                    >
-                                        Comunidades alcanzadas
-                                    </p>
-                                </div>
-                                <div
-                                    style="
-                                        padding: 16px;
-                                        background: var(--bg-soft);
-                                        border-radius: var(--radius-md);
-                                    "
-                                >
-                                    <strong
-                                        style="
-                                            color: var(--primary);
-                                            font-size: 1.5rem;
-                                        "
-                                        >1,200</strong
-                                    >
-                                    <p
-                                        style="
-                                            font-size: 0.85rem;
-                                            color: var(--text-muted);
-                                        "
-                                    >
-                                        Familias participantes
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- IMPACT CALCULATOR -->
-            <section class="section">
-                <div class="container">
-                    <div class="impact-calculator reveal-scale">
-                        <span
-                            style="
-                                font-size: 0.8rem;
-                                font-weight: 700;
-                                text-transform: uppercase;
-                                letter-spacing: 3px;
-                                color: var(--accent-light);
-                            "
-                            >Calculadora de impacto</span
-                        >
-                        <h2 style="margin-top: 12px">
-                            ¿Cuánto puede cambiar tu donación?
-                        </h2>
-                        <p style="opacity: 0.7; font-size: 1.1rem">
-                            Cada contribución tiene un impacto directo y
-                            medible.
-                        </p>
-                        <div class="calc-grid">
-                            <div class="calc-item">
-                                <div class="calc-amount">€15</div>
-                                <div class="calc-desc">
-                                    Materiales escolares para un niño durante un
-                                    semestre completo
-                                </div>
-                            </div>
-                            <div class="calc-item">
-                                <div class="calc-amount">€50</div>
-                                <div class="calc-desc">
-                                    Un mes de formación técnica en cocina para
-                                    un joven en el HTC
-                                </div>
-                            </div>
-                            <div class="calc-item">
-                                <div class="calc-amount">€100</div>
-                                <div class="calc-desc">
-                                    Una beca mensual completa: alimentación,
-                                    materiales y transporte
-                                </div>
-                            </div>
-                        </div>
-                        <a
-                            href="donar.html"
-                            class="btn btn--primary btn--lg"
-                            style="margin-top: 40px"
-                            >Haz tu impacto ahora →</a
-                        >
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <footer class="footer">
+            </div>
+        </section>
+        <!-- Program 1 -->
+        <section class="section">
             <div class="container">
-                <div class="footer-grid">
-                    <div class="footer-brand">
-                        <a href="index.html" class="logo"
-                            ><picture
-                                ><source
-                                    srcset="assets/images/logo-mark.webp"
-                                    type="image/webp" />
-                                <img
-                                    src="assets/images/logo-mark.png"
-                                    alt=""
-                                    class="logo-icon"
-                                    width="782"
-                                    height="555"
-                                    loading="eager" /></picture
-                            >Mama<span>Alice</span></a
-                        >
-                        <p>
-                            Transformando el futuro de la juventud ayacuchana
-                            mediante educación, soporte emocional y formación
-                            técnica de excelencia.
-                        </p>
-                        <div class="social-links">
-                            <a
-                                href="#"
-                                class="social-link"
-                                aria-label="Facebook"
-                                >f</a
-                            >
-                            <a
-                                href="#"
-                                class="social-link"
-                                aria-label="Instagram"
-                                >ig</a
-                            >
-                            <a
-                                href="#"
-                                class="social-link"
-                                aria-label="LinkedIn"
-                                >in</a
-                            >
-                            <a href="#" class="social-link" aria-label="YouTube"
-                                >yt</a
-                            >
+                <div class="approach-grid">
+                    <div class="reveal-left">
+                        <picture>
+                            <source srcset="assets/images/community_image_1782863348941.webp" type="image/webp" />
+                            <img src="assets/images/community_image_1782863348941.png" alt="Soporte Psicosocial"
+                                 style="border-radius:var(--radius-lg);box-shadow:var(--shadow-xl);width:100%;height:420px;object-fit:cover;"
+                                 width="1024" height="1024" loading="lazy" decoding="async" />
+                        </picture>
+                    </div>
+                    <div class="reveal-right">
+                        <div class="program-number">01</div>
+                        <h2 style="font-size:2.2rem;margin-bottom:20px;">Soporte Psicosocial</h2>
+                        <p style="font-size:1.05rem;line-height:1.9;margin-bottom:16px;">Nuestro equipo de psicólogos especializados trabaja directamente en las comunidades afectadas por décadas de conflicto armado y pobreza extrema.</p>
+                        <p style="font-size:1.05rem;line-height:1.9;margin-bottom:28px;">Mediante terapia individual, grupal y talleres familiares, reconstruimos la confianza, la autoestima y los vínculos afectivos que son la base de todo desarrollo.</p>
+                        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+                            <div style="padding:20px;background:var(--primary-pale);border-radius:var(--radius-md);border-left:4px solid var(--primary);">
+                                <strong style="font-family:var(--font-heading);font-size:1.8rem;color:var(--primary-dark);display:block;line-height:1.1;">320</strong>
+                                <span style="font-size:0.82rem;color:var(--text-muted);">Sesiones terapéuticas al año</span>
+                            </div>
+                            <div style="padding:20px;background:var(--secondary-pale);border-radius:var(--radius-md);border-left:4px solid var(--secondary);">
+                                <strong style="font-family:var(--font-heading);font-size:1.8rem;color:var(--secondary-dark);display:block;line-height:1.1;">92%</strong>
+                                <span style="font-size:0.82rem;color:var(--text-muted);">Reportan mejoría emocional</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="footer-col">
-                        <h4>Navegación</h4>
-                        <a href="index.html">Inicio</a
-                        ><a href="nosotros.html">Sobre Nosotros</a
-                        ><a href="comunidades.html">Proyectos</a
-                        ><a href="hospitality.html">Hospitality Center</a
-                        ><a href="transparencia.html">Transparencia</a>
-                    </div>
-                    <div class="footer-col">
-                        <h4>Involúcrate</h4>
-                        <a href="donar.html">Donar</a
-                        ><a href="#">Voluntariado</a
-                        ><a href="#">Empresas Aliadas</a
-                        ><a href="#">Trabaja con Nosotros</a>
-                    </div>
-                    <div class="footer-col">
-                        <h4>Contacto</h4>
-                        <a href="#">Ayacucho, Perú</a
-                        ><a href="mailto:info@mamaalice.org"
-                            >info@mamaalice.org</a
-                        ><a href="tel:+5166123456">+51 66 123 456</a>
-                    </div>
-                </div>
-                <div class="footer-bottom">
-                    <p>© 2026 ONG Mama Alice. Todos los derechos reservados.</p>
-                    <div>
-                        <a href="#">Política de Privacidad</a> ·
-                        <a href="#">Aviso Legal</a>
                     </div>
                 </div>
             </div>
-        </footer>
-        <script src="js/components.js"></script>
+        </section>
+
+        <!-- Program 2 -->
+        <section class="section section--gray">
+            <div class="container">
+                <div class="approach-grid reverse">
+                    <div class="reveal-right">
+                        <picture>
+                            <source srcset="assets/images/volunteer_team_1782863788228.webp" type="image/webp" />
+                            <img src="assets/images/volunteer_team_1782863788228.png" alt="Refuerzo Escolar"
+                                 style="border-radius:var(--radius-lg);box-shadow:var(--shadow-xl);width:100%;height:420px;object-fit:cover;"
+                                 width="1024" height="1024" loading="lazy" decoding="async" />
+                        </picture>
+                    </div>
+                    <div class="reveal-left">
+                        <div class="program-number">02</div>
+                        <h2 style="font-size:2.2rem;margin-bottom:20px;">Refuerzo Escolar</h2>
+                        <p style="font-size:1.05rem;line-height:1.9;margin-bottom:16px;">Tutorías especializadas en matemáticas, lenguaje y ciencias para niños y adolescentes en riesgo de deserción escolar.</p>
+                        <p style="font-size:1.05rem;line-height:1.9;margin-bottom:28px;">Nuestros voluntarios y educadores trabajan en turnos vespertinos dentro de los centros comunitarios, asegurando atención personalizada.</p>
+                        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+                            <div style="padding:20px;background:var(--bg-white);border-radius:var(--radius-md);border-left:4px solid var(--primary);box-shadow:var(--shadow-sm);">
+                                <strong style="font-family:var(--font-heading);font-size:1.8rem;color:var(--primary-dark);display:block;line-height:1.1;">450+</strong>
+                                <span style="font-size:0.82rem;color:var(--text-muted);">Estudiantes atendidos</span>
+                            </div>
+                            <div style="padding:20px;background:var(--bg-white);border-radius:var(--radius-md);border-left:4px solid var(--secondary);box-shadow:var(--shadow-sm);">
+                                <strong style="font-family:var(--font-heading);font-size:1.8rem;color:var(--secondary-dark);display:block;line-height:1.1;">78%</strong>
+                                <span style="font-size:0.82rem;color:var(--text-muted);">Mejoran calificaciones</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Program 3 -->
+        <section class="section">
+            <div class="container">
+                <div class="approach-grid">
+                    <div class="reveal-left">
+                        <picture>
+                            <source srcset="assets/images/ayacucho_landscape_1782863794905.webp" type="image/webp" />
+                            <img src="assets/images/ayacucho_landscape_1782863794905.png" alt="Talleres preventivos en Ayacucho"
+                                 style="border-radius:var(--radius-lg);box-shadow:var(--shadow-xl);width:100%;height:420px;object-fit:cover;"
+                                 width="1024" height="1024" loading="lazy" decoding="async" />
+                        </picture>
+                    </div>
+                    <div class="reveal-right">
+                        <div class="program-number">03</div>
+                        <h2 style="font-size:2.2rem;margin-bottom:20px;">Talleres Preventivos</h2>
+                        <p style="font-size:1.05rem;line-height:1.9;margin-bottom:16px;">Educación en valores, prevención de violencia intrafamiliar, embarazo adolescente y consumo de sustancias.</p>
+                        <p style="font-size:1.05rem;line-height:1.9;margin-bottom:28px;">Trabajamos con metodologías participativas, teatro, arte y dinámicas grupales que conectan con la realidad de cada comunidad.</p>
+                        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+                            <div style="padding:20px;background:var(--primary-pale);border-radius:var(--radius-md);border-left:4px solid var(--primary);">
+                                <strong style="font-family:var(--font-heading);font-size:1.8rem;color:var(--primary-dark);display:block;line-height:1.1;">24</strong>
+                                <span style="font-size:0.82rem;color:var(--text-muted);">Comunidades alcanzadas</span>
+                            </div>
+                            <div style="padding:20px;background:var(--secondary-pale);border-radius:var(--radius-md);border-left:4px solid var(--secondary);">
+                                <strong style="font-family:var(--font-heading);font-size:1.8rem;color:var(--secondary-dark);display:block;line-height:1.1;">1,200</strong>
+                                <span style="font-size:0.82rem;color:var(--text-muted);">Familias participantes</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- IMPACT CALCULATOR -->
+        <section class="section">
+            <div class="container">
+                <div class="impact-calculator reveal-scale">
+                    <span style="font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:3.5px;color:var(--primary);">Calculadora de impacto</span>
+                    <h2 style="margin-top:12px;">¿Cuánto puede cambiar tu donación?</h2>
+                    <p style="opacity:0.72;font-size:1.05rem;max-width:520px;margin:0 auto;">Cada contribución tiene un impacto directo y medible en la vida de un joven.</p>
+                    <div class="calc-grid">
+                        <div class="calc-item">
+                            <div class="calc-amount">€15</div>
+                            <div class="calc-desc">Materiales escolares para un niño durante un semestre completo</div>
+                        </div>
+                        <div class="calc-item">
+                            <div class="calc-amount">€50</div>
+                            <div class="calc-desc">Un mes de formación técnica en cocina para un joven en el HTC</div>
+                        </div>
+                        <div class="calc-item">
+                            <div class="calc-amount">€100</div>
+                            <div class="calc-desc">Una beca mensual completa: alimentación, materiales y transporte</div>
+                        </div>
+                    </div>
+                    <a href="donar.html" class="btn btn--primary btn--lg" style="margin-top:44px;">Haz tu impacto ahora →</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="js/components.js"></script>
     <script src="js/main.js"></script>
-    </body>
+</body>
 </html>

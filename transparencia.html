@@ -1,1008 +1,286 @@
 <!doctype html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Transparencia y Libros Anuales | ONG Mama Alice</title>
-        <meta
-            name="description"
-            content="Consulta nuestros libros anuales, informes financieros y la distribución auditable de fondos. Mama Alice apuesta por la transparencia total."
-        />
-        <meta
-            property="og:title"
-            content="Transparencia y Libros Anuales | ONG Mama Alice"
-        />
-        <meta
-            property="og:description"
-            content="Consulta nuestros libros anuales, informes financieros y la distribución auditable de fondos."
-        />
-        <meta property="og:type" content="website" />
-        <meta
-            property="og:url"
-            content="https://tu-dominio-aqui.org/transparencia.html"
-        />
-        <meta property="og:site_name" content="ONG Mama Alice" />
-        <meta property="og:locale" content="es_PE" />
-        <meta
-            property="og:image"
-            content="https://tu-dominio-aqui.org/assets/images/logo.png"
-        />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta
-            name="twitter:title"
-            content="Transparencia y Libros Anuales | ONG Mama Alice"
-        />
-        <meta
-            name="twitter:description"
-            content="Consulta nuestros libros anuales, informes financieros y la distribución auditable de fondos."
-        />
-        <meta
-            name="twitter:image"
-            content="https://tu-dominio-aqui.org/assets/images/logo.png"
-        />
-        <link
-            rel="canonical"
-            href="https://tu-dominio-aqui.org/transparencia.html"
-        />
-        <meta name="theme-color" content="#0F2B4A" />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="assets/images/favicon-32x32.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="assets/images/favicon-16x16.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="512x512"
-            href="assets/images/favicon-512x512.png"
-        />
-        <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="assets/images/apple-touch-icon.png"
-        />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,800;1,9..144,500&amp;family=Inter:wght@400;500;600&amp;display=swap"
-        />
-        <link rel="stylesheet" href="css/styles.css" />
-        <style>
-            .trust-badges {
-                display: flex;
-                gap: 24px;
-                justify-content: center;
-                flex-wrap: wrap;
-                margin-top: 40px;
-            }
-            .trust-badge {
-                display: flex;
-                align-items: center;
-                gap: 12px;
-                background: var(--bg-white);
-                padding: 16px 24px;
-                border-radius: var(--radius-full);
-                box-shadow: var(--shadow-sm);
-                font-size: 0.9rem;
-                font-weight: 600;
-                color: var(--text-secondary);
-            }
-            .trust-badge .badge-icon {
-                width: 32px;
-                height: 32px;
-                border-radius: 50%;
-                background: var(--success);
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: white;
-                font-size: 1rem;
-            }
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transparencia y Libros Anuales | ONG Mama Alice</title>
+    <meta name="description" content="Consulta nuestros libros anuales, informes financieros y la distribución auditable de fondos. Mama Alice apuesta por la transparencia total." />
+    <meta property="og:title" content="Transparencia y Libros Anuales | ONG Mama Alice" />
+    <meta property="og:description" content="Consulta nuestros libros anuales, informes financieros y la distribución auditable de fondos." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tu-dominio-aqui.org/transparencia.html" />
+    <meta property="og:site_name" content="ONG Mama Alice" />
+    <meta property="og:locale" content="es_PE" />
+    <meta property="og:image" content="https://tu-dominio-aqui.org/assets/images/logo-oficial.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://tu-dominio-aqui.org/transparencia.html" />
+    <meta name="theme-color" content="#F5A420" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,800;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
 
-            /* Featured Book */
-            .featured-book {
-                display: grid;
-                grid-template-columns: auto 1fr;
-                gap: 80px;
-                align-items: center;
-                background: var(--bg-white);
-                border-radius: var(--radius-xl);
-                padding: 60px;
-                box-shadow: var(--shadow-xl);
-                position: relative;
-                overflow: hidden;
-            }
-            .featured-book::before {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 6px;
-                height: 100%;
-                background: linear-gradient(
-                    180deg,
-                    var(--accent),
-                    var(--primary)
-                );
-            }
-            .featured-book-cover {
-                width: 280px;
-                height: 400px;
-                border-radius: 6px 20px 20px 6px;
-                position: relative;
-                box-shadow:
-                    var(--shadow-2xl),
-                    10px 10px 0 rgba(15, 43, 74, 0.08);
-                transition: transform var(--duration-normal) var(--ease-out);
-                cursor: pointer;
-                overflow: hidden;
-            }
-            .featured-book-cover:hover {
-                transform: rotate(-2deg) scale(1.03);
-            }
-            .featured-book-badge {
-                position: absolute;
-                top: -10px;
-                right: -10px;
-                background: var(--accent);
-                color: white;
-                font-size: 0.7rem;
-                font-weight: 800;
-                text-transform: uppercase;
-                letter-spacing: 1px;
-                padding: 8px 16px;
-                border-radius: var(--radius-full);
-                box-shadow: var(--shadow-md);
-                z-index: 2;
-            }
+    <main id="main-content">
 
-            /* Financial dashboard */
-            .finance-grid {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 32px;
-            }
-            .finance-card {
-                background: var(--bg-white);
-                border-radius: var(--radius-lg);
-                padding: 36px;
-                box-shadow: var(--shadow-md);
-            }
-            .finance-card h3 {
-                font-family: var(--font-body);
-                font-size: 1.15rem;
-                margin-bottom: 28px;
-                padding-bottom: 16px;
-                border-bottom: 1px solid var(--border);
-            }
-            .finance-highlight {
-                display: flex;
-                align-items: baseline;
-                gap: 12px;
-                margin-bottom: 24px;
-            }
-            .finance-highlight .big-number {
-                font-family: var(--font-heading);
-                font-size: 3rem;
-                font-weight: 800;
-                color: var(--primary);
-            }
-            .finance-highlight .desc {
-                font-size: 1rem;
-                color: var(--text-muted);
-            }
-
-            /* Report list */
-            .reports-list {
-                margin-top: 40px;
-            }
-            .report-item {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                padding: 20px 24px;
-                background: var(--bg-white);
-                border-radius: var(--radius-md);
-                margin-bottom: 12px;
-                box-shadow: var(--shadow-xs);
-                transition: all var(--duration-fast) var(--ease-out);
-            }
-            .report-item:hover {
-                box-shadow: var(--shadow-md);
-                transform: translateX(4px);
-            }
-            .report-info {
-                display: flex;
-                align-items: center;
-                gap: 16px;
-            }
-            .report-icon {
-                width: 44px;
-                height: 44px;
-                border-radius: var(--radius-sm);
-                background: var(--bg-soft);
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 1.2rem;
-            }
-            .report-meta h4 {
-                font-family: var(--font-body);
-                font-size: 1rem;
-                margin-bottom: 2px;
-            }
-            .report-meta p {
-                font-size: 0.82rem;
-                color: var(--text-muted);
-            }
-            .report-item .btn {
-                white-space: nowrap;
-            }
-
-            @media (max-width: 768px) {
-                .featured-book {
-                    grid-template-columns: 1fr;
-                    padding: 32px;
-                    text-align: center;
-                }
-                .featured-book-cover {
-                    margin: 0 auto;
-                    width: 220px;
-                    height: 310px;
-                }
-                .finance-grid {
-                    grid-template-columns: 1fr;
-                }
-                .report-item {
-                    flex-direction: column;
-                    gap: 16px;
-                    align-items: flex-start;
-                }
-            }
-        </style>
-    </head>
-    <body>
-        <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
-    
-        <header class="header" id="header">
-            <div class="container nav-container">
-                <a href="index.html" class="logo"
-                    ><picture
-                        ><source
-                            srcset="assets/images/logo-mark.webp"
-                            type="image/webp" />
-                        <img
-                            src="assets/images/logo-mark.png"
-                            alt=""
-                            class="logo-icon"
-                            width="782"
-                            height="555"
-                            loading="eager" /></picture
-                    >Mama<span>Alice</span></a
-                >
-                <button class="mobile-menu-btn" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
-                    ☰
-                </button>
-                <nav class="nav-links" id="nav-links">
-                    <a href="index.html">Inicio</a>
-                    <a href="nosotros.html">Nosotros</a>
-                    <a href="comunidades.html">Proyectos</a>
-                    <a href="hospitality.html">Hospitality</a>
-                    <a href="transparencia.html" class="active"
-                        >Transparencia</a
-                    >
-                    <a href="donar.html" class="btn btn--primary btn--sm"
-                        >Donar Ahora</a
-                    >
-                </nav>
-            </div>
-        </header>
-
-        <main id="main-content">
-            <section class="page-hero">
-                <div class="container page-hero-content">
-                    <h1>Transparencia Total</h1>
-                    <p>
-                        Cada euro, cada sol, rendido públicamente. Porque la
-                        confianza se gana con hechos, no con palabras.
-                    </p>
-                    <div class="breadcrumb">
-                        <a href="index.html">Inicio</a> /
-                        <span>Transparencia</span>
-                    </div>
+        <!-- PAGE HERO -->
+        <section class="page-hero">
+            <div class="container page-hero-content">
+                <span class="eyebrow-hero">Auditoría externa · Informes públicos</span>
+                <h1>Transparencia Total</h1>
+                <p>Cada euro, cada sol, rendido públicamente. Porque la confianza se gana con hechos, no con palabras.</p>
+                <div class="breadcrumb">
+                    <a href="index.html">Inicio</a> / <span>Transparencia</span>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- Trust Badges -->
-            <div
-                class="container"
-                style="margin-top: -40px; position: relative; z-index: 20"
-            >
-                <div class="trust-badges reveal">
-                    <div class="trust-badge">
-                        <div class="badge-icon">✓</div>
-                        Auditoría externa anual
+        <!-- Trust Badges -->
+        <div class="container" style="margin-top:-40px;position:relative;z-index:20;">
+            <div class="trust-badges reveal">
+                <div class="trust-badge"><div class="badge-icon">✓</div>Auditoría externa anual</div>
+                <div class="trust-badge"><div class="badge-icon">✓</div>Informes públicos verificables</div>
+                <div class="trust-badge"><div class="badge-icon">✓</div>88% inversión en programas</div>
+                <div class="trust-badge"><div class="badge-icon">✓</div>Registro ONG activo</div>
+            </div>
+        </div>
+
+        <!-- FEATURED ANNUAL BOOK -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="eyebrow">Último informe</span>
+                    <h2>Memoria Institucional 2025</h2>
+                    <p>Nuestro informe anual más completo: resultados, historias de éxito y la distribución auditable de cada fondo recibido.</p>
+                </div>
+                <div class="featured-book reveal-scale">
+                    <div style="position:relative;">
+                        <span class="featured-book-badge">Más reciente</span>
+                        <div class="featured-book-cover" style="background:linear-gradient(135deg,var(--secondary) 0%,var(--secondary-dark) 100%);">
+                            <div class="featured-book-cover-pages"></div>
+                            <div class="book-cover-inner">
+                                <div class="book-label">LIBRO ANUAL</div>
+                                <div class="book-year">2025</div>
+                                <div class="book-org">MamaAlice.</div>
+                                <div style="margin-top:20px;width:36px;height:3px;background:var(--primary);border-radius:2px;"></div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="trust-badge">
-                        <div class="badge-icon">✓</div>
-                        Informes públicos verificables
-                    </div>
-                    <div class="trust-badge">
-                        <div class="badge-icon">✓</div>
-                        88% inversión en programas
-                    </div>
-                    <div class="trust-badge">
-                        <div class="badge-icon">✓</div>
-                        Registro ONG activo
+                    <div>
+                        <h3 style="font-family:var(--font-body);font-size:1.8rem;margin-bottom:16px;">Un año de logros medibles</h3>
+                        <p style="font-size:1.05rem;line-height:1.9;margin-bottom:16px;">En este documento detallamos la ejecución de cada programa, las historias de transformación de nuestros estudiantes y la distribución auditable de nuestros fondos operativos.</p>
+                        <ul style="margin-bottom:32px;list-style:none;padding:0;">
+                            <li style="display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--border);font-size:0.95rem;"><span style="color:var(--primary);font-weight:800;font-size:1.1rem;">→</span>2,500 jóvenes capacitados acumulados</li>
+                            <li style="display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--border);font-size:0.95rem;"><span style="color:var(--primary);font-weight:800;font-size:1.1rem;">→</span>85% de inserción laboral en HTC</li>
+                            <li style="display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid var(--border);font-size:0.95rem;"><span style="color:var(--primary);font-weight:800;font-size:1.1rem;">→</span>Expansión a 24 comunidades rurales</li>
+                            <li style="display:flex;align-items:center;gap:10px;padding:8px 0;font-size:0.95rem;"><span style="color:var(--secondary);font-weight:800;font-size:1.1rem;">→</span>Auditoría financiera completa incluida</li>
+                        </ul>
+                        <div class="btn-group">
+                            <a href="#" class="btn btn--primary">Descargar PDF (Español)</a>
+                            <a href="#" class="btn btn--outline">Download (English)</a>
+                        </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- FEATURED ANNUAL BOOK (Latest) -->
-            <section class="section">
-                <div class="container">
-                    <div class="section-header reveal">
-                        <span class="eyebrow">Último informe</span>
-                        <h2>Memoria Institucional 2025</h2>
-                        <p>
-                            Nuestro informe anual más completo: resultados,
-                            historias de éxito y la distribución auditable de
-                            cada fondo recibido.
-                        </p>
+        <!-- ALL ANNUAL BOOKS LIBRARY -->
+        <section class="section section--gray">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="eyebrow">Biblioteca de informes</span>
+                    <h2>Todos nuestros Libros Anuales</h2>
+                    <p>Accede a la memoria histórica completa de Mama Alice. Cada año, un nuevo capítulo de impacto documentado.</p>
+                </div>
+                <div class="books-grid">
+                    <div class="book-card reveal stagger-1">
+                        <div class="book-cover" style="background:linear-gradient(135deg,var(--secondary),var(--secondary-dark));">
+                            <div class="book-cover-pages"></div>
+                            <div class="book-cover-inner"><div class="book-label">LIBRO ANUAL</div><div class="book-year">2025</div><div class="book-org">MamaAlice.</div></div>
+                        </div>
+                        <h4>Memoria 2025</h4>
+                        <p>2,500 jóvenes · 24 comunidades</p>
+                        <a href="#" class="btn btn--primary btn--sm">Descargar PDF</a>
                     </div>
-
-                    <div class="featured-book reveal-scale">
-                        <div style="position: relative">
-                            <span class="featured-book-badge"
-                                >Más reciente</span
-                            >
-                            <div
-                                class="featured-book-cover"
-                                style="
-                                    background: linear-gradient(
-                                        135deg,
-                                        var(--primary) 0%,
-                                        var(--primary-dark) 100%
-                                    );
-                                "
-                            >
-                                <div class="book-cover-inner">
-                                    <div class="book-label">LIBRO ANUAL</div>
-                                    <div class="book-year">2025</div>
-                                    <div class="book-org">MamaAlice.</div>
-                                    <div
-                                        style="
-                                            margin-top: 24px;
-                                            width: 40px;
-                                            height: 3px;
-                                            background: var(--accent);
-                                            border-radius: 2px;
-                                        "
-                                    ></div>
-                                </div>
-                            </div>
+                    <div class="book-card reveal stagger-2">
+                        <div class="book-cover" style="background:linear-gradient(135deg,#1a4a2e,#0d2d1a);">
+                            <div class="book-cover-pages"></div>
+                            <div class="book-cover-inner"><div class="book-label">LIBRO ANUAL</div><div class="book-year">2024</div><div class="book-org">MamaAlice.</div></div>
                         </div>
-                        <div>
-                            <h3
-                                style="
-                                    font-family: var(--font-body);
-                                    font-size: 1.8rem;
-                                    margin-bottom: 16px;
-                                "
-                            >
-                                Un año de logros medibles
-                            </h3>
-                            <p
-                                style="
-                                    font-size: 1.05rem;
-                                    line-height: 1.9;
-                                    margin-bottom: 16px;
-                                "
-                            >
-                                En este documento detallamos la ejecución de
-                                cada programa, las historias de transformación
-                                de nuestros estudiantes y la distribución
-                                auditable de nuestros fondos operativos.
-                            </p>
-                            <ul
-                                style="
-                                    margin-bottom: 28px;
-                                    font-size: 0.95rem;
-                                    line-height: 2.2;
-                                "
-                            >
-                                <li
-                                    style="
-                                        display: flex;
-                                        align-items: center;
-                                        gap: 10px;
-                                    "
-                                >
-                                    <span
-                                        style="
-                                            color: var(--accent);
-                                            font-weight: bold;
-                                        "
-                                        >→</span
-                                    >
-                                    2,500 jóvenes capacitados acumulados
-                                </li>
-                                <li
-                                    style="
-                                        display: flex;
-                                        align-items: center;
-                                        gap: 10px;
-                                    "
-                                >
-                                    <span
-                                        style="
-                                            color: var(--accent);
-                                            font-weight: bold;
-                                        "
-                                        >→</span
-                                    >
-                                    85% de inserción laboral en HTC
-                                </li>
-                                <li
-                                    style="
-                                        display: flex;
-                                        align-items: center;
-                                        gap: 10px;
-                                    "
-                                >
-                                    <span
-                                        style="
-                                            color: var(--accent);
-                                            font-weight: bold;
-                                        "
-                                        >→</span
-                                    >
-                                    Expansión a 24 comunidades rurales
-                                </li>
-                                <li
-                                    style="
-                                        display: flex;
-                                        align-items: center;
-                                        gap: 10px;
-                                    "
-                                >
-                                    <span
-                                        style="
-                                            color: var(--accent);
-                                            font-weight: bold;
-                                        "
-                                        >→</span
-                                    >
-                                    Auditoría financiera completa incluida
-                                </li>
-                            </ul>
-                            <div class="btn-group">
-                                <a href="#" class="btn btn--primary"
-                                    >Descargar PDF (Español)</a
-                                >
-                                <a href="#" class="btn btn--outline"
-                                    >Download (English)</a
-                                >
-                            </div>
+                        <h4>Memoria 2024</h4>
+                        <p>2,100 jóvenes · Nuevo centro HTC</p>
+                        <a href="#" class="btn btn--outline btn--sm">Descargar PDF</a>
+                    </div>
+                    <div class="book-card reveal stagger-3">
+                        <div class="book-cover" style="background:linear-gradient(135deg,#4a1a0f,#2d0d08);">
+                            <div class="book-cover-pages"></div>
+                            <div class="book-cover-inner"><div class="book-label">LIBRO ANUAL</div><div class="book-year">2023</div><div class="book-org">MamaAlice.</div></div>
                         </div>
+                        <h4>Memoria 2023</h4>
+                        <p>1,800 jóvenes · Expansión regional</p>
+                        <a href="#" class="btn btn--outline btn--sm">Descargar PDF</a>
+                    </div>
+                    <div class="book-card reveal stagger-4">
+                        <div class="book-cover" style="background:linear-gradient(135deg,#3d2e4a,#1e152d);">
+                            <div class="book-cover-pages"></div>
+                            <div class="book-cover-inner"><div class="book-label">LIBRO ANUAL</div><div class="book-year">2022</div><div class="book-org">MamaAlice.</div></div>
+                        </div>
+                        <h4>Memoria 2022</h4>
+                        <p>1,400 jóvenes · 85% inserción</p>
+                        <a href="#" class="btn btn--outline btn--sm">Descargar PDF</a>
+                    </div>
+                    <div class="book-card reveal stagger-5">
+                        <div class="book-cover" style="background:linear-gradient(135deg,#4a3d1a,#2d250d);">
+                            <div class="book-cover-pages"></div>
+                            <div class="book-cover-inner"><div class="book-label">LIBRO ANUAL</div><div class="book-year">2021</div><div class="book-org">MamaAlice.</div></div>
+                        </div>
+                        <h4>Memoria 2021</h4>
+                        <p>1,000 jóvenes · Respuesta COVID</p>
+                        <a href="#" class="btn btn--outline btn--sm">Descargar PDF</a>
+                    </div>
+                    <div class="book-card reveal stagger-5">
+                        <div class="book-cover" style="background:linear-gradient(135deg,#1a3a4a,#0d1e2d);">
+                            <div class="book-cover-pages"></div>
+                            <div class="book-cover-inner"><div class="book-label">LIBRO ANUAL</div><div class="book-year">2020</div><div class="book-org">MamaAlice.</div></div>
+                        </div>
+                        <h4>Memoria 2020</h4>
+                        <p>800 jóvenes · Resiliencia comunitaria</p>
+                        <a href="#" class="btn btn--outline btn--sm">Descargar PDF</a>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- ALL ANNUAL BOOKS LIBRARY -->
-            <section class="section section--gray">
-                <div class="container">
-                    <div class="section-header reveal">
-                        <span class="eyebrow">Biblioteca de informes</span>
-                        <h2>Todos nuestros Libros Anuales</h2>
-                        <p>
-                            Accede a la memoria histórica completa de Mama
-                            Alice. Cada año, un nuevo capítulo de impacto
-                            documentado.
-                        </p>
-                    </div>
-
-                    <div class="books-grid">
-                        <!-- 2025 -->
-                        <div class="book-card reveal stagger-1">
-                            <div
-                                class="book-cover"
-                                style="
-                                    background: linear-gradient(
-                                        135deg,
-                                        var(--primary),
-                                        var(--primary-dark)
-                                    );
-                                "
-                            >
-                                <div class="book-cover-inner">
-                                    <div class="book-label">LIBRO ANUAL</div>
-                                    <div class="book-year">2025</div>
-                                    <div class="book-org">MamaAlice.</div>
-                                </div>
-                            </div>
-                            <h4>Memoria Institucional 2025</h4>
-                            <p>
-                                2,500 jóvenes · 24 comunidades · Auditoría
-                                completa
-                            </p>
-                            <a href="#" class="btn btn--primary btn--sm"
-                                >Descargar PDF</a
-                            >
-                        </div>
-
-                        <!-- 2024 -->
-                        <div class="book-card reveal stagger-2">
-                            <div
-                                class="book-cover"
-                                style="
-                                    background: linear-gradient(
-                                        135deg,
-                                        #1a4a2e,
-                                        #0d2d1a
-                                    );
-                                "
-                            >
-                                <div class="book-cover-inner">
-                                    <div class="book-label">LIBRO ANUAL</div>
-                                    <div class="book-year">2024</div>
-                                    <div class="book-org">MamaAlice.</div>
-                                </div>
-                            </div>
-                            <h4>Memoria Institucional 2024</h4>
-                            <p>
-                                2,100 jóvenes · 20 comunidades · Nuevo centro
-                                HTC
-                            </p>
-                            <a href="#" class="btn btn--outline btn--sm"
-                                >Descargar PDF</a
-                            >
-                        </div>
-
-                        <!-- 2023 -->
-                        <div class="book-card reveal stagger-3">
-                            <div
-                                class="book-cover"
-                                style="
-                                    background: linear-gradient(
-                                        135deg,
-                                        #4a1a0f,
-                                        #2d0d08
-                                    );
-                                "
-                            >
-                                <div class="book-cover-inner">
-                                    <div class="book-label">LIBRO ANUAL</div>
-                                    <div class="book-year">2023</div>
-                                    <div class="book-org">MamaAlice.</div>
-                                </div>
-                            </div>
-                            <h4>Memoria Institucional 2023</h4>
-                            <p>
-                                1,800 jóvenes · 18 comunidades · Expansión
-                                regional
-                            </p>
-                            <a href="#" class="btn btn--outline btn--sm"
-                                >Descargar PDF</a
-                            >
-                        </div>
-
-                        <!-- 2022 -->
-                        <div class="book-card reveal stagger-4">
-                            <div
-                                class="book-cover"
-                                style="
-                                    background: linear-gradient(
-                                        135deg,
-                                        #3d2e4a,
-                                        #1e152d
-                                    );
-                                "
-                            >
-                                <div class="book-cover-inner">
-                                    <div class="book-label">LIBRO ANUAL</div>
-                                    <div class="book-year">2022</div>
-                                    <div class="book-org">MamaAlice.</div>
-                                </div>
-                            </div>
-                            <h4>Memoria Institucional 2022</h4>
-                            <p>
-                                1,400 jóvenes · 15 comunidades · 85% inserción
-                                laboral
-                            </p>
-                            <a href="#" class="btn btn--outline btn--sm"
-                                >Descargar PDF</a
-                            >
-                        </div>
-
-                        <!-- 2021 -->
-                        <div class="book-card reveal stagger-5">
-                            <div
-                                class="book-cover"
-                                style="
-                                    background: linear-gradient(
-                                        135deg,
-                                        #4a3d1a,
-                                        #2d250d
-                                    );
-                                "
-                            >
-                                <div class="book-cover-inner">
-                                    <div class="book-label">LIBRO ANUAL</div>
-                                    <div class="book-year">2021</div>
-                                    <div class="book-org">MamaAlice.</div>
-                                </div>
-                            </div>
-                            <h4>Memoria Institucional 2021</h4>
-                            <p>
-                                1,000 jóvenes · Respuesta COVID-19 ·
-                                Digitalización
-                            </p>
-                            <a href="#" class="btn btn--outline btn--sm"
-                                >Descargar PDF</a
-                            >
-                        </div>
-
-                        <!-- 2020 -->
-                        <div class="book-card reveal stagger-5">
-                            <div
-                                class="book-cover"
-                                style="
-                                    background: linear-gradient(
-                                        135deg,
-                                        #1a3a4a,
-                                        #0d1e2d
-                                    );
-                                "
-                            >
-                                <div class="book-cover-inner">
-                                    <div class="book-label">LIBRO ANUAL</div>
-                                    <div class="book-year">2020</div>
-                                    <div class="book-org">MamaAlice.</div>
-                                </div>
-                            </div>
-                            <h4>Memoria Institucional 2020</h4>
-                            <p>
-                                800 jóvenes · Pandemia · Resiliencia comunitaria
-                            </p>
-                            <a href="#" class="btn btn--outline btn--sm"
-                                >Descargar PDF</a
-                            >
-                        </div>
-                    </div>
+        <!-- FINANCIAL DASHBOARD -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="eyebrow">Dashboard financiero</span>
+                    <h2>¿A dónde van los fondos?</h2>
+                    <p>Cada centavo se rastrea y se reporta. Transparencia al nivel de las mejores ONGs del mundo.</p>
                 </div>
-            </section>
-
-            <!-- FINANCIAL DASHBOARD -->
-            <section class="section">
-                <div class="container">
-                    <div class="section-header reveal">
-                        <span class="eyebrow">Dashboard financiero</span>
-                        <h2>¿A dónde van los fondos?</h2>
-                        <p>
-                            Inspirados en el modelo de transparencia de
-                            charity:water, cada centavo se rastrea y se reporta.
-                        </p>
-                    </div>
-
-                    <div class="finance-grid">
-                        <div class="finance-card reveal stagger-1">
+                <div class="finance-grid">
+                    <div class="finance-card reveal stagger-1" style="display:flex;gap:40px;align-items:center;">
+                        <div class="finance-chart" style="width:200px;height:200px;min-width:200px;border-radius:50%;background:conic-gradient(var(--secondary) 0% 45%, var(--primary) 45% 65%, var(--gold) 65% 83%, var(--dark-soft) 83% 95%, #ddd 95% 100%);position:relative;box-shadow:var(--shadow-md);transform:rotate(-15deg);">
+                            <div style="position:absolute;inset:40px;background:var(--bg-white);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-heading);font-weight:800;font-size:1.6rem;color:var(--text-primary);box-shadow:inset 0 4px 10px rgba(0,0,0,0.05);transform:rotate(15deg);">2025</div>
+                        </div>
+                        <div style="flex:1;">
                             <h3>📊 Distribución de Inversión 2025</h3>
                             <div class="progress-item">
-                                <div class="progress-label">
-                                    <span>Programas Educativos</span
-                                    ><span class="percentage">45%</span>
-                                </div>
-                                <div class="progress-track">
-                                    <div
-                                        class="progress-fill"
-                                        data-width="45%"
-                                    ></div>
-                                </div>
+                                <div class="progress-label"><span><span style="display:inline-block;width:12px;height:12px;border-radius:2px;background:var(--secondary);margin-right:8px;"></span>Programas Educativos</span><span class="percentage">45%</span></div>
+                                <div class="progress-track"><div class="progress-fill" style="background:var(--secondary);" data-width="45%"></div></div>
                             </div>
                             <div class="progress-item">
-                                <div class="progress-label">
-                                    <span>Soporte Psicosocial</span
-                                    ><span class="percentage">20%</span>
-                                </div>
-                                <div class="progress-track">
-                                    <div
-                                        class="progress-fill"
-                                        data-width="20%"
-                                    ></div>
-                                </div>
+                                <div class="progress-label"><span><span style="display:inline-block;width:12px;height:12px;border-radius:2px;background:var(--primary);margin-right:8px;"></span>Soporte Psicosocial</span><span class="percentage">20%</span></div>
+                                <div class="progress-track"><div class="progress-fill" style="background:var(--primary);" data-width="20%"></div></div>
                             </div>
                             <div class="progress-item">
-                                <div class="progress-label">
-                                    <span>Hospitality Center</span
-                                    ><span class="percentage">18%</span>
-                                </div>
-                                <div class="progress-track">
-                                    <div
-                                        class="progress-fill"
-                                        data-width="18%"
-                                    ></div>
-                                </div>
+                                <div class="progress-label"><span><span style="display:inline-block;width:12px;height:12px;border-radius:2px;background:var(--gold);margin-right:8px;"></span>Hospitality Center</span><span class="percentage">18%</span></div>
+                                <div class="progress-track"><div class="progress-fill" style="background:var(--gold);" data-width="18%"></div></div>
                             </div>
                             <div class="progress-item">
-                                <div class="progress-label">
-                                    <span>Administración</span
-                                    ><span class="percentage">12%</span>
-                                </div>
-                                <div class="progress-track">
-                                    <div
-                                        class="progress-fill"
-                                        data-width="12%"
-                                    ></div>
-                                </div>
+                                <div class="progress-label"><span><span style="display:inline-block;width:12px;height:12px;border-radius:2px;background:var(--dark-soft);margin-right:8px;"></span>Administración</span><span class="percentage">12%</span></div>
+                                <div class="progress-track"><div class="progress-fill" style="background:var(--dark-soft);" data-width="12%"></div></div>
                             </div>
                             <div class="progress-item">
-                                <div class="progress-label">
-                                    <span>Comunicación</span
-                                    ><span class="percentage">5%</span>
-                                </div>
-                                <div class="progress-track">
-                                    <div
-                                        class="progress-fill"
-                                        data-width="5%"
-                                    ></div>
-                                </div>
+                                <div class="progress-label"><span><span style="display:inline-block;width:12px;height:12px;border-radius:2px;background:#ddd;margin-right:8px;"></span>Comunicación</span><span class="percentage">5%</span></div>
+                                <div class="progress-track"><div class="progress-fill" style="background:#ccc;" data-width="5%"></div></div>
                             </div>
                         </div>
-
-                        <div class="finance-card reveal stagger-2">
+                    </div>
+                    <div class="finance-card reveal stagger-2" style="display:flex;gap:40px;align-items:center;">
+                        <div class="finance-chart" style="width:200px;height:200px;min-width:200px;border-radius:50%;background:conic-gradient(var(--secondary) 0% 42%, var(--primary) 42% 70%, var(--gold) 70% 88%, var(--dark-soft) 88% 100%);position:relative;box-shadow:var(--shadow-md);transform:rotate(45deg);">
+                            <div style="position:absolute;inset:40px;background:var(--bg-white);border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;font-family:var(--font-heading);font-weight:800;font-size:1.4rem;color:var(--text-primary);box-shadow:inset 0 4px 10px rgba(0,0,0,0.05);transform:rotate(-45deg);"><span>€1.2M</span><span style="font-size:0.6rem;font-family:var(--font-body);text-transform:uppercase;letter-spacing:1px;color:var(--text-muted);font-weight:600;">Recaudado</span></div>
+                        </div>
+                        <div style="flex:1;">
                             <h3>💰 Origen de los Fondos</h3>
                             <div class="progress-item">
-                                <div class="progress-label">
-                                    <span>Cooperación Internacional</span
-                                    ><span class="percentage">42%</span>
-                                </div>
-                                <div class="progress-track">
-                                    <div
-                                        class="progress-fill"
-                                        data-width="42%"
-                                    ></div>
-                                </div>
+                                <div class="progress-label"><span><span style="display:inline-block;width:12px;height:12px;border-radius:2px;background:var(--secondary);margin-right:8px;"></span>Cooperación Internacional</span><span class="percentage">42%</span></div>
+                                <div class="progress-track"><div class="progress-fill" style="background:var(--secondary);" data-width="42%"></div></div>
                             </div>
                             <div class="progress-item">
-                                <div class="progress-label">
-                                    <span>Donantes Privados (Europa)</span
-                                    ><span class="percentage">28%</span>
-                                </div>
-                                <div class="progress-track">
-                                    <div
-                                        class="progress-fill"
-                                        data-width="28%"
-                                    ></div>
-                                </div>
+                                <div class="progress-label"><span><span style="display:inline-block;width:12px;height:12px;border-radius:2px;background:var(--primary);margin-right:8px;"></span>Donantes Privados (Europa)</span><span class="percentage">28%</span></div>
+                                <div class="progress-track"><div class="progress-fill" style="background:var(--primary);" data-width="28%"></div></div>
                             </div>
                             <div class="progress-item">
-                                <div class="progress-label">
-                                    <span>Subvenciones Públicas</span
-                                    ><span class="percentage">18%</span>
-                                </div>
-                                <div class="progress-track">
-                                    <div
-                                        class="progress-fill"
-                                        data-width="18%"
-                                    ></div>
-                                </div>
+                                <div class="progress-label"><span><span style="display:inline-block;width:12px;height:12px;border-radius:2px;background:var(--gold);margin-right:8px;"></span>Subvenciones Públicas</span><span class="percentage">18%</span></div>
+                                <div class="progress-track"><div class="progress-fill" style="background:var(--gold);" data-width="18%"></div></div>
                             </div>
                             <div class="progress-item">
-                                <div class="progress-label">
-                                    <span>Ingresos propios (HTC)</span
-                                    ><span class="percentage">12%</span>
-                                </div>
-                                <div class="progress-track">
-                                    <div
-                                        class="progress-fill"
-                                        data-width="12%"
-                                    ></div>
-                                </div>
-                            </div>
-                            <div
-                                class="finance-highlight"
-                                style="
-                                    margin-top: 24px;
-                                    padding-top: 20px;
-                                    border-top: 1px solid var(--border);
-                                "
-                            >
-                                <div class="big-number">
-                                    88<span style="font-size: 1.5rem">%</span>
-                                </div>
-                                <div class="desc">
-                                    de los fondos se destinan directamente a
-                                    programas y beneficiarios
-                                </div>
+                                <div class="progress-label"><span><span style="display:inline-block;width:12px;height:12px;border-radius:2px;background:var(--dark-soft);margin-right:8px;"></span>Ingresos propios (HTC)</span><span class="percentage">12%</span></div>
+                                <div class="progress-track"><div class="progress-fill" style="background:var(--dark-soft);" data-width="12%"></div></div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
-
-            <!-- OTHER REPORTS -->
-            <section class="section section--gray">
-                <div class="container">
-                    <div class="section-header reveal">
-                        <span class="eyebrow">Documentos adicionales</span>
-                        <h2>Otros informes y documentos</h2>
-                        <p>
-                            Accede a nuestros informes de auditoría, estatutos y
-                            documentos legales.
-                        </p>
-                    </div>
-                    <div class="reports-list">
-                        <div class="report-item reveal stagger-1">
-                            <div class="report-info">
-                                <div class="report-icon">📋</div>
-                                <div class="report-meta">
-                                    <h4>Informe de Auditoría Externa 2025</h4>
-                                    <p>
-                                        Auditoría independiente · PDF · 2.4 MB
-                                    </p>
-                                </div>
-                            </div>
-                            <a href="#" class="btn btn--outline btn--sm"
-                                >Descargar</a
-                            >
-                        </div>
-                        <div class="report-item reveal stagger-2">
-                            <div class="report-info">
-                                <div class="report-icon">📜</div>
-                                <div class="report-meta">
-                                    <h4>Estatutos de la Asociación</h4>
-                                    <p>
-                                        Documento legal fundacional · PDF · 1.1
-                                        MB
-                                    </p>
-                                </div>
-                            </div>
-                            <a href="#" class="btn btn--outline btn--sm"
-                                >Descargar</a
-                            >
-                        </div>
-                        <div class="report-item reveal stagger-3">
-                            <div class="report-info">
-                                <div class="report-icon">📊</div>
-                                <div class="report-meta">
-                                    <h4>Informe de Impacto Social 2024</h4>
-                                    <p>
-                                        Evaluación de resultados por programa ·
-                                        PDF · 3.8 MB
-                                    </p>
-                                </div>
-                            </div>
-                            <a href="#" class="btn btn--outline btn--sm"
-                                >Descargar</a
-                            >
-                        </div>
-                        <div class="report-item reveal stagger-4">
-                            <div class="report-info">
-                                <div class="report-icon">🏛️</div>
-                                <div class="report-meta">
-                                    <h4>Certificado de Inscripción ONG</h4>
-                                    <p>Registro oficial · PDF · 0.5 MB</p>
-                                </div>
-                            </div>
-                            <a href="#" class="btn btn--outline btn--sm"
-                                >Descargar</a
-                            >
-                        </div>
-                    </div>
+                <div class="finance-highlight" style="margin-top:24px;padding-top:20px;border-top:1px solid var(--border);">
+                    <div class="big-number">88<span style="font-size:1.4rem;">%</span></div>
+                    <div class="desc">de los fondos se destinan directamente a programas y beneficiarios</div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- CTA -->
-            <section class="cta-band">
-                <div class="container reveal">
-                    <h2>La transparencia genera confianza</h2>
-                    <p>
-                        ¿Tienes preguntas sobre nuestros informes? Escríbenos y
-                        te respondemos.
-                    </p>
-                    <div class="btn-group" style="justify-content: center">
-                        <a href="donar.html" class="btn btn--primary btn--lg"
-                            >Donar con confianza →</a
-                        >
-                        <a
-                            href="mailto:info@mamaalice.org"
-                            class="btn btn--white btn--lg"
-                            >Contactar</a
-                        >
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <footer class="footer">
+        <!-- OTHER REPORTS -->
+        <section class="section section--gray">
             <div class="container">
-                <div class="footer-grid">
-                    <div class="footer-brand">
-                        <a href="index.html" class="logo"
-                            ><picture
-                                ><source
-                                    srcset="assets/images/logo-mark.webp"
-                                    type="image/webp" />
-                                <img
-                                    src="assets/images/logo-mark.png"
-                                    alt=""
-                                    class="logo-icon"
-                                    width="782"
-                                    height="555"
-                                    loading="eager" /></picture
-                            >Mama<span>Alice</span></a
-                        >
-                        <p>
-                            Transformando el futuro de la juventud ayacuchana
-                            mediante educación, soporte emocional y formación
-                            técnica de excelencia.
-                        </p>
-                        <div class="social-links">
-                            <a
-                                href="#"
-                                class="social-link"
-                                aria-label="Facebook"
-                                >f</a
-                            ><a
-                                href="#"
-                                class="social-link"
-                                aria-label="Instagram"
-                                >ig</a
-                            ><a
-                                href="#"
-                                class="social-link"
-                                aria-label="LinkedIn"
-                                >in</a
-                            ><a
-                                href="#"
-                                class="social-link"
-                                aria-label="YouTube"
-                                >yt</a
-                            >
-                        </div>
-                    </div>
-                    <div class="footer-col">
-                        <h4>Navegación</h4>
-                        <a href="index.html">Inicio</a
-                        ><a href="nosotros.html">Sobre Nosotros</a
-                        ><a href="comunidades.html">Proyectos</a
-                        ><a href="hospitality.html">Hospitality Center</a
-                        ><a href="transparencia.html">Transparencia</a>
-                    </div>
-                    <div class="footer-col">
-                        <h4>Involúcrate</h4>
-                        <a href="donar.html">Donar</a
-                        ><a href="#">Voluntariado</a
-                        ><a href="#">Empresas Aliadas</a
-                        ><a href="#">Trabaja con Nosotros</a>
-                    </div>
-                    <div class="footer-col">
-                        <h4>Contacto</h4>
-                        <a href="#">Ayacucho, Perú</a
-                        ><a href="mailto:info@mamaalice.org"
-                            >info@mamaalice.org</a
-                        ><a href="tel:+5166123456">+51 66 123 456</a>
-                    </div>
+                <div class="section-header reveal">
+                    <span class="eyebrow">Documentos adicionales</span>
+                    <h2>Otros informes y documentos</h2>
+                    <p>Accede a nuestros informes de auditoría, estatutos y documentos legales.</p>
                 </div>
-                <div class="footer-bottom">
-                    <p>© 2026 ONG Mama Alice. Todos los derechos reservados.</p>
-                    <div>
-                        <a href="#">Política de Privacidad</a> ·
-                        <a href="#">Aviso Legal</a>
+                <div class="reports-list">
+                    <div class="report-item reveal stagger-1">
+                        <div class="report-info">
+                            <div class="report-icon">📋</div>
+                            <div class="report-meta"><h4>Informe de Auditoría Externa 2025</h4><p>Auditoría independiente · PDF · 2.4 MB</p></div>
+                        </div>
+                        <a href="#" class="btn btn--outline btn--sm">Descargar</a>
+                    </div>
+                    <div class="report-item reveal stagger-2">
+                        <div class="report-info">
+                            <div class="report-icon">📜</div>
+                            <div class="report-meta"><h4>Estatutos de la Asociación</h4><p>Documento legal fundacional · PDF · 1.1 MB</p></div>
+                        </div>
+                        <a href="#" class="btn btn--outline btn--sm">Descargar</a>
+                    </div>
+                    <div class="report-item reveal stagger-3">
+                        <div class="report-info">
+                            <div class="report-icon">📊</div>
+                            <div class="report-meta"><h4>Informe de Impacto Social 2024</h4><p>Evaluación de resultados por programa · PDF · 3.8 MB</p></div>
+                        </div>
+                        <a href="#" class="btn btn--outline btn--sm">Descargar</a>
+                    </div>
+                    <div class="report-item reveal stagger-4">
+                        <div class="report-info">
+                            <div class="report-icon">🏛️</div>
+                            <div class="report-meta"><h4>Certificado de Inscripción ONG</h4><p>Registro oficial · PDF · 0.5 MB</p></div>
+                        </div>
+                        <a href="#" class="btn btn--outline btn--sm">Descargar</a>
                     </div>
                 </div>
             </div>
-        </footer>
-        <script src="js/components.js"></script>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-band">
+            <div class="container reveal">
+                <h2>La transparencia genera confianza</h2>
+                <p>¿Tienes preguntas sobre nuestros informes? Escríbenos y te respondemos.</p>
+                <div class="btn-group" style="justify-content:center;">
+                    <a href="donar.html" class="btn btn--primary btn--lg">Donar con confianza →</a>
+                    <a href="mailto:info@mamaalice.org" class="btn btn--white btn--lg">Contactar</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="js/components.js"></script>
     <script src="js/main.js"></script>
-    </body>
+</body>
 </html>

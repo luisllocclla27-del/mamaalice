@@ -1,654 +1,208 @@
 <!doctype html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Sobre Nosotros | ONG Mama Alice</title>
-        <meta
-            name="description"
-            content="Conoce la historia, misión y equipo de Mama Alice. Desde Ayacucho, Perú, transformamos el futuro de jóvenes en situación de vulnerabilidad."
-        />
-        <meta property="og:title" content="Sobre Nosotros | ONG Mama Alice" />
-        <meta
-            property="og:description"
-            content="Conoce la historia, misión y equipo de Mama Alice, transformando el futuro de jóvenes en Ayacucho, Perú."
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://tu-dominio-aqui.org/nosotros.html" />
-        <meta property="og:site_name" content="ONG Mama Alice" />
-        <meta property="og:locale" content="es_PE" />
-        <meta
-            property="og:image"
-            content="https://tu-dominio-aqui.org/assets/images/logo.png"
-        />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Sobre Nosotros | ONG Mama Alice" />
-        <meta
-            name="twitter:description"
-            content="Conoce la historia, misión y equipo de Mama Alice, transformando el futuro de jóvenes en Ayacucho, Perú."
-        />
-        <meta
-            name="twitter:image"
-            content="https://tu-dominio-aqui.org/assets/images/logo.png"
-        />
-        <link rel="canonical" href="https://tu-dominio-aqui.org/nosotros.html" />
-        <meta name="theme-color" content="#0F2B4A" />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="assets/images/favicon-32x32.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="16x16"
-            href="assets/images/favicon-16x16.png"
-        />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="512x512"
-            href="assets/images/favicon-512x512.png"
-        />
-        <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="assets/images/apple-touch-icon.png"
-        />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,800;1,9..144,500&amp;family=Inter:wght@400;500;600&amp;display=swap"
-        />
-        <link rel="stylesheet" href="css/styles.css" />
-        <style>
-            .timeline {
-                position: relative;
-                padding: 40px 0;
-            }
-            .timeline::before {
-                content: "";
-                position: absolute;
-                left: 50%;
-                top: 0;
-                bottom: 0;
-                width: 2px;
-                background: var(--border);
-                transform: translateX(-50%);
-            }
-            .timeline-item {
-                display: flex;
-                justify-content: flex-end;
-                padding: 0 0 48px;
-                width: 50%;
-                position: relative;
-            }
-            .timeline-item:nth-child(even) {
-                align-self: flex-end;
-                justify-content: flex-start;
-                margin-left: 50%;
-            }
-            .timeline-item::after {
-                content: "";
-                position: absolute;
-                width: 16px;
-                height: 16px;
-                background: var(--accent);
-                border: 4px solid var(--bg-white);
-                border-radius: 50%;
-                z-index: 2;
-            }
-            .timeline-item:nth-child(odd)::after {
-                right: -8px;
-            }
-            .timeline-item:nth-child(even)::after {
-                left: -8px;
-            }
-            .timeline-content {
-                background: var(--bg-white);
-                border-radius: var(--radius-lg);
-                padding: 28px 32px;
-                box-shadow: var(--shadow-md);
-                max-width: 420px;
-                margin-right: 40px;
-            }
-            .timeline-item:nth-child(even) .timeline-content {
-                margin-right: 0;
-                margin-left: 40px;
-            }
-            .timeline-content .year {
-                font-family: var(--font-heading);
-                font-size: 1.5rem;
-                color: var(--accent);
-                font-weight: 800;
-                margin-bottom: 8px;
-            }
-            .timeline-content h3 {
-                font-family: var(--font-body);
-                font-size: 1.1rem;
-                margin-bottom: 8px;
-            }
-            .timeline-content p {
-                font-size: 0.92rem;
-                color: var(--text-muted);
-            }
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sobre Nosotros | ONG Mama Alice</title>
+    <meta name="description" content="Conoce la historia, misión y equipo de Mama Alice. Desde Ayacucho, Perú, transformamos el futuro de jóvenes en situación de vulnerabilidad." />
+    <meta property="og:title" content="Sobre Nosotros | ONG Mama Alice" />
+    <meta property="og:description" content="Conoce la historia, misión y equipo de Mama Alice, transformando el futuro de jóvenes en Ayacucho, Perú." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tu-dominio-aqui.org/nosotros.html" />
+    <meta property="og:site_name" content="ONG Mama Alice" />
+    <meta property="og:locale" content="es_PE" />
+    <meta property="og:image" content="https://tu-dominio-aqui.org/assets/images/logo-oficial.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://tu-dominio-aqui.org/nosotros.html" />
+    <meta name="theme-color" content="#F5A420" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,800;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
 
-            .values-grid {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: 32px;
-            }
-            .value-card {
-                background: var(--bg-white);
-                border-radius: var(--radius-lg);
-                padding: 40px 32px;
-                box-shadow: var(--shadow-md);
-                text-align: center;
-                transition: all var(--duration-normal) var(--ease-out);
-                border-bottom: 4px solid transparent;
-            }
-            .value-card:hover {
-                transform: translateY(-6px);
-                box-shadow: var(--shadow-xl);
-                border-bottom-color: var(--accent);
-            }
-            .value-icon {
-                width: 72px;
-                height: 72px;
-                margin: 0 auto 20px;
-                border-radius: 50%;
-                background: linear-gradient(
-                    135deg,
-                    var(--accent),
-                    var(--accent-dark)
-                );
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                font-size: 2rem;
-            }
+    <main id="main-content">
 
-            .team-grid {
-                display: grid;
-                grid-template-columns: repeat(4, 1fr);
-                gap: 32px;
-            }
-            .team-member {
-                text-align: center;
-            }
-            .team-photo {
-                width: 160px;
-                height: 160px;
-                border-radius: 50%;
-                margin: 0 auto 20px;
-                background: linear-gradient(
-                    135deg,
-                    var(--bg-soft),
-                    var(--border)
-                );
-                overflow: hidden;
-                border: 4px solid var(--bg-white);
-                box-shadow: var(--shadow-md);
-            }
-            .team-photo img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-            .team-member h4 {
-                font-family: var(--font-body);
-                font-size: 1.05rem;
-                margin-bottom: 4px;
-            }
-            .team-member p {
-                font-size: 0.85rem;
-                color: var(--text-muted);
-            }
-
-            @media (max-width: 768px) {
-                .timeline::before {
-                    left: 20px;
-                }
-                .timeline-item,
-                .timeline-item:nth-child(even) {
-                    width: 100%;
-                    margin-left: 0;
-                    justify-content: flex-start;
-                    padding-left: 50px;
-                }
-                .timeline-item::after,
-                .timeline-item:nth-child(odd)::after,
-                .timeline-item:nth-child(even)::after {
-                    left: 12px;
-                    right: auto;
-                }
-                .timeline-content,
-                .timeline-item:nth-child(even) .timeline-content {
-                    margin-left: 0;
-                    margin-right: 0;
-                }
-                .values-grid,
-                .team-grid {
-                    grid-template-columns: 1fr 1fr;
-                }
-            }
-            @media (max-width: 480px) {
-                .values-grid,
-                .team-grid {
-                    grid-template-columns: 1fr;
-                }
-            }
-        </style>
-    </head>
-    <body>
-        <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
-    
-        <!-- HEADER -->
-        <header class="header" id="header">
-            <div class="container nav-container">
-                <a href="index.html" class="logo"
-                    ><picture
-                        ><source
-                            srcset="assets/images/logo-mark.webp"
-                            type="image/webp" />
-                        <img
-                            src="assets/images/logo-mark.png"
-                            alt=""
-                            class="logo-icon"
-                            width="782"
-                            height="555"
-                            loading="eager" /></picture
-                    >Mama<span>Alice</span></a
-                >
-                <button class="mobile-menu-btn" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
-                    ☰
-                </button>
-                <nav class="nav-links" id="nav-links">
-                    <a href="index.html">Inicio</a>
-                    <a href="nosotros.html" class="active">Nosotros</a>
-                    <a href="comunidades.html">Proyectos</a>
-                    <a href="hospitality.html">Hospitality</a>
-                    <a href="transparencia.html">Transparencia</a>
-                    <a href="donar.html" class="btn btn--primary btn--sm"
-                        >Donar Ahora</a
-                    >
-                </nav>
+        <!-- PAGE HERO -->
+        <section class="page-hero">
+            <picture>
+                <source srcset="assets/images/ayacucho_landscape_1782863794905.webp" type="image/webp" />
+                <img src="assets/images/ayacucho_landscape_1782863794905.png"
+                     alt="Paisaje de Ayacucho" class="page-hero-bg"
+                     width="1024" height="1024" loading="eager" fetchpriority="high" decoding="async" />
+            </picture>
+            <div class="container page-hero-content">
+                <span class="eyebrow-hero">ONG Mama Alice · Ayacucho, Perú</span>
+                <h1>Nuestra Historia</h1>
+                <p>Desde los Andes peruanos, construyendo puentes entre la vulnerabilidad y la profesionalización.</p>
+                <div class="breadcrumb">
+                    <a href="index.html">Inicio</a> / <span>Nosotros</span>
+                </div>
             </div>
-        </header>
+        </section>
 
-        <main id="main-content">
-            <!-- PAGE HERO -->
-            <section class="page-hero">
-                <picture>
-                    <source
-                        srcset="
-                            assets/images/ayacucho_landscape_1782863794905.webp
-                        "
-                        type="image/webp"
-                    />
-                    <img
-                        src="assets/images/ayacucho_landscape_1782863794905.png"
-                        alt="Paisaje de Ayacucho"
-                        class="page-hero-bg"
-                        width="1024"
-                        height="1024"
-                        loading="eager"
-                        fetchpriority="high"
-                        decoding="async"
-                    />
-                </picture>
-                <div class="container page-hero-content">
-                    <h1>Nuestra Historia</h1>
-                    <p>
-                        Desde los Andes peruanos, construyendo puentes entre la
-                        vulnerabilidad y la profesionalización.
-                    </p>
-                    <div class="breadcrumb">
-                        <a href="index.html">Inicio</a> / <span>Nosotros</span>
-                    </div>
-                </div>
-            </section>
-
-            <!-- MISSION & VISION -->
-            <section class="section">
-                <div class="container">
-                    <div
-                        style="
-                            display: grid;
-                            grid-template-columns: 1fr 1fr;
-                            gap: 80px;
-                            align-items: center;
-                        "
-                    >
-                        <div class="reveal-left">
-                            <picture>
-                                <source
-                                    srcset="
-                                        assets/images/historical_founder_1782863423506.webp
-                                    "
-                                    type="image/webp"
-                                />
-                                <img
-                                    src="assets/images/historical_founder_1782863423506.png"
-                                    alt="Fundadora de Mama Alice"
-                                    style="
-                                        border-radius: var(--radius-lg);
-                                        box-shadow: var(--shadow-2xl);
-                                    "
-                                    width="1024"
-                                    height="1024"
-                                    loading="lazy"
-                                    decoding="async"
-                                />
-                            </picture>
-                        </div>
-                        <div class="reveal-right">
-                            <span
-                                class="eyebrow"
-                                style="
-                                    color: var(--accent);
-                                    font-family: var(--font-body);
-                                    font-size: 0.8rem;
-                                    font-weight: 700;
-                                    text-transform: uppercase;
-                                    letter-spacing: 3px;
-                                "
-                                >Nuestra esencia</span
-                            >
-                            <h2 style="font-size: 2.5rem; margin: 12px 0 24px">
-                                Una convicción que cambió todo
-                            </h2>
-                            <p
-                                style="
-                                    font-size: 1.05rem;
-                                    line-height: 1.9;
-                                    margin-bottom: 16px;
-                                "
-                            >
-                                Mama Alice nació de la convicción de que ningún
-                                joven debería ver limitado su futuro por su
-                                lugar de nacimiento. En un contexto donde el
-                                conflicto armado dejó cicatrices profundas,
-                                nuestra fundadora decidió actuar.
-                            </p>
-                            <p
-                                style="
-                                    font-size: 1.05rem;
-                                    line-height: 1.9;
-                                    margin-bottom: 32px;
-                                "
-                            >
-                                Hoy somos un ecosistema integral que abarca la
-                                salud emocional, la educación básica y la
-                                formación técnica, con resultados medibles que
-                                hablan por sí solos.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- VALUES -->
-            <section class="section section--gray">
-                <div class="container">
-                    <div class="section-header reveal">
-                        <span class="eyebrow">Nuestros valores</span>
-                        <h2>Lo que nos guía cada día</h2>
-                    </div>
-                    <div class="values-grid">
-                        <div class="value-card reveal stagger-1">
-                            <div class="value-icon">🤝</div>
-                            <h3>Empatía</h3>
-                            <p
-                                style="
-                                    color: var(--text-muted);
-                                    font-size: 0.95rem;
-                                "
-                            >
-                                Cada joven es escuchado, comprendido y
-                                acompañado desde su realidad personal.
-                            </p>
-                        </div>
-                        <div class="value-card reveal stagger-2">
-                            <div class="value-icon">🔍</div>
-                            <h3>Transparencia</h3>
-                            <p
-                                style="
-                                    color: var(--text-muted);
-                                    font-size: 0.95rem;
-                                "
-                            >
-                                Cada recurso se audita y se reporta. Nuestros
-                                donantes son nuestros socios.
-                            </p>
-                        </div>
-                        <div class="value-card reveal stagger-3">
-                            <div class="value-icon">🌱</div>
-                            <h3>Sostenibilidad</h3>
-                            <p
-                                style="
-                                    color: var(--text-muted);
-                                    font-size: 0.95rem;
-                                "
-                            >
-                                No creamos dependencia. Formamos para la
-                                autonomía profesional y la independencia.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- TIMELINE -->
-            <section class="section">
-                <div class="container">
-                    <div class="section-header reveal">
-                        <span class="eyebrow">Hitos</span>
-                        <h2>Nuestra trayectoria</h2>
-                        <p>
-                            Más de una década construyendo futuro en Ayacucho.
-                        </p>
-                    </div>
-                    <div class="timeline">
-                        <div class="timeline-item reveal-left">
-                            <div class="timeline-content">
-                                <div class="year">2010</div>
-                                <h3>Fundación</h3>
-                                <p>
-                                    Se establece Mama Alice como proyecto de
-                                    asistencia social en las comunidades rurales
-                                    de Ayacucho.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="timeline-item reveal-right">
-                            <div class="timeline-content">
-                                <div class="year">2014</div>
-                                <h3>Primer Centro Comunitario</h3>
-                                <p>
-                                    Se inaugura el primer centro de soporte
-                                    psicosocial y refuerzo escolar para 120
-                                    niños.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="timeline-item reveal-left">
-                            <div class="timeline-content">
-                                <div class="year">2018</div>
-                                <h3>Hospitality Training Center</h3>
-                                <p>
-                                    Nace el centro de formación técnica en
-                                    gastronomía y hotelería, con alianzas con el
-                                    sector turístico.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="timeline-item reveal-right">
-                            <div class="timeline-content">
-                                <div class="year">2022</div>
-                                <h3>85% de Inserción Laboral</h3>
-                                <p>
-                                    Se alcanza la tasa de inserción laboral más
-                                    alta entre las ONGs de formación técnica en
-                                    la región.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="timeline-item reveal-left">
-                            <div class="timeline-content">
-                                <div class="year">2025</div>
-                                <h3>2,500 Jóvenes Capacitados</h3>
-                                <p>
-                                    Se supera el hito de dos mil quinientos
-                                    jóvenes formados y acompañados
-                                    integralmente.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- TEAM -->
-            <section class="section section--gray">
-                <div class="container">
-                    <div class="section-header reveal">
-                        <span class="eyebrow">Equipo directivo</span>
-                        <h2>Las personas detrás del cambio</h2>
-                        <p>
-                            Líderes comprometidos con el desarrollo integral de
-                            Ayacucho.
-                        </p>
-                    </div>
-                    <div class="team-grid">
-                        <div class="team-member reveal stagger-1">
-                            <div class="team-photo"></div>
-                            <h4>Directora General</h4>
-                            <p>Fundadora y líder estratégica</p>
-                        </div>
-                        <div class="team-member reveal stagger-2">
-                            <div class="team-photo"></div>
-                            <h4>Coord. Educativa</h4>
-                            <p>Programas comunitarios</p>
-                        </div>
-                        <div class="team-member reveal stagger-3">
-                            <div class="team-photo"></div>
-                            <h4>Director HTC</h4>
-                            <p>Hospitality Training Center</p>
-                        </div>
-                        <div class="team-member reveal stagger-4">
-                            <div class="team-photo"></div>
-                            <h4>Psicóloga Principal</h4>
-                            <p>Soporte psicosocial</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- CTA -->
-            <section class="cta-band">
-                <div class="container reveal">
-                    <h2>¿Quieres formar parte del cambio?</h2>
-                    <p>
-                        Conoce nuestras oportunidades de voluntariado, donación
-                        o alianza empresarial.
-                    </p>
-                    <div class="btn-group" style="justify-content: center">
-                        <a href="donar.html" class="btn btn--primary btn--lg"
-                            >Donar ahora →</a
-                        >
-                        <a href="#" class="btn btn--white btn--lg"
-                            >Voluntariado</a
-                        >
-                    </div>
-                </div>
-            </section>
-        </main>
-
-        <!-- FOOTER -->
-        <footer class="footer">
+        <!-- MISSION & VISION -->
+        <section class="section">
             <div class="container">
-                <div class="footer-grid">
-                    <div class="footer-brand">
-                        <a href="index.html" class="logo"
-                            ><picture
-                                ><source
-                                    srcset="assets/images/logo-mark.webp"
-                                    type="image/webp" />
-                                <img
-                                    src="assets/images/logo-mark.png"
-                                    alt=""
-                                    class="logo-icon"
-                                    width="782"
-                                    height="555"
-                                    loading="eager" /></picture
-                            >Mama<span>Alice</span></a
-                        >
-                        <p>
-                            Transformando el futuro de la juventud ayacuchana
-                            mediante educación, soporte emocional y formación
-                            técnica de excelencia.
-                        </p>
-                        <div class="social-links">
-                            <a
-                                href="#"
-                                class="social-link"
-                                aria-label="Facebook"
-                                >f</a
-                            >
-                            <a
-                                href="#"
-                                class="social-link"
-                                aria-label="Instagram"
-                                >ig</a
-                            >
-                            <a
-                                href="#"
-                                class="social-link"
-                                aria-label="LinkedIn"
-                                >in</a
-                            >
-                            <a href="#" class="social-link" aria-label="YouTube"
-                                >yt</a
-                            >
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center;">
+                    <div class="reveal-left">
+                        <picture>
+                            <source srcset="assets/images/historical_founder_1782863423506.webp" type="image/webp" />
+                            <img src="assets/images/historical_founder_1782863423506.png"
+                                 alt="Fundadora de Mama Alice"
+                                 style="border-radius:var(--radius-lg);box-shadow:var(--shadow-2xl);width:100%;height:500px;object-fit:cover;"
+                                 width="1024" height="1024" loading="lazy" decoding="async" />
+                        </picture>
+                    </div>
+                    <div class="reveal-right">
+                        <span style="font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:3.5px;color:var(--secondary-dark);display:block;margin-bottom:12px;">Nuestra esencia</span>
+                        <h2 style="font-size:2.5rem;margin:0 0 24px;">Una convicción que cambió todo</h2>
+                        <p style="font-size:1.05rem;line-height:1.9;margin-bottom:16px;">Mama Alice nació de la convicción de que ningún joven debería ver limitado su futuro por su lugar de nacimiento. En un contexto donde el conflicto armado dejó cicatrices profundas, nuestra fundadora decidió actuar.</p>
+                        <p style="font-size:1.05rem;line-height:1.9;margin-bottom:32px;">Hoy somos un ecosistema integral que abarca la salud emocional, la educación básica y la formación técnica, con resultados medibles que hablan por sí solos.</p>
+                        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+                            <div style="padding:20px;background:var(--primary-pale);border-radius:var(--radius-md);border-left:4px solid var(--primary);">
+                                <strong style="font-family:var(--font-heading);font-size:2rem;color:var(--primary-dark);display:block;line-height:1;">2010</strong>
+                                <span style="font-size:0.82rem;color:var(--text-muted);font-weight:600;">Año de fundación</span>
+                            </div>
+                            <div style="padding:20px;background:var(--secondary-pale);border-radius:var(--radius-md);border-left:4px solid var(--secondary);">
+                                <strong style="font-family:var(--font-heading);font-size:2rem;color:var(--secondary-dark);display:block;line-height:1;">2,500+</strong>
+                                <span style="font-size:0.82rem;color:var(--text-muted);font-weight:600;">Jóvenes formados</span>
+                            </div>
                         </div>
-                    </div>
-                    <div class="footer-col">
-                        <h4>Navegación</h4>
-                        <a href="index.html">Inicio</a>
-                        <a href="nosotros.html">Sobre Nosotros</a>
-                        <a href="comunidades.html">Proyectos</a>
-                        <a href="hospitality.html">Hospitality Center</a>
-                        <a href="transparencia.html">Transparencia</a>
-                    </div>
-                    <div class="footer-col">
-                        <h4>Involúcrate</h4>
-                        <a href="donar.html">Donar</a>
-                        <a href="#">Voluntariado</a>
-                        <a href="#">Empresas Aliadas</a>
-                        <a href="#">Trabaja con Nosotros</a>
-                    </div>
-                    <div class="footer-col">
-                        <h4>Contacto</h4>
-                        <a href="#">Ayacucho, Perú</a>
-                        <a href="mailto:info@mamaalice.org"
-                            >info@mamaalice.org</a
-                        >
-                        <a href="tel:+5166123456">+51 66 123 456</a>
-                    </div>
-                </div>
-                <div class="footer-bottom">
-                    <p>© 2026 ONG Mama Alice. Todos los derechos reservados.</p>
-                    <div>
-                        <a href="#">Política de Privacidad</a> ·
-                        <a href="#">Aviso Legal</a>
                     </div>
                 </div>
             </div>
-        </footer>
-        <script src="js/components.js"></script>
+        </section>
+
+        <!-- VALUES -->
+        <section class="section section--gray">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="eyebrow">Nuestros valores</span>
+                    <h2>Lo que nos guía cada día</h2>
+                    <p>Tres principios que definen cómo trabajamos y cómo acompañamos a cada joven en su proceso.</p>
+                </div>
+                <div class="values-grid">
+                    <div class="value-card reveal stagger-1">
+                        <div class="value-icon">🤝</div>
+                        <h3>Empatía</h3>
+                        <p>Cada joven es escuchado, comprendido y acompañado desde su realidad personal, sin juicios.</p>
+                    </div>
+                    <div class="value-card reveal stagger-2">
+                        <div class="value-icon">🔍</div>
+                        <h3>Transparencia</h3>
+                        <p>Cada recurso se audita y se reporta. Nuestros donantes son nuestros socios en la misión.</p>
+                    </div>
+                    <div class="value-card reveal stagger-3">
+                        <div class="value-icon">🌱</div>
+                        <h3>Sostenibilidad</h3>
+                        <p>No creamos dependencia. Formamos para la autonomía profesional y la independencia plena.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TIMELINE -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="eyebrow">Hitos</span>
+                    <h2>Nuestra trayectoria</h2>
+                    <p>Más de una década construyendo futuro en Ayacucho.</p>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item reveal-left">
+                        <div class="timeline-content">
+                            <div class="year">2010</div>
+                            <h3>Fundación</h3>
+                            <p>Se establece Mama Alice como proyecto de asistencia social en las comunidades rurales de Ayacucho.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal-right">
+                        <div class="timeline-content">
+                            <div class="year">2014</div>
+                            <h3>Primer Centro Comunitario</h3>
+                            <p>Se inaugura el primer centro de soporte psicosocial y refuerzo escolar para 120 niños.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal-left">
+                        <div class="timeline-content">
+                            <div class="year">2018</div>
+                            <h3>Hospitality Training Center</h3>
+                            <p>Nace el centro de formación técnica en gastronomía y hotelería, con alianzas con el sector turístico.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal-right">
+                        <div class="timeline-content">
+                            <div class="year">2022</div>
+                            <h3>85% de Inserción Laboral</h3>
+                            <p>Se alcanza la tasa de inserción laboral más alta entre las ONGs de formación técnica en la región.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item reveal-left">
+                        <div class="timeline-content">
+                            <div class="year">2025</div>
+                            <h3>2,500 Jóvenes Capacitados</h3>
+                            <p>Se supera el hito de dos mil quinientos jóvenes formados y acompañados integralmente.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TEAM -->
+        <section class="section section--gray">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="eyebrow">Equipo directivo</span>
+                    <h2>Las personas detrás del cambio</h2>
+                    <p>Líderes comprometidos con el desarrollo integral de Ayacucho.</p>
+                </div>
+                <div class="team-grid">
+                    <div class="team-member reveal stagger-1">
+                        <div class="team-photo"></div>
+                        <h4>Directora General</h4>
+                        <p>Fundadora y líder estratégica</p>
+                    </div>
+                    <div class="team-member reveal stagger-2">
+                        <div class="team-photo"></div>
+                        <h4>Coord. Educativa</h4>
+                        <p>Programas comunitarios</p>
+                    </div>
+                    <div class="team-member reveal stagger-3">
+                        <div class="team-photo"></div>
+                        <h4>Director HTC</h4>
+                        <p>Hospitality Training Center</p>
+                    </div>
+                    <div class="team-member reveal stagger-4">
+                        <div class="team-photo"></div>
+                        <h4>Psicóloga Principal</h4>
+                        <p>Soporte psicosocial</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-band">
+            <div class="container reveal">
+                <h2>¿Quieres formar parte del cambio?</h2>
+                <p>Conoce nuestras oportunidades de voluntariado, donación o alianza empresarial.</p>
+                <div class="btn-group" style="justify-content:center;">
+                    <a href="donar.html" class="btn btn--primary btn--lg">Donar ahora →</a>
+                    <a href="#" class="btn btn--white btn--lg">Voluntariado</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="js/components.js"></script>
     <script src="js/main.js"></script>
-    </body>
+</body>
 </html>
