@@ -1,40 +1,40 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Donar a ONG Mama Alice | Haz tu aporte solidario hoy</title>
-    <meta name="description" content="Tu donación cambia vidas. Apoya la educación y salud mental de niños en Ayacucho. Aporta hoy desde €15 mensuales de forma segura." />
-    <meta property="og:title" content="Donar | ONG Mama Alice" />
-    <meta property="og:description" content="Haz tu donación segura a Mama Alice y transforma el futuro de un joven en Ayacucho, Perú." />
+    <title>Donate to Mama Alice NGO | Make your solidarity contribution today</title>
+    <meta name="description" content="Your donation changes lives. Support the education and mental health of children in Ayacucho. Contribute today from €15 a month safely." />
+    <meta property="og:title" content="Donate | Mama Alice NGO" />
+    <meta property="og:description" content="Make your safe donation to Mama Alice and transform the future of a young person in Ayacucho, Peru." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://tu-dominio-aqui.org/donar.html" />
-    <meta property="og:site_name" content="ONG Mama Alice" />
-    <meta property="og:locale" content="es_PE" />
+    <meta property="og:site_name" content="Mama Alice NGO" />
+    <meta property="og:locale" content="en_US" />
     <meta property="og:image" content="https://tu-dominio-aqui.org/assets/images/logo-oficial.png" />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="canonical" href="https://tu-dominio-aqui.org/donar.html" />
     <meta name="theme-color" content="#F5A420" />
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/apple-touch-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,800;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" />
-    <link rel="stylesheet" href="css/styles.min.css?v=22" />
-    <link rel="preload" href="css/styles.min.css?v=22" as="style" />
-    <link rel="preload" as="image" href="assets/images/logo-transparent.png" />
+    <link rel="stylesheet" href="../css/styles.min.css?v=22" />
+    <link rel="preload" href="../css/styles.min.css?v=22" as="style" />
+    <link rel="preload" as="image" href="../assets/images/logo-transparent.png" />
 </head>
 <body>
-    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- Minimal header fijo para página de donación -->
+    <!-- Minimal fixed header for donation page -->
     <header class="header header--scrolled" style="position:sticky;top:0;">
         <div class="container nav-container">
-            <a href="index.html" class="logo" aria-label="Mama Alice — Inicio">
-                <img src="assets/images/logo-transparent.png" alt="Mama Alice ONG" class="logo-oficial-img" width="120" height="85" / fetchpriority="high" loading="eager">
+            <a href="index.html" class="logo" aria-label="Mama Alice — Home">
+                <img src="../assets/images/logo-transparent.png" alt="Mama Alice NGO" class="logo-oficial-img" width="120" height="85" / fetchpriority="high" loading="eager">
             </a>
-            <a href="index.html" class="btn btn--outline-dark btn--sm">← Volver al sitio</a>
+            <a href="index.html" class="btn btn--outline-dark btn--sm">← Back to site</a>
         </div>
     </header>
 
@@ -44,44 +44,44 @@
             
             <!-- Header of the Card -->
             <div style="background:var(--primary); padding:40px 32px 32px; color:white; text-align:center;">
-                <h1 style="font-family:var(--font-heading); font-size:2rem; font-weight:600; margin-bottom:8px; line-height:1.2;">Donar a Mama Alice: Tu aporte cambia vidas</h1>
-                <p style="font-size:0.95rem; opacity:0.9; margin:0; font-weight:400;">Apoya la educación en Ayacucho de forma segura.</p>
+                <h1 style="font-family:var(--font-heading); font-size:2rem; font-weight:600; margin-bottom:8px; line-height:1.2;">Donate to Mama Alice: Your contribution changes lives</h1>
+                <p style="font-size:0.95rem; opacity:0.9; margin:0; font-weight:400;">Support education in Ayacucho safely.</p>
             </div>
 
             <div style="padding:40px 32px;">
-                <form onsubmit="event.preventDefault();alert('¡Gracias por tu generosidad! Esta es una versión demostrativa.');">
+                <form onsubmit="event.preventDefault();alert('Thank you for your generosity! This is a demo version.');">
                     
                     <!-- Frequency Toggle -->
                     <div style="display:flex; background:#f1f3f5; border-radius:12px; padding:6px; margin-bottom:32px;">
-                        <div class="freq-option active checkout-toggle" tabindex="0" onclick="selectFreq(this)">Donación Única</div>
-                        <div class="freq-option checkout-toggle" tabindex="0" onclick="selectFreq(this)">Mensual ❤️</div>
+                        <div class="freq-option active checkout-toggle" tabindex="0" onclick="selectFreq(this)">One-time Donation</div>
+                        <div class="freq-option checkout-toggle" tabindex="0" onclick="selectFreq(this)">Monthly ❤️</div>
                     </div>
 
                     <!-- Price Anchors -->
                     <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:12px; margin-bottom:32px;">
                         <div class="price-anchor checkout-price" tabindex="0" onclick="selectDonation(this)">
                             <div class="amount">€15</div>
-                            <div class="impact">Materiales</div>
+                            <div class="impact">Materials</div>
                         </div>
                         <div class="price-anchor selected checkout-price" tabindex="0" onclick="selectDonation(this)">
                             <div class="amount">€50</div>
-                            <div class="impact">Formación</div>
+                            <div class="impact">Training</div>
                         </div>
                         <div class="price-anchor checkout-price" tabindex="0" onclick="selectDonation(this)">
                             <div class="amount">€100</div>
-                            <div class="impact">Beca Total</div>
+                            <div class="impact">Full Scholarship</div>
                         </div>
                     </div>
 
                     <!-- Custom Amount / Slider Area -->
                     <div style="margin-bottom:40px; padding-bottom:32px; border-bottom:1px solid #e9ecef;">
                         <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:12px;">
-                            <label for="donation-slider" style="font-size:0.9rem; font-weight:600; color:#495057; margin:0;">Personaliza tu monto</label>
+                            <label for="donation-slider" style="font-size:0.9rem; font-weight:600; color:#495057; margin:0;">Customize your amount</label>
                             <div style="font-family:var(--font-heading); font-size:1.6rem; color:var(--primary); font-weight:700;">€<span id="slider-val">50</span></div>
                         </div>
                         <input type="range" id="donation-slider" min="5" max="250" step="5" value="50" style="width:100%; height:6px; background:#e9ecef; border-radius:10px; accent-color:var(--primary); cursor:pointer; margin-bottom:12px;" />
                         <div style="font-size:0.85rem; color:#6c757d; font-style:italic; text-align:center;">
-                            ✨ <span id="slider-impact">1 mes de formación técnica.</span>
+                            ✨ <span id="slider-impact">1 month of technical training.</span>
                         </div>
                     </div>
 
@@ -89,34 +89,34 @@
                     <!-- Personal Info -->
                     <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
                         <div>
-                            <label class="checkout-label">Nombre</label>
-                            <input type="text" class="checkout-input" placeholder="Ej. Ana" required />
+                            <label class="checkout-label">First Name</label>
+                            <input type="text" class="checkout-input" placeholder="e.g. Anna" required />
                         </div>
                         <div>
-                            <label class="checkout-label">Apellido</label>
-                            <input type="text" class="checkout-input" placeholder="Ej. García" required />
+                            <label class="checkout-label">Last Name</label>
+                            <input type="text" class="checkout-input" placeholder="e.g. Garcia" required />
                         </div>
                     </div>
 
-                    <label class="checkout-label">Correo Electrónico</label>
-                    <input type="email" class="checkout-input" placeholder="ana@correo.com" required />
+                    <label class="checkout-label">Email Address</label>
+                    <input type="email" class="checkout-input" placeholder="anna@email.com" required />
 
-                    <label class="checkout-label">Datos de Tarjeta <span style="font-weight:normal;color:#adb5bd;float:right;">Prueba Segura</span></label>
+                    <label class="checkout-label">Card Details <span style="font-weight:normal;color:#adb5bd;float:right;">Secure Test</span></label>
                     <div style="display:flex; flex-direction:column; gap:0;">
                         <input type="text" class="checkout-input" placeholder="0000 0000 0000 0000" style="border-bottom-left-radius:0; border-bottom-right-radius:0;" required />
                         <div style="display:flex;">
-                            <input type="text" class="checkout-input" placeholder="MM/AA" style="flex:1; border-top-left-radius:0; border-top-right-radius:0; border-top:none; border-right:none;" required />
+                            <input type="text" class="checkout-input" placeholder="MM/YY" style="flex:1; border-top-left-radius:0; border-top-right-radius:0; border-top:none; border-right:none;" required />
                             <input type="text" class="checkout-input" placeholder="CVC" style="flex:1; border-top-left-radius:0; border-top-right-radius:0; border-top:none;" required />
                         </div>
                     </div>
 
                     <button type="submit" style="width:100%; background:var(--primary); color:white; border:none; padding:18px; font-size:1.1rem; font-weight:600; border-radius:8px; cursor:pointer; margin-top:32px; transition:all 0.2s; box-shadow:0 4px 12px rgba(46,155,138,0.2);">
-                        Hacer Donación Segura
+                        Make a Secure Donation
                     </button>
 
                     <div style="margin-top:24px; text-align:center; font-size:0.85rem; color:#6c757d; display:flex; align-items:center; justify-content:center; gap:8px;">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-                        Tus datos están encriptados y protegidos (SSL de 256 bits).
+                        Your data is encrypted and protected (256-bit SSL).
                     </div>
                 </form>
             </div>
@@ -139,15 +139,15 @@
                     });
                     
                     if(val < 25) {
-                        impactDisplay.textContent = "Materiales escolares y apoyo básico.";
+                        impactDisplay.textContent = "School materials and basic support.";
                     } else if(val < 50) {
-                        impactDisplay.textContent = "Terapias psicológicas para un joven.";
+                        impactDisplay.textContent = "Psychological therapies for a young person.";
                     } else if(val < 100) {
-                        impactDisplay.textContent = "1 mes de formación técnica.";
+                        impactDisplay.textContent = "1 month of technical training.";
                     } else if(val < 150) {
-                        impactDisplay.textContent = "Beca completa (educación, comida, pasajes).";
+                        impactDisplay.textContent = "Full scholarship (education, food, transport).";
                     } else {
-                        impactDisplay.textContent = "Impacto profundo en múltiples jóvenes.";
+                        impactDisplay.textContent = "Profound impact on multiple young people.";
                     }
                 });
             }
@@ -179,7 +179,7 @@
             element.setAttribute('aria-checked', 'true');
         }
     </script>
-    <script src="js/main.js"></script>
+    <script src="../js/main.js"></script>
 <script>
 (function(){
     if(document.getElementById('scrollTopBtn')) return;

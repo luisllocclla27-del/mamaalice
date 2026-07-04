@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <meta name="view-transition" content="same-origin" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Página no encontrada | ONG Mama Alice</title>
@@ -9,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,800;1,9..144,500&amp;family=Inter:wght@400;500;600&amp;display=swap">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.min.css?v=22">
     <style>
         body {
             background: var(--primary-dark);
@@ -161,7 +162,9 @@
     <div class="bg-orb bg-orb-2"></div>
 
     <div class="error-container">
-        <span class="illustration" role="img" aria-label="Mapa con pin">🗺️</span>
+        <span class="illustration" role="img" aria-label="Mapa con pin">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"></polygon><line x1="9" y1="3" x2="9" y2="18"></line><line x1="15" y1="6" x2="15" y2="21"></line></svg>
+        </span>
 
         <div class="error-code" aria-label="Error 404">404</div>
         <div class="error-divider"></div>
@@ -176,7 +179,7 @@
             <a href="index.html" class="btn btn--primary btn--lg">
                 ← Volver al inicio
             </a>
-            <a href="donar.html" class="btn--outline-white">
+            <a href="#" onclick="event.preventDefault(); window.toggleDonationDrawer()" class="btn--outline-white">
                 Hacer una donación
             </a>
         </div>
@@ -201,5 +204,26 @@
             }
         }, 1000);
     </script>
+<script>
+(function(){
+    if(document.getElementById('scrollTopBtn')) return;
+    const btn = document.createElement('button');
+    btn.id = 'scrollTopBtn';
+    btn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>';
+    btn.style.cssText = 'position:fixed;bottom:20px;right:20px;width:56px;height:56px;border-radius:50%;background-color:#2e9b8a;color:white;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2147483647;opacity:0;visibility:hidden;transform:translateY(20px);transition:all 0.3s ease-out;box-shadow:0 10px 25px rgba(46,155,138,0.5);';
+    document.body.appendChild(btn);
+    btn.addEventListener('mouseenter', () => { btn.style.backgroundColor = '#237a6c'; btn.style.transform = 'translateY(-5px)'; });
+    btn.addEventListener('mouseleave', () => { btn.style.backgroundColor = '#2e9b8a'; btn.style.transform = 'translateY(0)'; });
+    btn.addEventListener('click', () => { window.lenis ? window.lenis.scrollTo(0) : window.scrollTo({top:0,behavior:'smooth'}); });
+    const chk = () => {
+        const y = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
+        if(y > 50) { btn.style.opacity='1'; btn.style.visibility='visible'; btn.style.transform='translateY(0)'; }
+        else { btn.style.opacity='0'; btn.style.visibility='hidden'; btn.style.transform='translateY(20px)'; }
+    };
+    window.addEventListener('scroll', chk, {passive:true});
+    setInterval(chk, 250);
+    chk();
+})();
+</script>
 </body>
 </html>

@@ -15,14 +15,59 @@
   }
 
   /* ══════════════════════════════════════════
-     HEADER — Logo oficial PNG sobre fondo
+     HEADER & FOOTER Data
   ══════════════════════════════════════════ */
+  const isEn = window.location.pathname.includes('/en/');
+  const assetPrefix = isEn ? '../assets/' : 'assets/';
+
+  // --- Preloader Injection ---
+  const preloaderHTML = `
+  <div id="global-preloader" style="position:fixed; top:0; left:0; width:100%; height:100%; background-color:#ffffff; z-index:9999; display:flex; justify-content:center; align-items:center; transition:opacity 0.8s ease, visibility 0.8s ease;">
+    <img src="${assetPrefix}images/logo-transparent.png" alt="Mama Alice Loading..." style="max-width:150px; animation: pulse 2s infinite ease-in-out;">
+    <style>
+      @keyframes pulse {
+        0% { transform: scale(0.95); opacity: 0.7; }
+        50% { transform: scale(1.05); opacity: 1; }
+        100% { transform: scale(0.95); opacity: 0.7; }
+      }
+      body.loading { overflow: hidden; }
+    </style>
+  </div>
+  `;
+  document.write(preloaderHTML);
+  document.body.classList.add('loading');
+
+  const labels = {
+    inicio: isEn ? 'Home' : 'Inicio',
+    nosotros: isEn ? 'About Us' : 'Nosotros',
+    proyectos: isEn ? 'Projects' : 'Proyectos',
+    hospitality: 'Hospitality',
+    transparencia: isEn ? 'Transparency' : 'Transparencia',
+    donar: isEn ? 'Donate Now' : 'Donar Ahora',
+    footer_desc: isEn ? 'Transforming the future of Ayacucho\'s youth through education, emotional support, and technical training of excellence.' : 'Transformando el futuro de la juventud ayacuchana mediante educación, soporte emocional y formación técnica de excelencia.',
+    nav_title: isEn ? 'Navigation' : 'Navegación',
+    get_involved: isEn ? 'Get Involved' : 'Involúcrate',
+    donate: isEn ? 'Donate' : 'Donar',
+    volunteer: isEn ? 'Volunteering' : 'Voluntariado',
+    partners: isEn ? 'Corporate Partners' : 'Empresas Aliadas',
+    work: isEn ? 'Work with Us' : 'Trabaja con Nosotros',
+    contact: isEn ? 'Contact' : 'Contacto',
+    rights: isEn ? 'All rights reserved.' : 'Todos los derechos reservados.',
+    privacy: isEn ? 'Privacy Policy' : 'Política de Privacidad',
+    legal: isEn ? 'Legal Notice' : 'Aviso Legal',
+    nlTitle: isEn ? 'Subscribe to our newsletter' : 'Suscríbete a nuestro boletín',
+    nlSub: isEn ? 'Join our community and receive stories of impact directly in your inbox.' : 'Únete a nuestra comunidad y recibe historias de impacto directo en tu bandeja.',
+    nlPlaceholder: isEn ? 'Your email address...' : 'Tu correo electrónico...',
+    nlBtn: isEn ? 'Subscribe' : 'Suscribirse',
+    successAlert: isEn ? 'Thank you for subscribing!' : '¡Gracias por suscribirte!'
+  };
+
   const HEADER_HTML = `
 <header class="header" id="header" role="banner">
   <div class="container nav-container">
 
     <a href="index.html" class="logo" aria-label="Mama Alice — Inicio">
-      <img src="assets/images/logo-transparent.png"
+      <img src="${assetPrefix}images/logo-transparent.png"
            alt="Mama Alice ONG"
            class="logo-oficial-img"
            width="120" height="85"
@@ -39,34 +84,39 @@
     </button>
 
     <nav class="nav-links" id="main-nav" role="navigation" aria-label="Menú principal">
-      <a href="index.html"         data-page="index.html">Inicio</a>
-      <a href="nosotros.html"      data-page="nosotros.html">Nosotros</a>
-      <a href="comunidades.html"   data-page="comunidades.html">Proyectos</a>
-      <a href="hospitality.html"   data-page="hospitality.html">Hospitality</a>
-      <a href="transparencia.html" data-page="transparencia.html">Transparencia</a>
-      <button onclick="window.toggleDonationDrawer()" class="btn btn--primary btn--sm">Donar Ahora</button>
+      <a href="index.html"         data-page="index.html">${labels.inicio}</a>
+      <a href="nosotros.html"      data-page="nosotros.html">${labels.nosotros}</a>
+      <a href="comunidades.html"   data-page="comunidades.html">${labels.proyectos}</a>
+      <a href="hospitality.html"   data-page="hospitality.html">${labels.hospitality}</a>
+      <a href="transparencia.html" data-page="transparencia.html">${labels.transparencia}</a>
+      
+      <!-- Language Switcher -->
+      <div class="lang-switcher">
+        <a href="#" onclick="toggleLanguage(event, 'es')" class="lang-btn" id="lang-es">ES</a>
+        <span class="lang-sep">|</span>
+        <a href="#" onclick="toggleLanguage(event, 'en')" class="lang-btn" id="lang-en">EN</a>
+      </div>
+
+      <button onclick="window.toggleDonationDrawer()" class="btn btn--primary btn--sm">${labels.donar}</button>
     </nav>
 
   </div>
 </header>`;
 
-  /* ══════════════════════════════════════════
-     FOOTER — Editar aquí, se actualiza en todo
-  ══════════════════════════════════════════ */
   const FOOTER_HTML = `
 <footer class="footer" id="footer" role="contentinfo">
-  <div class="container">
+  <div class="container" style="padding-top:60px;">
     <div class="footer-grid">
 
       <!-- Brand -->
       <div class="footer-brand">
         <a href="index.html" class="logo" aria-label="Mama Alice — Inicio">
-          <img src="assets/images/logo-transparent.png"
+          <img src="${assetPrefix}images/logo-transparent.png"
                alt="Mama Alice ONG"
                style="height:56px;width:auto;filter:brightness(0) invert(1);opacity:0.9;"
                loading="lazy" />
         </a>
-        <p>Transformando el futuro de la juventud ayacuchana mediante educación, soporte emocional y formación técnica de excelencia.</p>
+        <p>${labels.footer_desc}</p>
         <div class="social-links">
           <a href="https://facebook.com/mamaaliceong"
              class="social-link" aria-label="Facebook de Mama Alice"
@@ -105,26 +155,26 @@
 
       <!-- Navegación -->
       <div class="footer-col">
-        <h4>Navegación</h4>
-        <a href="index.html">Inicio</a>
-        <a href="nosotros.html">Sobre Nosotros</a>
-        <a href="comunidades.html">Proyectos</a>
-        <a href="hospitality.html">Hospitality Center</a>
-        <a href="transparencia.html">Transparencia</a>
+        <h4>${labels.nav_title}</h4>
+        <a href="index.html">${labels.inicio}</a>
+        <a href="nosotros.html">${labels.nosotros}</a>
+        <a href="comunidades.html">${labels.proyectos}</a>
+        <a href="hospitality.html">${labels.hospitality}</a>
+        <a href="transparencia.html">${labels.transparencia}</a>
       </div>
 
       <!-- Involúcrate -->
       <div class="footer-col">
-        <h4>Involúcrate</h4>
-        <a href="donar.html">Donar</a>
-        <a href="#">Voluntariado</a>
-        <a href="#">Empresas Aliadas</a>
-        <a href="#">Trabaja con Nosotros</a>
+        <h4>${labels.get_involved}</h4>
+        <a href="donar.html">${labels.donate}</a>
+        <a href="#">${labels.volunteer}</a>
+        <a href="#">${labels.partners}</a>
+        <a href="#">${labels.work}</a>
       </div>
 
       <!-- Contacto — fuente única de verdad -->
       <div class="footer-col">
-        <h4>Contacto</h4>
+        <h4>${labels.contact}</h4>
         <a href="https://maps.google.com/?q=Ayacucho,+Peru"
            target="_blank" rel="noopener noreferrer">
           Jr. Lima 123, Ayacucho, Perú
@@ -136,10 +186,10 @@
     </div>
 
     <div class="footer-bottom">
-      <p>© <span id="footer-year"></span> ONG Mama Alice. Todos los derechos reservados.</p>
+      <p>© <span id="footer-year"></span> ONG Mama Alice. ${labels.rights}</p>
       <div>
-        <a href="#">Política de Privacidad</a> ·
-        <a href="#">Aviso Legal</a> ·
+        <a href="#">${labels.privacy}</a> ·
+        <a href="#">${labels.legal}</a> ·
         <a href="sitemap.xml">Sitemap</a>
       </div>
     </div>
@@ -260,18 +310,35 @@
     const nav = document.getElementById('main-nav');
     if (nav) setActive(nav);
 
+    // ── Language Switcher State ──
+    const isEn = window.location.pathname.includes('/en/');
+    const langEs = document.getElementById('lang-es');
+    const langEn = document.getElementById('lang-en');
+    
+    if (langEs && langEn) {
+        if (isEn) {
+            langEn.style.fontWeight = 'bold';
+            langEn.style.color = 'var(--primary)';
+            langEs.style.color = 'var(--text-muted)';
+        } else {
+            langEs.style.fontWeight = 'bold';
+            langEs.style.color = 'var(--primary)';
+            langEn.style.color = 'var(--text-muted)';
+        }
+    }
+
     // ── Lenis Smooth Scroll ──
     if (!document.getElementById('lenis-script')) {
       const script = document.createElement('script');
       script.id = 'lenis-script';
       script.src = 'https://unpkg.com/@studio-freight/lenis@1.0.42/dist/lenis.min.js';
       script.onload = () => {
-        const lenis = new Lenis({ 
+        window.lenis = new Lenis({ 
           duration: 1.4, 
           easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
           smoothWheel: true 
         });
-        function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+        function raf(time) { window.lenis.raf(time); requestAnimationFrame(raf); }
         requestAnimationFrame(raf);
       };
       document.head.appendChild(script);
@@ -320,6 +387,14 @@
       if (drawer && overlay) {
           drawer.classList.toggle('is-open');
           overlay.classList.toggle('is-open');
+          
+          if (drawer.classList.contains('is-open')) {
+              document.body.style.overflow = 'hidden';
+              if (window.lenis) window.lenis.stop();
+          } else {
+              document.body.style.overflow = '';
+              if (window.lenis) window.lenis.start();
+          }
       }
   };
 
@@ -513,3 +588,199 @@
   }
 
 })();
+
+// --- SCROLL TO TOP BUTTON ---
+function initScrollToTop() {
+    if(document.getElementById('scrollTopBtn')) return;
+    const scrollTopBtn = document.createElement('button');
+    scrollTopBtn.id = 'scrollTopBtn';
+    scrollTopBtn.setAttribute('aria-label', 'Volver arriba');
+    scrollTopBtn.innerHTML = '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>';
+    
+    // Set base inline styles for absolute certainty
+    scrollTopBtn.style.cssText = `
+        position: fixed;
+        bottom: 40px;
+        right: 40px;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background-color: var(--primary, #2e9b8a);
+        color: white;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(20px);
+        transition: opacity 0.3s ease-out, transform 0.3s ease-out, visibility 0.3s, background-color 0.3s;
+        box-shadow: 0 10px 25px rgba(46, 155, 138, 0.4);
+    `;
+    
+    document.body.appendChild(scrollTopBtn);
+
+    // Hover effects via JS since we are using inline styles
+    scrollTopBtn.addEventListener('mouseenter', () => {
+        scrollTopBtn.style.backgroundColor = 'var(--primary-dark, #237a6c)';
+        scrollTopBtn.style.transform = 'translateY(-5px)';
+    });
+    scrollTopBtn.addEventListener('mouseleave', () => {
+        scrollTopBtn.style.backgroundColor = 'var(--primary, #2e9b8a)';
+        scrollTopBtn.style.transform = 'translateY(0)';
+    });
+
+    scrollTopBtn.addEventListener('click', () => {
+        if (window.lenis) {
+            window.lenis.scrollTo(0);
+        } else {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    });
+
+    const checkScroll = () => {
+        if (window.scrollY > 50) {
+            scrollTopBtn.style.opacity = '1';
+            scrollTopBtn.style.visibility = 'visible';
+            scrollTopBtn.style.transform = 'translateY(0)';
+        } else {
+            scrollTopBtn.style.opacity = '0';
+            scrollTopBtn.style.visibility = 'hidden';
+            scrollTopBtn.style.transform = 'translateY(20px)';
+        }
+    };
+
+    window.addEventListener('scroll', checkScroll, { passive: true });
+    
+    // Also poll for the first 2 seconds just in case of initial load quirks
+    let pollCount = 0;
+    const pollInterval = setInterval(() => {
+        checkScroll();
+        if(window.lenis) {
+            // Hook into lenis scroll explicitly if it becomes available
+            window.lenis.on('scroll', checkScroll);
+            clearInterval(pollInterval);
+        }
+        if(pollCount++ > 20) clearInterval(pollInterval);
+    }, 100);
+
+    checkScroll();
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initScrollToTop);
+} else {
+    initScrollToTop();
+}
+
+
+// Global function to toggle language
+window.toggleLanguage = function(e, targetLang) {
+    e.preventDefault();
+    const currentPath = window.location.pathname;
+    let newPath = currentPath;
+    if (currentPath === '/' || currentPath.endsWith('index.html') && !currentPath.includes('/en/')) {
+        newPath = targetLang === 'en' ? '/en/index.html' : currentPath;
+    } else if (currentPath.includes('/en/')) {
+        if (targetLang === 'es') {
+            newPath = currentPath.replace('/en/', '/');
+        }
+    } else {
+        if (targetLang === 'en') {
+            const filename = currentPath.split('/').pop() || 'index.html';
+            newPath = currentPath.substring(0, currentPath.lastIndexOf('/') + 1) + 'en/' + filename;
+        }
+    }
+    window.location.href = newPath;
+};
+
+
+// --- Final Polish Animations (Fase 3) ---
+function initFinalPolishAnimations() {
+    if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+    
+    // Animate Counters
+    const counters = document.querySelectorAll('.gsap-counter');
+    counters.forEach(counter => {
+        const target = parseFloat(counter.getAttribute('data-target'));
+        gsap.to(counter, {
+            innerHTML: target,
+            duration: 2,
+            snap: { innerHTML: 1 },
+            ease: "power2.out",
+            scrollTrigger: {
+                trigger: counter.closest('section'),
+                start: "top 80%",
+                toggleActions: "play none none none"
+            }
+        });
+    });
+
+    // Animate Timeline
+    const timelineItems = document.querySelectorAll('.gsap-timeline-item');
+    const timelineProgress = document.querySelector('.timeline-progress');
+    
+    if (timelineItems.length > 0 && timelineProgress) {
+        gsap.to(timelineProgress, {
+            height: "100%",
+            ease: "none",
+            scrollTrigger: {
+                trigger: ".timeline-container",
+                start: "top center",
+                end: "bottom center",
+                scrub: 0.5
+            }
+        });
+
+        timelineItems.forEach((item) => {
+            gsap.to(item, {
+                opacity: 1,
+                y: 0,
+                duration: 0.8,
+                ease: "back.out(1.7)",
+                scrollTrigger: {
+                    trigger: item,
+                    start: "top 80%",
+                    toggleActions: "play none none reverse"
+                }
+            });
+        });
+    }
+
+    // Animate Parallax Backgrounds
+    const parallaxImages = document.querySelectorAll('.parallax');
+    parallaxImages.forEach(img => {
+        gsap.to(img, {
+            yPercent: 30, // move image down by 30% of its height
+            ease: "none",
+            scrollTrigger: {
+                trigger: img.closest('section'),
+                start: "top bottom", 
+                end: "bottom top",
+                scrub: true
+            }
+        });
+    });
+}
+
+function handlePreloader() {
+    const preloader = document.getElementById('global-preloader');
+    if(preloader) {
+        setTimeout(() => {
+            preloader.style.opacity = '0';
+            preloader.style.visibility = 'hidden';
+            document.body.classList.remove('loading');
+            setTimeout(() => preloader.remove(), 800);
+        }, 300); // Small delay to ensure it feels deliberate
+    }
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initFinalPolishAnimations);
+} else {
+    initFinalPolishAnimations();
+}
+
+window.addEventListener('load', handlePreloader);
