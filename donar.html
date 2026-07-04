@@ -40,184 +40,161 @@
         </div>
     </header>
 
-    <main id="main-content">
-        <div class="donate-layout">
-
-            <!-- Left Panel: Why Donate -->
-            <div class="donate-hero">
-                <div style="position:relative;z-index:1;">
-                    <span style="font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:3.5px;color:var(--primary);">Tu donación importa</span>
-                    <h1 style="margin-top:12px;">Haz posible el cambio hoy</h1>
-                    <p>Tu aporte directo asegura la alimentación, educación y capacitación técnica de cientos de jóvenes en Ayacucho.</p>
-
-                    <div class="impact-list">
-                        <div class="impact-list-item">
-                            <div class="impact-icon">📚</div>
-                            <div><strong>€15</strong> cubren los materiales escolares de un niño durante un semestre.</div>
-                        </div>
-                        <div class="impact-list-item">
-                            <div class="impact-icon">🍳</div>
-                            <div><strong>€50</strong> cubren un mes completo de formación técnica en el HTC.</div>
-                        </div>
-                        <div class="impact-list-item">
-                            <div class="impact-icon">🎓</div>
-                            <div><strong>€100</strong> cubren una beca mensual completa: alimentación, materiales y transporte.</div>
-                        </div>
-                    </div>
-
-                    <!-- Mini stats -->
-                    <div style="margin-top:40px;display:grid;grid-template-columns:1fr 1fr;gap:16px;">
-                        <div style="padding:20px;background:rgba(245,164,32,0.12);border-radius:var(--radius-md);border:1px solid rgba(245,164,32,0.25);">
-                            <span style="font-family:var(--font-heading);font-size:2rem;font-weight:800;color:var(--primary);display:block;line-height:1;">88%</span>
-                            <span style="font-size:0.8rem;color:rgba(255,255,255,0.65);">A programas directos</span>
-                        </div>
-                        <div style="padding:20px;background:rgba(46,155,138,0.12);border-radius:var(--radius-md);border:1px solid rgba(46,155,138,0.25);">
-                            <span style="font-family:var(--font-heading);font-size:2rem;font-weight:800;color:var(--secondary-light);display:block;line-height:1;">2,500</span>
-                            <span style="font-size:0.8rem;color:rgba(255,255,255,0.65);">Jóvenes beneficiados</span>
-                        </div>
-                    </div>
-
-                    <div style="margin-top:32px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.08);">
-                        <p style="font-size:0.85rem;color:rgba(255,255,255,0.50);">
-                            El 88% de tu donación se destina directamente a los programas.
-                            <a href="transparencia.html" style="color:var(--primary);font-weight:600;">Ver transparencia →</a>
-                        </p>
-                    </div>
-                </div>
+    <main id="main-content" style="background-color:#f8f9fa; min-height:100vh; padding:120px 20px 60px; display:flex; justify-content:center; align-items:flex-start; font-family:var(--font-body, 'Inter', sans-serif);">
+        
+        <div style="width:100%; max-width:520px; background:white; border-radius:24px; box-shadow:0 12px 40px rgba(0,0,0,0.08); overflow:hidden; position:relative;">
+            
+            <!-- Header of the Card -->
+            <div style="background:var(--primary); padding:40px 32px 32px; color:white; text-align:center;">
+                <h1 style="font-family:var(--font-heading); font-size:2rem; font-weight:600; margin-bottom:8px; line-height:1.2;">Tu aporte cambia vidas</h1>
+                <p style="font-size:0.95rem; opacity:0.9; margin:0; font-weight:400;">Apoya la educación en Ayacucho de forma segura.</p>
             </div>
 
-            <!-- Right Panel: Donation Form -->
-            <div class="donate-form-panel">
-                <h2>Elige tu aporte</h2>
-                <p class="subtitle">Selecciona un monto o ingresa una cantidad personalizada.</p>
-
-                <form onsubmit="event.preventDefault();alert('¡Gracias por tu generosidad! Esta es una versión demostrativa. En producción se conectará con Stripe o PayPal.');">
-
-                    <!-- Frequency -->
-                    <div class="freq-toggle" role="radiogroup" aria-label="Frecuencia de donación">
-                        <div class="freq-option active" role="radio" aria-checked="true" tabindex="0"
-                             onclick="selectFreq(this)"
-                             onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();selectFreq(this);}">
-                            Donación única
-                        </div>
-                        <div class="freq-option" role="radio" aria-checked="false" tabindex="0"
-                             onclick="selectFreq(this)"
-                             onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();selectFreq(this);}">
-                            Mensual ❤️
-                        </div>
+            <div style="padding:40px 32px;">
+                <form onsubmit="event.preventDefault();alert('¡Gracias por tu generosidad! Esta es una versión demostrativa.');">
+                    
+                    <!-- Frequency Toggle -->
+                    <div style="display:flex; background:#f1f3f5; border-radius:12px; padding:6px; margin-bottom:32px;">
+                        <div class="freq-option active checkout-toggle" tabindex="0" onclick="selectFreq(this)">Donación Única</div>
+                        <div class="freq-option checkout-toggle" tabindex="0" onclick="selectFreq(this)">Mensual ❤️</div>
                     </div>
 
                     <!-- Price Anchors -->
-                    <div class="price-grid" role="radiogroup" aria-label="Monto de donación">
-                        <div class="price-anchor" role="radio" aria-checked="false" tabindex="0"
-                             onclick="selectDonation(this)"
-                             onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();selectDonation(this);}">
-                            <span class="amount">€15</span>
-                            <span class="impact-text">Materiales escolares</span>
+                    <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:12px; margin-bottom:32px;">
+                        <div class="price-anchor checkout-price" tabindex="0" onclick="selectDonation(this)">
+                            <div class="amount">€15</div>
+                            <div class="impact">Materiales</div>
                         </div>
-                        <div class="price-anchor selected popular" role="radio" aria-checked="true" tabindex="0"
-                             onclick="selectDonation(this)"
-                             onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();selectDonation(this);}">
-                            <span class="amount">€50</span>
-                            <span class="impact-text">1 mes de formación</span>
+                        <div class="price-anchor selected checkout-price" tabindex="0" onclick="selectDonation(this)">
+                            <div class="amount">€50</div>
+                            <div class="impact">Formación</div>
                         </div>
-                        <div class="price-anchor" role="radio" aria-checked="false" tabindex="0"
-                             onclick="selectDonation(this)"
-                             onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();selectDonation(this);}">
-                            <span class="amount">€100</span>
-                            <span class="impact-text">Beca completa</span>
+                        <div class="price-anchor checkout-price" tabindex="0" onclick="selectDonation(this)">
+                            <div class="amount">€100</div>
+                            <div class="impact">Beca Total</div>
                         </div>
                     </div>
 
-                    <!-- Custom Amount Slider -->
-                    <div class="custom-slider-container" style="margin-top:24px;padding:24px;background:var(--bg-soft);border-radius:var(--radius-md);border:1px solid var(--border);">
-                        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
-                            <label for="donation-slider" style="font-weight:600;color:var(--text-primary);margin:0;">Desliza para elegir tu impacto</label>
-                            <div style="font-family:var(--font-heading);font-size:1.8rem;color:var(--primary);font-weight:800;">€<span id="slider-val">50</span></div>
+                    <!-- Custom Amount / Slider Area -->
+                    <div style="margin-bottom:40px; padding-bottom:32px; border-bottom:1px solid #e9ecef;">
+                        <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:12px;">
+                            <label for="donation-slider" style="font-size:0.9rem; font-weight:600; color:#495057; margin:0;">Personaliza tu monto</label>
+                            <div style="font-family:var(--font-heading); font-size:1.6rem; color:var(--primary); font-weight:700;">€<span id="slider-val">50</span></div>
                         </div>
-                        <input type="range" id="donation-slider" min="5" max="250" step="5" value="50" style="width:100%;accent-color:var(--primary);cursor:pointer;" />
-                        <div style="margin-top:16px;font-size:0.95rem;color:var(--text-muted);background:rgba(255,255,255,0.5);padding:12px;border-radius:var(--radius-sm);border-left:3px solid var(--gold);">
-                            ✨ <span id="slider-impact">1 mes de formación técnica en el HTC.</span>
+                        <input type="range" id="donation-slider" min="5" max="250" step="5" value="50" style="width:100%; height:6px; background:#e9ecef; border-radius:10px; accent-color:var(--primary); cursor:pointer; margin-bottom:12px;" />
+                        <div style="font-size:0.85rem; color:#6c757d; font-style:italic; text-align:center;">
+                            ✨ <span id="slider-impact">1 mes de formación técnica.</span>
                         </div>
                     </div>
-                    
-                    <script>
-                        document.addEventListener('DOMContentLoaded', () => {
-                            const slider = document.getElementById('donation-slider');
-                            const valDisplay = document.getElementById('slider-val');
-                            const impactDisplay = document.getElementById('slider-impact');
-                            
-                            slider.addEventListener('input', (e) => {
-                                const val = parseInt(e.target.value);
-                                valDisplay.textContent = val;
-                                
-                                // Update price anchors UI
-                                document.querySelectorAll('.price-anchor').forEach(el => {
-                                    el.classList.remove('selected');
-                                    el.setAttribute('aria-checked', 'false');
-                                });
-                                
-                                // Dynamic impact text
-                                if(val < 25) {
-                                    impactDisplay.textContent = "Materiales escolares y apoyo básico.";
-                                } else if(val < 50) {
-                                    impactDisplay.textContent = "Terapias psicológicas para un joven.";
-                                } else if(val < 100) {
-                                    impactDisplay.textContent = "1 mes de formación técnica en el HTC.";
-                                } else if(val < 150) {
-                                    impactDisplay.textContent = "Beca completa (educación, comida, pasajes).";
-                                } else {
-                                    impactDisplay.textContent = "Impacto profundo en múltiples jóvenes y familias.";
-                                }
-                            });
-                        });
-                    </script>
+
+                    <style>
+                        .checkout-toggle {
+                            flex: 1;
+                            text-align: center;
+                            padding: 10px 16px;
+                            border-radius: 8px;
+                            font-size: 0.9rem;
+                            font-weight: 600;
+                            color: #495057;
+                            cursor: pointer;
+                            transition: all 0.2s ease;
+                        }
+                        .checkout-toggle.active {
+                            background: white;
+                            color: var(--primary);
+                            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+                        }
+                        .checkout-price {
+                            border: 2px solid #e9ecef;
+                            padding: 16px 8px;
+                            text-align: center;
+                            border-radius: 12px;
+                            cursor: pointer;
+                            transition: all 0.2s ease;
+                            background: white;
+                        }
+                        .checkout-price:hover {
+                            border-color: #ced4da;
+                        }
+                        .checkout-price.selected {
+                            border-color: var(--primary);
+                            background: rgba(46,155,138,0.04);
+                        }
+                        .checkout-price .amount {
+                            font-family: var(--font-heading);
+                            font-size: 1.5rem;
+                            font-weight: 700;
+                            color: #212529;
+                            margin-bottom: 4px;
+                        }
+                        .checkout-price.selected .amount {
+                            color: var(--primary);
+                        }
+                        .checkout-price .impact {
+                            font-size: 0.75rem;
+                            color: #6c757d;
+                            font-weight: 500;
+                        }
+                        .checkout-input {
+                            width: 100%;
+                            padding: 14px 16px;
+                            border: 1px solid #ced4da;
+                            border-radius: 8px;
+                            font-size: 1rem;
+                            color: #212529;
+                            background: #fff;
+                            transition: all 0.2s ease;
+                            font-family: var(--font-body);
+                        }
+                        .checkout-input:focus {
+                            outline: none;
+                            border-color: var(--primary);
+                            box-shadow: 0 0 0 3px rgba(46,155,138,0.15);
+                        }
+                        .checkout-input::placeholder {
+                            color: #adb5bd;
+                        }
+                        .checkout-label {
+                            display: block;
+                            font-size: 0.85rem;
+                            font-weight: 600;
+                            color: #495057;
+                            margin-bottom: 8px;
+                            margin-top: 20px;
+                        }
+                    </style>
+
                     <!-- Personal Info -->
-                    <div class="form-row">
-                        <div class="form-group" style="margin-bottom:0;">
-                            <label for="donor-name">Nombre</label>
-                            <input type="text" id="donor-name" class="form-control" placeholder="Tu nombre" autocomplete="given-name" required />
+                    <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+                        <div>
+                            <label class="checkout-label">Nombre</label>
+                            <input type="text" class="checkout-input" placeholder="Ej. Ana" required />
                         </div>
-                        <div class="form-group" style="margin-bottom:0;">
-                            <label for="donor-lastname">Apellido</label>
-                            <input type="text" id="donor-lastname" class="form-control" placeholder="Tu apellido" autocomplete="family-name" required />
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="donor-email">Correo electrónico</label>
-                        <input type="email" id="donor-email" class="form-control" placeholder="tu@correo.com" autocomplete="email" inputmode="email" required />
-                    </div>
-
-                    <div class="form-group">
-                        <label for="donor-card">Número de tarjeta</label>
-                        <input type="text" id="donor-card" class="form-control" placeholder="•••• •••• •••• ••••" autocomplete="cc-number" inputmode="numeric" maxlength="19" required />
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group" style="margin-bottom:0;">
-                            <label for="donor-card-exp">Vencimiento</label>
-                            <input type="text" id="donor-card-exp" class="form-control" placeholder="MM / AA" autocomplete="cc-exp" inputmode="numeric" maxlength="5" required />
-                        </div>
-                        <div class="form-group" style="margin-bottom:0;">
-                            <label for="donor-card-cvc">CVC</label>
-                            <input type="text" id="donor-card-cvc" class="form-control" placeholder="•••" autocomplete="cc-csc" inputmode="numeric" maxlength="4" required />
+                        <div>
+                            <label class="checkout-label">Apellido</label>
+                            <input type="text" class="checkout-input" placeholder="Ej. García" required />
                         </div>
                     </div>
 
-                    <button type="submit" class="btn btn--primary donate-btn">
-                        Completar donación segura →
+                    <label class="checkout-label">Correo Electrónico</label>
+                    <input type="email" class="checkout-input" placeholder="ana@correo.com" required />
+
+                    <label class="checkout-label">Datos de Tarjeta <span style="font-weight:normal;color:#adb5bd;float:right;">Prueba Segura</span></label>
+                    <div style="display:flex; flex-direction:column; gap:0;">
+                        <input type="text" class="checkout-input" placeholder="0000 0000 0000 0000" style="border-bottom-left-radius:0; border-bottom-right-radius:0;" required />
+                        <div style="display:flex;">
+                            <input type="text" class="checkout-input" placeholder="MM/AA" style="flex:1; border-top-left-radius:0; border-top-right-radius:0; border-top:none; border-right:none;" required />
+                            <input type="text" class="checkout-input" placeholder="CVC" style="flex:1; border-top-left-radius:0; border-top-right-radius:0; border-top:none;" required />
+                        </div>
+                    </div>
+
+                    <button type="submit" style="width:100%; background:var(--primary); color:white; border:none; padding:18px; font-size:1.1rem; font-weight:600; border-radius:8px; cursor:pointer; margin-top:32px; transition:all 0.2s; box-shadow:0 4px 12px rgba(46,155,138,0.2);">
+                        Hacer Donación Segura
                     </button>
 
-                    <div class="secure-info">
-                        <span>🔒</span>
-                        <span>Pagos encriptados con SSL de 256 bits</span>
-                    </div>
-
-                    <div class="trust-strip">
-                        <div class="trust-item">✓ Deducible de impuestos</div>
-                        <div class="trust-item">✓ Recibo inmediato</div>
-                        <div class="trust-item">✓ Cancelar cuando quieras</div>
+                    <div style="margin-top:24px; text-align:center; font-size:0.85rem; color:#6c757d; display:flex; align-items:center; justify-content:center; gap:8px;">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                        Tus datos están encriptados y protegidos (SSL de 256 bits).
                     </div>
                 </form>
             </div>
@@ -225,6 +202,35 @@
     </main>
 
     <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const slider = document.getElementById('donation-slider');
+            const valDisplay = document.getElementById('slider-val');
+            const impactDisplay = document.getElementById('slider-impact');
+            
+            if(slider) {
+                slider.addEventListener('input', (e) => {
+                    const val = parseInt(e.target.value);
+                    valDisplay.textContent = val;
+                    
+                    document.querySelectorAll('.price-anchor').forEach(el => {
+                        el.classList.remove('selected');
+                    });
+                    
+                    if(val < 25) {
+                        impactDisplay.textContent = "Materiales escolares y apoyo básico.";
+                    } else if(val < 50) {
+                        impactDisplay.textContent = "Terapias psicológicas para un joven.";
+                    } else if(val < 100) {
+                        impactDisplay.textContent = "1 mes de formación técnica.";
+                    } else if(val < 150) {
+                        impactDisplay.textContent = "Beca completa (educación, comida, pasajes).";
+                    } else {
+                        impactDisplay.textContent = "Impacto profundo en múltiples jóvenes.";
+                    }
+                });
+            }
+        });
+
         function selectDonation(element) {
             document.querySelectorAll('.price-anchor').forEach(el => {
                 el.classList.remove('selected');
@@ -232,7 +238,15 @@
             });
             element.classList.add('selected');
             element.setAttribute('aria-checked', 'true');
-            document.querySelector('.custom-amount-input').value = '';
+            // Sync Slider
+            const slider = document.getElementById('donation-slider');
+            const valDisplay = document.getElementById('slider-val');
+            if(slider) {
+                const textAmt = element.querySelector('.amount').textContent.replace('€', '');
+                slider.value = textAmt;
+                valDisplay.textContent = textAmt;
+                slider.dispatchEvent(new Event('input'));
+            }
         }
         function selectFreq(element) {
             element.closest('.freq-toggle').querySelectorAll('.freq-option').forEach(el => {
