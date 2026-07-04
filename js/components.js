@@ -44,8 +44,7 @@
       <a href="comunidades.html"   data-page="comunidades.html">Proyectos</a>
       <a href="hospitality.html"   data-page="hospitality.html">Hospitality</a>
       <a href="transparencia.html" data-page="transparencia.html">Transparencia</a>
-      <a href="donar.html"         data-page="donar.html"
-         class="btn btn--primary btn--sm">Donar Ahora</a>
+      <button onclick="window.toggleDonationDrawer()" class="btn btn--primary btn--sm">Donar Ahora</button>
     </nav>
 
   </div>
@@ -148,6 +147,86 @@
 </footer>`;
 
   /* ══════════════════════════════════════════
+     DONATION DRAWER HTML
+  ══════════════════════════════════════════ */
+  const DONATION_DRAWER_HTML = `
+<div id="donation-overlay" class="donation-overlay" onclick="window.toggleDonationDrawer()"></div>
+<div id="donation-drawer" class="donation-drawer">
+  <div class="drawer-header">
+    <h2>Tu aporte cambia vidas</h2>
+    <button class="drawer-close" onclick="window.toggleDonationDrawer()" aria-label="Cerrar">&times;</button>
+  </div>
+  <div class="drawer-body" data-lenis-prevent="true">
+    <p style="font-size:0.95rem; color:#6c757d; margin-bottom:24px;">Apoya la educación en Ayacucho de forma segura.</p>
+    
+    <form onsubmit="event.preventDefault();alert('¡Gracias por tu generosidad! Esta es una versión demostrativa.'); window.toggleDonationDrawer();">
+        <div style="display:flex; background:#f1f3f5; border-radius:12px; padding:6px; margin-bottom:32px;">
+            <div class="freq-option active checkout-toggle" onclick="window.drawerSelectFreq(this)">Donación Única</div>
+            <div class="freq-option checkout-toggle" onclick="window.drawerSelectFreq(this)">Mensual</div>
+        </div>
+
+        <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:12px; margin-bottom:32px;">
+            <div class="price-anchor checkout-price" onclick="window.drawerSelectDonation(this)">
+                <div class="amount">€15</div>
+                <div class="impact">Materiales</div>
+            </div>
+            <div class="price-anchor selected checkout-price" onclick="window.drawerSelectDonation(this)">
+                <div class="amount">€50</div>
+                <div class="impact">Formación</div>
+            </div>
+            <div class="price-anchor checkout-price" onclick="window.drawerSelectDonation(this)">
+                <div class="amount">€100</div>
+                <div class="impact">Beca Total</div>
+            </div>
+        </div>
+
+        <div style="margin-bottom:32px; padding-bottom:24px; border-bottom:1px solid #e9ecef;">
+            <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:12px;">
+                <label for="drawer-donation-slider" style="font-size:0.9rem; font-weight:600; color:#495057; margin:0;">Personaliza monto</label>
+                <div style="font-family:var(--font-heading); font-size:1.6rem; color:var(--primary); font-weight:700;">€<span id="drawer-slider-val">50</span></div>
+            </div>
+            <input type="range" id="drawer-donation-slider" min="5" max="250" step="5" value="50" style="width:100%; height:6px; background:#e9ecef; border-radius:10px; accent-color:var(--primary); cursor:pointer; margin-bottom:12px;" />
+            <div style="font-size:0.85rem; color:#6c757d; font-style:italic; text-align:center;">
+                <span id="drawer-slider-impact">1 mes de formación técnica.</span>
+            </div>
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+            <div>
+                <label class="checkout-label">Nombre</label>
+                <input type="text" class="checkout-input" placeholder="Ej. Ana" required />
+            </div>
+            <div>
+                <label class="checkout-label">Apellido</label>
+                <input type="text" class="checkout-input" placeholder="Ej. García" required />
+            </div>
+        </div>
+
+        <label class="checkout-label">Correo Electrónico</label>
+        <input type="email" class="checkout-input" placeholder="ana@correo.com" required />
+
+        <label class="checkout-label">Datos de Tarjeta</label>
+        <div style="display:flex; flex-direction:column; gap:0;">
+            <input type="text" class="checkout-input" placeholder="0000 0000 0000 0000" style="border-bottom-left-radius:0; border-bottom-right-radius:0;" required />
+            <div style="display:flex;">
+                <input type="text" class="checkout-input" placeholder="MM/AA" style="flex:1; border-top-left-radius:0; border-top-right-radius:0; border-top:none; border-right:none;" required />
+                <input type="text" class="checkout-input" placeholder="CVC" style="flex:1; border-top-left-radius:0; border-top-right-radius:0; border-top:none;" required />
+            </div>
+        </div>
+
+        <button type="submit" style="width:100%; background:var(--primary); color:white; border:none; padding:18px; font-size:1.1rem; font-weight:600; border-radius:8px; cursor:pointer; margin-top:32px; transition:all 0.2s;">
+            Completar Donación
+        </button>
+
+        <div style="margin-top:16px; text-align:center; font-size:0.8rem; color:#6c757d; display:flex; align-items:center; justify-content:center; gap:6px;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+            Pago seguro y encriptado.
+        </div>
+    </form>
+  </div>
+</div>`;
+
+  /* ══════════════════════════════════════════
      INJECT into DOM
   ══════════════════════════════════════════ */
   function inject() {
@@ -165,6 +244,12 @@
       existingFooter.outerHTML = FOOTER_HTML;
     } else {
       document.body.insertAdjacentHTML('beforeend', FOOTER_HTML);
+    }
+    
+    // ── Donation Drawer ──
+    if (!document.getElementById('donation-drawer')) {
+        document.body.insertAdjacentHTML('beforeend', DONATION_DRAWER_HTML);
+        setupDrawerSlider();
     }
 
     // ── Dynamic copyright year ──
@@ -191,46 +276,153 @@
       };
       document.head.appendChild(script);
     }
+  }
 
-    // ── Custom Branded Cursor ──
-    if (window.matchMedia('(pointer: fine)').matches && !document.getElementById('custom-cursor')) {
-      const cursor = document.createElement('div');
-      cursor.id = 'custom-cursor';
-      cursor.className = 'custom-cursor';
-      document.body.appendChild(cursor);
+  function setupDrawerSlider() {
+      const slider = document.getElementById('drawer-donation-slider');
+      const valDisplay = document.getElementById('drawer-slider-val');
+      const impactDisplay = document.getElementById('drawer-slider-impact');
       
-      let clientX = -100;
-      let clientY = -100;
-      
-      document.addEventListener('mousemove', e => {
-        clientX = e.clientX;
-        clientY = e.clientY;
-      });
-      
-      const renderCursor = () => {
-        cursor.style.transform = `translate3d(${clientX}px, ${clientY}px, 0)`;
-        requestAnimationFrame(renderCursor);
-      };
-      requestAnimationFrame(renderCursor);
-      
-      // Add hover states dynamically
-      document.body.addEventListener('mouseover', e => {
-        if(e.target.closest('a, button, input, .freq-option, .price-anchor, svg, .map-wrapper')) {
-          cursor.classList.add('cursor-hover');
-        }
-      });
-      document.body.addEventListener('mouseout', e => {
-        if(e.target.closest('a, button, input, .freq-option, .price-anchor, svg, .map-wrapper')) {
-          cursor.classList.remove('cursor-hover');
-        }
-      });
-    }
+      if(slider) {
+          slider.addEventListener('input', (e) => {
+              const val = parseInt(e.target.value);
+              valDisplay.textContent = val;
+              
+              document.querySelectorAll('.donation-drawer .price-anchor').forEach(el => {
+                  el.classList.remove('selected');
+              });
+              
+              if(val < 25) {
+                  impactDisplay.textContent = "Materiales escolares y apoyo básico.";
+              } else if(val < 50) {
+                  impactDisplay.textContent = "Terapias psicológicas para un joven.";
+              } else if(val < 100) {
+                  impactDisplay.textContent = "1 mes de formación técnica.";
+              } else if(val < 150) {
+                  impactDisplay.textContent = "Beca completa (educación, comida, pasajes).";
+              } else {
+                  impactDisplay.textContent = "Impacto profundo en múltiples jóvenes.";
+              }
+          });
+      }
   }
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', inject);
   } else {
     inject();
+  }
+
+  // Global functions for the Drawer
+  window.toggleDonationDrawer = function() {
+      const drawer = document.getElementById('donation-drawer');
+      const overlay = document.getElementById('donation-overlay');
+      if (drawer && overlay) {
+          drawer.classList.toggle('is-open');
+          overlay.classList.toggle('is-open');
+      }
+  };
+
+  window.drawerSelectDonation = function(element) {
+      document.querySelectorAll('.donation-drawer .price-anchor').forEach(el => el.classList.remove('selected'));
+      element.classList.add('selected');
+      
+      const slider = document.getElementById('drawer-donation-slider');
+      const valDisplay = document.getElementById('drawer-slider-val');
+      if(slider) {
+          const textAmt = element.querySelector('.amount').textContent.replace('€', '');
+          slider.value = textAmt;
+          valDisplay.textContent = textAmt;
+          slider.dispatchEvent(new Event('input'));
+      }
+  };
+
+  window.drawerSelectFreq = function(element) {
+      element.closest('.donation-drawer').querySelectorAll('.freq-option').forEach(el => el.classList.remove('active'));
+      element.classList.add('active');
+  };
+
+  /* ══════════════════════════════════════════
+     TESTIMONIAL CAROUSEL
+  ══════════════════════════════════════════ */
+  let currentSlide = 0;
+  let carouselInterval;
+  const slideDuration = 8000; // 8 seconds per slide
+
+  function initCarousel() {
+      const slides = document.querySelectorAll('.testimonial-slide');
+      if (slides.length === 0) return;
+      
+      const progressBar = document.getElementById('carouselProgress');
+      
+      window.nextTestimonial = function() {
+          currentSlide = (currentSlide + 1) % slides.length;
+          updateCarousel(slides, progressBar);
+          resetCarouselTimer(slides, progressBar);
+      };
+      
+      window.prevTestimonial = function() {
+          currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+          updateCarousel(slides, progressBar);
+          resetCarouselTimer(slides, progressBar);
+      };
+
+      function updateCarousel(slides, progressBar) {
+          slides.forEach((slide, index) => {
+              if (index === currentSlide) {
+                  slide.classList.add('active');
+              } else {
+                  slide.classList.remove('active');
+              }
+          });
+          
+          if(progressBar) {
+              progressBar.style.transition = 'none';
+              progressBar.style.width = '0%';
+              setTimeout(() => {
+                  progressBar.style.transition = `width ${slideDuration}ms linear`;
+                  progressBar.style.width = '100%';
+              }, 50);
+          }
+      }
+
+      function resetCarouselTimer(slides, progressBar) {
+          clearInterval(carouselInterval);
+          carouselInterval = setInterval(() => {
+              currentSlide = (currentSlide + 1) % slides.length;
+              updateCarousel(slides, progressBar);
+          }, slideDuration);
+      }
+
+      // Touch events for swipe
+      let touchStartX = 0;
+      let touchEndX = 0;
+      const carouselContainer = document.getElementById('testimonialCarousel');
+      if(carouselContainer) {
+          carouselContainer.addEventListener('touchstart', e => {
+              touchStartX = e.changedTouches[0].screenX;
+          }, {passive: true});
+          carouselContainer.addEventListener('touchend', e => {
+              touchEndX = e.changedTouches[0].screenX;
+              handleSwipe();
+          }, {passive: true});
+      }
+
+      function handleSwipe() {
+          const threshold = 50;
+          if (touchEndX < touchStartX - threshold) window.nextTestimonial();
+          if (touchEndX > touchStartX + threshold) window.prevTestimonial();
+      }
+
+      // Initialize first slide
+      updateCarousel(slides, progressBar);
+      resetCarouselTimer(slides, progressBar);
+  }
+
+  if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initCarousel);
+  } else {
+      setTimeout(initCarousel, 100);
   }
 
 })();

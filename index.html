@@ -64,14 +64,10 @@
                     <h1>Donde el <em>origen</em> no define el <em>destino</em></h1>
                     <p>Educación, soporte psicosocial y formación técnica de excelencia para que cada joven construya su propio futuro.</p>
                     <div class="btn-group">
-                        <a href="donar.html" class="btn btn--primary btn--lg">Haz tu impacto hoy →</a>
-                        <a href="nosotros.html" class="btn btn--white btn--lg">Nuestra historia</a>
+                        <a href="#" onclick="event.preventDefault(); window.toggleDonationDrawer()" class="btn btn--primary btn--lg">Haz tu impacto hoy →</a>
+                        <a href="nosotros.html" class="btn btn--white btn--lg">Descubre nuestra historia</a>
                     </div>
                 </div>
-            </div>
-            <div class="hero-scroll-indicator" aria-hidden="true">
-                <span>Descubre más</span>
-                <div class="arrow"></div>
             </div>
         </section>
 
@@ -190,35 +186,71 @@
             </div>
         </section>
 
-        <!-- ═══════ TESTIMONIAL ═══════ -->
-        <section class="section" id="testimonial">
-            <div class="container">
-                <div style="display:grid;grid-template-columns:1fr 1.2fr;gap:64px;align-items:center;">
-                    <div class="reveal-left">
-                        <picture>
-                            <source srcset="assets/images/testimonial_student_1782863781130.webp" type="image/webp" />
-                            <img src="assets/images/testimonial_student_1782863781130.png"
-                                 alt="María, egresada del Hospitality Training Center"
-                                 style="border-radius:var(--radius-lg);box-shadow:var(--shadow-xl);width:100%;height:480px;object-fit:cover;"
-                                 width="1024" height="1024" loading="lazy" decoding="async" />
-                        </picture>
-                    </div>
-                    <div class="reveal-right">
-                        <span class="eyebrow" style="color:var(--secondary-dark);font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:3.5px;display:block;margin-bottom:20px;">Historia de impacto</span>
-                        <div class="testimonial-card">
-                            <blockquote>"Antes de Mama Alice, mi única opción era el trabajo informal. Hoy soy chef profesional en uno de los mejores hoteles de la región. Este programa no solo me dio una carrera, me devolvió la dignidad."</blockquote>
-                            <div class="testimonial-author">
-                                <picture>
-                                    <source srcset="assets/images/testimonial_student_1782863781130.webp" type="image/webp" />
-                                    <img src="assets/images/testimonial_student_1782863781130.png" alt="María C." width="56" height="56" loading="lazy" decoding="async" />
-                                </picture>
-                                <div class="testimonial-author-info">
-                                    <h4>María C.</h4>
-                                    <p>Egresada 2024 — Hospitality Training Center</p>
+        <!-- ═══════ TESTIMONIAL CAROUSEL ═══════ -->
+        <section class="section" id="testimonial" style="overflow:hidden;">
+            <div class="container" style="position:relative;">
+                <div class="testimonial-carousel" id="testimonialCarousel">
+                    
+                    <!-- Slide 1 -->
+                    <div class="testimonial-slide active">
+                        <div class="testimonial-image-col">
+                            <picture>
+                                <source srcset="assets/images/testimonial_student_1782863781130.webp" type="image/webp" />
+                                <img src="assets/images/testimonial_student_1782863781130.png"
+                                     alt="María, egresada del Hospitality Training Center"
+                                     class="carousel-img"
+                                     width="1024" height="1024" loading="lazy" decoding="async" />
+                            </picture>
+                        </div>
+                        <div class="testimonial-content-col">
+                            <span class="eyebrow" style="color:var(--secondary-dark);font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:3.5px;display:block;margin-bottom:20px;">Historia de impacto</span>
+                            <div class="testimonial-card">
+                                <blockquote>"Antes de Mama Alice, mi única opción era el trabajo informal. Hoy soy chef profesional en uno de los mejores hoteles de la región. Este programa no solo me dio una carrera, me devolvió la <strong style="color:var(--primary);">dignidad</strong>."</blockquote>
+                                <div class="testimonial-author">
+                                    <div class="testimonial-author-info">
+                                        <h4>María C.</h4>
+                                        <p>Egresada 2024 — Hospitality Training Center</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    <!-- Slide 2 -->
+                    <div class="testimonial-slide">
+                        <div class="testimonial-image-col">
+                            <picture>
+                                <source srcset="assets/images/volunteer_team_1782863788228.webp" type="image/webp" />
+                                <img src="assets/images/volunteer_team_1782863788228.png"
+                                     alt="David, Voluntario Internacional"
+                                     class="carousel-img"
+                                     width="1024" height="1024" loading="lazy" decoding="async" />
+                            </picture>
+                        </div>
+                        <div class="testimonial-content-col">
+                            <span class="eyebrow" style="color:var(--secondary-dark);font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:3.5px;display:block;margin-bottom:20px;">Red Global</span>
+                            <div class="testimonial-card">
+                                <blockquote>"Viajar a Ayacucho cambió mi perspectiva del mundo. La energía de estos jóvenes es profundamente inspiradora; nosotros venimos con la intención de enseñar, pero terminamos <strong style="color:var(--secondary-dark);">aprendiendo mucho más</strong> de ellos."</blockquote>
+                                <div class="testimonial-author">
+                                    <div class="testimonial-author-info">
+                                        <h4>David S.</h4>
+                                        <p>Voluntario Internacional — Programa Educativo</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel Controls -->
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev" aria-label="Anterior testimonio" onclick="window.prevTestimonial()">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                    </button>
+                    <div class="carousel-progress"><div class="progress-bar" id="carouselProgress"></div></div>
+                    <button class="carousel-btn next" aria-label="Siguiente testimonio" onclick="window.nextTestimonial()">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+                    </button>
                 </div>
             </div>
         </section>
