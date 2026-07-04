@@ -814,6 +814,201 @@ footer.footer {
   .bento-item.medium {
     grid-column: span 2;
   }
+  }
+  .carousel-controls {
+    justify-content: center;
+    margin-top: 24px;
+  }
+}
+
+/* =========================================================================
+   DONATION DRAWER
+   ========================================================================= */
+.donation-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 2000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  backdrop-filter: blur(4px);
+}
+.donation-overlay.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.donation-drawer {
+  position: fixed;
+  top: 0; right: -100%;
+  width: 100%; max-width: 480px;
+  height: 100vh;
+  background: var(--bg-white, #fff);
+  z-index: 2001;
+  box-shadow: -10px 0 40px rgba(0,0,0,0.2);
+  transition: right 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  overflow-y: auto;
+  padding: 48px;
+}
+.donation-drawer.is-open {
+  right: 0;
+}
+.drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.drawer-header h2 {
+  font-size: 1.6rem;
+  margin: 0;
+}
+.drawer-close {
+  background: none; border: none; font-size: 2.2rem; cursor: pointer;
+  color: var(--text-muted); line-height: 1; padding: 0;
+}
+.drawer-close:hover {
+  color: var(--primary);
+}
+
+@media(max-width: 480px) {
+  .donation-drawer {
+    padding: 32px 24px;
+  }
+}
+
+/* =========================================================================
+   STICKY HORIZONTAL TIMELINE
+   ========================================================================= */
+.sticky-timeline-wrapper {
+  height: 300vh; /* creates the scrollable distance */
+  position: relative;
+  background: var(--dark);
+  color: white;
+  margin-top: 64px;
+}
+.sticky-timeline-container {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  padding-left: max(5vw, calc((100vw - 1200px) / 2));
+}
+.timeline-header {
+  margin-bottom: 60px;
+  padding-right: 5vw;
+}
+.horizontal-scroll-track {
+  display: flex;
+  gap: 40px;
+  width: fit-content;
+  will-change: transform;
+}
+.sticky-timeline-card {
+  width: 400px;
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 40px;
+  border-radius: var(--radius-lg);
+  border-top: 4px solid var(--primary);
+  backdrop-filter: blur(10px);
+}
+.sticky-timeline-card .year {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: var(--primary);
+  margin-bottom: 12px;
+  line-height: 1;
+}
+.sticky-timeline-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 16px;
+  color: white;
+}
+.sticky-timeline-card p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+@media(max-width: 768px) {
+  .sticky-timeline-wrapper {
+    height: 400vh;
+  }
+  .sticky-timeline-card {
+    width: 85vw;
+    padding: 30px;
+  }
+  .sticky-timeline-card .year {
+    font-size: 2.8rem;
+  }
+}
+
+/* =========================================================================
+   BENTO GRID (HOSPITALITY)
+   ========================================================================= */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 300px);
+  gap: 20px;
+  margin-top: 40px;
+}
+.bento-item {
+  background: var(--bg-white);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: transform var(--duration-normal) var(--ease-out), box-shadow var(--duration-normal) var(--ease-out);
+}
+.bento-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-xl);
+}
+.bento-item.large {
+  grid-column: span 2;
+  grid-row: span 2;
+  background: var(--primary);
+  color: white;
+}
+.bento-item.medium {
+  grid-column: span 2;
+}
+.bento-bg {
+  position: absolute;
+  top: -10%; left: 0; width: 100%; height: 120%;
+  object-fit: cover;
+  z-index: 0;
+  will-change: transform;
+}
+.bento-content {
+  position: relative;
+  z-index: 10;
+}
+
+@media(max-width: 1024px) {
+  .bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+  .bento-item.large {
+    grid-column: span 2;
+    min-height: 400px;
+  }
+  .bento-item.medium {
+    grid-column: span 2;
+  }
 }
 @media(max-width: 768px) {
   .bento-grid {
@@ -822,6 +1017,8 @@ footer.footer {
   .bento-item.large, .bento-item.medium {
     grid-column: span 1;
   }
+}
+
 /* =========================================================================
    DONATION FORM (CHECKOUT CLASSES)
    ========================================================================= */
