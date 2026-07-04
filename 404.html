@@ -156,6 +156,13 @@
             50%       { transform: rotate(3deg); }
         }
     </style>
+
+    <script>
+        // Redirect to English 404 if the path was inside /en/
+        if (window.location.pathname.startsWith('/en/')) {
+            window.location.replace('/en/404.html');
+        }
+    </script>
 </head>
 <body>
     <div class="bg-orb bg-orb-1"></div>
