@@ -471,15 +471,6 @@ a:focus-visible,button:focus-visible,input:focus-visible,[role='radio']:focus-vi
    ADVANCED GLOBAL FX (AWWWARDS LEVEL)
    ========================================================================= */
 
-/* 1. Custom Branded Cursor */
-.custom-cursor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 14px;
-  height: 14px;
-  background-color: var(--primary);
-  border-radius: 50%;
   pointer-events: none;
   z-index: 99999;
   transform: translate3d(-100px, -100px, 0);
@@ -498,8 +489,8 @@ a:focus-visible,button:focus-visible,input:focus-visible,[role='radio']:focus-vi
   mix-blend-mode: normal;
 }
 @media (pointer: fine) {
-  body { cursor: none; }
-  a, button, input, select, textarea { cursor: none; }
+  body { cursor: auto; }
+  a, button, input, select, textarea { cursor: pointer; }
 }
 
 /* 2. Lenis Smooth Scroll Recommended CSS */
@@ -636,5 +627,61 @@ footer.footer {
   .carousel-controls {
     justify-content: center;
     margin-top: 24px;
+  }
+}
+
+/* =========================================================================
+   DONATION DRAWER
+   ========================================================================= */
+.donation-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 2000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  backdrop-filter: blur(4px);
+}
+.donation-overlay.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+.donation-drawer {
+  position: fixed;
+  top: 0; right: -100%;
+  width: 100%; max-width: 480px;
+  height: 100vh;
+  background: var(--bg-white, #fff);
+  z-index: 2001;
+  box-shadow: -10px 0 40px rgba(0,0,0,0.2);
+  transition: right 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  overflow-y: auto;
+  padding: 48px;
+}
+.donation-drawer.is-open {
+  right: 0;
+}
+.drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.drawer-header h2 {
+  font-size: 1.6rem;
+  margin: 0;
+}
+.drawer-close {
+  background: none; border: none; font-size: 2.2rem; cursor: pointer;
+  color: var(--text-muted); line-height: 1; padding: 0;
+}
+.drawer-close:hover {
+  color: var(--primary);
+}
+
+@media(max-width: 480px) {
+  .donation-drawer {
+    padding: 32px 24px;
   }
 }
