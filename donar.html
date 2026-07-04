@@ -26,22 +26,23 @@
 <body>
     <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
 
-    <!-- Minimal header fijo para página de donación -->
-    <header class="header header--scrolled" style="position:sticky;top:0;">
+    <!-- Minimal header flotante para página de donación -->
+    <header class="header" style="position:absolute;top:20px;left:0;right:0;z-index:100;background:rgba(255,255,255,0.1);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.2);">
         <div class="container nav-container">
             <a href="index.html" class="logo" aria-label="Mama Alice — Inicio">
                 <img src="assets/images/logo-transparent.png"
                      alt="Mama Alice ONG"
                      class="logo-oficial-img"
                      width="120" height="85"
+                     style="filter:brightness(0) invert(1);"
                      loading="eager" />
             </a>
-            <a href="index.html" class="btn btn--outline-dark btn--sm">← Volver al sitio</a>
+            <a href="index.html" class="btn btn--outline btn--sm" style="color:white;border-color:white;">← Volver al sitio</a>
         </div>
     </header>
 
     <main id="main-content">
-        <div class="donate-layout">
+        <div class="donate-layout" style="grid-template-columns: 1.2fr 1fr;">
 
             <!-- Left Panel: Why Donate -->
             <div class="donate-hero">
@@ -88,138 +89,141 @@
 
             <!-- Right Panel: Donation Form -->
             <div class="donate-form-panel">
-                <h2>Elige tu aporte</h2>
-                <p class="subtitle">Selecciona un monto o ingresa una cantidad personalizada.</p>
+                <div style="max-width: 540px; margin: 0 auto; width: 100%;">
+                    <h2>Elige tu aporte</h2>
+                    <p class="subtitle">Selecciona un monto o ingresa una cantidad personalizada.</p>
 
-                <form onsubmit="event.preventDefault();alert('¡Gracias por tu generosidad! Esta es una versión demostrativa. En producción se conectará con Stripe o PayPal.');">
+                    <form onsubmit="event.preventDefault();alert('¡Gracias por tu generosidad! Esta es una versión demostrativa. En producción se conectará con Stripe o PayPal.');">
 
-                    <!-- Frequency -->
-                    <div class="freq-toggle" role="radiogroup" aria-label="Frecuencia de donación">
-                        <div class="freq-option active" role="radio" aria-checked="true" tabindex="0"
-                             onclick="selectFreq(this)"
-                             onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();selectFreq(this);}">
-                            Donación única
+                        <!-- Frequency -->
+                        <div class="freq-toggle" role="radiogroup" aria-label="Frecuencia de donación">
+                            <div class="freq-option active" role="radio" aria-checked="true" tabindex="0"
+                                 onclick="selectFreq(this)"
+                                 onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();selectFreq(this);}">
+                                Donación única
+                            </div>
+                            <div class="freq-option" role="radio" aria-checked="false" tabindex="0"
+                                 onclick="selectFreq(this)"
+                                 onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();selectFreq(this);}">
+                                Mensual ❤️
+                            </div>
                         </div>
-                        <div class="freq-option" role="radio" aria-checked="false" tabindex="0"
-                             onclick="selectFreq(this)"
-                             onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();selectFreq(this);}">
-                            Mensual ❤️
-                        </div>
-                    </div>
 
-                    <!-- Price Anchors -->
-                    <div class="price-grid" role="radiogroup" aria-label="Monto de donación">
-                        <div class="price-anchor" role="radio" aria-checked="false" tabindex="0"
-                             onclick="selectDonation(this)"
-                             onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();selectDonation(this);}">
-                            <span class="amount">€15</span>
-                            <span class="impact-text">Materiales escolares</span>
+                        <!-- Price Anchors -->
+                        <div class="price-grid" role="radiogroup" aria-label="Monto de donación">
+                            <div class="price-anchor" role="radio" aria-checked="false" tabindex="0"
+                                 onclick="selectDonation(this)"
+                                 onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();selectDonation(this);}">
+                                <span class="amount">€15</span>
+                                <span class="impact-text">Materiales escolares</span>
+                            </div>
+                            <div class="price-anchor selected popular" role="radio" aria-checked="true" tabindex="0"
+                                 onclick="selectDonation(this)"
+                                 onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();selectDonation(this);}">
+                                <span class="amount">€50</span>
+                                <span class="impact-text">1 mes de formación</span>
+                            </div>
+                            <div class="price-anchor" role="radio" aria-checked="false" tabindex="0"
+                                 onclick="selectDonation(this)"
+                                 onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();selectDonation(this);}">
+                                <span class="amount">€100</span>
+                                <span class="impact-text">Beca completa</span>
+                            </div>
                         </div>
-                        <div class="price-anchor selected popular" role="radio" aria-checked="true" tabindex="0"
-                             onclick="selectDonation(this)"
-                             onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();selectDonation(this);}">
-                            <span class="amount">€50</span>
-                            <span class="impact-text">1 mes de formación</span>
-                        </div>
-                        <div class="price-anchor" role="radio" aria-checked="false" tabindex="0"
-                             onclick="selectDonation(this)"
-                             onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();selectDonation(this);}">
-                            <span class="amount">€100</span>
-                            <span class="impact-text">Beca completa</span>
-                        </div>
-                    </div>
 
-                    <!-- Custom Amount Slider -->
-                    <div class="custom-slider-container" style="margin-top:24px;padding:24px;background:var(--bg-soft);border-radius:var(--radius-md);border:1px solid var(--border);">
-                        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
-                            <label for="donation-slider" style="font-weight:600;color:var(--text-primary);margin:0;">Desliza para elegir tu impacto</label>
-                            <div style="font-family:var(--font-heading);font-size:1.8rem;color:var(--primary);font-weight:800;">€<span id="slider-val">50</span></div>
+                        <!-- Custom Amount Slider -->
+                        <div class="custom-slider-container" style="margin-top:24px;padding:24px;background:var(--bg-soft);border-radius:var(--radius-md);border:1px solid var(--border);">
+                            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+                                <label for="donation-slider" style="font-weight:600;color:var(--text-primary);margin:0;">Desliza para elegir tu impacto</label>
+                                <div style="font-family:var(--font-heading);font-size:1.8rem;color:var(--primary);font-weight:800;">€<span id="slider-val">50</span></div>
+                            </div>
+                            <input type="range" id="donation-slider" min="5" max="250" step="5" value="50" style="width:100%;accent-color:var(--primary);cursor:pointer;" />
+                            <div style="margin-top:16px;font-size:0.95rem;color:var(--text-muted);background:rgba(255,255,255,0.5);padding:12px;border-radius:var(--radius-sm);border-left:3px solid var(--gold);">
+                                ✨ <span id="slider-impact">1 mes de formación técnica en el HTC.</span>
+                            </div>
                         </div>
-                        <input type="range" id="donation-slider" min="5" max="250" step="5" value="50" style="width:100%;accent-color:var(--primary);cursor:pointer;" />
-                        <div style="margin-top:16px;font-size:0.95rem;color:var(--text-muted);background:rgba(255,255,255,0.5);padding:12px;border-radius:var(--radius-sm);border-left:3px solid var(--gold);">
-                            ✨ <span id="slider-impact">1 mes de formación técnica en el HTC.</span>
-                        </div>
-                    </div>
-                    
-                    <script>
-                        document.addEventListener('DOMContentLoaded', () => {
-                            const slider = document.getElementById('donation-slider');
-                            const valDisplay = document.getElementById('slider-val');
-                            const impactDisplay = document.getElementById('slider-impact');
-                            
-                            slider.addEventListener('input', (e) => {
-                                const val = parseInt(e.target.value);
-                                valDisplay.textContent = val;
+                        
+                        <script>
+                            document.addEventListener('DOMContentLoaded', () => {
+                                const slider = document.getElementById('donation-slider');
+                                const valDisplay = document.getElementById('slider-val');
+                                const impactDisplay = document.getElementById('slider-impact');
                                 
-                                // Update price anchors UI
-                                document.querySelectorAll('.price-anchor').forEach(el => {
-                                    el.classList.remove('selected');
-                                    el.setAttribute('aria-checked', 'false');
+                                slider.addEventListener('input', (e) => {
+                                    const val = parseInt(e.target.value);
+                                    valDisplay.textContent = val;
+                                    
+                                    // Update price anchors UI
+                                    document.querySelectorAll('.price-anchor').forEach(el => {
+                                        el.classList.remove('selected');
+                                        el.setAttribute('aria-checked', 'false');
+                                    });
+                                    
+                                    // Dynamic impact text
+                                    if(val < 25) {
+                                        impactDisplay.textContent = "Materiales escolares y apoyo básico.";
+                                    } else if(val < 50) {
+                                        impactDisplay.textContent = "Terapias psicológicas para un joven.";
+                                    } else if(val < 100) {
+                                        impactDisplay.textContent = "1 mes de formación técnica en el HTC.";
+                                    } else if(val < 150) {
+                                        impactDisplay.textContent = "Beca completa (educación, comida, pasajes).";
+                                    } else {
+                                        impactDisplay.textContent = "Impacto profundo en múltiples jóvenes y familias.";
+                                    }
                                 });
-                                
-                                // Dynamic impact text
-                                if(val < 25) {
-                                    impactDisplay.textContent = "Materiales escolares y apoyo básico.";
-                                } else if(val < 50) {
-                                    impactDisplay.textContent = "Terapias psicológicas para un joven.";
-                                } else if(val < 100) {
-                                    impactDisplay.textContent = "1 mes de formación técnica en el HTC.";
-                                } else if(val < 150) {
-                                    impactDisplay.textContent = "Beca completa (educación, comida, pasajes).";
-                                } else {
-                                    impactDisplay.textContent = "Impacto profundo en múltiples jóvenes y familias.";
-                                }
                             });
-                        });
-                    </script>
-                    <!-- Personal Info -->
-                    <div class="form-row">
-                        <div class="form-group" style="margin-bottom:0;">
-                            <label for="donor-name">Nombre</label>
-                            <input type="text" id="donor-name" class="form-control" placeholder="Tu nombre" autocomplete="given-name" required />
+                        </script>
+
+                        <!-- Personal Info -->
+                        <div class="form-row">
+                            <div class="form-group" style="margin-bottom:0;">
+                                <label for="donor-name">Nombre</label>
+                                <input type="text" id="donor-name" class="form-control" placeholder="Tu nombre" autocomplete="given-name" required />
+                            </div>
+                            <div class="form-group" style="margin-bottom:0;">
+                                <label for="donor-lastname">Apellido</label>
+                                <input type="text" id="donor-lastname" class="form-control" placeholder="Tu apellido" autocomplete="family-name" required />
+                            </div>
                         </div>
-                        <div class="form-group" style="margin-bottom:0;">
-                            <label for="donor-lastname">Apellido</label>
-                            <input type="text" id="donor-lastname" class="form-control" placeholder="Tu apellido" autocomplete="family-name" required />
+
+                        <div class="form-group">
+                            <label for="donor-email">Correo Electrónico</label>
+                            <input type="email" id="donor-email" class="form-control" placeholder="nombre@correo.com" autocomplete="email" required />
                         </div>
-                    </div>
 
-                    <div class="form-group">
-                        <label for="donor-email">Correo electrónico</label>
-                        <input type="email" id="donor-email" class="form-control" placeholder="tu@correo.com" autocomplete="email" inputmode="email" required />
-                    </div>
-
-                    <div class="form-group">
-                        <label for="donor-card">Número de tarjeta</label>
-                        <input type="text" id="donor-card" class="form-control" placeholder="•••• •••• •••• ••••" autocomplete="cc-number" inputmode="numeric" maxlength="19" required />
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group" style="margin-bottom:0;">
-                            <label for="donor-card-exp">Vencimiento</label>
-                            <input type="text" id="donor-card-exp" class="form-control" placeholder="MM / AA" autocomplete="cc-exp" inputmode="numeric" maxlength="5" required />
+                        <div class="form-group">
+                            <label for="donor-card">Número de Tarjeta</label>
+                            <input type="text" id="donor-card" class="form-control" placeholder="0000 0000 0000 0000" autocomplete="cc-number" inputmode="numeric" maxlength="19" required />
                         </div>
-                        <div class="form-group" style="margin-bottom:0;">
-                            <label for="donor-card-cvc">CVC</label>
-                            <input type="text" id="donor-card-cvc" class="form-control" placeholder="•••" autocomplete="cc-csc" inputmode="numeric" maxlength="4" required />
+
+                        <div class="form-row">
+                            <div class="form-group" style="margin-bottom:0;">
+                                <label for="donor-card-exp">Caducidad</label>
+                                <input type="text" id="donor-card-exp" class="form-control" placeholder="MM / AA" autocomplete="cc-exp" inputmode="numeric" maxlength="5" required />
+                            </div>
+                            <div class="form-group" style="margin-bottom:0;">
+                                <label for="donor-card-cvc">CVC</label>
+                                <input type="text" id="donor-card-cvc" class="form-control" placeholder="•••" autocomplete="cc-csc" inputmode="numeric" maxlength="4" required />
+                            </div>
                         </div>
-                    </div>
 
-                    <button type="submit" class="btn btn--primary donate-btn">
-                        Completar donación segura →
-                    </button>
+                        <button type="submit" class="btn btn--primary donate-btn">
+                            Completar donación segura →
+                        </button>
 
-                    <div class="secure-info">
-                        <span>🔒</span>
-                        <span>Pagos encriptados con SSL de 256 bits</span>
-                    </div>
+                        <div class="secure-info">
+                            <span>🔒</span>
+                            <span>Pagos encriptados con SSL de 256 bits</span>
+                        </div>
 
-                    <div class="trust-strip">
-                        <div class="trust-item">✓ Deducible de impuestos</div>
-                        <div class="trust-item">✓ Recibo inmediato</div>
-                        <div class="trust-item">✓ Cancelar cuando quieras</div>
-                    </div>
-                </form>
+                        <div class="trust-strip">
+                            <div class="trust-item">✓ Deducible de impuestos</div>
+                            <div class="trust-item">✓ Recibo inmediato</div>
+                            <div class="trust-item">✓ Cancelar cuando quieras</div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </main>
