@@ -1419,7 +1419,7 @@ body.page-leaving {
 .sticky-timeline-wrapper {
   position: relative;
   background-color: var(--dark);
-  background-image: url('../assets/images/ayacucho_landscape.png');
+  background-image: url('../assets/images/ayacucho_landscape.webp');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -1543,4 +1543,79 @@ body.page-leaving {
 }
 @media(max-width: 768px) {
   .scroll-top-btn { bottom: 20px; right: 20px; width: 50px; height: 50px; }
+}
+
+/* ═══════════════════════════════════════════
+   COOKIE BANNER (GDPR)
+   ═══════════════════════════════════════════ */
+.cookie-banner {
+    position: fixed;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    background: rgba(46, 155, 138, 0.95);
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 20px;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: bottom 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.cookie-banner.show {
+    bottom: 0;
+}
+
+.cookie-content {
+    max-width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+
+.cookie-text {
+    flex: 1;
+    min-width: 300px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.cookie-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.cookie-btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-family: var(--font-body);
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.cookie-btn-accept {
+    background: var(--primary);
+    color: white;
+}
+
+.cookie-btn-accept:hover {
+    background: var(--primary-dark);
+}
+
+.cookie-btn-reject {
+    background: transparent;
+    border: 1px solid rgba(255,255,255,0.5);
+    color: white;
+}
+
+.cookie-btn-reject:hover {
+    background: rgba(255,255,255,0.1);
 }

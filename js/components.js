@@ -23,7 +23,7 @@
   // --- Preloader Injection ---
   const preloaderHTML = `
   <div id="global-preloader" style="position:fixed; top:0; left:0; width:100%; height:100%; background-color:#ffffff; z-index:999999; display:flex; justify-content:center; align-items:center; transition:opacity 0.8s ease, visibility 0.8s ease;">
-    <img src="/assets/images/logo-oficial.png" alt="Mama Alice Loading..." style="max-width:200px; animation: pulse 2s infinite ease-in-out;">
+    <img src="/assets/images/logo-oficial.webp" alt="Mama Alice Loading..." style="max-width:200px; animation: pulse 2s infinite ease-in-out;">
     <style>
       @keyframes pulse {
         0% { transform: scale(0.95); opacity: 0.7; }
@@ -76,7 +76,7 @@
   <div class="container nav-container">
 
     <a href="${isEn ? '/en/' : '/'}" class="logo" aria-label="Mama Alice — Inicio">
-      <img src="${assetPrefix}images/logo-transparent.png"
+      <img src="${assetPrefix}images/logo-transparent.webp"
            alt="Mama Alice ONG"
            class="logo-oficial-img"
            width="120" height="85"
@@ -120,7 +120,7 @@
       <!-- Brand -->
       <div class="footer-brand">
         <a href="${isEn ? '/en/' : '/'}" class="logo" aria-label="Mama Alice — Inicio">
-          <img src="${assetPrefix}images/logo-transparent.png"
+          <img src="${assetPrefix}images/logo-transparent.webp"
                alt="Mama Alice ONG"
                style="height:56px;width:auto;filter:brightness(0) invert(1);opacity:0.9;"
                loading="lazy" />
@@ -799,3 +799,91 @@ if (document.readyState === 'loading') {
 }
 
 window.addEventListener('load', handlePreloader);
+
+// --- Formspree Async Newsletter Handler ---
+document.addEventListener('DOMContentLoaded', () => {
+    const forms = document.querySelectorAll('.newsletter-form');
+    forms.forEach(form => {
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const statusText = form.querySelector('.form-status');
+            const btn = form.querySelector('button[type="submit"]');
+            const isEn = window.location.pathname.includes('/en/');
+            
+            if (statusText) {
+                statusText.style.display = 'block';
+                statusText.style.color = '#495057';
+                statusText.innerText = isEn ? 'Sending...' : 'Enviando...';
+            }
+            if (btn) btn.disabled = true;
+
+            try {
+                const response = await fetch(form.action, {
+                    method: form.method,
+                    body: new FormData(form),
+                    headers: { 'Accept': 'application/json' }
+                });
+                
+                if (response.ok) {
+                    if (statusText) {
+                        statusText.style.color = 'var(--primary)';
+                        statusText.innerText = isEn ? 'Thank you! You have subscribed successfully.' : '¡Gracias! Te has suscrito con éxito.';
+                    }
+                    form.reset();
+                } else {
+                    if (statusText) {
+                        statusText.style.color = '#e03131';
+                        statusText.innerText = isEn ? 'Oops! There was a problem.' : '¡Ups! Hubo un problema al enviar.';
+                    }
+                }
+            } catch (err) {
+                if (statusText) {
+                    statusText.style.color = '#e03131';
+                    statusText.innerText = isEn ? 'Network error. Please try again later.' : 'Error de red. Inténtalo más tarde.';
+                }
+            } finally {
+                if (btn) btn.disabled = false;
+            }
+        });
+    });
+});
+
+// --- GDPR Cookie Banner ---
+function initCookieBanner() {
+    if (localStorage.getItem('cookieConsent')) return;
+    
+    const isEn = window.location.pathname.includes('/en/');
+    const text = isEn 
+        ? "We use cookies to improve your experience, analyze site traffic, and optimize our NGO's outreach. By clicking 'Accept', you agree to our use of cookies."
+        : "Usamos cookies para mejorar tu experiencia, analizar el tráfico del sitio y optimizar el alcance de nuestra ONG. Al hacer clic en 'Aceptar', aceptas nuestro uso de cookies.";
+    const btnAccept = isEn ? "Accept" : "Aceptar";
+    const btnReject = isEn ? "Decline" : "Rechazar";
+
+    const banner = document.createElement('div');
+    banner.className = 'cookie-banner';
+    banner.innerHTML = `
+        <div class="cookie-content">
+            <div class="cookie-text">${text}</div>
+            <div class="cookie-buttons">
+                <button class="cookie-btn cookie-btn-reject" id="btn-reject-cookie">${btnReject}</button>
+                <button class="cookie-btn cookie-btn-accept" id="btn-accept-cookie">${btnAccept}</button>
+            </div>
+        </div>
+    `;
+    
+    document.body.appendChild(banner);
+    
+    // Animate in
+    setTimeout(() => banner.classList.add('show'), 2000);
+
+    document.getElementById('btn-accept-cookie').addEventListener('click', () => {
+        localStorage.setItem('cookieConsent', 'accepted');
+        banner.classList.remove('show');
+    });
+
+    document.getElementById('btn-reject-cookie').addEventListener('click', () => {
+        localStorage.setItem('cookieConsent', 'rejected');
+        banner.classList.remove('show');
+    });
+}
+document.addEventListener('DOMContentLoaded', initCookieBanner);
