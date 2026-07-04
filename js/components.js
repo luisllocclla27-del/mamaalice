@@ -17,7 +17,7 @@
   /* ══════════════════════════════════════════
      HEADER & FOOTER Data
   ══════════════════════════════════════════ */
-  const isEn = window.location.pathname.includes('/en/');
+  const isEn = window.location.pathname.startsWith('/en/') || window.location.pathname === '/en';
   const assetPrefix = isEn ? '../assets/' : 'assets/';
 
   // --- Preloader Injection ---
@@ -320,7 +320,7 @@
     if (nav) setActive(nav);
 
     // ── Language Switcher State ──
-    const isEn = window.location.pathname.includes('/en/');
+    const isEn = window.location.pathname.startsWith('/en/') || window.location.pathname === '/en';
     const langEs = document.getElementById('lang-es');
     const langEn = document.getElementById('lang-en');
     
@@ -808,7 +808,7 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const statusText = form.querySelector('.form-status');
             const btn = form.querySelector('button[type="submit"]');
-            const isEn = window.location.pathname.includes('/en/');
+            const isEn = window.location.pathname.startsWith('/en/') || window.location.pathname === '/en';
             
             if (statusText) {
                 statusText.style.display = 'block';
@@ -852,7 +852,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function initCookieBanner() {
     if (localStorage.getItem('cookieConsent')) return;
     
-    const isEn = window.location.pathname.includes('/en/');
+    const isEn = window.location.pathname.startsWith('/en/') || window.location.pathname === '/en';
     const text = isEn 
         ? "We use cookies to improve your experience, analyze site traffic, and optimize our NGO's outreach. By clicking 'Accept', you agree to our use of cookies."
         : "Usamos cookies para mejorar tu experiencia, analizar el tráfico del sitio y optimizar el alcance de nuestra ONG. Al hacer clic en 'Aceptar', aceptas nuestro uso de cookies.";
