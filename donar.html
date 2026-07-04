@@ -26,158 +26,198 @@
 <body>
     <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
 
-    <!-- Minimal header flotante para página de donación -->
-    <header class="header" style="position:absolute;top:20px;left:0;right:0;z-index:100;background:rgba(255,255,255,0.1);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,0.2);">
+    <!-- Minimal header fijo para página de donación -->
+    <header class="header header--scrolled" style="position:sticky;top:0;">
         <div class="container nav-container">
             <a href="index.html" class="logo" aria-label="Mama Alice — Inicio">
                 <img src="assets/images/logo-transparent.png"
                      alt="Mama Alice ONG"
                      class="logo-oficial-img"
                      width="120" height="85"
-                     style="filter:brightness(0) invert(1);"
                      loading="eager" />
             </a>
-            <a href="index.html" class="btn btn--outline btn--sm" style="color:white;border-color:white;">← Volver al sitio</a>
+            <a href="index.html" class="btn btn--outline-dark btn--sm">← Volver al sitio</a>
         </div>
     </header>
 
-    <main id="main-content" style="display:flex; min-height:100vh; flex-direction:row; flex-wrap:wrap; background-color:#F9F9F6;">
-        
-        <!-- Left Side: Fixed Editorial Image -->
-        <div style="flex:1; min-width:320px; position:relative; min-height:50vh;" class="editorial-left">
-            <div style="position:absolute; inset:0; background-image: url('assets/images/hero-1.jpg'); background-size:cover; background-position:center; background-attachment:scroll;"></div>
-            <div style="position:absolute; inset:0; background:linear-gradient(to bottom, rgba(18, 30, 28, 0.2), rgba(18, 30, 28, 0.8));"></div>
-            
-            <div style="position:absolute; inset:0; padding:60px 40px; display:flex; flex-direction:column; justify-content:flex-end; color:white;">
-                <span style="font-size:0.85rem;font-weight:700;text-transform:uppercase;letter-spacing:4px;color:#F5A420;margin-bottom:16px;display:block;">Tu donación importa</span>
-                <h1 style="font-size:clamp(3rem, 6vw, 4.5rem); line-height:1; margin-bottom:24px; font-weight:500; font-family:var(--font-heading);">Haz posible el<br>cambio hoy.</h1>
-                <p style="font-size:1.15rem; line-height:1.6; color:rgba(255,255,255,0.9); max-width:480px; font-weight:400;">Tu aporte directo asegura la alimentación, educación y capacitación técnica de cientos de jóvenes en Ayacucho.</p>
+    <main id="main-content">
+        <div class="donate-layout">
+
+            <!-- Left Panel: Why Donate -->
+            <div class="donate-hero">
+                <div style="position:relative;z-index:1;">
+                    <span style="font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:3.5px;color:var(--primary);">Tu donación importa</span>
+                    <h1 style="margin-top:12px;">Haz posible el cambio hoy</h1>
+                    <p>Tu aporte directo asegura la alimentación, educación y capacitación técnica de cientos de jóvenes en Ayacucho.</p>
+
+                    <div class="impact-list">
+                        <div class="impact-list-item">
+                            <div class="impact-icon">📚</div>
+                            <div><strong>€15</strong> cubren los materiales escolares de un niño durante un semestre.</div>
+                        </div>
+                        <div class="impact-list-item">
+                            <div class="impact-icon">🍳</div>
+                            <div><strong>€50</strong> cubren un mes completo de formación técnica en el HTC.</div>
+                        </div>
+                        <div class="impact-list-item">
+                            <div class="impact-icon">🎓</div>
+                            <div><strong>€100</strong> cubren una beca mensual completa: alimentación, materiales y transporte.</div>
+                        </div>
+                    </div>
+
+                    <!-- Mini stats -->
+                    <div style="margin-top:40px;display:grid;grid-template-columns:1fr 1fr;gap:16px;">
+                        <div style="padding:20px;background:rgba(245,164,32,0.12);border-radius:var(--radius-md);border:1px solid rgba(245,164,32,0.25);">
+                            <span style="font-family:var(--font-heading);font-size:2rem;font-weight:800;color:var(--primary);display:block;line-height:1;">88%</span>
+                            <span style="font-size:0.8rem;color:rgba(255,255,255,0.65);">A programas directos</span>
+                        </div>
+                        <div style="padding:20px;background:rgba(46,155,138,0.12);border-radius:var(--radius-md);border:1px solid rgba(46,155,138,0.25);">
+                            <span style="font-family:var(--font-heading);font-size:2rem;font-weight:800;color:var(--secondary-light);display:block;line-height:1;">2,500</span>
+                            <span style="font-size:0.8rem;color:rgba(255,255,255,0.65);">Jóvenes beneficiados</span>
+                        </div>
+                    </div>
+
+                    <div style="margin-top:32px;padding-top:24px;border-top:1px solid rgba(255,255,255,0.08);">
+                        <p style="font-size:0.85rem;color:rgba(255,255,255,0.50);">
+                            El 88% de tu donación se destina directamente a los programas.
+                            <a href="transparencia.html" style="color:var(--primary);font-weight:600;">Ver transparencia →</a>
+                        </p>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <!-- Right Side: Minimalist Form -->
-        <div style="flex:1; min-width:320px; display:flex; align-items:center; justify-content:center; padding:100px 40px 60px;" class="editorial-right">
-            <div style="width:100%; max-width:480px;">
-                
-                <h2 style="font-family:var(--font-heading); font-size:2rem; font-weight:500; color:#1a1a1a; margin-bottom:8px;">Tu aporte</h2>
-                <p style="font-size:1rem; color:#666; margin-bottom:48px;">Selecciona una cantidad para transformar una vida.</p>
+            <!-- Right Panel: Donation Form -->
+            <div class="donate-form-panel">
+                <h2>Elige tu aporte</h2>
+                <p class="subtitle">Selecciona un monto o ingresa una cantidad personalizada.</p>
 
-                <form onsubmit="event.preventDefault();alert('¡Gracias por tu generosidad! Esta es una versión demostrativa.');">
-                    
-                    <!-- Frequency Toggle (Minimalist pill) -->
-                    <div style="display:flex; background:rgba(0,0,0,0.04); border-radius:100px; padding:4px; margin-bottom:32px;">
-                        <div class="freq-option active" style="flex:1; text-align:center; padding:12px; border-radius:100px; font-weight:600; font-size:0.9rem; cursor:pointer;" onclick="selectFreq(this)">Única</div>
-                        <div class="freq-option" style="flex:1; text-align:center; padding:12px; border-radius:100px; font-weight:600; font-size:0.9rem; cursor:pointer;" onclick="selectFreq(this)">Mensual ❤️</div>
+                <form onsubmit="event.preventDefault();alert('¡Gracias por tu generosidad! Esta es una versión demostrativa. En producción se conectará con Stripe o PayPal.');">
+
+                    <!-- Frequency -->
+                    <div class="freq-toggle" role="radiogroup" aria-label="Frecuencia de donación">
+                        <div class="freq-option active" role="radio" aria-checked="true" tabindex="0"
+                             onclick="selectFreq(this)"
+                             onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();selectFreq(this);}">
+                            Donación única
+                        </div>
+                        <div class="freq-option" role="radio" aria-checked="false" tabindex="0"
+                             onclick="selectFreq(this)"
+                             onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();selectFreq(this);}">
+                            Mensual ❤️
+                        </div>
                     </div>
 
-                    <!-- Clean Price Anchors -->
-                    <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:12px; margin-bottom:32px;">
-                        <div class="price-anchor" onclick="selectDonation(this)" style="padding:20px 0; text-align:center; border-radius:12px; cursor:pointer; font-family:var(--font-heading); font-size:1.4rem;">
+                    <!-- Price Anchors -->
+                    <div class="price-grid" role="radiogroup" aria-label="Monto de donación">
+                        <div class="price-anchor" role="radio" aria-checked="false" tabindex="0"
+                             onclick="selectDonation(this)"
+                             onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();selectDonation(this);}">
                             <span class="amount">€15</span>
+                            <span class="impact-text">Materiales escolares</span>
                         </div>
-                        <div class="price-anchor selected" onclick="selectDonation(this)" style="padding:20px 0; text-align:center; border-radius:12px; cursor:pointer; font-family:var(--font-heading); font-size:1.4rem;">
+                        <div class="price-anchor selected popular" role="radio" aria-checked="true" tabindex="0"
+                             onclick="selectDonation(this)"
+                             onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();selectDonation(this);}">
                             <span class="amount">€50</span>
+                            <span class="impact-text">1 mes de formación</span>
                         </div>
-                        <div class="price-anchor" onclick="selectDonation(this)" style="padding:20px 0; text-align:center; border-radius:12px; cursor:pointer; font-family:var(--font-heading); font-size:1.4rem;">
+                        <div class="price-anchor" role="radio" aria-checked="false" tabindex="0"
+                             onclick="selectDonation(this)"
+                             onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();selectDonation(this);}">
                             <span class="amount">€100</span>
+                            <span class="impact-text">Beca completa</span>
                         </div>
                     </div>
 
-                    <!-- Custom Slider Area -->
-                    <div style="margin-bottom:48px;">
-                        <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:16px;">
-                            <label for="donation-slider" style="font-weight:500; color:#444; font-size:0.95rem; margin:0;">O personaliza tu cantidad</label>
-                            <div style="font-family:var(--font-heading); font-size:1.8rem; color:#1a1a1a; font-weight:500;">€<span id="slider-val">50</span></div>
+                    <!-- Custom Amount Slider -->
+                    <div class="custom-slider-container" style="margin-top:24px;padding:24px;background:var(--bg-soft);border-radius:var(--radius-md);border:1px solid var(--border);">
+                        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
+                            <label for="donation-slider" style="font-weight:600;color:var(--text-primary);margin:0;">Desliza para elegir tu impacto</label>
+                            <div style="font-family:var(--font-heading);font-size:1.8rem;color:var(--primary);font-weight:800;">€<span id="slider-val">50</span></div>
                         </div>
-                        <input type="range" id="donation-slider" min="5" max="250" step="5" value="50" style="width:100%; height:4px; accent-color:#1a1a1a; cursor:pointer; margin-bottom:16px;" />
-                        <div style="font-size:0.95rem; color:#666; font-style:italic;">
-                            ✨ <span id="slider-impact">1 mes de formación técnica.</span>
+                        <input type="range" id="donation-slider" min="5" max="250" step="5" value="50" style="width:100%;accent-color:var(--primary);cursor:pointer;" />
+                        <div style="margin-top:16px;font-size:0.95rem;color:var(--text-muted);background:rgba(255,255,255,0.5);padding:12px;border-radius:var(--radius-sm);border-left:3px solid var(--gold);">
+                            ✨ <span id="slider-impact">1 mes de formación técnica en el HTC.</span>
+                        </div>
+                    </div>
+                    
+                    <script>
+                        document.addEventListener('DOMContentLoaded', () => {
+                            const slider = document.getElementById('donation-slider');
+                            const valDisplay = document.getElementById('slider-val');
+                            const impactDisplay = document.getElementById('slider-impact');
+                            
+                            slider.addEventListener('input', (e) => {
+                                const val = parseInt(e.target.value);
+                                valDisplay.textContent = val;
+                                
+                                // Update price anchors UI
+                                document.querySelectorAll('.price-anchor').forEach(el => {
+                                    el.classList.remove('selected');
+                                    el.setAttribute('aria-checked', 'false');
+                                });
+                                
+                                // Dynamic impact text
+                                if(val < 25) {
+                                    impactDisplay.textContent = "Materiales escolares y apoyo básico.";
+                                } else if(val < 50) {
+                                    impactDisplay.textContent = "Terapias psicológicas para un joven.";
+                                } else if(val < 100) {
+                                    impactDisplay.textContent = "1 mes de formación técnica en el HTC.";
+                                } else if(val < 150) {
+                                    impactDisplay.textContent = "Beca completa (educación, comida, pasajes).";
+                                } else {
+                                    impactDisplay.textContent = "Impacto profundo en múltiples jóvenes y familias.";
+                                }
+                            });
+                        });
+                    </script>
+                    <!-- Personal Info -->
+                    <div class="form-row">
+                        <div class="form-group" style="margin-bottom:0;">
+                            <label for="donor-name">Nombre</label>
+                            <input type="text" id="donor-name" class="form-control" placeholder="Tu nombre" autocomplete="given-name" required />
+                        </div>
+                        <div class="form-group" style="margin-bottom:0;">
+                            <label for="donor-lastname">Apellido</label>
+                            <input type="text" id="donor-lastname" class="form-control" placeholder="Tu apellido" autocomplete="family-name" required />
                         </div>
                     </div>
 
-                    <!-- Minimalist Form Inputs (Editorial Style) -->
-                    <style>
-                        .editorial-input {
-                            width: 100%;
-                            border: none;
-                            border-bottom: 1px solid #ccc;
-                            background: transparent;
-                            padding: 12px 0;
-                            font-size: 1.05rem;
-                            color: #1a1a1a;
-                            outline: none;
-                            border-radius: 0;
-                            transition: border-color 0.3s;
-                        }
-                        .editorial-input:focus {
-                            border-bottom-color: #1a1a1a;
-                        }
-                        .editorial-input::placeholder {
-                            color: #aaa;
-                            font-weight: 400;
-                        }
-                        .editorial-label {
-                            display: block;
-                            font-size: 0.8rem;
-                            text-transform: uppercase;
-                            letter-spacing: 1px;
-                            color: #888;
-                            margin-bottom: 4px;
-                            margin-top: 24px;
-                        }
-                        .freq-option {
-                            transition: all 0.3s ease;
-                        }
-                        .freq-option.active {
-                            background: #fff;
-                            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-                            color: #1a1a1a;
-                        }
-                        .price-anchor {
-                            border: 1px solid #ddd;
-                            background: transparent;
-                            color: #333;
-                            font-weight: normal;
-                            transition: all 0.2s ease;
-                        }
-                        .price-anchor.selected {
-                            border: 2px solid var(--primary);
-                            background: rgba(46,155,138,0.05);
-                            color: var(--primary);
-                            font-weight: 700;
-                        }
-                        @media(min-width: 900px) {
-                            .editorial-left { position: sticky; top: 0; height: 100vh; }
-                        }
-                    </style>
+                    <div class="form-group">
+                        <label for="donor-email">Correo electrónico</label>
+                        <input type="email" id="donor-email" class="form-control" placeholder="tu@correo.com" autocomplete="email" inputmode="email" required />
+                    </div>
 
-                    <div style="display:flex; gap:24px;">
-                        <div style="flex:1;">
-                            <label class="editorial-label">Nombre</label>
-                            <input type="text" class="editorial-input" placeholder="Tu nombre" required />
+                    <div class="form-group">
+                        <label for="donor-card">Número de tarjeta</label>
+                        <input type="text" id="donor-card" class="form-control" placeholder="•••• •••• •••• ••••" autocomplete="cc-number" inputmode="numeric" maxlength="19" required />
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group" style="margin-bottom:0;">
+                            <label for="donor-card-exp">Vencimiento</label>
+                            <input type="text" id="donor-card-exp" class="form-control" placeholder="MM / AA" autocomplete="cc-exp" inputmode="numeric" maxlength="5" required />
                         </div>
-                        <div style="flex:1;">
-                            <label class="editorial-label">Apellido</label>
-                            <input type="text" class="editorial-input" placeholder="Tu apellido" required />
+                        <div class="form-group" style="margin-bottom:0;">
+                            <label for="donor-card-cvc">CVC</label>
+                            <input type="text" id="donor-card-cvc" class="form-control" placeholder="•••" autocomplete="cc-csc" inputmode="numeric" maxlength="4" required />
                         </div>
                     </div>
 
-                    <label class="editorial-label">Correo Electrónico</label>
-                    <input type="email" class="editorial-input" placeholder="nombre@correo.com" required />
-
-                    <label class="editorial-label">Datos de pago <span style="text-transform:none;letter-spacing:0;color:#aaa;font-weight:normal;float:right;">(Modo Prueba)</span></label>
-                    <div style="display:flex; gap:16px;">
-                        <input type="text" class="editorial-input" placeholder="0000 0000 0000 0000" style="flex:2;" required />
-                        <input type="text" class="editorial-input" placeholder="MM/AA" style="flex:1;" required />
-                        <input type="text" class="editorial-input" placeholder="CVC" style="flex:1;" required />
-                    </div>
-
-                    <button type="submit" style="width:100%; background:#1a1a1a; color:white; border:none; padding:20px; font-size:1.1rem; font-weight:500; border-radius:8px; cursor:pointer; margin-top:48px; transition:background 0.3s;">
-                        Donar Ahora →
+                    <button type="submit" class="btn btn--primary donate-btn">
+                        Completar donación segura →
                     </button>
 
-                    <div style="margin-top:24px; text-align:center; font-size:0.85rem; color:#888;">
-                        🔒 Pagos seguros y encriptados
+                    <div class="secure-info">
+                        <span>🔒</span>
+                        <span>Pagos encriptados con SSL de 256 bits</span>
+                    </div>
+
+                    <div class="trust-strip">
+                        <div class="trust-item">✓ Deducible de impuestos</div>
+                        <div class="trust-item">✓ Recibo inmediato</div>
+                        <div class="trust-item">✓ Cancelar cuando quieras</div>
                     </div>
                 </form>
             </div>
@@ -185,39 +225,6 @@
     </main>
 
     <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const slider = document.getElementById('donation-slider');
-            const valDisplay = document.getElementById('slider-val');
-            const impactDisplay = document.getElementById('slider-impact');
-            
-            if(slider) {
-                slider.addEventListener('input', (e) => {
-                    const val = parseInt(e.target.value);
-                    valDisplay.textContent = val;
-                    
-                    document.querySelectorAll('.price-anchor').forEach(el => {
-                        el.style.borderColor = '#ddd';
-                        el.style.borderWidth = '1px';
-                        el.style.background = 'transparent';
-                        el.style.color = '#333';
-                        el.style.fontWeight = 'normal';
-                        el.classList.remove('selected');
-                    });
-                    
-                    if(val < 25) {
-                        impactDisplay.textContent = "Materiales escolares y apoyo básico.";
-                    } else if(val < 50) {
-                        impactDisplay.textContent = "Terapias psicológicas para un joven.";
-                    } else if(val < 100) {
-                        impactDisplay.textContent = "1 mes de formación técnica.";
-                    } else if(val < 150) {
-                        impactDisplay.textContent = "Beca completa (educación, comida, pasajes).";
-                    } else {
-                        impactDisplay.textContent = "Impacto profundo en múltiples jóvenes.";
-                    }
-                });
-            }
-        });
         function selectDonation(element) {
             document.querySelectorAll('.price-anchor').forEach(el => {
                 el.classList.remove('selected');
@@ -225,15 +232,7 @@
             });
             element.classList.add('selected');
             element.setAttribute('aria-checked', 'true');
-            // If they select a price anchor, update the slider visually
-            const slider = document.getElementById('donation-slider');
-            const valDisplay = document.getElementById('slider-val');
-            if (slider && valDisplay) {
-                const textAmt = element.querySelector('.amount').textContent.replace('€', '');
-                slider.value = textAmt;
-                valDisplay.textContent = textAmt;
-                slider.dispatchEvent(new Event('input'));
-            }
+            document.querySelector('.custom-amount-input').value = '';
         }
         function selectFreq(element) {
             element.closest('.freq-toggle').querySelectorAll('.freq-option').forEach(el => {
