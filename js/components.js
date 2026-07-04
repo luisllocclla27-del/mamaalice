@@ -75,7 +75,7 @@
 <header class="header" id="header" role="banner">
   <div class="container nav-container">
 
-    <a href="index.html" class="logo" aria-label="Mama Alice — Inicio">
+    <a href="${isEn ? '/en/' : '/'}" class="logo" aria-label="Mama Alice — Inicio">
       <img src="${assetPrefix}images/logo-transparent.png"
            alt="Mama Alice ONG"
            class="logo-oficial-img"
@@ -93,7 +93,7 @@
     </button>
 
     <nav class="nav-links" id="main-nav" role="navigation" aria-label="Menú principal">
-      <a href="index.html"         data-page="index.html">${labels.inicio}</a>
+      <a href="${isEn ? '/en/' : '/'}" data-page="index.html">${labels.inicio}</a>
       <a href="nosotros.html"      data-page="nosotros.html">${labels.nosotros}</a>
       <a href="comunidades.html"   data-page="comunidades.html">${labels.proyectos}</a>
       <a href="hospitality.html"   data-page="hospitality.html">${labels.hospitality}</a>
@@ -119,7 +119,7 @@
 
       <!-- Brand -->
       <div class="footer-brand">
-        <a href="index.html" class="logo" aria-label="Mama Alice — Inicio">
+        <a href="${isEn ? '/en/' : '/'}" class="logo" aria-label="Mama Alice — Inicio">
           <img src="${assetPrefix}images/logo-transparent.png"
                alt="Mama Alice ONG"
                style="height:56px;width:auto;filter:brightness(0) invert(1);opacity:0.9;"
@@ -165,7 +165,7 @@
       <!-- Navegación -->
       <div class="footer-col">
         <h4>${labels.nav_title}</h4>
-        <a href="index.html">${labels.inicio}</a>
+        <a href="${isEn ? '/en/' : '/'}">${labels.inicio}</a>
         <a href="nosotros.html">${labels.nosotros}</a>
         <a href="comunidades.html">${labels.proyectos}</a>
         <a href="hospitality.html">${labels.hospitality}</a>
@@ -686,22 +686,28 @@ if (document.readyState === 'loading') {
 
 
 // Global function to toggle language
-window.toggleLanguage = function(e, targetLang) {
+window.toggleLanguage = function (e, targetLang) {
     e.preventDefault();
-    const currentPath = window.location.pathname;
+    let currentPath = window.location.pathname.replace('.html', '');
+    if (currentPath.endsWith('/index')) currentPath = currentPath.replace('/index', '/');
+    if (currentPath === '') currentPath = '/';
+    
     let newPath = currentPath;
-    if (currentPath === '/' || currentPath.endsWith('index.html') && !currentPath.includes('/en/')) {
-        newPath = targetLang === 'en' ? '/en/index.html' : currentPath;
-    } else if (currentPath.includes('/en/')) {
+
+    if (currentPath === '/') {
+        newPath = targetLang === 'en' ? '/en/' : '/';
+    } else if (currentPath.startsWith('/en/') || currentPath === '/en') {
         if (targetLang === 'es') {
-            newPath = currentPath.replace('/en/', '/');
+            newPath = currentPath.replace('/en', '');
+            if (newPath === '/' || newPath === '') newPath = '/';
         }
     } else {
         if (targetLang === 'en') {
-            const filename = currentPath.split('/').pop() || 'index.html';
-            newPath = currentPath.substring(0, currentPath.lastIndexOf('/') + 1) + 'en/' + filename;
+            const filename = currentPath.split('/').pop();
+            newPath = '/en/' + filename;
         }
     }
+    
     window.location.href = newPath;
 };
 
