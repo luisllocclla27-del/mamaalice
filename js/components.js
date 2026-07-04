@@ -419,10 +419,97 @@
       resetCarouselTimer(slides, progressBar);
   }
 
+  /* ══════════════════════════════════════════
+     STICKY HORIZONTAL TIMELINE
+  ══════════════════════════════════════════ */
+  function initStickyTimeline() {
+      const wrapper = document.querySelector('.sticky-timeline-wrapper');
+      const track = document.getElementById('horizontalTrack');
+      if (!wrapper || !track) return;
+
+      window.addEventListener('scroll', () => {
+          const rect = wrapper.getBoundingClientRect();
+          // rect.top is 0 when wrapper hits the top of the viewport
+          // rect.height is 300vh, window.innerHeight is 100vh
+          // We scroll for 200vh
+          const maxScrollDistance = rect.height - window.innerHeight;
+          let progress = -rect.top / maxScrollDistance;
+          
+          if (progress < 0) progress = 0;
+          if (progress > 1) progress = 1;
+
+          // The amount we need to translate horizontally:
+          // Total width of track minus the viewport width (plus some padding)
+          const maxTranslate = track.scrollWidth - window.innerWidth + 150;
+          
+          track.style.transform = `translate3d(-${progress * maxTranslate}px, 0, 0)`;
+      });
+  }
+
+  /* ══════════════════════════════════════════
+     BENTO BOX PARALLAX
+  ══════════════════════════════════════════ */
+  function initBentoParallax() {
+      const bentoItems = document.querySelectorAll('.bento-parallax');
+      if (bentoItems.length === 0) return;
+      
+      window.addEventListener('scroll', () => {
+          bentoItems.forEach(item => {
+              const bg = item.querySelector('.bento-bg');
+              if (!bg) return;
+              const rect = item.getBoundingClientRect();
+              
+              // Only parallax if it's in the viewport
+              if (rect.top < window.innerHeight && rect.bottom > 0) {
+                  const progress = (window.innerHeight - rect.top) / (window.innerHeight + rect.height);
+                  // Translate Y based on scroll progress (subtle movement)
+                  const y = progress * 20 - 10; 
+                  bg.style.transform = `translate3d(0, ${y}%, 0)`;
+              }
+          });
+      });
+  }
+
+  /* ══════════════════════════════════════════
+     MAGNETIC BUTTONS
+  ══════════════════════════════════════════ */
+  function initMagneticButtons() {
+      // Only run on non-touch devices
+      if (window.matchMedia("(pointer: coarse)").matches) return;
+      
+      const magnets = document.querySelectorAll('.btn--primary, .btn--outline, .btn--white');
+      
+      magnets.forEach(magnet => {
+          // Set transition for smooth return
+          magnet.style.transition = 'transform 0.3s cubic-bezier(0.33, 1, 0.68, 1), background-color 0.3s, color 0.3s';
+          
+          magnet.addEventListener('mousemove', (e) => {
+              const rect = magnet.getBoundingClientRect();
+              const x = e.clientX - rect.left - rect.width / 2;
+              const y = e.clientY - rect.top - rect.height / 2;
+              
+              // Remove transition during move for instant tracking
+              magnet.style.transition = 'none';
+              magnet.style.transform = `translate(${x * 0.25}px, ${y * 0.25}px)`;
+          });
+          
+          magnet.addEventListener('mouseleave', () => {
+              magnet.style.transition = 'transform 0.5s cubic-bezier(0.33, 1, 0.68, 1), background-color 0.3s, color 0.3s';
+              magnet.style.transform = 'translate(0px, 0px)';
+          });
+      });
+  }
+
   if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', initCarousel);
+      document.addEventListener('DOMContentLoaded', initStickyTimeline);
+      document.addEventListener('DOMContentLoaded', initBentoParallax);
+      document.addEventListener('DOMContentLoaded', initMagneticButtons);
   } else {
       setTimeout(initCarousel, 100);
+      setTimeout(initStickyTimeline, 100);
+      setTimeout(initBentoParallax, 100);
+      setTimeout(initMagneticButtons, 100);
   }
 
 })();

@@ -107,50 +107,48 @@
             </div>
         </section>
 
-        <!-- TIMELINE -->
-        <section class="section">
-            <div class="container">
-                <div class="section-header reveal">
-                    <span class="eyebrow">Hitos</span>
-                    <h2>Nuestra trayectoria</h2>
-                    <p>Más de una década construyendo futuro en Ayacucho.</p>
+        <!-- ═══════ STICKY HORIZONTAL TIMELINE ═══════ -->
+        <section class="sticky-timeline-wrapper">
+            <div class="sticky-timeline-container">
+                <div class="timeline-header reveal">
+                    <span class="eyebrow" style="color:var(--primary);">Hitos</span>
+                    <h2 style="font-size: clamp(2rem, 5vw, 3.5rem); margin-bottom: 20px;">Nuestra trayectoria</h2>
+                    <p style="font-size: 1.1rem; opacity: 0.8; max-width: 500px;">Más de una década construyendo futuro en Ayacucho. Desliza hacia abajo para viajar en el tiempo.</p>
                 </div>
-                <div class="timeline">
-                    <div class="timeline-item reveal-left">
-                        <div class="timeline-content">
-                            <div class="year">2010</div>
-                            <h3>Fundación</h3>
-                            <p>Se establece Mama Alice como proyecto de asistencia social en las comunidades rurales de Ayacucho.</p>
-                        </div>
+                
+                <div class="horizontal-scroll-track" id="horizontalTrack">
+                    <!-- Hito 2010 -->
+                    <div class="sticky-timeline-card">
+                        <div class="year">2010</div>
+                        <h3>Fundación</h3>
+                        <p>Se establece Mama Alice como proyecto de asistencia social en las comunidades rurales de Ayacucho.</p>
                     </div>
-                    <div class="timeline-item reveal-right">
-                        <div class="timeline-content">
-                            <div class="year">2014</div>
-                            <h3>Primer Centro Comunitario</h3>
-                            <p>Se inaugura el primer centro de soporte psicosocial y refuerzo escolar para 120 niños.</p>
-                        </div>
+                    <!-- Hito 2014 -->
+                    <div class="sticky-timeline-card">
+                        <div class="year">2014</div>
+                        <h3>Primer Centro Comunitario</h3>
+                        <p>Se inaugura el primer centro de soporte psicosocial y refuerzo escolar para 120 niños.</p>
                     </div>
-                    <div class="timeline-item reveal-left">
-                        <div class="timeline-content">
-                            <div class="year">2018</div>
-                            <h3>Hospitality Training Center</h3>
-                            <p>Nace el centro de formación técnica en gastronomía y hotelería, con alianzas con el sector turístico.</p>
-                        </div>
+                    <!-- Hito 2018 -->
+                    <div class="sticky-timeline-card">
+                        <div class="year">2018</div>
+                        <h3>Hospitality Training Center</h3>
+                        <p>Nace el centro de formación técnica en gastronomía y hotelería, con alianzas con el sector turístico.</p>
                     </div>
-                    <div class="timeline-item reveal-right">
-                        <div class="timeline-content">
-                            <div class="year">2022</div>
-                            <h3>85% de Inserción Laboral</h3>
-                            <p>Se alcanza la tasa de inserción laboral más alta entre las ONGs de formación técnica en la región.</p>
-                        </div>
+                    <!-- Hito 2022 -->
+                    <div class="sticky-timeline-card">
+                        <div class="year">2022</div>
+                        <h3>85% de Inserción Laboral</h3>
+                        <p>Se alcanza la tasa de inserción laboral más alta entre las ONGs de formación técnica en la región.</p>
                     </div>
-                    <div class="timeline-item reveal-left">
-                        <div class="timeline-content">
-                            <div class="year">2025</div>
-                            <h3>2,500 Jóvenes Capacitados</h3>
-                            <p>Se supera el hito de dos mil quinientos jóvenes formados y acompañados integralmente.</p>
-                        </div>
+                    <!-- Hito 2025 -->
+                    <div class="sticky-timeline-card">
+                        <div class="year">2025</div>
+                        <h3>2,500 Jóvenes Capacitados</h3>
+                        <p>Se supera el hito de dos mil quinientos jóvenes formados y acompañados integralmente.</p>
                     </div>
+                    <!-- Final padding space for overscroll -->
+                    <div class="sticky-timeline-card" style="opacity:0; width:10vw; padding:0; border:none;"></div>
                 </div>
             </div>
         </section>
