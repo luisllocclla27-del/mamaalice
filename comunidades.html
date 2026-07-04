@@ -21,7 +21,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,800;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/styles.min.css?v=22" />
+    <link rel="preload" href="css/styles.min.css?v=22" as="style" />
+    <link rel="preload" as="image" href="assets/images/scraped/kl-66.jpg" />
 </head>
 <body>
     <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
@@ -31,8 +33,7 @@
         <!-- PAGE HERO -->
         <section class="page-hero">
             <picture>
-                
-                <img src="assets/images/community_image_1782863348941.png"
+                <img src="assets/images/scraped/kl-66.jpg"
                      alt="Comunidad en Ayacucho" class="page-hero-bg"
                      width="1024" height="1024" loading="eager" fetchpriority="high" decoding="async" />
             </picture>
@@ -45,101 +46,52 @@
                 </div>
             </div>
         </section>
-        <!-- Program 1 -->
-        <section class="section">
-            <div class="container">
-                <div class="approach-grid">
-                    <div class="reveal-left">
-                        <picture>
-                            <source srcset="assets/images/community_image_1782863348941.webp" type="image/webp" />
-                            <img src="assets/images/community_image_1782863348941.png" alt="Soporte Psicosocial"
-                                 style="border-radius:var(--radius-lg);box-shadow:var(--shadow-xl);width:100%;height:420px;object-fit:cover;"
-                                 width="1024" height="1024" loading="lazy" decoding="async" />
-                        </picture>
-                    </div>
-                    <div class="reveal-right">
-                        <div class="program-number">01</div>
-                        <h2 style="font-size:2.2rem;margin-bottom:20px;">Soporte Psicosocial</h2>
-                        <p style="font-size:1.05rem;line-height:1.9;margin-bottom:16px;">Nuestro equipo de psicólogos especializados trabaja directamente en las comunidades afectadas por décadas de conflicto armado y pobreza extrema.</p>
-                        <p style="font-size:1.05rem;line-height:1.9;margin-bottom:28px;">Mediante terapia individual, grupal y talleres familiares, reconstruimos la confianza, la autoestima y los vínculos afectivos que son la base de todo desarrollo.</p>
-                        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
-                            <div style="padding:20px;background:var(--primary-pale);border-radius:var(--radius-md);border-left:4px solid var(--primary);">
-                                <strong style="font-family:var(--font-heading);font-size:1.8rem;color:var(--primary-dark);display:block;line-height:1.1;">320</strong>
-                                <span style="font-size:0.82rem;color:var(--text-muted);">Sesiones terapéuticas al año</span>
-                            </div>
-                            <div style="padding:20px;background:var(--secondary-pale);border-radius:var(--radius-md);border-left:4px solid var(--secondary);">
-                                <strong style="font-family:var(--font-heading);font-size:1.8rem;color:var(--secondary-dark);display:block;line-height:1.1;">92%</strong>
-                                <span style="font-size:0.82rem;color:var(--text-muted);">Reportan mejoría emocional</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Program 2 -->
+        <!-- PROGRAMAS -->
         <section class="section section--gray">
             <div class="container">
-                <div class="approach-grid reverse">
-                    <div class="reveal-right">
-                        <picture>
-                            <source srcset="assets/images/volunteer_team_1782863788228.webp" type="image/webp" />
-                            <img src="assets/images/volunteer_team_1782863788228.png" alt="Refuerzo Escolar"
-                                 style="border-radius:var(--radius-lg);box-shadow:var(--shadow-xl);width:100%;height:420px;object-fit:cover;"
-                                 width="1024" height="1024" loading="lazy" decoding="async" />
-                        </picture>
+                <div class="section-header text-center reveal">
+                    <h2>Programas de Transformación</h2>
+                    <p>Nuestro enfoque se divide en tres pilares fundamentales.</p>
+                </div>
+                
+                <div class="accordion-wrapper reveal">
+                    <!-- Program 1 -->
+                    <div class="accordion-item active">
+                        <img src="assets/images/scraped/cropped-cropped-cropped-MA3-1.jpg" alt="Soporte Psicosocial" class="accordion-bg" loading="lazy" decoding="async">
+                        <div class="accordion-overlay"></div>
+                        <div class="accordion-num">01</div>
+                        <div class="accordion-content">
+                            <h3>Soporte Psicosocial</h3>
+                            <p>Terapia individual y talleres familiares para reconstruir la confianza.</p>
+                        </div>
                     </div>
-                    <div class="reveal-left">
-                        <div class="program-number">02</div>
-                        <h2 style="font-size:2.2rem;margin-bottom:20px;">Refuerzo Escolar</h2>
-                        <p style="font-size:1.05rem;line-height:1.9;margin-bottom:16px;">Tutorías especializadas en matemáticas, lenguaje y ciencias para niños y adolescentes en riesgo de deserción escolar.</p>
-                        <p style="font-size:1.05rem;line-height:1.9;margin-bottom:28px;">Nuestros voluntarios y educadores trabajan en turnos vespertinos dentro de los centros comunitarios, asegurando atención personalizada.</p>
-                        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
-                            <div style="padding:20px;background:var(--bg-white);border-radius:var(--radius-md);border-left:4px solid var(--primary);box-shadow:var(--shadow-sm);">
-                                <strong style="font-family:var(--font-heading);font-size:1.8rem;color:var(--primary-dark);display:block;line-height:1.1;">450+</strong>
-                                <span style="font-size:0.82rem;color:var(--text-muted);">Estudiantes atendidos</span>
-                            </div>
-                            <div style="padding:20px;background:var(--bg-white);border-radius:var(--radius-md);border-left:4px solid var(--secondary);box-shadow:var(--shadow-sm);">
-                                <strong style="font-family:var(--font-heading);font-size:1.8rem;color:var(--secondary-dark);display:block;line-height:1.1;">78%</strong>
-                                <span style="font-size:0.82rem;color:var(--text-muted);">Mejoran calificaciones</span>
-                            </div>
+                    
+                    <!-- Program 2 -->
+                    <div class="accordion-item">
+                        <img src="assets/images/scraped/cropped-cropped-MA4-scaled-1.jpg" alt="Refuerzo Escolar" class="accordion-bg" loading="lazy" decoding="async">
+                        <div class="accordion-overlay"></div>
+                        <div class="accordion-num">02</div>
+                        <div class="accordion-content">
+                            <h3>Refuerzo Escolar</h3>
+                            <p>Tutorías especializadas para niños en riesgo de deserción.</p>
+                        </div>
+                    </div>
+
+                    <!-- Program 3 -->
+                    <div class="accordion-item">
+                        <img src="assets/images/scraped/cropped-cropped-MA5.jpg" alt="Talleres Preventivos" class="accordion-bg" loading="lazy" decoding="async">
+                        <div class="accordion-overlay"></div>
+                        <div class="accordion-num">03</div>
+                        <div class="accordion-content">
+                            <h3>Talleres Preventivos</h3>
+                            <p>Habilidades blandas y liderazgo para el desarrollo personal.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Program 3 -->
-        <section class="section">
-            <div class="container">
-                <div class="approach-grid">
-                    <div class="reveal-left">
-                        <picture>
-                            <source srcset="assets/images/ayacucho_landscape_1782863794905.webp" type="image/webp" />
-                            <img src="assets/images/ayacucho_landscape_1782863794905.png" alt="Talleres preventivos en Ayacucho"
-                                 style="border-radius:var(--radius-lg);box-shadow:var(--shadow-xl);width:100%;height:420px;object-fit:cover;"
-                                 width="1024" height="1024" loading="lazy" decoding="async" />
-                        </picture>
-                    </div>
-                    <div class="reveal-right">
-                        <div class="program-number">03</div>
-                        <h2 style="font-size:2.2rem;margin-bottom:20px;">Talleres Preventivos</h2>
-                        <p style="font-size:1.05rem;line-height:1.9;margin-bottom:16px;">Educación en valores, prevención de violencia intrafamiliar, embarazo adolescente y consumo de sustancias.</p>
-                        <p style="font-size:1.05rem;line-height:1.9;margin-bottom:28px;">Trabajamos con metodologías participativas, teatro, arte y dinámicas grupales que conectan con la realidad de cada comunidad.</p>
-                        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;">
-                            <div style="padding:20px;background:var(--primary-pale);border-radius:var(--radius-md);border-left:4px solid var(--primary);">
-                                <strong style="font-family:var(--font-heading);font-size:1.8rem;color:var(--primary-dark);display:block;line-height:1.1;">24</strong>
-                                <span style="font-size:0.82rem;color:var(--text-muted);">Comunidades alcanzadas</span>
-                            </div>
-                            <div style="padding:20px;background:var(--secondary-pale);border-radius:var(--radius-md);border-left:4px solid var(--secondary);">
-                                <strong style="font-family:var(--font-heading);font-size:1.8rem;color:var(--secondary-dark);display:block;line-height:1.1;">1,200</strong>
-                                <span style="font-size:0.82rem;color:var(--text-muted);">Familias participantes</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+
 
         <!-- IMPACT MAP -->
         <section class="section section--gray" style="padding-bottom: 0;">
@@ -271,7 +223,7 @@
 
     </main>
 
-    <script src="js/components.js"></script>
+    <script src="js/components.min.js?v=22"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
