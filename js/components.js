@@ -23,7 +23,7 @@
   // --- Preloader Injection ---
   const preloaderHTML = `
   <div id="global-preloader" style="position:fixed; top:0; left:0; width:100%; height:100%; background-color:#ffffff; z-index:999999; display:flex; justify-content:center; align-items:center; transition:opacity 0.8s ease, visibility 0.8s ease;">
-    <img src="/assets/images/logo-oficial.webp" alt="Mama Alice Loading..." style="max-width:200px; animation: pulse 2s infinite ease-in-out;">
+    <img src="/assets/images/logo-transparent.png" alt="Mama Alice Loading..." style="max-width:200px; animation: pulse 2s infinite ease-in-out;">
     <style>
       @keyframes pulse {
         0% { transform: scale(0.95); opacity: 0.7; }
@@ -76,7 +76,7 @@
   <div class="container nav-container">
 
     <a href="${isEn ? '/en/' : '/'}" class="logo" aria-label="Mama Alice — Inicio">
-      <img src="${assetPrefix}images/logo-transparent.webp"
+      <img src="${assetPrefix}images/logo-transparent.png"
            alt="Mama Alice ONG"
            class="logo-oficial-img"
            width="120" height="85"
@@ -120,9 +120,9 @@
       <!-- Brand -->
       <div class="footer-brand">
         <a href="${isEn ? '/en/' : '/'}" class="logo" aria-label="Mama Alice — Inicio">
-          <img src="${assetPrefix}images/logo-transparent.webp"
+          <img src="${assetPrefix}images/logo-transparent.png"
                alt="Mama Alice ONG"
-               style="height:56px;width:auto;filter:brightness(0) invert(1);opacity:0.9;"
+               style="height:56px;width:auto;opacity:0.9;"
                loading="lazy" />
         </a>
         <p>${labels.footer_desc}</p>
