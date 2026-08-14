@@ -118,7 +118,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,[role='radio']:focus-vi
 .progress-label .percentage{color:var(--primary);font-weight:800}
 .progress-track{height:7px;background:var(--bg-medium);border-radius:var(--radius-full);overflow:hidden}
 .progress-fill{height:100%;border-radius:var(--radius-full);background:linear-gradient(90deg,var(--primary) 0%,var(--primary-light) 100%);width:0;transition:width 1.4s var(--ease-out)}
-.page-hero{position:relative;padding:180px 0 100px;background:var(--dark);overflow:hidden}
+.page-hero{position:relative;min-height:88vh;display:flex;align-items:center;justify-content:center;padding:140px 0 60px;background:var(--dark);overflow:hidden;width:100%}
 .page-hero--mesh{background:radial-gradient(circle at 15% 15%, #183e35 0%, var(--dark) 45%), radial-gradient(circle at 85% 85%, #2a2215 0%, var(--dark) 45%);background-size:cover}
 .page-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--primary) 0%,var(--gold-light) 100%);opacity:.5}
 .page-hero::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(30,26,20,.92),rgba(30,26,20,.62))}
