@@ -1,133 +1,250 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reporte Anual 2025 | ONG Mama Alice</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,700;0,9..144,800;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap" />
-    <link rel="stylesheet" href="css/styles.min.css?v=1786730596493" />
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/logo-transparent.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/logo-transparent.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/logo-transparent.png" />
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Memoria Anual 2025 | ONG Mama Alice</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="assets/images/logo-transparent.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,700;0,9..144,800;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/styles.min.css?v=1786730596493">
+<style>
+:root{--rp:#2E9B8A;--rs:#F5A420;--rd:#1a2e2b;--rc:#FBF8F4}
+#rbar{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--rs),var(--rp));width:0;z-index:99999;transition:width .1s linear}
+.cnav{position:fixed;right:24px;top:50%;transform:translateY(-50%);z-index:1000;display:flex;flex-direction:column;gap:10px}
+.cdot{width:10px;height:10px;border-radius:50%;background:rgba(46,155,138,.3);border:2px solid var(--rp);cursor:pointer;transition:all .3s;position:relative}
+.cdot.on,.cdot:hover{background:var(--rp);transform:scale(1.4)}
+.cdot::before{content:attr(data-l);position:absolute;right:18px;top:50%;transform:translateY(-50%);background:var(--rd);color:#fff;font-size:.72rem;font-family:'Inter',sans-serif;white-space:nowrap;padding:4px 10px;border-radius:20px;opacity:0;pointer-events:none;transition:opacity .2s}
+.cdot:hover::before{opacity:1}
+.bkbar{background:rgba(46,155,138,.08);border-bottom:1px solid rgba(46,155,138,.2);padding:12px 0;text-align:center}
+.bkbar a{display:inline-flex;align-items:center;gap:8px;color:var(--rp);font-size:.85rem;font-weight:600;text-decoration:none}
+.rhero{position:relative;min-height:100vh;display:flex;align-items:flex-end;overflow:hidden;background:var(--rd)}
+.rhero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.45;transform:scale(1.05);transition:transform 8s ease}
+.rhero-bg.ld{transform:scale(1)}
+.rover{position:absolute;inset:0;background:linear-gradient(to top,rgba(26,46,43,.98) 0%,rgba(26,46,43,.4) 60%,transparent 100%)}
+.hcnt{position:relative;z-index:2;padding:80px 48px;max-width:900px}
+.ybadge{display:inline-flex;align-items:center;gap:10px;background:var(--rs);color:#fff;font-family:'Inter',sans-serif;font-size:.8rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:8px 20px;border-radius:100px;margin-bottom:24px}
+.htitle{font-family:'Fraunces',serif;font-size:clamp(3rem,7vw,6rem);font-weight:800;color:#fff;line-height:1.05;margin-bottom:20px}
+.htitle em{color:var(--rs);font-style:normal}
+.hsub{font-size:1.2rem;color:rgba(255,255,255,.8);max-width:560px;line-height:1.7;margin-bottom:40px}
+.hstats{display:flex;gap:40px;flex-wrap:wrap}
+.hsn{font-family:'Fraunces',serif;font-size:2.8rem;font-weight:800;color:var(--rs);line-height:1}
+.hsl{font-size:.8rem;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:1px;margin-top:4px}
+.hscroll{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:8px;color:rgba(255,255,255,.6);font-size:.75rem;letter-spacing:2px;text-transform:uppercase;cursor:pointer}
+.hscroll svg{animation:boun 1.8s ease-in-out infinite}
+@keyframes boun{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
+.scnt{background:var(--rd);color:#fff;padding:80px 0}
+.cgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2px}
+.ccard{padding:48px 32px;text-align:center;border-right:1px solid rgba(255,255,255,.08);position:relative;overflow:hidden}
+.ccard::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--rs);transform:scaleX(0);transition:transform .5s}
+.ccard:hover::after{transform:scaleX(1)}
+.cico{width:52px;height:52px;background:rgba(245,164,32,.15);border-radius:14px;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;color:var(--rs)}
+.cnum{font-family:'Fraunces',serif;font-size:3.5rem;font-weight:800;color:#fff;line-height:1;margin-bottom:8px}
+.cnum .sfx{font-size:2rem}
+.clbl{font-size:.85rem;color:rgba(255,255,255,.55);text-transform:uppercase;letter-spacing:1.5px}
+.chdr{text-align:center;padding:80px 0 40px}
+.chnum{display:inline-block;font-family:'Fraunces',serif;font-size:.85rem;font-weight:700;color:var(--rp);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.chtitle{font-family:'Fraunces',serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:800;color:var(--rd);margin-bottom:16px}
+.chtitle .ac{color:var(--rp)}
+.chdesc{font-size:1.1rem;color:#6b7a78;max-width:640px;margin:0 auto;line-height:1.8}
+.sprog{padding:100px 0;background:var(--rc)}
+.pb{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-bottom:100px}
+.pb:last-child{margin-bottom:0}
+.pb.rv{direction:rtl}
+.pb.rv>*{direction:ltr}
+.pimg{position:relative;border-radius:24px;overflow:hidden;aspect-ratio:4/3;box-shadow:0 30px 80px rgba(0,0,0,.15)}
+.pimg img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.pimg:hover img{transform:scale(1.04)}
+.pbadge{position:absolute;bottom:20px;left:20px;background:var(--rs);color:#fff;font-size:.75rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:6px 14px;border-radius:100px}
+.ptag{display:inline-block;font-size:.75rem;font-weight:700;color:var(--rp);letter-spacing:2px;text-transform:uppercase;background:rgba(46,155,138,.1);padding:4px 12px;border-radius:100px;margin-bottom:16px}
+.ph3{font-family:'Fraunces',serif;font-size:clamp(1.6rem,2.5vw,2.4rem);font-weight:800;color:var(--rd);line-height:1.2;margin-bottom:16px}
+.pp{font-size:1.05rem;line-height:1.85;color:#4a5c59;margin-bottom:24px}
+.ppills{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:24px}
+.pill{display:flex;align-items:center;gap:10px;background:#fff;border:1px solid rgba(46,155,138,.2);border-radius:12px;padding:10px 16px}
+.pn{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:800;color:var(--rp);line-height:1}
+.pl{font-size:.8rem;color:#6b7a78}
+.sfin{padding:100px 0;background:#fff}
+.flyt{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.ccrd{background:var(--rc);border-radius:24px;padding:40px}
+.cct{font-family:'Fraunces',serif;font-size:1.3rem;font-weight:700;color:var(--rd);margin-bottom:8px}
+.ccs{font-size:.9rem;color:#6b7a78;margin-bottom:28px}
+.cwrp{position:relative;height:240px;margin-bottom:24px}
+.ccen{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;pointer-events:none}
+.ccen strong{font-family:'Fraunces',serif;font-size:1.8rem;font-weight:800;color:var(--rd)}
+.ccen span{font-size:.7rem;color:#6b7a78;text-transform:uppercase;letter-spacing:1px}
+.ll{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px}
+.li{display:flex;align-items:center;gap:12px;font-size:.9rem;color:var(--rd)}
+.ld{width:12px;height:12px;border-radius:3px;flex-shrink:0}
+.lp{margin-left:auto;font-weight:700}
+.fhl{background:var(--rd);border-radius:24px;padding:40px;color:#fff;text-align:center;margin-top:24px}
+.fbn{font-family:'Fraunces',serif;font-size:5rem;font-weight:800;color:var(--rs);line-height:1;margin-bottom:8px}
+.fbs{font-size:1rem;color:rgba(255,255,255,.7)}
+.stl{padding:100px 0;background:var(--rc)}
+.tl{position:relative;max-width:780px;margin:0 auto}
+.tl::before{content:'';position:absolute;left:50%;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--rp),var(--rs));transform:translateX(-50%)}
+.tli{display:flex;gap:40px;margin-bottom:56px;position:relative}
+.tli:nth-child(odd){flex-direction:row-reverse;text-align:right}
+.tli:nth-child(odd) .tlc{align-items:flex-end}
+.tld{position:absolute;left:50%;transform:translateX(-50%);width:16px;height:16px;border-radius:50%;background:var(--rs);border:3px solid #fff;box-shadow:0 0 0 3px var(--rs);top:8px;z-index:2}
+.tlc{width:calc(50% - 40px);display:flex;flex-direction:column}
+.tlcard{background:#fff;border-radius:16px;padding:20px 24px;box-shadow:0 4px 20px rgba(0,0,0,.06);border-left:4px solid var(--rp)}
+.tli:nth-child(odd) .tlcard{border-left:none;border-right:4px solid var(--rs)}
+.tlm{font-size:.75rem;font-weight:700;color:var(--rp);letter-spacing:2px;text-transform:uppercase;margin-bottom:6px}
+.tlt{font-family:'Fraunces',serif;font-size:1.15rem;font-weight:700;color:var(--rd);margin-bottom:6px}
+.tldesc{font-size:.9rem;color:#6b7a78;line-height:1.6}
+.sqt{padding:100px 0;background:var(--rd);text-align:center;position:relative;overflow:hidden}
+.sqt::before{content:'\201C';position:absolute;font-family:'Fraunces',serif;font-size:400px;color:rgba(255,255,255,.03);top:-80px;left:50%;transform:translateX(-50%);line-height:1;pointer-events:none}
+.qtxt{font-family:'Fraunces',serif;font-size:clamp(1.5rem,3vw,2.4rem);font-weight:600;color:#fff;line-height:1.5;max-width:820px;margin:0 auto 40px;font-style:italic}
+.qtxt em{color:var(--rs);font-style:normal}
+.qauth{display:flex;align-items:center;justify-content:center;gap:16px}
+.qavt{width:72px;height:72px;border-radius:50%;object-fit:cover;border:3px solid var(--rs)}
+.qname{font-weight:700;color:#fff;font-size:1.1rem}
+.qrole{font-size:.9rem;color:rgba(255,255,255,.5)}
+.scta{padding:100px 0;background:linear-gradient(135deg,var(--rp) 0%,#1a6b60 100%);text-align:center}
+.scta h2{font-family:'Fraunces',serif;font-size:clamp(2rem,4vw,3rem);font-weight:800;color:#fff;margin-bottom:16px}
+.scta p{font-size:1.1rem;color:rgba(255,255,255,.8);margin-bottom:40px}
+.ctabts{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.bwh{background:#fff;color:var(--rp);border:none;padding:16px 32px;border-radius:100px;font-size:1rem;font-weight:700;text-decoration:none;transition:all .3s;display:inline-flex;align-items:center;gap:8px}
+.bwh:hover{background:var(--rs);color:#fff;transform:translateY(-2px)}
+.bow{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.5);padding:16px 32px;border-radius:100px;font-size:1rem;font-weight:700;text-decoration:none;transition:all .3s;display:inline-flex;align-items:center;gap:8px}
+.bow:hover{border-color:#fff;background:rgba(255,255,255,.1);transform:translateY(-2px)}
+.fi{opacity:0;transform:translateY(30px);transition:opacity .7s ease,transform .7s ease}
+.fi.vs{opacity:1;transform:translateY(0)}
+.fl{opacity:0;transform:translateX(-40px);transition:opacity .7s ease,transform .7s ease}
+.fl.vs{opacity:1;transform:translateX(0)}
+.fr{opacity:0;transform:translateX(40px);transition:opacity .7s ease,transform .7s ease}
+.fr.vs{opacity:1;transform:translateX(0)}
+.new-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(245,164,32,.15);color:var(--rs);font-size:.72rem;font-weight:700;letter-spacing:1px;padding:4px 10px;border-radius:100px;border:1px solid rgba(245,164,32,.3);margin-left:10px;vertical-align:middle}
+@media(max-width:768px){
+.cnav{display:none}
+.pb,.pb.rv{grid-template-columns:1fr;direction:ltr}
+.flyt{grid-template-columns:1fr}
+.hcnt{padding:60px 24px}
+.hstats{gap:24px}
+.tl::before{left:20px}
+.tli,.tli:nth-child(odd){flex-direction:column;text-align:left;gap:20px}
+.tld{left:20px}
+.tlc,.tli:nth-child(odd) .tlc{width:100%;padding-left:52px;align-items:flex-start}
+}
+</style>
 </head>
 <body>
-    <main id="main-content">
-        <!-- PAGE HERO -->
-        <section class="page-hero" style="min-height: 100vh;">
-            <picture>
-                <img src="assets/images/549166365_1161321586027712_5890717818174913624_n.jpg" alt="Portada Reporte" class="page-hero-bg" loading="eager" />
-            </picture>
-            <div class="container page-hero-content">
-                <span class="eyebrow-hero">Reporte Anual</span>
-                <h1>Impacto 2025</h1>
-                <p style="font-size: 1.5rem; max-width: 600px; margin: 0 auto;">Transformando el futuro, un niño a la vez.</p>
-                <div class="hero-scroll-indicator" style="margin-top: 40px;">
-                    <span style="display: block; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 8px;">Descubre nuestro viaje</span>
-                    <div style="width: 24px; height: 24px; border-bottom: 2px solid white; border-right: 2px solid white; transform: rotate(45deg); margin: 0 auto; animation: bounce 2s infinite;"></div>
-                </div>
-            </div>
-            <!-- Estilo temporal para la animación de la flecha -->
-            <style>
-                @keyframes bounce {
-                    0%, 20%, 50%, 80%, 100% { transform: translateY(0) rotate(45deg); }
-                    40% { transform: translateY(-15px) rotate(45deg); }
-                    60% { transform: translateY(-7px) rotate(45deg); }
-                }
-            </style>
-        </section>
-        
-        <div id="report-content">
-            <!-- TASK 2: IMPACT COUNTERS -->
-            <section class="section" style="background: var(--dark); color: white;">
-                <div class="container">
-                    <div class="impact-stats-grid">
-                        <div class="stat-box">
-                            <h2 class="counter" data-target="243">0</h2>
-                            <p>Estudiantes Regulares</p>
-                        </div>
-                        <div class="stat-box">
-                            <h2 class="counter" data-target="83">0</h2>
-                            <p>% Éxito Académico</p>
-                        </div>
-                        <div class="stat-box">
-                            <h2 class="counter" data-target="75">0</h2>
-                            <p>Atenciones Médicas</p>
-                        </div>
-                        <div class="stat-box">
-                            <h2 class="counter" data-target="576">0</h2>
-                            <p>Horas de Práctica por Alumno (HTC)</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- TASK 3: NARRATIVE BLOCKS -->
-            <section class="section bg-cream">
-                <div class="container">
-                    <!-- Block 1 -->
-                    <div class="story-block fade-up">
-                        <div class="story-img">
-                            <img src="assets/images/601438844_1232935938866276_5383665154388954629_n.jpg" alt="Educación" />
-                        </div>
-                        <div class="story-text">
-                            <h3>Educación Integral</h3>
-                            <p>El 83% de nuestros estudiantes regulares lograron aprobar el año académico sin repetir. Implementamos programas de alfabetización y estimulación temprana, logrando mejoras contundentes en lectura, matemática y habilidades motoras.</p>
-                        </div>
-                    </div>
-                    
-                    <!-- Block 2 (Reverse) -->
-                    <div class="story-block reverse fade-up">
-                        <div class="story-img">
-                            <img src="assets/images/613092641_1462210539237958_392448947434615007_n.jpg" alt="Salud Mental" />
-                        </div>
-                        <div class="story-text">
-                            <h3>Salud Mental y Bienestar</h3>
-                            <p>Atendimos 75 casos médicos y de primeros auxilios. Nuestro equipo psicosocial ayudó a decenas de niños a desarrollar regulación emocional y autoestima a través de actividades creativas y el gran festival de familias.</p>
-                        </div>
-                    </div>
-
-                    <!-- Block 3 -->
-                    <div class="story-block fade-up">
-                        <div class="story-img">
-                            <img src="assets/images/hospitality_image_1782863355574.webp" alt="Hospitality Training" />
-                        </div>
-                        <div class="story-text">
-                            <h3>Hospitality Training Center (HTC)</h3>
-                            <p>18 estudiantes completaron exitosamente su entrenamiento culinario, acumulando 576 horas de práctica. 12 de ellos encontraron empleo inmediatamente en restaurantes de Ayacucho y Lima, superando grandes retos personales.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- TASK 4: SUCCESS STORY & CTA -->
-            <section class="section" style="background: var(--primary-light);">
-                <div class="container" style="text-align: center; max-width: 800px;">
-                    <h2 style="font-size: 2.2rem; margin-bottom: 32px; color: var(--dark); font-family: var(--font-heading); line-height: 1.3;">"Con determinación y trabajo duro, me convertí en uno de los mejores del grupo. Ahora soy cocinero y sé que puedo llegar a ser jefe de cocina."</h2>
-                    <div style="display: flex; align-items: center; justify-content: center; gap: 16px;">
-                        <img src="assets/images/testimonial_student_1782863781130.webp" alt="Estudiante" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover;" />
-                        <div style="text-align: left;">
-                            <strong style="font-size: 1.2rem; color: var(--dark);">Johanes</strong>
-                            <p style="margin: 0; font-size: 1rem; opacity: 0.8; color: var(--dark);">Graduado de Gastronomía</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- CTA -->
-            <section class="section">
-                <div class="container" style="text-align: center;">
-                    <h2 style="margin-bottom: 24px;">Descubre todos los detalles</h2>
-                    <p style="margin-bottom: 32px; max-width: 600px; margin-inline: auto; font-size: 1.1rem; opacity: 0.9;">Transparencia financiera, nuevas metas y todos los nombres detrás del éxito de este año.</p>
-                    <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
-                        <a href="https://canva.link/k1m0kehb46982n9" target="_blank" class="btn btn-primary" style="padding: 16px 32px; font-size: 1.1rem;">Ver Reporte Completo en Canva</a>
-                        <a href="donar.html" class="btn btn-outline" style="padding: 16px 32px; font-size: 1.1rem;">Hacer un Donativo</a>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </main>
-
-    <script src="js/components.min.js" defer></script>
-    <script src="js/reporte.js" defer></script>
+<div id="rbar"></div>
+<nav class="cnav" aria-label="Navegar por capitulos">
+<div class="cdot on" data-l="Portada" data-t="hero" onclick="goTo('hero')"></div>
+<div class="cdot" data-l="Impacto" data-t="impacto" onclick="goTo('impacto')"></div>
+<div class="cdot" data-l="Programas" data-t="programas" onclick="goTo('programas')"></div>
+<div class="cdot" data-l="Finanzas" data-t="finanzas" onclick="goTo('finanzas')"></div>
+<div class="cdot" data-l="Hitos 2025" data-t="hitos" onclick="goTo('hitos')"></div>
+<div class="cdot" data-l="Testimonios" data-t="testimonios" onclick="goTo('testimonios')"></div>
+</nav>
+<div class="bkbar"><a href="transparencia.html"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg> Volver a Transparencia</a></div>
+<main id="main-content">
+<section class="rhero" id="hero">
+<img src="assets/images/735058570_1620659200059757_2937634648358041761_n.jpg" alt="Mama Alice 2025" class="rhero-bg" loading="eager" onload="this.classList.add('ld')" onerror="this.src='assets/images/549166365_1161321586027712_5890717818174913624_n.jpg'">
+<div class="rover"></div>
+<div class="hcnt container">
+<div class="ybadge"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>Memoria Institucional &middot; 2025 <span class="new-badge">MAS RECIENTE</span></div>
+<h1 class="htitle">Sembrando el<br><em>futuro</em> hoy</h1>
+<p class="hsub">243 estudiantes. 83% de exito academico. 18 nuevos profesionales del sector gastronomico. El ano en que consolidamos nuestra vision y la llevamos mas lejos.</p>
+<div class="hstats">
+<div><div class="hsn">243</div><div class="hsl">Estudiantes regulares</div></div>
+<div><div class="hsn">83%</div><div class="hsl">Exito academico</div></div>
+<div><div class="hsn">18</div><div class="hsl">Graduados HTC</div></div>
+<div><div class="hsn">576</div><div class="hsl">Horas HTC / alumno</div></div>
+</div>
+</div>
+<div class="hscroll" onclick="goTo('impacto')">Explora nuestro impacto<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></div>
+</section>
+<section class="scnt" id="impacto">
+<div class="container">
+<div class="chdr" style="padding-top:0;margin-bottom:48px"><span class="chnum">Capitulo 01</span><h2 class="chtitle" style="color:#fff">Impacto en <span class="ac">numeros</span></h2><p class="chdesc" style="color:rgba(255,255,255,.6)">2025: el ano de la consolidacion y la expansion de nuestra mision.</p></div>
+<div class="cgrid">
+<div class="ccard fi"><div class="cico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div><div class="cnum"><span class="ca" data-v="243">0</span></div><div class="clbl">Estudiantes Regulares</div></div>
+<div class="ccard fi"><div class="cico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><div class="cnum"><span class="ca" data-v="83">0</span><span class="sfx">%</span></div><div class="clbl">Exito Academico</div></div>
+<div class="ccard fi"><div class="cico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><div class="cnum"><span class="ca" data-v="75">0</span></div><div class="clbl">Atenciones Medicas</div></div>
+<div class="ccard fi"><div class="cico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div><div class="cnum"><span class="ca" data-v="576">0</span></div><div class="clbl">Horas Practica / Alumno HTC</div></div>
+<div class="ccard fi"><div class="cico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><div class="cnum"><span class="ca" data-v="18">0</span></div><div class="clbl">Graduados HTC</div></div>
+<div class="ccard fi"><div class="cico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><div class="cnum"><span class="ca" data-v="12">0</span></div><div class="clbl">HTC Empleados Directos</div></div>
+</div>
+</div>
+</section>
+<section class="sprog" id="programas">
+<div class="container">
+<div class="chdr fi"><span class="chnum">Capitulo 02</span><h2 class="chtitle">Nuestros <span class="ac">programas</span></h2><p class="chdesc">En 2025 fortalecemos cada pilar y ampliamos nuestro impacto con metodologias mas efectivas.</p></div>
+<div class="pb">
+<div class="pimg fl"><img src="assets/images/601438844_1232935938866276_5383665154388954629_n.jpg" alt="Educacion Integral 2025" loading="lazy"><span class="pbadge">Educacion</span></div>
+<div class="fr"><span class="ptag">Pilar 1</span><h3 class="ph3">Educacion Integral 2025</h3><p class="pp">El 83% de nuestros estudiantes regulares lograron aprobar el ano academico. Implementamos programas de alfabetizacion y estimulacion temprana con resultados contundentes en lectura, matematica y habilidades motoras finas.</p><div class="ppills"><div class="pill"><div class="pn">83%</div><div class="pl">Tasa de aprobacion</div></div><div class="pill"><div class="pn">243</div><div class="pl">Estudiantes regulares</div></div></div></div>
+</div>
+<div class="pb rv">
+<div class="pimg fr"><img src="assets/images/613092641_1462210539237958_392448947434615007_n.jpg" alt="Salud Mental 2025" loading="lazy"><span class="pbadge">Bienestar</span></div>
+<div class="fl"><span class="ptag">Pilar 2</span><h3 class="ph3">Salud Mental y Bienestar Psicosocial</h3><p class="pp">Atendimos 75 casos medicos y de primeros auxilios. Nuestro equipo psicosocial ayudo a decenas de ninos a desarrollar regulacion emocional y autoestima a traves del gran festival de familias 2025 y actividades creativas semanales.</p><div class="ppills"><div class="pill"><div class="pn">75</div><div class="pl">Atenciones medicas</div></div><div class="pill"><div class="pn">+50</div><div class="pl">Ninos en terapia</div></div></div></div>
+</div>
+<div class="pb">
+<div class="pimg fl"><img src="assets/images/hospitality_image_1782863355574.webp" alt="HTC 2025" loading="lazy"><span class="pbadge">HTC</span></div>
+<div class="fr"><span class="ptag">Pilar 3</span><h3 class="ph3">Hospitality Training Center</h3><p class="pp">18 estudiantes completaron su entrenamiento culinario acumulando 576 horas de practica profesional en el Restaurante QuinuaQ. 12 de ellos encontraron empleo en restaurantes de Ayacucho y Lima, superando metas previas.</p><div class="ppills"><div class="pill"><div class="pn">576</div><div class="pl">Horas por alumno</div></div><div class="pill"><div class="pn">12</div><div class="pl">Empleados directos</div></div></div></div>
+</div>
+</div>
+</section>
+<section class="sfin" id="finanzas">
+<div class="container">
+<div class="chdr fi"><span class="chnum">Capitulo 03</span><h2 class="chtitle">Transparencia <span class="ac">financiera</span></h2><p class="chdesc">Rendicion publica de cuentas 2025. Cada euro rastreable.</p></div>
+<div class="flyt">
+<div><div class="ccrd fi"><div class="cct">A donde va cada euro?</div><div class="ccs">Distribucion de inversion - Ejercicio 2025</div><div class="cwrp"><canvas id="ic25"></canvas><div class="ccen"><strong>88%</strong><span>Impacto directo</span></div></div><ul class="ll"><li class="li"><span class="ld" style="background:#2E9B8A"></span>Programas Educativos<span class="lp">45%</span></li><li class="li"><span class="ld" style="background:#F5A420"></span>Soporte Psicosocial<span class="lp">20%</span></li><li class="li"><span class="ld" style="background:#d4af37"></span>Hospitality Training<span class="lp">18%</span></li><li class="li"><span class="ld" style="background:#3d5c56"></span>Administracion<span class="lp">12%</span></li><li class="li"><span class="ld" style="background:#c5d4d0"></span>Comunicacion<span class="lp">5%</span></li></ul></div></div>
+<div><div class="ccrd fi"><div class="cct">De donde vienen los fondos?</div><div class="ccs">Origen de ingresos - Ejercicio 2025</div><div class="cwrp"><canvas id="fc25"></canvas><div class="ccen"><strong>1.2M</strong><span>Recaudado EUR</span></div></div><ul class="ll"><li class="li"><span class="ld" style="background:#2E9B8A"></span>Cooperacion Internacional<span class="lp">42%</span></li><li class="li"><span class="ld" style="background:#F5A420"></span>Donantes Privados Europa<span class="lp">28%</span></li><li class="li"><span class="ld" style="background:#d4af37"></span>Subvenciones Publicas<span class="lp">18%</span></li><li class="li"><span class="ld" style="background:#3d5c56"></span>Ingresos HTC / QuinuaQ<span class="lp">12%</span></li></ul></div><div class="fhl fi"><div class="fbn">88<span style="font-size:2.5rem">%</span></div><div class="fbs">de los fondos van directamente a programas y beneficiarios</div></div></div>
+</div>
+</div>
+</section>
+<section class="stl" id="hitos">
+<div class="container">
+<div class="chdr fi"><span class="chnum">Capitulo 04</span><h2 class="chtitle">Hitos del <span class="ac">ano 2025</span></h2><p class="chdesc">Un ano de crecimiento y consolidacion institucional.</p></div>
+<div class="tl">
+<div class="tli fi"><div class="tld"></div><div class="tlc"><div class="tlcard"><div class="tlm">Enero 2025</div><div class="tlt">Nuevo curriculo educativo</div><div class="tldesc">Implementamos un curriculo renovado con metodologias activas, juego educativo y tecnologia para ninos de 3 a 16 anos.</div></div></div></div>
+<div class="tli fi"><div class="tld"></div><div class="tlc"><div class="tlcard"><div class="tlm">Marzo 2025</div><div class="tlt">Festival de Familias 2025</div><div class="tldesc">Mas de 400 personas participaron en el gran festival comunitario de bienestar, creatividad y celebracion del progreso.</div></div></div></div>
+<div class="tli fi"><div class="tld"></div><div class="tlc"><div class="tlcard"><div class="tlm">Mayo 2025</div><div class="tlt">Alianza con restaurantes de Lima</div><div class="tldesc">Firmamos acuerdos con 3 restaurantes de Lima para recibir a nuestros graduados HTC en pasantias y empleos directos.</div></div></div></div>
+<div class="tli fi"><div class="tld"></div><div class="tlc"><div class="tlcard"><div class="tlm">Julio 2025</div><div class="tlt">Graduacion HTC: 18 nuevos profesionales</div><div class="tldesc">Celebramos la graduacion de 18 jovenes que completaron 576 horas de formacion culinaria de excelencia.</div></div></div></div>
+<div class="tli fi"><div class="tld"></div><div class="tlc"><div class="tlcard"><div class="tlm">Octubre 2025</div><div class="tlt">Expansion a nuevas comunidades</div><div class="tldesc">Llegamos a 3 nuevas comunidades rurales de la region, ampliando el alcance de nuestros programas educativos.</div></div></div></div>
+<div class="tli fi"><div class="tld"></div><div class="tlc"><div class="tlcard"><div class="tlm">Diciembre 2025</div><div class="tlt">Auditoria y cierre del ano</div><div class="tldesc">Auditoria externa completada. 83% de exito academico: el mejor resultado desde la fundacion de Mama Alice.</div></div></div></div>
+</div>
+</div>
+</section>
+<section class="sqt" id="testimonios">
+<div class="container">
+<span class="chnum" style="color:rgba(255,255,255,.4)">Capitulo 05 Testimonios</span>
+<blockquote class="qtxt fi">"Con determinacion y trabajo duro, me converti en uno de los mejores del grupo. Ahora soy cocinero y se que puedo llegar a ser <em>jefe de cocina</em>."</blockquote>
+<div class="qauth fi"><img src="assets/images/testimonial_student_1782863781130.webp" alt="Johanes" class="qavt"><div style="text-align:left"><div class="qname">Johanes</div><div class="qrole">Graduado de Gastronomia HTC 2025</div></div></div>
+</div>
+</section>
+<section class="scta">
+<div class="container">
+<h2 class="fi">Nuestro mejor ano hasta ahora</h2>
+<p class="fi">Conoce el reporte completo y apoya la proxima etapa de nuestra mision en Ayacucho.</p>
+<div class="ctabts fi">
+<a href="Jaarverslag 2025 Annual report 2025.pdf" target="_blank" class="bwh">Descargar PDF 2025</a>
+<a href="donar.html" class="bow">Hacer una donacion</a>
+<a href="transparencia.html" class="bow">Ver todos los reportes</a>
+</div>
+</div>
+</section>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="js/components.min.js?v=22"></script>
+<script src="js/main.js"></script>
+<script>
+window.addEventListener('scroll',()=>{const e=document.documentElement;document.getElementById('rbar').style.width=(e.scrollTop/(e.scrollHeight-e.clientHeight)*100)+'%';},{passive:true});
+function goTo(id){const el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth'});}
+const chs=['hero','impacto','programas','finanzas','hitos','testimonios'];
+const dots=document.querySelectorAll('.cdot');
+window.addEventListener('scroll',()=>{let cur='hero';chs.forEach(id=>{const el=document.getElementById(id);if(el&&window.scrollY>=el.offsetTop-200)cur=id;});dots.forEach(d=>d.classList.toggle('on',d.dataset.t===cur));},{passive:true});
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vs');e.target.querySelectorAll('.ca[data-v]').forEach(el=>{if(el.dataset.a)return;el.dataset.a=1;const t=+el.dataset.v,d=1800,s=t/(d/16);let c=0;const iv=setInterval(()=>{c=Math.min(c+s,t);el.textContent=Math.round(c).toLocaleString();if(c>=t)clearInterval(iv);},16);});obs.unobserve(e.target);}});},{threshold:0.15});
+document.querySelectorAll('.fi,.fl,.fr,.ccard').forEach(el=>obs.observe(el));
+document.addEventListener('DOMContentLoaded',()=>{
+const dO={cutout:'74%',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{enabled:true}},animation:{animateScale:true,animateRotate:true,duration:1400,easing:'easeOutQuart'}};
+const c1=document.getElementById('ic25');if(c1)new Chart(c1,{type:'doughnut',data:{labels:['Programas','Psicosocial','HTC','Admin','Com'],datasets:[{data:[45,20,18,12,5],backgroundColor:['#2E9B8A','#F5A420','#d4af37','#3d5c56','#c5d4d0'],borderWidth:0,hoverOffset:10}]},options:dO});
+const c2=document.getElementById('fc25');if(c2)new Chart(c2,{type:'doughnut',data:{labels:['Coop','Donantes','Subvenciones','HTC'],datasets:[{data:[42,28,18,12],backgroundColor:['#2E9B8A','#F5A420','#d4af37','#3d5c56'],borderWidth:0,hoverOffset:10}]},options:dO});
+});
+(function(){if(document.getElementById('scrollTopBtn'))return;const btn=document.createElement('button');btn.id='scrollTopBtn';btn.innerHTML='<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>';btn.style.cssText='position:fixed;bottom:20px;right:20px;width:56px;height:56px;border-radius:50%;background-color:#2e9b8a;color:white;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:2147483647;opacity:0;visibility:hidden;transform:translateY(20px);transition:all 0.3s ease-out;box-shadow:0 10px 25px rgba(46,155,138,0.5);';document.body.appendChild(btn);btn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));window.addEventListener('scroll',()=>{const s=window.scrollY>300;btn.style.opacity=s?'1':'0';btn.style.visibility=s?'visible':'hidden';},{passive:true});})();
+</script>
 </body>
 </html>
