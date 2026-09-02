@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Annual Report 2024 | Mama Alice NGO</title>
+<meta name="description" content="Interactive Annual Report 2024 of Mama Alice NGO. 416 students, 106 health interventions, HTC Group VII, audited financial balance. Ayacucho, Peru.">
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="../assets/images/logo-transparent.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,700;0,9..144,800;1,9..144,500&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../css/styles.min.css?v=1786730596493">
+<style>
+:root{--rp:#2E9B8A;--rs:#F5A420;--rd:#1a2e2b;--rc:#FBF8F4}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;color:#333;overflow-x:hidden}
+#rbar{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--rs),var(--rp));width:0;z-index:99999;transition:width .1s linear}
+.bkbar{background:rgba(255,255,255,.96);border-bottom:1px solid rgba(46,155,138,.15);padding:10px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px;position:sticky;top:0;z-index:1000;backdrop-filter:blur(8px)}
+.bkbar a.bk{display:inline-flex;align-items:center;gap:6px;color:var(--rp);font-size:.85rem;font-weight:600;text-decoration:none}
+.bkbar a.lang{background:var(--rd);color:#fff;font-size:.78rem;font-weight:700;letter-spacing:1px;padding:5px 14px;border-radius:100px;text-decoration:none;transition:background .2s}
+.bkbar a.lang:hover{background:var(--rp)}
+.cnav{position:fixed;right:20px;top:50%;transform:translateY(-50%);z-index:1000;display:flex;flex-direction:column;gap:10px}
+.cdot{width:10px;height:10px;border-radius:50%;background:rgba(46,155,138,.3);border:2px solid var(--rp);cursor:pointer;transition:all .3s;position:relative}
+.cdot.on,.cdot:hover{background:var(--rp);transform:scale(1.4)}
+.cdot::before{content:attr(data-l);position:absolute;right:18px;top:50%;transform:translateY(-50%);background:var(--rd);color:#fff;font-size:.72rem;white-space:nowrap;padding:4px 10px;border-radius:20px;opacity:0;pointer-events:none;transition:opacity .2s}
+.cdot:hover::before{opacity:1}
+.rhero{position:relative;min-height:100vh;display:flex;align-items:flex-end;overflow:hidden;background:var(--rd)}
+.rhero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.42;transform:scale(1.05);transition:transform 8s ease}
+.rhero-bg.ld{transform:scale(1)}
+.rover{position:absolute;inset:0;background:linear-gradient(to top,rgba(26,46,43,.98) 0%,rgba(26,46,43,.45) 55%,transparent 100%)}
+.hcnt{position:relative;z-index:2;padding:80px 48px;max-width:920px}
+.ybadge{display:inline-flex;align-items:center;gap:10px;background:var(--rs);color:#fff;font-size:.78rem;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:8px 20px;border-radius:100px;margin-bottom:24px}
+.htitle{font-family:'Fraunces',serif;font-size:clamp(2.8rem,7vw,5.5rem);font-weight:800;color:#fff;line-height:1.05;margin-bottom:20px}
+.htitle em{color:var(--rs);font-style:normal}
+.hsub{font-size:1.1rem;color:rgba(255,255,255,.82);max-width:620px;line-height:1.75;margin-bottom:40px}
+.hstats{display:flex;gap:36px;flex-wrap:wrap}
+.hsn{font-family:'Fraunces',serif;font-size:2.6rem;font-weight:800;color:var(--rs);line-height:1}
+.hsl{font-size:.75rem;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:1px;margin-top:4px}
+.hscroll{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:8px;color:rgba(255,255,255,.55);font-size:.72rem;letter-spacing:2px;text-transform:uppercase;cursor:pointer;background:none;border:none}
+.hscroll svg{animation:boun 1.8s ease-in-out infinite}
+@keyframes boun{0%,100%{transform:translateY(0)}50%{transform:translateY(8px)}}
+.scnt{background:var(--rd);color:#fff;padding:80px 0}
+.container{max-width:1140px;margin:0 auto;padding:0 24px}
+.cgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:2px}
+.ccard{padding:36px 20px;text-align:center;border-right:1px solid rgba(255,255,255,.08);position:relative;overflow:hidden;transition:background .3s}
+.ccard:hover{background:rgba(255,255,255,.04)}
+.ccard::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--rs);transform:scaleX(0);transition:transform .4s}
+.ccard:hover::after{transform:scaleX(1)}
+.cico{width:44px;height:44px;background:rgba(245,164,32,.14);border-radius:10px;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;color:var(--rs)}
+.cnum{font-family:'Fraunces',serif;font-size:2.8rem;font-weight:800;color:#fff;line-height:1;margin-bottom:6px}
+.cnum .sfx{font-size:1.6rem}
+.clbl{font-size:.75rem;color:rgba(255,255,255,.52);text-transform:uppercase;letter-spacing:1.5px}
+.chdr{text-align:center;padding:80px 0 40px}
+.chnum{display:inline-block;font-family:'Fraunces',serif;font-size:.82rem;font-weight:700;color:var(--rp);letter-spacing:3px;text-transform:uppercase;margin-bottom:12px}
+.chtitle{font-family:'Fraunces',serif;font-size:clamp(1.8rem,3.5vw,3rem);font-weight:800;color:var(--rd);margin-bottom:16px}
+.chtitle .ac{color:var(--rp)}
+.chdesc{font-size:1.05rem;color:#6b7a78;max-width:600px;margin:0 auto;line-height:1.8}
+.sprog{padding:90px 0;background:var(--rc)}
+.sprog.wh{background:#fff}
+.pb{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;margin-bottom:90px}
+.pb:last-child{margin-bottom:0}
+.pb.rv{direction:rtl}
+.pb.rv>*{direction:ltr}
+.pimg{position:relative;border-radius:20px;overflow:hidden;aspect-ratio:4/3;box-shadow:0 24px 70px rgba(0,0,0,.14)}
+.pimg img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.pimg:hover img{transform:scale(1.04)}
+.pbadge{position:absolute;bottom:16px;left:16px;background:var(--rs);color:#fff;font-size:.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:5px 12px;border-radius:100px}
+.ptag{display:inline-block;font-size:.72rem;font-weight:700;color:var(--rp);letter-spacing:2px;text-transform:uppercase;background:rgba(46,155,138,.1);padding:4px 10px;border-radius:100px;margin-bottom:14px}
+.ph3{font-family:'Fraunces',serif;font-size:clamp(1.5rem,2.3vw,2.2rem);font-weight:800;color:var(--rd);line-height:1.2;margin-bottom:14px}
+.pp{font-size:1rem;line-height:1.85;color:#4a5c59;margin-bottom:18px}
+.ppills{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
+.pill{display:flex;align-items:center;gap:9px;background:#fff;border:1px solid rgba(46,155,138,.2);border-radius:10px;padding:9px 14px}
+.sprog.wh .pill{background:var(--rc)}
+.pn{font-family:'Fraunces',serif;font-size:1.4rem;font-weight:800;color:var(--rp);line-height:1}
+.pl{font-size:.76rem;color:#6b7a78}
+.rtable{width:100%;border-collapse:collapse;font-size:.86rem;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.06);margin-top:20px}
+.rtable th{background:var(--rp);color:#fff;padding:10px 14px;text-align:left;font-size:.78rem;letter-spacing:.5px;text-transform:uppercase}
+.rtable td{padding:9px 14px;border-bottom:1px solid rgba(46,155,138,.1);color:var(--rd)}
+.rtable tr:last-child td{border-bottom:none}
+.rtable tr:hover td{background:rgba(46,155,138,.04)}
+.badge-g{background:rgba(46,155,138,.12);color:var(--rp);padding:2px 8px;border-radius:100px;font-size:.72rem;font-weight:600}
+.badge-o{background:rgba(245,164,32,.12);color:darkorange;padding:2px 8px;border-radius:100px;font-size:.72rem;font-weight:600}
+.sfin{padding:90px 0;background:#fff}
+.flyt{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.ccrd{background:var(--rc);border-radius:20px;padding:36px}
+.cct{font-family:'Fraunces',serif;font-size:1.25rem;font-weight:700;color:var(--rd);margin-bottom:7px}
+.ccs{font-size:.88rem;color:#6b7a78;margin-bottom:24px}
+.cwrp{position:relative;height:220px;margin-bottom:20px}
+.ccen{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;pointer-events:none}
+.ccen strong{font-family:'Fraunces',serif;font-size:1.6rem;font-weight:800;color:var(--rd)}
+.ccen span{font-size:.68rem;color:#6b7a78;text-transform:uppercase;letter-spacing:1px}
+.ll{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:9px}
+.li{display:flex;align-items:center;gap:11px;font-size:.88rem;color:var(--rd)}
+.ldo{width:11px;height:11px;border-radius:3px;flex-shrink:0}
+.lp{margin-left:auto;font-weight:700;font-size:.82rem}
+.fhl{background:var(--rd);border-radius:20px;padding:36px;color:#fff;text-align:center;margin-top:22px}
+.fbn{font-family:'Fraunces',serif;font-size:3.5rem;font-weight:800;color:var(--rs);line-height:1;margin-bottom:8px}
+.fbs{font-size:.95rem;color:rgba(255,255,255,.68)}
+.sdon{padding:80px 0;background:var(--rc)}
+.dgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-top:36px}
+.dcard{background:#fff;border-radius:14px;padding:22px;border-left:4px solid var(--rp);box-shadow:0 4px 14px rgba(0,0,0,.05);transition:transform .3s,box-shadow .3s}
+.dcard:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(0,0,0,.1)}
+.dname{font-family:'Fraunces',serif;font-size:1rem;font-weight:700;color:var(--rd);margin-bottom:5px}
+.dtype{font-size:.75rem;color:var(--rp);font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:7px}
+.ddesc{font-size:.82rem;color:#6b7a78;line-height:1.6}
+.steam{padding:80px 0;background:#fff}
+.tgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:14px;margin-top:32px}
+.tcard{text-align:center;background:var(--rc);border-radius:14px;padding:20px 12px}
+.tcard-ico{width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--rp),#1a6b60);display:flex;align-items:center;justify-content:center;margin:0 auto 10px;color:#fff}
+.tcard-name{font-family:'Fraunces',serif;font-size:.9rem;font-weight:700;color:var(--rd);margin-bottom:3px}
+.tcard-role{font-size:.72rem;color:var(--rp);font-weight:600}
+.tcard-fte{font-size:.68rem;color:#9ab0ac;margin-top:2px}
+.ssocial{padding:60px 0;background:var(--rd);text-align:center}
+.social-nums{display:flex;justify-content:center;gap:50px;flex-wrap:wrap;margin-top:32px}
+.sn-num{font-family:'Fraunces',serif;font-size:3rem;font-weight:800;color:var(--rs);line-height:1}
+.sn-lbl{font-size:.8rem;color:rgba(255,255,255,.52);text-transform:uppercase;letter-spacing:1px;margin-top:5px}
+.sqt{padding:90px 0;background:var(--rd);text-align:center;position:relative;overflow:hidden}
+.sqt::before{content:'"';position:absolute;font-family:'Fraunces',serif;font-size:350px;color:rgba(255,255,255,.03);top:-60px;left:50%;transform:translateX(-50%);line-height:1;pointer-events:none}
+.qtxt{font-family:'Fraunces',serif;font-size:clamp(1.2rem,2.5vw,1.85rem);font-weight:600;color:#fff;line-height:1.65;max-width:800px;margin:0 auto 32px;font-style:italic}
+.qtxt em{color:var(--rs);font-style:normal}
+.qauth{display:flex;align-items:center;justify-content:center;gap:14px}
+.qavt{width:64px;height:64px;border-radius:50%;object-fit:cover;border:3px solid var(--rs)}
+.qname{font-weight:700;color:#fff;font-size:1rem}
+.qrole{font-size:.84rem;color:rgba(255,255,255,.5)}
+.scta{padding:90px 0;background:linear-gradient(135deg,var(--rp) 0%,#1a6b60 100%);text-align:center}
+.scta h2{font-family:'Fraunces',serif;font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:800;color:#fff;margin-bottom:14px}
+.scta p{font-size:1.05rem;color:rgba(255,255,255,.8);margin-bottom:36px}
+.ctabts{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.bwh{background:#fff;color:var(--rp);border:none;padding:14px 30px;border-radius:100px;font-size:.95rem;font-weight:700;text-decoration:none;transition:all .3s;display:inline-flex;align-items:center;gap:8px}
+.bwh:hover{background:var(--rs);color:#fff;transform:translateY(-2px)}
+.bow{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.45);padding:14px 30px;border-radius:100px;font-size:.95rem;font-weight:700;text-decoration:none;transition:all .3s;display:inline-flex;align-items:center;gap:8px}
+.bow:hover{border-color:#fff;background:rgba(255,255,255,.1);transform:translateY(-2px)}
+.fi{opacity:0;transform:translateY(28px);transition:opacity .65s ease,transform .65s ease}
+.fi.vs{opacity:1;transform:translateY(0)}
+.fl{opacity:0;transform:translateX(-36px);transition:opacity .65s ease,transform .65s ease}
+.fl.vs{opacity:1;transform:translateX(0)}
+.fr{opacity:0;transform:translateX(36px);transition:opacity .65s ease,transform .65s ease}
+.fr.vs{opacity:1;transform:translateX(0)}
+@media(max-width:768px){.cnav{display:none}.pb,.pb.rv{grid-template-columns:1fr;direction:ltr}.flyt{grid-template-columns:1fr}.hcnt{padding:60px 20px}.social-nums{gap:24px}.tgrid{grid-template-columns:repeat(2,1fr)}}
+</style>
+</head>
+<body>
+<div id="rbar"></div>
+<nav class="cnav" aria-label="Chapters">
+<div class="cdot on" data-l="Cover" data-t="hero" onclick="goTo('hero')"></div>
+<div class="cdot" data-l="Impact" data-t="impacto" onclick="goTo('impacto')"></div>
+<div class="cdot" data-l="Programs" data-t="programas" onclick="goTo('programas')"></div>
+<div class="cdot" data-l="Results" data-t="resultados" onclick="goTo('resultados')"></div>
+<div class="cdot" data-l="Finances" data-t="finanzas" onclick="goTo('finanzas')"></div>
+<div class="cdot" data-l="Donors" data-t="donantes" onclick="goTo('donantes')"></div>
+<div class="cdot" data-l="Team" data-t="equipo" onclick="goTo('equipo')"></div>
+<div class="cdot" data-l="Testimonial" data-t="testimonio" onclick="goTo('testimonio')"></div>
+</nav>
+<div class="bkbar">
+  <a class="bk" href="transparencia.html"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg> Transparency</a>
+  <a class="lang" href="../reporte-2024.html">Versi&oacute;n en Espa&ntilde;ol</a>
+</div>
+<main id="main-content">
+
+<section class="rhero" id="hero">
+<img src="../assets/images/549166365_1161321586027712_5890717818174913624_n.jpg" alt="Mama Alice 2024" class="rhero-bg" loading="eager" onload="this.classList.add('ld')">
+<div class="rover"></div>
+<div class="hcnt container">
+  <div class="ybadge">&#9733; Annual Report &middot; 2024</div>
+  <h1 class="htitle">A year of <br><em>real growth</em></h1>
+  <p class="hsub">416 students enrolled. 106 health interventions. HTC Group VII: 20 young professionals trained. The complete and verifiable account of what we achieved in Ayacucho in 2024.</p>
+  <div class="hstats">
+    <div><div class="hsn">416</div><div class="hsl">Students enrolled</div></div>
+    <div><div class="hsn">106</div><div class="hsl">Health interventions</div></div>
+    <div><div class="hsn">20</div><div class="hsl">HTC Group VII students</div></div>
+    <div><div class="hsn">S/ 2.3M</div><div class="hsl">Total assets (31/12/2024)</div></div>
+  </div>
+</div>
+<button class="hscroll" onclick="goTo('impacto')">Explore the results<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg></button>
+</section>
+
+<section class="scnt" id="impacto">
+<div class="container">
+  <div class="chdr" style="padding-top:0;margin-bottom:44px">
+    <span class="chnum">Chapter 01</span>
+    <h2 class="chtitle" style="color:#fff">2024 Impact in <span class="ac">exact figures</span></h2>
+    <p class="chdesc" style="color:rgba(255,255,255,.6)">Data verified from the 60-page institutional annual report 2024. Audited balance as of 31/12/2024.</p>
+  </div>
+  <div class="cgrid">
+    <div class="ccard fi"><div class="cico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div><div class="cnum"><span class="ca" data-v="416">0</span></div><div class="clbl">Students Enrolled</div></div>
+    <div class="ccard fi"><div class="cico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><div class="cnum"><span class="ca" data-v="106">0</span></div><div class="clbl">Health Interventions</div></div>
+    <div class="ccard fi"><div class="cico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div class="cnum"><span class="ca" data-v="28">0</span></div><div class="clbl">Social Work Cases (8&nbsp;%)</div></div>
+    <div class="ccard fi"><div class="cico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div><div class="cnum"><span class="ca" data-v="20">0</span></div><div class="clbl">HTC Group VII Students</div></div>
+    <div class="ccard fi"><div class="cico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><div class="cnum" style="font-size:2rem">S/&nbsp;2.3M</div><div class="clbl">Total Assets 31/12/2024</div></div>
+    <div class="ccard fi"><div class="cico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div><div class="cnum" style="font-size:2.2rem">+43&nbsp;%</div><div class="clbl">Improvement vs. 2023</div></div>
+  </div>
+</div>
+</section>
+
+<section class="sprog" id="programas">
+<div class="container">
+  <div class="chdr fi"><span class="chnum">Chapter 02</span>
+    <h2 class="chtitle">Programs <span class="ac">2024</span></h2>
+    <p class="chdesc">Five integrated programme areas working together for deep and lasting change in the Yanama community, Ayacucho.</p>
+  </div>
+  <div class="pb">
+    <div class="pimg fl"><img src="../assets/images/601438844_1232935938866276_5383665154388954629_n.jpg" alt="Education 2024" loading="lazy"><span class="pbadge">Education</span></div>
+    <div class="fr">
+      <span class="ptag">Education Programme</span>
+      <h3 class="ph3">416 Students &middot; +43&nbsp;% Academic Improvement</h3>
+      <p class="pp">We served <strong>416 students</strong> across pre-school, primary, secondary and individual education levels in Yanama. School results showed a <strong>+43&nbsp;% improvement compared to 2023</strong>. "Our students are more social and less aggressive. Their self-image has improved. Chances of derailment are much smaller."</p>
+      <p class="pp" style="font-size:.93rem;color:#6b7a78">64 pre-school students (57 with regular attendance ≈ 90&nbsp;%). Individual support for students with specific learning difficulties.</p>
+      <div class="ppills">
+        <div class="pill"><div class="pn">416</div><div class="pl">Students<br>enrolled</div></div>
+        <div class="pill"><div class="pn">64</div><div class="pl">Pre-school<br>level</div></div>
+        <div class="pill"><div class="pn">+43&nbsp;%</div><div class="pl">Improvement<br>vs 2023</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="pb rv">
+    <div class="pimg fr"><img src="../assets/images/613092641_1462210539237958_392448947434615007_n.jpg" alt="Health 2024" loading="lazy"><span class="pbadge">Health</span></div>
+    <div class="fl">
+      <span class="ptag">Health Programme</span>
+      <h3 class="ph3">106 Health Interventions &middot; Holistic Family Care</h3>
+      <p class="pp">We carried out <strong>106 medical and health interventions</strong>, including 28 social work cases (8&nbsp;% of attended families). Preventive activities in hygiene, nutrition and mental health complemented clinical work.</p>
+      <p class="pp" style="font-size:.93rem;color:#6b7a78">Family Ginkana festivals, positive parenting workshops, music therapy as emotional expression and the cultural activity "A Trip Through Peru".</p>
+      <div class="ppills">
+        <div class="pill"><div class="pn">106</div><div class="pl">Health<br>interventions</div></div>
+        <div class="pill"><div class="pn">28</div><div class="pl">Social cases<br>(8&nbsp;% of families)</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="pb">
+    <div class="pimg fl"><img src="../assets/images/hospitality_image_1782863355574.webp" alt="HTC 2024" loading="lazy"><span class="pbadge">HTC Gastronomy</span></div>
+    <div class="fr">
+      <span class="ptag">Hospitality Training Center</span>
+      <h3 class="ph3">HTC Group VII &middot; 20 Young Professionals Trained</h3>
+      <p class="pp"><strong>Group VII of the HTC</strong> started in October 2023 with <strong>20 students</strong> (13 male, 7 female). They trained as waiters, bartenders and cooks at QuinuaQ Restaurant, accumulating real hands-on experience in front-of-house and kitchen.</p>
+      <p class="pp" style="font-size:.93rem;color:#6b7a78">"The most important goal of the Hospitality Training Centre is 'to create training, internships and employment for young people'. Majority of graduates find a job or continue their studies."</p>
+      <div class="ppills">
+        <div class="pill"><div class="pn">20</div><div class="pl">HTC Group VII<br>students</div></div>
+        <div class="pill"><div class="pn">13M / 7F</div><div class="pl">Gender<br>breakdown</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="pb rv">
+    <div class="pimg fr"><img src="../assets/images/volunteer_team_1782863788228.webp" alt="Rock and Water 2024" loading="lazy"><span class="pbadge">Rock &amp; Water</span></div>
+    <div class="fl">
+      <span class="ptag">Sport &amp; Methodology</span>
+      <h3 class="ph3">New Football Pitch &amp; Rock and Water</h3>
+      <p class="pp">With support from the <strong>UEFA Foundation for Children</strong> we laid out a small grass football pitch where children practise football and where <strong>Rock and Water</strong> training sessions are held &mdash; a methodology working on self-control, trust and peaceful conflict resolution.</p>
+      <p class="pp" style="font-size:.93rem;color:#6b7a78">Rock and Water was additionally funded by the World of Children Foundation for special activities and workshops throughout 2024.</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="sfin" id="resultados">
+<div class="container">
+  <div class="chdr fi"><span class="chnum">Chapter 03</span>
+    <h2 class="chtitle">Academic <span class="ac">Results</span></h2>
+    <p class="chdesc">Real grade distribution for Mama Alice students in the 2024 school year.</p>
+  </div>
+  <div class="flyt fi">
+    <div>
+      <div class="ccrd">
+        <div class="cct">Grade distribution 2024</div>
+        <div class="ccs">Verified school results from the institutional report</div>
+        <div class="cwrp"><canvas id="ch_grades"></canvas><div class="ccen"><strong>+43&nbsp;%</strong><span>vs 2023</span></div></div>
+        <ul class="ll">
+          <li class="li"><span class="ldo" style="background:#2E9B8A"></span>Good (Bueno)<span class="lp">26&nbsp;%</span></li>
+          <li class="li"><span class="ldo" style="background:#F5A420"></span>Sufficient (Suficiente)<span class="lp">42&nbsp;%</span></li>
+          <li class="li"><span class="ldo" style="background:#d4af37"></span>Just sufficient<span class="lp">25&nbsp;%</span></li>
+          <li class="li"><span class="ldo" style="background:#c5d4d0"></span>Insufficient<span class="lp">7&nbsp;%</span></li>
+        </ul>
+      </div>
+    </div>
+    <div>
+      <div class="ccrd">
+        <div class="cct">Budget breakdown by programme</div>
+        <div class="ccs">Executed budget 2024 (in thousands of soles S/)</div>
+        <div class="cwrp"><canvas id="ch_spend"></canvas><div class="ccen"><strong>S/ 646K</strong><span>total executed</span></div></div>
+        <ul class="ll">
+          <li class="li"><span class="ldo" style="background:#2E9B8A"></span>Primary Education<span class="lp">S/ 132K</span></li>
+          <li class="li"><span class="ldo" style="background:#F5A420"></span>Secondary Education<span class="lp">S/ 110K</span></li>
+          <li class="li"><span class="ldo" style="background:#d4af37"></span>Individual/Pre-school Ed.<span class="lp">S/ 101K</span></li>
+          <li class="li"><span class="ldo" style="background:#3d5c56"></span>Social Work &amp; Psychology<span class="lp">S/ 77K</span></li>
+          <li class="li"><span class="ldo" style="background:#c5d4d0"></span>Health<span class="lp">S/ 80K</span></li>
+          <li class="li"><span class="ldo" style="background:#8ec5be"></span>Families<span class="lp">S/ 65K</span></li>
+          <li class="li"><span class="ldo" style="background:#1a6b60"></span>HTC Vocational<span class="lp">S/ 82K</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="sdon" id="finanzas" style="background:#fff">
+<div class="container">
+  <div class="chdr fi"><span class="chnum">Chapter 04</span>
+    <h2 class="chtitle">Financial <span class="ac">Transparency</span></h2>
+    <p class="chdesc">Audited balance as of 31 December 2024. Exchange rate used: 1 euro = 3.87 soles.</p>
+  </div>
+  <div class="flyt fi">
+    <div>
+      <div class="ccrd">
+        <div class="cct">Balance Sheet 31/12/2024</div>
+        <div class="ccs">Asset statement of Mama Alice NGO at the close of the financial year</div>
+        <table class="rtable">
+          <tr><th>Item</th><th>S/ (Soles)</th><th>&euro; (Euros)</th></tr>
+          <tr><td>NGO bank accounts</td><td>241,334.14</td><td>62,360.24</td></tr>
+          <tr><td>Security deposit Yanama</td><td>1,000.00</td><td>258.40</td></tr>
+          <tr><td><strong>Total Current Assets</strong></td><td><strong>242,334.14</strong></td><td><strong>62,618.64</strong></td></tr>
+          <tr><td>Fixed assets &amp; property</td><td>2,067,650.82</td><td>534,277.62</td></tr>
+          <tr><td><strong>TOTAL ASSETS</strong></td><td><strong>2,309,984.96</strong></td><td><strong>596,896.26</strong></td></tr>
+        </table>
+      </div>
+    </div>
+    <div>
+      <div class="fhl fi">
+        <div class="fbn">S/ 2,309,984</div>
+        <div class="fbs">Total Assets as of 31/12/2024<br><small style="opacity:.6">vs. S/ 2,067,650 in 2023 &mdash; growth of S/ 242K</small></div>
+      </div>
+      <div class="ccrd" style="margin-top:22px">
+        <div class="cct">2024 executed budget</div>
+        <table class="rtable">
+          <tr><th>Programmes</th><th>S/ Soles</th><th>&euro; Euros</th></tr>
+          <tr><td>Pre-school (Initial)</td><td>49,714.59</td><td>13,436.38</td></tr>
+          <tr><td>Primary Education</td><td>132,443.80</td><td>35,795.62</td></tr>
+          <tr><td>Secondary Education</td><td>110,356.26</td><td>28,516.86</td></tr>
+          <tr><td>Individual Education</td><td>50,612.24</td><td>13,678.98</td></tr>
+          <tr><td>Individual work (psych/social)</td><td>76,720.65</td><td>20,735.31</td></tr>
+          <tr><td>Prevention &amp; health</td><td>80,221.31</td><td>21,681.43</td></tr>
+          <tr><td>Family work</td><td>64,769.61</td><td>17,505.30</td></tr>
+          <tr><td><strong>Sub-total Programmes</strong></td><td><strong>564,838.46</strong></td><td><strong>152,659.04</strong></td></tr>
+          <tr><td>HTC Vocational Training</td><td>81,577.31</td><td>27,192.43</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="sdon" id="donantes">
+<div class="container">
+  <div class="chdr fi"><span class="chnum">Chapter 05</span>
+    <h2 class="chtitle">Our <span class="ac">Donors 2024</span></h2>
+    <p class="chdesc">Organisations that made this impact possible with their trust and financial support.</p>
+  </div>
+  <div class="dgrid">
+    <div class="dcard fi"><div class="dtype">Primary &amp; Secondary Education</div><div class="dname">Foundation Mamita Alice</div><div class="ddesc">Netherlands. Funds primary and secondary school education programmes in Yanama.</div></div>
+    <div class="dcard fi"><div class="dtype">Pre-school, Wellbeing &amp; HTC</div><div class="dname">Foundation Kinderen van de Zon</div><div class="ddesc">Netherlands. Supports pre-school, individual education, wellbeing and part of vocational training.</div></div>
+    <div class="dcard fi"><div class="dtype">Infrastructure</div><div class="dname">Stichting Wilde Ganzen</div><div class="ddesc">Netherlands. Funded the purchase of land for the construction of dormitories for rural students.</div></div>
+    <div class="dcard fi"><div class="dtype">Sport &amp; Methodology</div><div class="dname">UEFA Foundation for Children</div><div class="ddesc">Installation of a grass football pitch and Rock and Water training sessions in Ayacucho.</div></div>
+    <div class="dcard fi"><div class="dtype">Special Activities</div><div class="dname">World of Children Foundation</div><div class="ddesc">Funded special extra activities and Rock and Water workshops throughout 2024.</div></div>
+    <div class="dcard fi"><div class="dtype">Peruvian Social Enterprise</div><div class="dname">Organdina</div><div class="ddesc">Peruvian company funding the vocational training programme of the Hospitality Training Center.</div></div>
+  </div>
+</div>
+</section>
+
+<section class="steam" id="equipo">
+<div class="container">
+  <div class="chdr fi"><span class="chnum">Chapter 06</span>
+    <h2 class="chtitle">Our <span class="ac">Team 2024</span></h2>
+    <p class="chdesc">The people who make impact happen every day in Ayacucho.</p>
+  </div>
+  <div class="tgrid">
+    <div class="tcard fi"><div class="tcard-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div><div class="tcard-name">Frederique Kallen</div><div class="tcard-role">Founder &amp; Project Director</div><div class="tcard-fte">1.0 FTE &middot; &euro;2,149/mo</div></div>
+    <div class="tcard fi"><div class="tcard-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"/></svg></div><div class="tcard-name">Elba Zegarra Vila</div><div class="tcard-role">Peruvian Director</div><div class="tcard-fte">1.0 FTE &middot; &euro;852/mo</div></div>
+    <div class="tcard fi"><div class="tcard-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/></svg></div><div class="tcard-name">Flor de Mar&iacute;a Cuenca</div><div class="tcard-role">Administration</div><div class="tcard-fte">1.0 FTE</div></div>
+    <div class="tcard fi"><div class="tcard-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></div><div class="tcard-name">Jorge Luis Allca</div><div class="tcard-role">Teacher / Education</div><div class="tcard-fte">1.0 FTE</div></div>
+    <div class="tcard fi"><div class="tcard-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/></svg></div><div class="tcard-name">Ferreol Janampa</div><div class="tcard-role">Teacher / Education</div><div class="tcard-fte">1.0 FTE</div></div>
+    <div class="tcard fi"><div class="tcard-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/></svg></div><div class="tcard-name">Eskarly Huamani</div><div class="tcard-role">Teacher / Education</div><div class="tcard-fte">1.0 FTE</div></div>
+    <div class="tcard fi"><div class="tcard-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/></svg></div><div class="tcard-name">Marivel Arango</div><div class="tcard-role">Teacher / Education</div><div class="tcard-fte">1.0 FTE</div></div>
+    <div class="tcard fi"><div class="tcard-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><div class="tcard-name">Nurse Yesenia</div><div class="tcard-role">Health Area</div><div class="tcard-fte">Medical Team</div></div>
+    <div class="tcard fi"><div class="tcard-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87"/></svg></div><div class="tcard-name">Psychologist Nory</div><div class="tcard-role">Wellbeing &amp; Psychology</div><div class="tcard-fte">Clinical Team</div></div>
+  </div>
+  <div class="ssocial" style="border-radius:20px;margin-top:44px">
+    <span class="chnum" style="color:rgba(255,255,255,.5)">Social Media 2024</span>
+    <h3 style="color:#fff;font-family:'Fraunces',serif;font-size:1.6rem;margin-top:8px">Our digital community</h3>
+    <div class="social-nums">
+      <div><div class="sn-num">+13,000</div><div class="sn-lbl">Followers (Channel 1)</div></div>
+      <div><div class="sn-num">+7,000</div><div class="sn-lbl">Followers (Channel 2)</div></div>
+      <div><div class="sn-num">+4,000</div><div class="sn-lbl">Followers (Channel 3)</div></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="sqt" id="testimonio">
+<div class="container">
+  <span class="chnum" style="color:rgba(255,255,255,.4)">Chapter 07 &middot; Founder's Letter</span>
+  <blockquote class="qtxt fi">"Compared to previous years, marked by the severe impacts of COVID-19 in Peru and ongoing political unrest, <em>2024 has been a peaceful and stable year in Ayacucho</em>. This allowed us to develop numerous activities for the children and their families at Mama Alice, focused on their well-being and growth."</blockquote>
+  <div class="qauth fi">
+    <img src="../assets/images/testimonial_student_1782863781130.webp" alt="Frederique Kallen" class="qavt">
+    <div style="text-align:left"><div class="qname">Frederique Kallen</div><div class="qrole">Founder, Mama Alice NGO &middot; Annual Letter 2024</div></div>
+  </div>
+</div>
+</section>
+
+<section class="scta">
+<div class="container">
+  <h2 class="fi">Download the Annual Report 2024</h2>
+  <p class="fi">Complete 60-page institutional report with audited financial data, results by programme and team testimonials.</p>
+  <div class="ctabts fi">
+    <a href="../Mama Alice - Annual Report 2024 (A4).pdf" target="_blank" rel="noopener" class="bwh">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+      Download PDF 2024
+    </a>
+    <a href="donar.html" class="bow">Make a donation</a>
+    <a href="transparencia.html" class="bow">All reports</a>
+  </div>
+</div>
+</section>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+window.addEventListener('scroll',()=>{const e=document.documentElement;document.getElementById('rbar').style.width=(e.scrollTop/(e.scrollHeight-e.clientHeight)*100)+'%';},{passive:true});
+function goTo(id){const el=document.getElementById(id);if(el)el.scrollIntoView({behavior:'smooth'});}
+const _chs=document.querySelectorAll('section[id]');
+const _dots=document.querySelectorAll('.cdot');
+window.addEventListener('scroll',()=>{let cur=_chs[0]?.id||'';_chs.forEach(s=>{if(window.scrollY>=s.offsetTop-220)cur=s.id;});_dots.forEach(d=>d.classList.toggle('on',d.dataset.t===cur));},{passive:true});
+const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vs');e.target.querySelectorAll('.ca[data-v]').forEach(el=>{if(el.dataset.a)return;el.dataset.a=1;const t=+el.dataset.v,dur=1800,step=t/(dur/16);let c=0;const iv=setInterval(()=>{c=Math.min(c+step,t);el.textContent=Math.round(c).toLocaleString();if(c>=t)clearInterval(iv);},16);});obs.unobserve(e.target);}});},{threshold:0.12});
+document.querySelectorAll('.fi,.fl,.fr,.ccard,.dcard,.tcard').forEach(el=>obs.observe(el));
+(function(){const b=document.createElement('button');b.id='sttb';b.innerHTML='<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>';b.style.cssText='position:fixed;bottom:20px;right:20px;width:52px;height:52px;border-radius:50%;background:#2e9b8a;color:#fff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;z-index:9999;opacity:0;visibility:hidden;transform:translateY(18px);transition:all .3s;box-shadow:0 8px 22px rgba(46,155,138,.45)';document.body.appendChild(b);b.onclick=()=>window.scrollTo({top:0,behavior:'smooth'});window.addEventListener('scroll',()=>{const s=window.scrollY>300;b.style.opacity=s?'1':'0';b.style.visibility=s?'visible':'hidden';},{passive:true});})();
+document.addEventListener('DOMContentLoaded',()=>{
+const dO={cutout:'72%',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},animation:{animateScale:true,animateRotate:true,duration:1300,easing:'easeOutQuart'}};
+const c1=document.getElementById('ch_grades');if(c1)new Chart(c1,{type:'doughnut',data:{labels:['Bueno / Good (26%)','Suficiente / Sufficient (42%)','Justo suficiente / Just sufficient (25%)','Insuficiente / Insufficient (7%)'],datasets:[{data:[26,42,25,7],backgroundColor:['#2E9B8A','#F5A420','#d4af37','#c5d4d0'],borderWidth:0,hoverOffset:10}]},options:dO});
+const c2=document.getElementById('ch_spend');if(c2)new Chart(c2,{type:'doughnut',data:{labels:['Ed. Primaria','Ed. Secundaria','Ed. Individual/Inicial','Trabajo Social','Salud','Familias','HTC Vocacional'],datasets:[{data:[132,110,101,77,80,65,82],backgroundColor:['#2E9B8A','#F5A420','#d4af37','#3d5c56','#c5d4d0','#8ec5be','#1a6b60'],borderWidth:0,hoverOffset:10}]},options:dO});
+});
+</script>
+</body>
+</html>
