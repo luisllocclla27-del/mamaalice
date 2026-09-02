@@ -1657,3 +1657,78 @@ body.page-leaving {
 .cookie-btn-reject:hover {
     background: rgba(255,255,255,0.1);
 }
+
+
+/* REPORTE 2024 PAGE STYLES */
+.impact-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+    text-align: center;
+    padding: 60px 0;
+}
+.stat-box h2 {
+    font-size: 4rem;
+    color: var(--primary);
+    margin-bottom: 8px;
+    font-family: var(--font-heading);
+}
+.stat-box p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0.9;
+}
+@media(max-width: 992px) {
+    .impact-stats-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media(max-width: 480px) {
+    .impact-stats-grid { grid-template-columns: 1fr; }
+}
+
+.story-block {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    margin-bottom: 120px;
+}
+.story-block.reverse {
+    flex-direction: row-reverse;
+}
+.story-img {
+    flex: 1;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+}
+.story-img img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+.story-text {
+    flex: 1;
+}
+.story-text h3 {
+    font-size: 2.5rem;
+    margin-bottom: 24px;
+    color: var(--dark);
+}
+.fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fade-up.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+@media(max-width: 992px) {
+    .story-block, .story-block.reverse {
+        flex-direction: column;
+        gap: 32px;
+        margin-bottom: 80px;
+    }
+}

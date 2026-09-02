@@ -97,6 +97,7 @@
       <a href="nosotros.html"      data-page="nosotros.html">${labels.nosotros}</a>
       <a href="comunidades.html"   data-page="comunidades.html">${labels.proyectos}</a>
       <a href="hospitality.html"   data-page="hospitality.html">${labels.hospitality}</a>
+      <a href="reporte-2024.html"  data-page="reporte-2024.html">Reporte 2024</a>
       <a href="transparencia.html" data-page="transparencia.html">${labels.transparencia}</a>
       
       <!-- Language Switcher -->
