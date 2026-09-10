@@ -151,14 +151,42 @@ body{font-family:'Inter',sans-serif;color:#333;overflow-x:hidden}
 .fr{opacity:0;transform:translateX(36px);transition:opacity .65s ease,transform .65s ease}
 .fr.vs{opacity:1;transform:translateX(0)}
 /* RESPONSIVE */
+/* PISA 2025 COMPARISON */
+.pisa-box{background:#fff;border-radius:20px;padding:36px;margin-top:48px;box-shadow:0 10px 30px rgba(0,0,0,.06);border:1px solid rgba(46,155,138,.15)}
+.pisa-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:24px}
+.pisa-col{padding:24px;border-radius:14px}
+.pisa-col.national{background:rgba(220,53,69,.04);border:1px solid rgba(220,53,69,.2)}
+.pisa-col.ngo{background:rgba(46,155,138,.06);border:1px solid rgba(46,155,138,.25)}
+.pisa-stat{display:flex;align-items:baseline;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(0,0,0,.06)}
+.pisa-stat:last-child{border-bottom:none}
+.pisa-num-bad{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:800;color:#c0392b}
+.pisa-num-good{font-family:'Fraunces',serif;font-size:1.5rem;font-weight:800;color:var(--rp)}
+.pisa-meta{font-size:.78rem;color:#7f8c8d;margin-top:18px;font-style:italic;line-height:1.5}
+/* FINANCIAL SECTION */
+.fin-summary{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-bottom:32px}
+.fin-card{background:var(--rc);border-radius:16px;padding:22px;border-left:4px solid var(--rp);transition:transform .3s,box-shadow .3s}
+.fin-card:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(0,0,0,.06)}
+.fin-card.accent{border-left-color:var(--rs);background:#fff9f0}
+.fin-card.dark{background:var(--rd);color:#fff;border-left-color:var(--rs)}
+.fin-note{background:rgba(46,155,138,.07);border-left:4px solid var(--rp);padding:18px 22px;border-radius:0 12px 12px 0;margin-bottom:36px;font-size:.88rem;line-height:1.65;color:var(--rd)}
+.tab-nav{display:flex;gap:10px;margin-bottom:20px;flex-wrap:wrap}
+.tab-btn{background:#fff;border:1.5px solid rgba(46,155,138,.3);color:var(--rd);padding:8px 18px;border-radius:100px;font-size:.82rem;font-weight:700;cursor:pointer;transition:all .2s}
+.tab-btn.active,.tab-btn:hover{background:var(--rp);color:#fff;border-color:var(--rp)}
+.tab-pane{display:none}
+.tab-pane.active{display:block}
+.audit-box{background:linear-gradient(135deg,var(--rd) 0%,#1a433d 100%);color:#fff;border-radius:20px;padding:34px;margin-top:36px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;box-shadow:0 16px 40px rgba(26,46,43,.25)}
+.audit-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(46,155,138,.25);border:1px solid var(--rp);color:#7fe3d3;font-size:.72rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:4px 12px;border-radius:100px;margin-bottom:12px}
+.audit-btn{background:var(--rs);color:#fff;border:none;padding:12px 24px;border-radius:100px;font-size:.88rem;font-weight:700;text-decoration:none;transition:all .3s;display:inline-flex;align-items:center;gap:8px}
+.audit-btn:hover{background:#e09315;transform:translateY(-2px);color:#fff}
 @media(max-width:768px){
 .cnav{display:none}
 .pb,.pb.rv{grid-template-columns:1fr;direction:ltr}
-.flyt{grid-template-columns:1fr}
+.flyt,.pisa-grid{grid-template-columns:1fr}
 .hcnt{padding:60px 20px}
 .hstats{gap:20px}
 .social-nums{gap:28px}
 .tgrid{grid-template-columns:repeat(2,1fr)}
+.audit-box{flex-direction:column;align-items:flex-start}
 }
 </style>
 
@@ -172,6 +200,7 @@ body{font-family:'Inter',sans-serif;color:#333;overflow-x:hidden}
 <div class="cdot" data-l="Health" data-t="salud" onclick="goTo('salud')"></div>
 <div class="cdot" data-l="HTC" data-t="htc" onclick="goTo('htc')"></div>
 <div class="cdot" data-l="Results" data-t="resultados" onclick="goTo('resultados')"></div>
+<div class="cdot" data-l="Finance" data-t="finanzas" onclick="goTo('finanzas')"></div>
 <div class="cdot" data-l="Partners" data-t="aliados" onclick="goTo('aliados')"></div>
 <div class="cdot" data-l="Testimonial" data-t="testimonios" onclick="goTo('testimonios')"></div>
 </nav>
@@ -246,6 +275,70 @@ body{font-family:'Inter',sans-serif;color:#333;overflow-x:hidden}
         <div class="pill"><div class="pn">198</div><div class="pl">Kite<br>Festival</div></div>
         <div class="pill"><div class="pn">55</div><div class="pl">Digital<br>Classrooms</div></div>
       </div>
+    </div>
+  </div>
+
+  <!-- PISA 2025 vs MAMA ALICE -->
+  <div class="pisa-box fi">
+    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:14px;">
+      <span class="ptag" style="background:rgba(245,164,32,.15);color:#b45309;">National Educational Context &middot; OECD Report</span>
+      <span style="font-size:.78rem;font-weight:700;color:var(--rp);background:rgba(46,155,138,.12);padding:5px 12px;border-radius:100px;">Published: September 2026</span>
+    </div>
+    <h3 class="ph3" style="margin-bottom:12px;">Education in Peru &mdash; PISA 2025 vs Mama Alice 2025</h3>
+    <p class="pp" style="margin-bottom:14px;">The latest PISA results, published by the OECD in September 2026, underline the continuing challenges faced by Peru's education system. Among Peruvian 15-year-olds, only <strong>30&nbsp;%</strong> reached at least the basic proficiency level in mathematics, compared with an OECD average of 65&nbsp;%. In reading, <strong>42&nbsp;%</strong> reached this level (OECD: 69&nbsp;%), while in science the figure was <strong>47&nbsp;%</strong> (OECD: 74&nbsp;%).</p>
+    <p class="pp" style="margin-bottom:18px;">Results in mathematics and reading declined compared with PISA 2022, reversing gains Peru had made since 2015, while performance in science remained broadly stable. Educational inequality remains an important concern: in science, students from the most socio-economically advantaged quarter of Peru's population scored an average of 78 points higher than students from the most disadvantaged quarter. These results underline the crucial need for complementary educational support for children growing up in disadvantaged communities.</p>
+    
+    <div class="pisa-grid">
+      <div class="pisa-col national">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px;">
+          <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#c0392b;"></span>
+          <strong style="font-size:.88rem;letter-spacing:1px;text-transform:uppercase;color:#962d22;">Peru &mdash; PISA 2025 (OECD)</strong>
+        </div>
+        <div class="pisa-stat">
+          <span style="font-size:.88rem;color:#4a5c59;">Below basic proficiency in <strong>Mathematics</strong></span>
+          <span class="pisa-num-bad">70&nbsp;%</span>
+        </div>
+        <p style="font-size:.75rem;color:#7f8c8d;margin:-4px 0 10px;">Only 30&nbsp;% reached basic proficiency (OECD: 65&nbsp;%).</p>
+        
+        <div class="pisa-stat">
+          <span style="font-size:.88rem;color:#4a5c59;">Below basic proficiency in <strong>Reading</strong></span>
+          <span class="pisa-num-bad">58&nbsp;%</span>
+        </div>
+        <p style="font-size:.75rem;color:#7f8c8d;margin:-4px 0 10px;">Only 42&nbsp;% reached basic proficiency (OECD: 69&nbsp;%).</p>
+        
+        <div class="pisa-stat">
+          <span style="font-size:.88rem;color:#4a5c59;">Below basic proficiency in <strong>Science</strong></span>
+          <span class="pisa-num-bad">53&nbsp;%</span>
+        </div>
+        <p style="font-size:.75rem;color:#7f8c8d;margin:-4px 0 4px;">78-point socioeconomic gap between quartiles.</p>
+      </div>
+
+      <div class="pisa-col ngo">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px;">
+          <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--rp);"></span>
+          <strong style="font-size:.88rem;letter-spacing:1px;text-transform:uppercase;color:var(--rp);">Mama Alice &mdash; 2025 Impact</strong>
+        </div>
+        <div class="pisa-stat">
+          <span style="font-size:.88rem;color:var(--rd);">Passed the school year <strong>directly</strong></span>
+          <span class="pisa-num-good">83&nbsp;%</span>
+        </div>
+        <p style="font-size:.75rem;color:#5a736f;margin:-4px 0 10px;">202 of 243 regular students passed without recovery.</p>
+        
+        <div class="pisa-stat">
+          <span style="font-size:.88rem;color:var(--rd);">Needed additional <strong>recovery support</strong></span>
+          <span class="pisa-num-good">41</span>
+        </div>
+        <p style="font-size:.75rem;color:#5a736f;margin:-4px 0 10px;">Intensive individualized tutoring and support.</p>
+        
+        <div class="pisa-stat">
+          <span style="font-size:.88rem;color:var(--rd);">Failed school year after support</span>
+          <span class="pisa-num-good">0&nbsp;% (Zero)</span>
+        </div>
+        <p style="font-size:.75rem;color:#5a736f;margin:-4px 0 4px;">No participating student failed the school year.</p>
+      </div>
+    </div>
+    <div class="pisa-meta">
+      <strong>Official sources:</strong> OECD (2026), <em>PISA 2025 Results (Volume I): Peru</em>, published 8 September 2026. Mama Alice Annual Report 2025 (evaluated and verified data).
     </div>
   </div>
 </div>
@@ -351,9 +444,249 @@ body{font-family:'Inter',sans-serif;color:#333;overflow-x:hidden}
 </div>
 </section>
 
-<section class="sdon" id="aliados">
+<!-- ══ FINANCIAL REPORT ══ -->
+<section class="sprog wh" id="finanzas">
 <div class="container">
   <div class="chdr fi"><span class="chnum">Chapter 06</span>
+    <h2 class="chtitle">Financial Report &amp; <span class="ac">Transparency 2025</span></h2>
+    <p class="chdesc">Audited financial accountability, 2025 expenditure breakdown, and 2026 operating budget. External audit certified with an unqualified clean opinion by Kayros S.C.</p>
+  </div>
+
+  <div class="fin-summary fi">
+    <div class="fin-card">
+      <span class="ptag" style="margin-bottom:8px">Total Income 2025</span>
+      <div style="font-family:'Fraunces',serif;font-size:1.85rem;font-weight:800;color:var(--rd);line-height:1.1">S/ 1,278,515</div>
+      <div style="font-size:.84rem;color:var(--rp);font-weight:700;margin-top:4px">&euro; 312,875 Euros</div>
+      <div style="font-size:.74rem;color:#6b7a78;margin-top:6px">Core funding, foundations, private donors &amp; capital grants</div>
+    </div>
+    <div class="fin-card">
+      <span class="ptag" style="margin-bottom:8px">Total Expenditure 2025</span>
+      <div style="font-family:'Fraunces',serif;font-size:1.85rem;font-weight:800;color:var(--rd);line-height:1.1">S/ 1,047,794</div>
+      <div style="font-size:.84rem;color:var(--rp);font-weight:700;margin-top:4px">&euro; 270,748 Euros</div>
+      <div style="font-size:.74rem;color:#6b7a78;margin-top:6px">Community programmes in Yanama &amp; HTC infrastructure</div>
+    </div>
+    <div class="fin-card accent">
+      <span class="ptag" style="margin-bottom:8px;background:rgba(245,164,32,.2);color:#b45309">Balance / Year-End Result</span>
+      <div style="font-family:'Fraunces',serif;font-size:1.85rem;font-weight:800;color:var(--rs);line-height:1.1">S/ 230,722</div>
+      <div style="font-size:.84rem;color:#b45309;font-weight:700;margin-top:4px">&euro; 62,696 Euros</div>
+      <div style="font-size:.74rem;color:#6b7a78;margin-top:6px">Earmarked funds reserved for multiannual projects in 2026</div>
+    </div>
+    <div class="fin-card dark">
+      <span class="ptag" style="margin-bottom:8px;background:rgba(255,255,255,.15);color:#fff">Proposed Budget 2026</span>
+      <div style="font-family:'Fraunces',serif;font-size:1.85rem;font-weight:800;color:var(--rs);line-height:1.1">S/ 815,995</div>
+      <div style="font-size:.84rem;color:rgba(255,255,255,.8);font-weight:700;margin-top:4px">&euro; 220,539 Euros</div>
+      <div style="font-size:.74rem;color:rgba(255,255,255,.6);margin-top:6px">Regular operating budget for 7 core areas &amp; HTC</div>
+    </div>
+  </div>
+
+  <div class="fin-note fi">
+    <strong>Explanatory note on the year-end balance:</strong> The positive year-end balance (S/ 230,721.52) does not represent unrestricted profit. NGO Mama Alice receives a significant proportion of its funding for specific programmes, investments and activities (such as the completion and equipment of accommodation modules at the HTC and access road maintenance). Funds that have not yet been spent at year-end remain exclusively reserved for the activities and obligations for which they were designated in 2026.
+  </div>
+
+  <!-- TABS CONTAINER -->
+  <div class="fi">
+    <div class="tab-nav">
+      <button class="tab-btn active" onclick="switchFinTab('tab-income')">1. Income Sources 2025</button>
+      <button class="tab-btn" onclick="switchFinTab('tab-expenditure')">2. Expenditure 2025</button>
+      <button class="tab-btn" onclick="switchFinTab('tab-budget2026')">3. Proposed Budget 2026</button>
+      <button class="tab-btn" onclick="switchFinTab('tab-explanations')">4. Item Explanations</button>
+    </div>
+
+    <!-- TAB 1: INCOME -->
+    <div id="tab-income" class="tab-pane active">
+      <div style="overflow-x:auto">
+        <table class="rtable">
+          <thead>
+            <tr>
+              <th>Funding Source</th>
+              <th>Designated Purpose</th>
+              <th style="text-align:right">Amount in Soles (S/)</th>
+              <th style="text-align:right">Amount in Euros (&euro;)*</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:rgba(46,155,138,.05)"><td colspan="4"><strong>Core Programmes and Vocational Training</strong></td></tr>
+            <tr><td>Stichting Mamita Alice</td><td>Primary Education in Yanama</td><td style="text-align:right">S/ 117,504.68</td><td style="text-align:right">&euro; 55,936.70</td></tr>
+            <tr><td>Stichting Kinderen van de Zon</td><td>Pre-primary &amp; Individual Education</td><td style="text-align:right">S/ 115,811.72</td><td style="text-align:right">&euro; 31,470.58</td></tr>
+            <tr><td>Stichting Kinderen van de Zon</td><td>Individual Psychosocial Work with Children</td><td style="text-align:right">S/ 60,562.38</td><td style="text-align:right">&euro; 16,457.17</td></tr>
+            <tr><td>Stichting Kinderen van de Zon</td><td>Work with Families</td><td style="text-align:right">S/ 53,379.00</td><td style="text-align:right">&euro; 14,505.16</td></tr>
+            <tr><td>Stichting Kinderen van de Zon</td><td>Prevention and Direct Treatment</td><td style="text-align:right">S/ 74,985.02</td><td style="text-align:right">&euro; 20,376.36</td></tr>
+            <tr><td>Various Private Donors</td><td>Primary Education</td><td style="text-align:right">S/ 68,770.12</td><td style="text-align:right">&euro; 10,000.00</td></tr>
+            <tr><td>VAT Refund (SUNAT)</td><td>Primary Education</td><td style="text-align:right">S/ 9,923.00</td><td style="text-align:right">&euro; 2,696.47</td></tr>
+            <tr><td>Various Private Donors</td><td>Vocational Cooking Training / External Study Costs</td><td style="text-align:right">S/ 64,327.00</td><td style="text-align:right">&euro; 17,480.16</td></tr>
+            <tr><td>Stichting Mamita Alice</td><td>Vocational Cooking Training (HTC)</td><td style="text-align:right">S/ 162,345.53</td><td style="text-align:right">&euro; 20,000.00</td></tr>
+            <tr><td>Stichting Kinderen van de Zon</td><td>Vocational Cooking Training (HTC)</td><td style="text-align:right">S/ 143,390.54</td><td style="text-align:right">&euro; 38,964.82</td></tr>
+            <tr><td>Mark (Private Donor)</td><td>Equipment for Vocational Training</td><td style="text-align:right">S/ 17,165.00</td><td style="text-align:right">&euro; 4,664.40</td></tr>
+            <tr><td>Rotary Club</td><td>Kitchen Equipment for Cooking Training</td><td style="text-align:right">S/ 22,839.88</td><td style="text-align:right">&euro; 6,000.00</td></tr>
+            <tr><td>Altipacha</td><td>Equipment and Accommodation for Vocational Training</td><td style="text-align:right">S/ 23,268.00</td><td style="text-align:right">&euro; 6,322.83</td></tr>
+            <tr style="font-weight:700;background:rgba(46,155,138,.08)"><td colspan="2">Subtotal Core Programmes</td><td style="text-align:right">S/ 934,271.87</td><td style="text-align:right">&euro; 244,874.65</td></tr>
+            <tr style="background:rgba(46,155,138,.05)"><td colspan="4"><strong>Natural-Grass Football Pitch and Rock &amp; Water</strong></td></tr>
+            <tr><td>World of Children Foundation</td><td>Reimbursement of costs: natural-grass pitch &amp; Rock &amp; Water</td><td style="text-align:right">S/ 86,549.35</td><td style="text-align:right">&euro; 25,052.00</td></tr>
+            <tr style="background:rgba(46,155,138,.05)"><td colspan="4"><strong>"Formación para Todos" &mdash; Completion of Accommodation Modules</strong></td></tr>
+            <tr><td>Foundation Wilde Ganzen</td><td>Completion of residential accommodation modules</td><td style="text-align:right">S/ 186,825.00</td><td style="text-align:right">&euro; 50,000.00</td></tr>
+            <tr><td>Peter and Huub</td><td>Completion and furnishing of accommodation modules</td><td style="text-align:right">S/ 53,197.50</td><td style="text-align:right">&euro; 13,000.00</td></tr>
+            <tr style="background:rgba(46,155,138,.05)"><td colspan="4"><strong>HTC Road Maintenance</strong></td></tr>
+            <tr><td>Hans Boot</td><td>Maintenance of the access road to the HTC</td><td style="text-align:right">S/ 17,671.62</td><td style="text-align:right">&euro; 5,000.00</td></tr>
+            <tr style="font-weight:800;font-size:1rem;background:rgba(245,164,32,.12);color:var(--rd)">
+              <td colspan="2">TOTAL INCOME 2025</td>
+              <td style="text-align:right;color:var(--rp)">S/ 1,278,515.34</td>
+              <td style="text-align:right;color:var(--rs)">&euro; 312,874.65</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:.76rem;color:#7f8c8d;margin-top:10px;font-style:italic">*Euro amounts reflect consolidated financial accounts and exchange rates upon receipt of funds.</p>
+    </div>
+
+    <!-- TAB 2: EXPENDITURE -->
+    <div id="tab-expenditure" class="tab-pane">
+      <div style="overflow-x:auto">
+        <table class="rtable">
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Description</th>
+              <th style="text-align:right">Amount in Soles (S/)</th>
+              <th style="text-align:right">Amount in Euros (&euro;)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:rgba(46,155,138,.05)"><td colspan="4"><strong>Main Mama Alice Programmes</strong></td></tr>
+            <tr><td>Salaries &amp; Statutory Benefits</td><td>Permanent contracted staff under Peruvian labor regulations</td><td style="text-align:right">S/ 371,282.96</td><td style="text-align:right">&euro; 100,892.11</td></tr>
+            <tr><td>Staff Fees</td><td>Teachers, nurses, cooking instructors, assistants &amp; cleaners</td><td style="text-align:right">S/ 150,081.21</td><td style="text-align:right">&euro; 40,782.94</td></tr>
+            <tr><td>Food &amp; Supplies for Cooking Classes</td><td>Culinary training food provisions and daily nutrition</td><td style="text-align:right">S/ 116,931.78</td><td style="text-align:right">&euro; 31,774.94</td></tr>
+            <tr><td>Audiovisual &amp; IT Facilities in Yanama</td><td>Computer lab and interactive media education for children</td><td style="text-align:right">S/ 62,300.00</td><td style="text-align:right">&euro; 16,929.35</td></tr>
+            <tr><td>External Professional &amp; Technical Services</td><td>Independent tradespeople, repairs, maintenance &amp; consultancy</td><td style="text-align:right">S/ 56,237.30</td><td style="text-align:right">&euro; 15,281.88</td></tr>
+            <tr><td>Transportation</td><td>Movement of staff, beneficiaries, materials &amp; supplies</td><td style="text-align:right">S/ 30,367.69</td><td style="text-align:right">&euro; 8,252.09</td></tr>
+            <tr><td>Furnishing Rooms for Vocational Training</td><td>Equipping bedroom modules for rural residential students</td><td style="text-align:right">S/ 30,351.67</td><td style="text-align:right">&euro; 8,247.74</td></tr>
+            <tr><td>Documentary Procedures &amp; Insurance</td><td>Institutional insurances and official certification processes</td><td style="text-align:right">S/ 17,542.14</td><td style="text-align:right">&euro; 4,766.89</td></tr>
+            <tr><td>Basic Services</td><td>Water, electricity, telephone and internet</td><td style="text-align:right">S/ 16,032.94</td><td style="text-align:right">&euro; 4,356.78</td></tr>
+            <tr><td>School Supplies &amp; Educational Materials</td><td>Books, creative materials, educational games and copies</td><td style="text-align:right">S/ 14,621.81</td><td style="text-align:right">&euro; 3,973.32</td></tr>
+            <tr><td>Depreciation of Mama Alice Fixed Assets</td><td>Annual accounting wear of institutional equipment</td><td style="text-align:right">S/ 13,907.70</td><td style="text-align:right">&euro; 3,779.27</td></tr>
+            <tr><td>Premises Rental</td><td>Lease of community facilities in Yanama</td><td style="text-align:right">S/ 11,012.00</td><td style="text-align:right">&euro; 2,992.39</td></tr>
+            <tr><td>Scholarships for Former Students</td><td>Support for students pursuing further education elsewhere</td><td style="text-align:right">S/ 5,320.00</td><td style="text-align:right">&euro; 1,445.65</td></tr>
+            <tr><td>Vehicle Expenses</td><td>Fuel, vehicular maintenance and safety checks</td><td style="text-align:right">S/ 4,900.20</td><td style="text-align:right">&euro; 1,331.58</td></tr>
+            <tr><td>Cleaning Materials</td><td>Hygiene and sanitation supplies for the centers</td><td style="text-align:right">S/ 4,786.97</td><td style="text-align:right">&euro; 1,300.81</td></tr>
+            <tr><td>Accounting &amp; Audit Fees</td><td>External financial audit (Kayros S.C.) &amp; accounting fees</td><td style="text-align:right">S/ 4,700.00</td><td style="text-align:right">&euro; 1,277.17</td></tr>
+            <tr><td>Staff Training</td><td>Capacity building workshops (Rock &amp; Water methodology)</td><td style="text-align:right">S/ 2,887.50</td><td style="text-align:right">&euro; 784.65</td></tr>
+            <tr><td>Costs in Lima</td><td>Purchases and administrative procedures in the capital</td><td style="text-align:right">S/ 2,660.89</td><td style="text-align:right">&euro; 723.07</td></tr>
+            <tr><td>Legal Expenses</td><td>Legal counsel, contracts, and institutional representation</td><td style="text-align:right">S/ 2,000.00</td><td style="text-align:right">&euro; 543.48</td></tr>
+            <tr><td>Machinery Rental</td><td>Road and site preparation machinery rental</td><td style="text-align:right">S/ 1,820.00</td><td style="text-align:right">&euro; 494.57</td></tr>
+            <tr><td>Municipal Taxes &amp; Property Tax</td><td>Local municipal taxes and property duties</td><td style="text-align:right">S/ 1,497.92</td><td style="text-align:right">&euro; 407.04</td></tr>
+            <tr><td>Bank Expenses</td><td>Institutional bank account maintenance fees</td><td style="text-align:right">S/ 1,188.84</td><td style="text-align:right">&euro; 323.05</td></tr>
+            <tr><td>Medicines &amp; First Aid</td><td>Medical care supplies and emergency dispensary</td><td style="text-align:right">S/ 605.51</td><td style="text-align:right">&euro; 164.54</td></tr>
+            <tr style="font-weight:700;background:rgba(46,155,138,.08)"><td colspan="2">Subtotal Main Programmes</td><td style="text-align:right">S/ 923,037.03</td><td style="text-align:right">&euro; 250,825.28</td></tr>
+            <tr style="background:rgba(46,155,138,.05)"><td colspan="4"><strong>Hospitality Training Centre (Capital Investments)</strong></td></tr>
+            <tr><td>Depreciation HTC Fixed Assets</td><td>Accounting depreciation of HTC buildings and assets</td><td style="text-align:right">S/ 80,344.31</td><td style="text-align:right">&euro; 21,832.69</td></tr>
+            <tr><td>Construction of HTC Wall</td><td>Perimeter security wall for student safety</td><td style="text-align:right">S/ 24,900.00</td><td style="text-align:right">&euro; 6,766.30</td></tr>
+            <tr><td>Road Maintenance HTC</td><td>Rehabilitation of access road to the training centre</td><td style="text-align:right">S/ 14,583.60</td><td style="text-align:right">&euro; 3,962.93</td></tr>
+            <tr><td>Water-Pipe Maintenance HTC</td><td>Continuous running water infrastructure</td><td style="text-align:right">S/ 4,928.88</td><td style="text-align:right">&euro; 1,339.37</td></tr>
+            <tr style="font-weight:700;background:rgba(46,155,138,.08)"><td colspan="2">Subtotal HTC Investments</td><td style="text-align:right">S/ 124,756.79</td><td style="text-align:right">&euro; 33,901.30</td></tr>
+            <tr style="font-weight:800;font-size:1rem;background:rgba(46,155,138,.15);color:var(--rd)">
+              <td colspan="2">TOTAL EXPENDITURE 2025</td>
+              <td style="text-align:right;color:var(--rp)">S/ 1,047,793.82</td>
+              <td style="text-align:right;color:var(--rp)">&euro; 270,747.76</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- TAB 3: BUDGET 2026 -->
+    <div id="tab-budget2026" class="tab-pane">
+      <div style="overflow-x:auto">
+        <table class="rtable">
+          <thead>
+            <tr>
+              <th>Strategic Programme</th>
+              <th style="text-align:right">Budget in Soles (S/)</th>
+              <th style="text-align:right">Budget in Euros (&euro;)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Pre-primary Education (Kindergarten)</td><td style="text-align:right">S/ 66,368.76</td><td style="text-align:right">&euro; 17,937.50</td></tr>
+            <tr><td>Primary Education in Yanama</td><td style="text-align:right">S/ 263,136.44</td><td style="text-align:right">&euro; 71,117.96</td></tr>
+            <tr><td>Individual Education (Special Support)</td><td style="text-align:right">S/ 55,847.87</td><td style="text-align:right">&euro; 15,094.02</td></tr>
+            <tr><td>Individual Psychosocial Work with Children</td><td style="text-align:right">S/ 71,698.93</td><td style="text-align:right">&euro; 19,378.09</td></tr>
+            <tr><td>Prevention and Direct Treatment (Health)</td><td style="text-align:right">S/ 91,622.42</td><td style="text-align:right">&euro; 24,762.82</td></tr>
+            <tr><td>Comprehensive Work with Families</td><td style="text-align:right">S/ 58,160.27</td><td style="text-align:right">&euro; 15,718.99</td></tr>
+            <tr style="font-weight:700;background:rgba(46,155,138,.08)">
+              <td>Subtotal Core Community Programmes</td>
+              <td style="text-align:right">S/ 606,834.69</td>
+              <td style="text-align:right">&euro; 164,009.38</td>
+            </tr>
+            <tr><td>Vocational Training &mdash; Waiter / Bartender / Cook (HTC)</td><td style="text-align:right">S/ 204,760.00</td><td style="text-align:right">&euro; 55,340.54</td></tr>
+            <tr><td>HTC Maintenance &amp; Property Tax</td><td style="text-align:right">S/ 4,400.00</td><td style="text-align:right">&euro; 1,189.19</td></tr>
+            <tr style="font-weight:800;font-size:1.05rem;background:rgba(245,164,32,.15);color:var(--rd)">
+              <td>TOTAL REGULAR OPERATING BUDGET 2026</td>
+              <td style="text-align:right;color:var(--rp)">S/ 815,994.69</td>
+              <td style="text-align:right;color:var(--rs)">&euro; 220,539.11</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="font-size:.78rem;color:#6b7a78;margin-top:12px">This proposed regular operating budget covers recurring program costs. As in 2025, separately financed investment or infrastructure projects are funded outside this operating baseline.</p>
+    </div>
+
+    <!-- TAB 4: ITEM EXPLANATIONS -->
+    <div id="tab-explanations" class="tab-pane">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:8px">
+        <div style="background:var(--rc);padding:20px;border-radius:12px;border-left:3px solid var(--rp)">
+          <strong style="color:var(--rd);display:block;margin-bottom:6px">Salaries &amp; Social Benefits</strong>
+          <p style="font-size:.84rem;color:#5a6b68;line-height:1.6">Remuneration of permanently contracted employees in accordance with Peruvian labour legislation, including all statutory benefits (health insurance, severance, bonuses).</p>
+        </div>
+        <div style="background:var(--rc);padding:20px;border-radius:12px;border-left:3px solid var(--rp)">
+          <strong style="color:var(--rd);display:block;margin-bottom:6px">Staff Training &amp; Methodology</strong>
+          <p style="font-size:.84rem;color:#5a6b68;line-height:1.6">Investment to build pedagogical and psychosocial capacities, specifically certifying educators in the <em>Rock &amp; Water</em> self-regulation and anti-bullying methodology.</p>
+        </div>
+        <div style="background:var(--rc);padding:20px;border-radius:12px;border-left:3px solid var(--rp)">
+          <strong style="color:var(--rd);display:block;margin-bottom:6px">Staff Fees</strong>
+          <p style="font-size:.84rem;color:#5a6b68;line-height:1.6">Professional compensation for specialized educators, nurses, chef instructors, caretaking staff, and support team members who maintain day-to-day operations.</p>
+        </div>
+        <div style="background:var(--rc);padding:20px;border-radius:12px;border-left:3px solid var(--rp)">
+          <strong style="color:var(--rd);display:block;margin-bottom:6px">Audiovisual &amp; IT Facilities</strong>
+          <p style="font-size:.84rem;color:#5a6b68;line-height:1.6">Major 2025 investment in digital classrooms, interactive projection screens and computer equipment for children and adolescents in Yanama to bridge the rural digital divide.</p>
+        </div>
+        <div style="background:var(--rc);padding:20px;border-radius:12px;border-left:3px solid var(--rp)">
+          <strong style="color:var(--rd);display:block;margin-bottom:6px">Accommodation Furnishing (HTC)</strong>
+          <p style="font-size:.84rem;color:#5a6b68;line-height:1.6">Complete equipping and furnishing of the residential modules (beds, mattresses, linens, curtains, lamps) to host rural young people participating in the 8-month intensive culinary program.</p>
+        </div>
+        <div style="background:var(--rc);padding:20px;border-radius:12px;border-left:3px solid var(--rp)">
+          <strong style="color:var(--rd);display:block;margin-bottom:6px">External Audit &amp; Compliance</strong>
+          <p style="font-size:.84rem;color:#5a6b68;line-height:1.6">Independent audit engagement fees with <em>Kayros S.C.</em> ensuring strict verification of financial statements under International Financial Reporting Standards (IFRS).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AUDIT BOX -->
+  <div class="audit-box fi">
+    <div style="max-width:640px">
+      <span class="audit-badge">External Independent Audit Report 2025</span>
+      <h3 style="font-family:'Fraunces',serif;font-size:1.6rem;font-weight:800;margin-bottom:10px">Unqualified Clean Audit Opinion</h3>
+      <p style="font-size:.9rem;opacity:.9;line-height:1.65;margin-bottom:12px">The financial statements of <strong>NGO Mama Alice</strong> as of December 31, 2025 have been audited by independent CPA firm <strong>KAYROS S.C. Auditores, Asesores y Consultores</strong> (Opinion issued in Ayacucho, August 5, 2026), certifying that they present fairly, in all material respects, the financial position of the organisation in accordance with IFRS.</p>
+      <div style="display:flex;gap:14px;flex-wrap:wrap;font-size:.78rem;opacity:.75">
+        <span>Tax ID (RUC): 20494337941</span>
+        <span>&middot;</span>
+        <span>Certified Lead Auditor: CPC Daniel Pizarro Pérez (Reg. 017-788)</span>
+        <span>&middot;</span>
+        <span>Full document: 22 pages</span>
+      </div>
+    </div>
+    <div>
+      <a href="../DICTAMEN EE FF 2025.pdf" target="_blank" rel="noopener" class="audit-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="12" y2="18"/><line x1="15" y1="15" x2="12" y2="18"/></svg>
+        Download Audit Report (PDF)
+      </a>
+    </div>
+  </div>
+</div>
+</section>
+
+<!-- ══ PARTNERS ══ -->
+<section class="sdon" id="aliados">
+<div class="container">
+  <div class="chdr fi"><span class="chnum">Chapter 07</span>
     <h2 class="chtitle">Partner <span class="ac">Institutions</span></h2>
     <p class="chdesc">Restaurants, clinics, hospitals and organisations that made our impact possible in 2025.</p>
   </div>
@@ -368,9 +701,10 @@ body{font-family:'Inter',sans-serif;color:#333;overflow-x:hidden}
 </div>
 </section>
 
+<!-- ══ TESTIMONIAL ══ -->
 <section class="sqt" id="testimonios">
 <div class="container">
-  <span class="chnum" style="color:rgba(255,255,255,.4)">Chapter 07 &middot; Real Story</span>
+  <span class="chnum" style="color:rgba(255,255,255,.4)">Chapter 08 &middot; Real Story</span>
   <blockquote class="qtxt fi">"Johanes, a student with speech difficulties who, through determination and hard work, became one of the strongest performers in the group. After graduation, he was hired by <em>Alfredo Fusi&oacute;n</em>, where the chef expressed that he could eventually become a head chef if he continues developing professionally."</blockquote>
   <div class="qauth fi">
     <img src="../assets/images/testimonial_student_1782863781130.webp" alt="Johanes" class="qavt">
@@ -379,14 +713,19 @@ body{font-family:'Inter',sans-serif;color:#333;overflow-x:hidden}
 </div>
 </section>
 
+<!-- ══ CTA ══ -->
 <section class="scta">
 <div class="container">
-  <h2 class="fi">Download the Annual Report 2025</h2>
-  <p class="fi">40-page institutional report with the full detail of every programme area, result and outcome.</p>
+  <h2 class="fi">Download the Annual Report &amp; Financials 2025</h2>
+  <p class="fi">40-page institutional report and certified independent external audit opinion.</p>
   <div class="ctabts fi">
     <a href="../Jaarverslag 2025 Annual report 2025.pdf" target="_blank" rel="noopener" class="bwh">
       <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-      Download PDF 2025
+      Download Annual Report 2025 (PDF)
+    </a>
+    <a href="../DICTAMEN EE FF 2025.pdf" target="_blank" rel="noopener" class="bow">
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+      Audit Opinion 2025 (PDF)
     </a>
     <a href="donar.html" class="bow">Make a donation</a>
     <a href="transparencia.html" class="bow">All reports</a>
@@ -410,9 +749,17 @@ document.querySelectorAll('.fi,.fl,.fr,.ccard,.dcard,.tcard').forEach(el=>obs.ob
 
 
 <script>
+function switchFinTab(id){
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.tab-pane').forEach(p=>p.classList.remove('active'));
+  const targetBtn=event.currentTarget||event.target;
+  if(targetBtn)targetBtn.classList.add('active');
+  const targetPane=document.getElementById(id);
+  if(targetPane)targetPane.classList.add('active');
+}
 document.addEventListener('DOMContentLoaded',()=>{
 const dO={cutout:'72%',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{enabled:true}},animation:{animateScale:true,animateRotate:true,duration:1300,easing:'easeOutQuart'}};
-const c1=document.getElementById('ch1');if(c1)new Chart(c1,{type:'doughnut',data:{labels:['Promovidos sin fallar (202)','Programa de recuperación (41)','Reprobados (0)'],datasets:[{data:[83,17,0],backgroundColor:['#2E9B8A','#F5A420','#d4af37'],borderWidth:0,hoverOffset:10}]},options:dO});
+const c1=document.getElementById('ch1');if(c1)new Chart(c1,{type:'doughnut',data:{labels:['Promoted without failing (202)','Recovery program (41)','Failed (0)'],datasets:[{data:[83,17,0],backgroundColor:['#2E9B8A','#F5A420','#d4af37'],borderWidth:0,hoverOffset:10}]},options:dO});
 });
 </script>
 
