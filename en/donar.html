@@ -67,16 +67,15 @@
             <!-- Header of the Card -->
             <div style="background:var(--primary); padding:40px 32px 32px; color:white; text-align:center;">
                 <h1 style="font-family:var(--font-heading); font-size:2rem; font-weight:600; margin-bottom:8px; line-height:1.2;">Donate to Mama Alice: Your contribution changes lives</h1>
-                <p style="font-size:0.95rem; opacity:0.9; margin:0; font-weight:400;">Support education in Ayacucho safely.</p>
+                <p style="font-size:0.95rem; opacity:0.9; margin:0; font-weight:400;">Support children, young people and families in Ayacucho.</p>
             </div>
 
             <div style="padding:40px 32px;">
                 <form onsubmit="event.preventDefault();alert('Thank you for your generosity! This is a demo version.');">
                     
-                    <!-- Frequency Toggle -->
-                    <div style="display:flex; background:#f1f3f5; border-radius:12px; padding:6px; margin-bottom:32px;">
-                        <div class="freq-option active checkout-toggle" tabindex="0" onclick="selectFreq(this)">One-time Donation</div>
-                        <div class="freq-option checkout-toggle" tabindex="0" onclick="selectFreq(this)">Monthly ❤️</div>
+                    <!-- Frequency: One-time only -->
+                    <div style="margin-bottom:24px; padding:12px 16px; background:var(--primary-pale); border-radius:8px; border-left:4px solid var(--primary);">
+                        <span style="font-size:0.9rem; font-weight:600; color:var(--primary-dark);">One-time donation — Monthly giving coming soon!</span>
                     </div>
 
                     <!-- Price Anchors -->
@@ -101,9 +100,9 @@
                             <label for="donation-slider" style="font-size:0.9rem; font-weight:600; color:#495057; margin:0;">Customize your amount</label>
                             <div style="font-family:var(--font-heading); font-size:1.6rem; color:var(--primary); font-weight:700;">€<span id="slider-val">50</span></div>
                         </div>
-                        <input type="range" id="donation-slider" min="5" max="250" step="5" value="50" style="width:100%; height:6px; background:#e9ecef; border-radius:10px; accent-color:var(--primary); cursor:pointer; margin-bottom:12px;" />
+                        <input type="range" id="donation-slider" min="5" max="1000" step="5" value="50" style="width:100%; height:6px; background:#e9ecef; border-radius:10px; accent-color:var(--primary); cursor:pointer; margin-bottom:12px;" />
                         <div style="font-size:0.85rem; color:#6c757d; font-style:italic; text-align:center;">
-                            ✨ <span id="slider-impact">1 month of technical training.</span>
+                            ✨ <span id="slider-impact">1 month of vocational training.</span>
                         </div>
                     </div>
 
@@ -165,7 +164,7 @@
                     } else if(val < 50) {
                         impactDisplay.textContent = "Psychological therapies for a young person.";
                     } else if(val < 100) {
-                        impactDisplay.textContent = "1 month of technical training.";
+                        impactDisplay.textContent = "1 month of vocational training.";
                     } else if(val < 150) {
                         impactDisplay.textContent = "Full scholarship (education, food, transport).";
                     } else {
@@ -193,12 +192,7 @@
             }
         }
         function selectFreq(element) {
-            element.closest('.freq-toggle').querySelectorAll('.freq-option').forEach(el => {
-                el.classList.remove('active');
-                el.setAttribute('aria-checked', 'false');
-            });
-            element.classList.add('active');
-            element.setAttribute('aria-checked', 'true');
+            // Monthly giving not yet available
         }
     </script>
     <script src="../js/main.js"></script>

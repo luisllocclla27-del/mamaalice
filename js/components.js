@@ -390,6 +390,37 @@
   }
 
   // Global functions for the Drawer
+
+  /* ── Language Switcher ── */
+  window.toggleLanguage = function(event, lang) {
+    event.preventDefault();
+    const path = window.location.pathname;
+    const currentIsEn = path.startsWith('/en/') || path === '/en';
+
+    // Map of page filenames
+    const pageMap = {
+      'index.html': 'index.html',
+      'nosotros.html': 'nosotros.html',
+      'comunidades.html': 'comunidades.html',
+      'hospitality.html': 'hospitality.html',
+      'transparencia.html': 'transparencia.html',
+      'donar.html': 'donar.html',
+      '404.html': '404.html',
+    };
+
+    // Determine current page filename
+    const segments = path.split('/').filter(Boolean);
+    const currentPage = segments[segments.length - 1] || 'index.html';
+    const targetPage = pageMap[currentPage] || 'index.html';
+
+    if (lang === 'en' && !currentIsEn) {
+      window.location.href = '/en/' + targetPage;
+    } else if (lang === 'es' && currentIsEn) {
+      window.location.href = '/' + targetPage;
+    }
+    // Already on the right language — do nothing
+  };
+
   window.toggleDonationDrawer = function() {
       const drawer = document.getElementById('donation-drawer');
       const overlay = document.getElementById('donation-overlay');
