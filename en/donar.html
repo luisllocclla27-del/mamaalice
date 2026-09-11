@@ -140,6 +140,48 @@
                         Your data is encrypted and protected (256-bit SSL).
                     </div>
                 </form>
+
+                <!-- Official Bank Transfer Box -->
+                <div style="margin-top:32px; padding-top:28px; border-top:1px solid #e9ecef;">
+                    <div style="display:flex; align-items:center; gap:10px; margin-bottom:16px;">
+                        <div style="width:36px; height:36px; border-radius:8px; background:var(--primary-pale); display:flex; align-items:center; justify-content:center; color:var(--primary); font-size:1.2rem;">🏛️</div>
+                        <div>
+                            <h3 style="font-size:1.05rem; font-weight:700; margin:0; color:#1a202c;">Direct Bank Transfer</h3>
+                            <p style="font-size:0.8rem; color:#718096; margin:0;">Official account of Mama Alice NGO in Peru (BCP)</p>
+                        </div>
+                    </div>
+
+                    <div style="display:grid; gap:10px; font-size:0.86rem;">
+                        <div style="display:flex; justify-content:space-between; align-items:center; padding:10px 12px; background:#f8fafc; border-radius:8px; border:1px solid #e2e8f0;">
+                            <span style="color:#64748b;">Bank</span>
+                            <strong style="color:#0f172a;">Banco de Crédito del Perú (BCP)</strong>
+                        </div>
+                        <div style="display:flex; justify-content:space-between; align-items:center; padding:10px 12px; background:#f8fafc; border-radius:8px; border:1px solid #e2e8f0;">
+                            <span style="color:#64748b;">Current Account</span>
+                            <div style="display:flex; align-items:center; gap:8px;">
+                                <code style="font-family:monospace; font-weight:700; color:#0f172a;">220-1719889036-24</code>
+                                <button type="button" onclick="navigator.clipboard.writeText('220-1719889036-24'); this.textContent='✓ Copied'; setTimeout(()=>this.textContent='Copy', 2000)" style="background:#edf2f7; border:1px solid #cbd5e1; border-radius:4px; padding:3px 8px; font-size:0.75rem; cursor:pointer; color:#475569; font-weight:600;">Copy</button>
+                            </div>
+                        </div>
+                        <div style="display:flex; justify-content:space-between; align-items:center; padding:10px 12px; background:#f8fafc; border-radius:8px; border:1px solid #e2e8f0;">
+                            <span style="color:#64748b;">CCI (Interbank Peru)</span>
+                            <div style="display:flex; align-items:center; gap:8px;">
+                                <code style="font-family:monospace; font-weight:700; color:#0f172a;">00222000171988903624</code>
+                                <button type="button" onclick="navigator.clipboard.writeText('00222000171988903624'); this.textContent='✓ Copied'; setTimeout(()=>this.textContent='Copy', 2000)" style="background:#edf2f7; border:1px solid #cbd5e1; border-radius:4px; padding:3px 8px; font-size:0.75rem; cursor:pointer; color:#475569; font-weight:600;">Copy</button>
+                            </div>
+                        </div>
+                        <div style="display:flex; justify-content:space-between; align-items:center; padding:10px 12px; background:#f8fafc; border-radius:8px; border:1px solid #e2e8f0;">
+                            <span style="color:#64748b;">SWIFT Code (International)</span>
+                            <div style="display:flex; align-items:center; gap:8px;">
+                                <code style="font-family:monospace; font-weight:700; color:#0f172a;">BCPLPEPL</code>
+                                <button type="button" onclick="navigator.clipboard.writeText('BCPLPEPL'); this.textContent='✓ Copied'; setTimeout(()=>this.textContent='Copy', 2000)" style="background:#edf2f7; border:1px solid #cbd5e1; border-radius:4px; padding:3px 8px; font-size:0.75rem; cursor:pointer; color:#475569; font-weight:600;">Copy</button>
+                            </div>
+                        </div>
+                    </div>
+                    <p style="font-size:0.78rem; color:#94a3b8; text-align:center; margin:14px 0 0;">
+                        Please email your transfer confirmation to <a href="mailto:info@mamaalice.org" style="color:var(--primary); font-weight:600; text-decoration:underline;">info@mamaalice.org</a> so we can confirm your donation and send your receipt.
+                    </p>
+                </div>
             </div>
         </div>
     </main>

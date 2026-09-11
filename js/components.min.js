@@ -281,7 +281,17 @@
 
         <div style="margin-top:16px; text-align:center; font-size:0.8rem; color:#6c757d; display:flex; align-items:center; justify-content:center; gap:6px;">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
-            Pago seguro y encriptado.
+            ${isEn ? 'Encrypted & secure payment.' : 'Pago seguro y encriptado.'}
+        </div>
+
+        <!-- Transferencia Bancaria BCP -->
+        <div style="margin-top:24px; padding-top:20px; border-top:1px solid #e9ecef; text-align:left;">
+            <div style="font-weight:700; font-size:0.9rem; margin-bottom:8px; color:#1a202c;">🏛️ ${isEn ? 'Direct Bank Transfer (Peru BCP)' : 'Transferencia Bancaria Directa (BCP Perú)'}</div>
+            <div style="font-size:0.82rem; color:#4a5568; line-height:1.6; background:#f8fafc; padding:10px 12px; border-radius:8px; border:1px solid #e2e8f0;">
+                <div><strong>${isEn ? 'Account' : 'Cta. Cte.'}:</strong> <code style="font-family:monospace; font-weight:bold;">220-1719889036-24</code></div>
+                <div><strong>CCI:</strong> <code style="font-family:monospace; font-weight:bold;">00222000171988903624</code></div>
+                <div><strong>SWIFT:</strong> <code style="font-family:monospace; font-weight:bold;">BCPLPEPL</code></div>
+            </div>
         </div>
     </form>
   </div>
