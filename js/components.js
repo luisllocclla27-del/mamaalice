@@ -17,7 +17,9 @@
   /* ══════════════════════════════════════════
      HEADER & FOOTER Data
   ══════════════════════════════════════════ */
-  const isEn = window.location.pathname.startsWith('/en/') || window.location.pathname === '/en';
+  const isEn = (document.documentElement.lang === 'en') || /\/en(\/|$)/i.test(window.location.pathname);
+  const isFile = window.location.protocol === 'file:';
+  const pathPrefix = isFile ? '' : (isEn ? '/en/' : '/');
   const assetPrefix = isEn ? '../assets/' : 'assets/';
 
   // --- Preloader Injection ---
@@ -53,7 +55,7 @@
     hospitality: 'Hospitality',
     transparencia: isEn ? 'Transparency' : 'Transparencia',
     donar: isEn ? 'Donate Now' : 'Donar Ahora',
-    footer_desc: isEn ? 'Transforming the future of Ayacucho\'s youth through education, emotional support, and technical training of excellence.' : 'Transformando el futuro de la juventud ayacuchana mediante educación, soporte emocional y formación técnica de excelencia.',
+    footer_desc: isEn ? 'Transforming the future of Ayacucho\'s youth through education, emotional support, and vocational training of excellence.' : 'Transformando el futuro de la juventud ayacuchana mediante educación, soporte emocional y formación vocacional de excelencia.',
     nav_title: isEn ? 'Navigation' : 'Navegación',
     get_involved: isEn ? 'Get Involved' : 'Involúcrate',
     donate: isEn ? 'Donate' : 'Donar',
@@ -75,7 +77,7 @@
 <header class="header" id="header" role="banner">
   <div class="container nav-container">
 
-    <a href="${isEn ? '/en/' : '/'}" class="logo" aria-label="Mama Alice — Inicio">
+    <a href="${isEn ? (isFile ? 'index.html' : '/en/') : (isFile ? 'index.html' : '/')}" class="logo" aria-label="Mama Alice — Inicio">
       <img src="${assetPrefix}images/logo-transparent.png"
            alt="Mama Alice ONG"
            class="logo-oficial-img"
@@ -93,11 +95,11 @@
     </button>
 
     <nav class="nav-links" id="main-nav" role="navigation" aria-label="Menú principal">
-      <a href="${isEn ? '/en/' : '/'}" data-page="index.html">${labels.inicio}</a>
-      <a href="nosotros.html"      data-page="nosotros.html">${labels.nosotros}</a>
-      <a href="comunidades.html"   data-page="comunidades.html">${labels.proyectos}</a>
-      <a href="hospitality.html"   data-page="hospitality.html">${labels.hospitality}</a>
-      <a href="transparencia.html" data-page="transparencia.html">${labels.transparencia}</a>
+      <a href="${isEn ? (isFile ? 'index.html' : '/en/') : (isFile ? 'index.html' : '/')}" data-page="index.html">${labels.inicio}</a>
+      <a href="${pathPrefix}nosotros.html"      data-page="nosotros.html">${labels.nosotros}</a>
+      <a href="${pathPrefix}comunidades.html"   data-page="comunidades.html">${labels.proyectos}</a>
+      <a href="${pathPrefix}hospitality.html"   data-page="hospitality.html">${labels.hospitality}</a>
+      <a href="${pathPrefix}transparencia.html" data-page="transparencia.html">${labels.transparencia}</a>
       
       <!-- Language Switcher -->
       <div class="lang-switcher">
@@ -165,18 +167,18 @@
       <!-- Navegación -->
       <div class="footer-col">
         <h4>${labels.nav_title}</h4>
-        <a href="${isEn ? '/en/' : '/'}">${labels.inicio}</a>
-        <a href="nosotros.html">${labels.nosotros}</a>
-        <a href="comunidades.html">${labels.proyectos}</a>
-        <a href="hospitality.html">${labels.hospitality}</a>
-        <a href="transparencia.html">${labels.transparencia}</a>
+        <a href="${isEn ? (isFile ? 'index.html' : '/en/') : (isFile ? 'index.html' : '/')}">${labels.inicio}</a>
+        <a href="${pathPrefix}nosotros.html">${labels.nosotros}</a>
+        <a href="${pathPrefix}comunidades.html">${labels.proyectos}</a>
+        <a href="${pathPrefix}hospitality.html">${labels.hospitality}</a>
+        <a href="${pathPrefix}transparencia.html">${labels.transparencia}</a>
       </div>
 
       <!-- Involúcrate -->
       <div class="footer-col">
         <h4>${labels.get_involved}</h4>
-        <a href="donar.html">${labels.donate}</a>
-        <a href="#">${labels.volunteer}</a>
+        <a href="${pathPrefix}donar.html">${labels.donate}</a>
+        <a href="${pathPrefix}nosotros.html#volunteer-form">${labels.volunteer}</a>
         <a href="#">${labels.partners}</a>
         <a href="#">${labels.work}</a>
       </div>
@@ -320,12 +322,12 @@
     if (nav) setActive(nav);
 
     // ── Language Switcher State ──
-    const isEn = window.location.pathname.startsWith('/en/') || window.location.pathname === '/en';
+    const isEnActive = (document.documentElement.lang === 'en') || /\/en(\/|$)/i.test(window.location.pathname);
     const langEs = document.getElementById('lang-es');
     const langEn = document.getElementById('lang-en');
     
     if (langEs && langEn) {
-        if (isEn) {
+        if (isEnActive) {
             langEn.style.fontWeight = 'bold';
             langEn.style.color = 'var(--primary)';
             langEs.style.color = 'var(--text-muted)';
@@ -393,9 +395,9 @@
 
   /* ── Language Switcher ── */
   window.toggleLanguage = function(event, lang) {
-    event.preventDefault();
+    if (event && event.preventDefault) event.preventDefault();
+    const isCurrentlyEn = (document.documentElement.lang === 'en') || /\/en(\/|$)/i.test(window.location.pathname);
     const path = window.location.pathname;
-    const currentIsEn = path.startsWith('/en/') || path === '/en';
 
     // Map of page filenames
     const pageMap = {
@@ -410,15 +412,24 @@
 
     // Determine current page filename
     const segments = path.split('/').filter(Boolean);
-    const currentPage = segments[segments.length - 1] || 'index.html';
+    let currentPage = segments[segments.length - 1] || 'index.html';
+    if (currentPage === 'en') currentPage = 'index.html';
     const targetPage = pageMap[currentPage] || 'index.html';
 
-    if (lang === 'en' && !currentIsEn) {
+    if (window.location.protocol === 'file:') {
+      if (lang === 'en' && !isCurrentlyEn) {
+        window.location.href = 'en/' + targetPage;
+      } else if (lang === 'es' && isCurrentlyEn) {
+        window.location.href = '../' + targetPage;
+      }
+      return;
+    }
+
+    if (lang === 'en' && !isCurrentlyEn) {
       window.location.href = '/en/' + targetPage;
-    } else if (lang === 'es' && currentIsEn) {
+    } else if (lang === 'es' && isCurrentlyEn) {
       window.location.href = '/' + targetPage;
     }
-    // Already on the right language — do nothing
   };
 
   window.toggleDonationDrawer = function() {
